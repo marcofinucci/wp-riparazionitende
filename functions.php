@@ -5,6 +5,8 @@
 
 defined('ABSPATH') || exit;
 
+require_once get_template_directory() . '/inc/icons.php';
+
 // Theme setup
 function rtc_theme_setup(): void {
     load_theme_textdomain('riparazionetende', get_template_directory() . '/languages');
