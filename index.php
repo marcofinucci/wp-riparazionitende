@@ -7,7 +7,7 @@ get_header();
 ?>
 
 <main id="main" class="pt-20 min-h-screen">
-  <div class="container-site py-16">
+  <div class="container-site py-14 lg:py-16">
     <?php if (have_posts()) : ?>
       <h1 class="section-heading mb-8"><?php esc_html_e('Articoli', 'riparazionetende'); ?></h1>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

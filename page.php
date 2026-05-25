@@ -28,7 +28,7 @@ get_header();
   </section>
 
   <!-- Content -->
-  <section class="bg-cream py-16 lg:py-20">
+  <section class="bg-cream py-14 lg:py-16">
     <div class="container-site">
       <div class="max-w-3xl">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -41,7 +41,7 @@ get_header();
   </section>
 
   <!-- CTA -->
-  <section class="bg-canvas py-14">
+  <section class="bg-canvas py-16 lg:py-20">
     <div class="container-site text-center">
       <h2 class="font-heading font-bold text-2xl text-forest mb-4">Hai una tenda da riparare?</h2>
       <p class="text-muted mb-7 max-w-lg mx-auto">Invia foto della tenda e dei danni per ricevere una valutazione preliminare.</p>

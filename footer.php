@@ -34,13 +34,18 @@
         <div class="flex flex-col gap-2.5">
           <a href="https://wa.me/393000000000" target="_blank" rel="noopener noreferrer"
             class="inline-flex items-center gap-2 text-canvas hover:text-white text-sm transition-colors">
-            <?php rtc_whatsapp_icon('w-4 h-4 text-[#25D366]'); ?>
+            <?php rtc_whatsapp_icon('w-4 h-4 text-canvas/70'); ?>
             WhatsApp
           </a>
           <a href="mailto:info@riparazionitendecampeggio.it"
             class="inline-flex items-center gap-2 text-canvas hover:text-white text-sm transition-colors">
             <?php rtc_icon('mail', 'w-4 h-4 text-canvas/70'); ?>
             info@riparazionitendecampeggio.it
+          </a>
+          <a href="<?php echo esc_url(rtc_phone_link(rtc_contact_phone())); ?>"
+            class="inline-flex items-center gap-2 text-canvas hover:text-white text-sm transition-colors">
+            <?php rtc_icon('phone', 'w-4 h-4 text-canvas/70'); ?>
+            <?php echo esc_html(rtc_contact_phone()); ?>
           </a>
         </div>
       </div>

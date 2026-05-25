@@ -102,6 +102,18 @@ function rtc_contact_email(): string {
     return sanitize_email($email);
 }
 
+// Helper: contact phone (display format)
+function rtc_contact_phone(): string {
+    $phone = '+39 085 000 0000';
+    if (function_exists('get_field')) {
+        $acf = get_field('contact_phone', 'option');
+        if ($acf) {
+            $phone = $acf;
+        }
+    }
+    return sanitize_text_field($phone);
+}
+
 // Helper: WhatsApp link
 function rtc_whatsapp_link(string $message = ''): string {
     $number = get_option('rtc_whatsapp', '393000000000');

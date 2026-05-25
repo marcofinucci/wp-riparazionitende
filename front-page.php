@@ -34,7 +34,7 @@ get_header();
     <!-- Gradiente bottom -->
     <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-forest-dark/80 to-transparent" aria-hidden="true"></div>
 
-    <div class="container-site relative z-10 py-24">
+    <div class="container-site relative z-10 py-16 lg:py-20">
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 text-canvas text-xs font-heading font-semibold uppercase tracking-widest mb-6">
           <span class="w-1.5 h-1.5 rounded-full bg-canvas animate-pulse" aria-hidden="true"></span>
@@ -97,7 +97,7 @@ get_header();
   <!-- =====================================================================
        SERVIZI
   ===================================================================== -->
-  <section class="bg-cream py-20 lg:py-24" aria-labelledby="servizi-heading">
+  <section class="bg-cream py-14 lg:py-16" aria-labelledby="servizi-heading">
     <div class="container-site">
 
       <div class="text-center mb-12">
@@ -210,7 +210,7 @@ get_header();
   <!-- =====================================================================
        AUTOREVOLEZZA
   ===================================================================== -->
-  <section class="bg-canvas py-20 lg:py-24" aria-labelledby="autorevolezza-heading">
+  <section class="bg-canvas py-14 lg:py-16" aria-labelledby="autorevolezza-heading">
     <div class="container-site">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -278,7 +278,7 @@ get_header();
   <!-- =====================================================================
        COME FUNZIONA
   ===================================================================== -->
-  <section class="bg-cream py-20 lg:py-24" aria-labelledby="come-funziona-heading">
+  <section class="bg-cream py-14 lg:py-16" aria-labelledby="come-funziona-heading">
     <div class="container-site">
 
       <div class="text-center mb-12">
@@ -338,7 +338,7 @@ get_header();
   <!-- =====================================================================
        MAPPA ITALIA
   ===================================================================== -->
-  <section class="bg-forest py-20 lg:py-24" aria-labelledby="mappa-heading">
+  <section class="bg-forest py-14 lg:py-16" aria-labelledby="mappa-heading">
     <div class="container-site">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -419,7 +419,7 @@ get_header();
   <!-- =====================================================================
        SOSTENIBILITÀ
   ===================================================================== -->
-  <section class="bg-cream py-20 lg:py-24" aria-labelledby="sostenibilita-heading">
+  <section class="bg-cream py-14 lg:py-16" aria-labelledby="sostenibilita-heading">
     <div class="container-site">
       <div class="max-w-3xl mx-auto text-center">
 
@@ -451,7 +451,7 @@ get_header();
   <!-- =====================================================================
        SALEWA
   ===================================================================== -->
-  <section class="bg-canvas py-14 lg:py-16" aria-labelledby="salewa-heading">
+  <section class="bg-canvas py-12 lg:py-14" aria-labelledby="salewa-heading">
     <div class="container-site">
       <div class="max-w-2xl mx-auto text-center">
         <h2 id="salewa-heading" class="section-subheading mb-3">
@@ -472,7 +472,7 @@ get_header();
   <!-- =====================================================================
        PRIMA DELLA SPEDIZIONE
   ===================================================================== -->
-  <section class="bg-cream py-16 lg:py-20" aria-labelledby="spedizione-prep-heading">
+  <section class="bg-cream py-14 lg:py-16" aria-labelledby="spedizione-prep-heading">
     <div class="container-site">
       <div class="bg-forest/5 border border-forest/15 rounded-2xl p-8 lg:p-12 max-w-4xl mx-auto">
 
@@ -512,7 +512,7 @@ get_header();
   <!-- =====================================================================
        FAQ
   ===================================================================== -->
-  <section class="bg-canvas py-20 lg:py-24" aria-labelledby="faq-heading">
+  <section class="bg-canvas py-14 lg:py-16" aria-labelledby="faq-heading">
     <div class="container-site">
 
       <div class="text-center mb-12">
@@ -578,7 +578,7 @@ get_header();
   <!-- =====================================================================
        CTA FINALE
   ===================================================================== -->
-  <section class="bg-forest py-20 lg:py-24" aria-labelledby="cta-finale-heading">
+  <section class="bg-forest py-16 lg:py-20" aria-labelledby="cta-finale-heading">
     <div class="container-site">
       <div class="max-w-2xl mx-auto text-center">
 
@@ -596,12 +596,12 @@ get_header();
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="https://wa.me/393000000000?text=Salve%2C%20vorrei%20una%20valutazione%20per%20la%20riparazione%20di%20una%20tenda."
             target="_blank" rel="noopener noreferrer"
-            class="btn-whatsapp text-base px-8 py-4 justify-center">
+            class="btn-whatsapp">
             <?php rtc_whatsapp_icon('w-5 h-5'); ?>
             Contattaci su WhatsApp
           </a>
-          <a href="<?php echo esc_url(home_url('/contatti')); ?>"
-            class="btn-outline text-base px-8 py-4 justify-center">
+          <a href=" <?php echo esc_url(home_url('/contatti')); ?>"
+            class="btn-outline">
             Oppure scrivi via email
           </a>
         </div>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template: Come Spedire
  * URL: /come-spedire-tenda-da-riparare
@@ -109,7 +110,7 @@ get_header();
       <p class="text-white/65 mb-8 max-w-lg mx-auto leading-relaxed">Inizia inviando le foto della tenda e dei danni tramite WhatsApp.</p>
       <a href="https://wa.me/393000000000?text=Salve%2C%20vorrei%20una%20valutazione%20per%20la%20riparazione%20di%20una%20tenda."
         target="_blank" rel="noopener noreferrer"
-        class="btn-whatsapp text-base px-8 py-4">
+        class="btn-whatsapp">
         <?php rtc_whatsapp_icon('w-5 h-5'); ?>
         Invia foto su WhatsApp
       </a>

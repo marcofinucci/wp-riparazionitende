@@ -13,6 +13,7 @@ if (!preg_match('/wa\.me\/\d+/', $wa_url)) {
 }
 
 $email = rtc_contact_email();
+$phone = rtc_contact_phone();
 
 $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['contact'])) : '';
 
@@ -43,51 +44,91 @@ get_header();
   <!-- Canali di contatto -->
   <section class="bg-cream py-14 lg:py-16" aria-labelledby="canali-heading">
     <div class="container-site">
-      <h2 id="canali-heading" class="section-subheading mb-8">Come raggiungerci</h2>
+      <h2 id="canali-heading" class="section-subheading mb-8">Contattaci</h2>
+      <?php
+      $canali = [
+        [
+          'href'   => $wa_url,
+          'target' => '_blank',
+          'rel'    => 'noopener noreferrer',
+          'icon'   => 'whatsapp',
+          'bg'     => 'bg-forest/10',
+          'color'  => 'text-forest',
+          'title'  => 'WhatsApp',
+          'desc'   => 'Canale preferito per foto, preventivi e aggiornamenti sulle lavorazioni.',
+          'action' => ['label' => 'Scrivici ora', 'chevron' => true],
+        ],
+        [
+          'href'   => 'mailto:' . $email,
+          'icon'   => 'mail',
+          'bg'     => 'bg-forest/10',
+          'color'  => 'text-forest',
+          'title'  => 'Email',
+          'desc'   => 'Per schede cliente, documentazione e comunicazioni formali.',
+          'action' => ['label' => $email, 'break_all' => true],
+        ],
+        [
+          'href'   => rtc_phone_link($phone),
+          'icon'   => 'phone',
+          'bg'     => 'bg-olive/10',
+          'color'  => 'text-olive',
+          'title'  => 'Telefono',
+          'desc'   => 'Per informazioni rapide negli orari di apertura del laboratorio.',
+          'action' => ['label' => $phone],
+        ],
+      ];
+      ?>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <?php foreach ($canali as $canale) :
+          $attrs = sprintf(
+            ' href="%s"%s%s',
+            esc_url($canale['href']),
+            !empty($canale['target']) ? ' target="' . esc_attr($canale['target']) . '"' : '',
+            !empty($canale['rel']) ? ' rel="' . esc_attr($canale['rel']) . '"' : ''
+          );
+          $action = $canale['action'];
+          $action_class = 'text-forest group-hover:text-olive font-heading font-medium text-sm transition-colors';
+          if (!empty($action['chevron'])) {
+            $action_class = 'inline-flex items-center gap-1.5 ' . $action_class;
+          }
+          if (!empty($action['break_all'])) {
+            $action_class .= ' break-all';
+          }
+        ?>
+          <a class="service-card group cursor-pointer" <?php echo $attrs; ?>>
+            <div class="w-12 h-12 rounded-xl <?php echo esc_attr($canale['bg']); ?> flex items-center justify-center">
+              <?php
+              $icon_class = 'w-6 h-6 ' . $canale['color'];
+              if ($canale['icon'] === 'whatsapp') {
+                rtc_whatsapp_icon($icon_class);
+              } else {
+                rtc_icon($canale['icon'], $icon_class);
+              }
+              ?>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-forest text-lg mb-1"><?php echo esc_html($canale['title']); ?></h3>
+              <p class="text-muted text-sm leading-relaxed mb-3"><?php echo esc_html($canale['desc']); ?></p>
+              <span class="<?php echo esc_attr($action_class); ?>">
+                <?php echo esc_html($action['label']); ?>
+                <?php if (!empty($action['chevron'])) : ?>
+                  <?php rtc_icon('chevron-right', 'w-4 h-4 group-hover:translate-x-0.5 transition-transform'); ?>
+                <?php endif; ?>
+              </span>
+            </div>
+          </a>
+        <?php endforeach; ?>
+      </div>
 
-        <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener noreferrer"
-          class="service-card group cursor-pointer hover:border-[#25D366]/40">
-          <div class="w-12 h-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center">
-            <?php rtc_whatsapp_icon('w-6 h-6 text-[#25D366]'); ?>
-          </div>
-          <div>
-            <h3 class="font-heading font-semibold text-forest text-lg mb-1">WhatsApp</h3>
-            <p class="text-muted text-sm leading-relaxed mb-3">Canale preferito per foto, preventivi e aggiornamenti sulle lavorazioni.</p>
-            <span class="inline-flex items-center gap-1.5 text-forest group-hover:text-olive font-heading font-medium text-sm transition-colors">
-              Scrivici ora
-              <?php rtc_icon('chevron-right', 'w-4 h-4 group-hover:translate-x-0.5 transition-transform'); ?>
-            </span>
-          </div>
-        </a>
-
-        <a href="<?php echo esc_url('mailto:' . $email); ?>"
-          class="service-card group cursor-pointer">
-          <div class="w-12 h-12 rounded-xl bg-forest/10 flex items-center justify-center">
-            <?php rtc_icon('mail', 'w-6 h-6 text-forest'); ?>
-          </div>
-          <div>
-            <h3 class="font-heading font-semibold text-forest text-lg mb-1">Email</h3>
-            <p class="text-muted text-sm leading-relaxed mb-3">Per schede cliente, documentazione e comunicazioni formali.</p>
-            <span class="text-forest group-hover:text-olive font-heading font-medium text-sm transition-colors break-all">
-              <?php echo esc_html($email); ?>
-            </span>
-          </div>
-        </a>
-
-        <div class="service-card cursor-default">
-          <div class="w-12 h-12 rounded-xl bg-olive/10 flex items-center justify-center">
-            <?php rtc_icon('clock', 'w-6 h-6 text-olive'); ?>
-          </div>
-          <div>
-            <h3 class="font-heading font-semibold text-forest text-lg mb-1">Tempi di risposta</h3>
-            <p class="text-muted text-sm leading-relaxed">
-              Rispondiamo di norma entro <strong class="text-dark font-medium">1–2 giorni lavorativi</strong>.
-              In periodi di alta richiesta i tempi possono allungarsi: ti aggiorniamo appena possibile.
-            </p>
-          </div>
+      <div class="mt-8 bg-forest/5 border border-forest/15 rounded-2xl p-6 flex items-start gap-4 max-w-3xl">
+        <?php rtc_icon('clock', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
+        <div>
+          <h3 class="font-heading font-semibold text-forest text-base mb-1">Tempi di risposta</h3>
+          <p class="text-muted text-sm leading-relaxed">
+            Rispondiamo di norma entro <strong class="text-dark font-medium">1–2 giorni lavorativi</strong>.
+            In periodi di alta richiesta i tempi possono allungarsi: ti aggiorniamo appena possibile.
+          </p>
         </div>
-
       </div>
     </div>
   </section>
@@ -161,7 +202,7 @@ get_header();
                 placeholder="Descrivi il tipo di tenda, i danni e se hai già inviato foto…"></textarea>
             </div>
 
-            <button type="submit" class="btn-primary text-base px-8 py-3.5">
+            <button type="submit" class="btn-primary">
               Invia messaggio
             </button>
           </form>
@@ -244,7 +285,7 @@ get_header();
   </section>
 
   <!-- Link utili -->
-  <section class="bg-canvas py-12">
+  <section class="bg-canvas py-12 lg:py-14">
     <div class="container-site">
       <div class="max-w-3xl">
         <h3 class="font-heading font-semibold text-forest text-base mb-5">Link utili</h3>
@@ -276,7 +317,7 @@ get_header();
         Inviale su WhatsApp per una valutazione più rapida.
       </p>
       <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener noreferrer"
-        class="btn-whatsapp text-base px-8 py-4 justify-center">
+        class="btn-whatsapp">
         <?php rtc_whatsapp_icon('w-5 h-5'); ?>
         Invia foto su WhatsApp
       </a>
