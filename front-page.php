@@ -79,17 +79,17 @@ get_header();
 
         <div class="flex flex-col items-center text-center py-5 sm:py-0 sm:px-8">
           <span class="font-heading font-bold text-3xl text-white">Dal 1990</span>
-          <span class="text-white/70 text-sm mt-1 font-body">Esperienza nel settore</span>
+          <span class="text-white mt-1 font-body">Esperienza nel settore</span>
         </div>
 
         <div class="flex flex-col items-center text-center py-5 sm:py-0 sm:px-8">
           <span class="font-heading font-bold text-3xl text-white">Migliaia</span>
-          <span class="text-white/70 text-sm mt-1 font-body">di tende riparate dal 2004</span>
+          <span class="text-white mt-1 font-body">di tende riparate dal 2004</span>
         </div>
 
         <div class="flex flex-col items-center text-center py-5 sm:py-0 sm:px-8">
           <span class="font-heading font-bold text-3xl text-white">Tutta Italia</span>
-          <span class="text-white/70 text-sm mt-1 font-body">Lavorazioni tramite spedizione</span>
+          <span class="text-white mt-1 font-body">Lavorazioni tramite spedizione</span>
         </div>
 
       </div>
@@ -118,75 +118,83 @@ get_header();
             'url'   => '/riparazione-tende-scout',
             'title' => 'Riparazione tende scout',
             'desc'  => 'Siamo specializzati nella manutenzione di tende scout di squadriglia (tende canadesi). Interveniamo su catino, telo, cerniere, occhielli, rinforzi, sacche e paleria.',
-            'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21l9-18 9 18M3 21h18M12 3v18M7 21l5-10 5 10"/>',
-            'badge' => 'Core service',
+            'img'   => 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&h=480&q=80',
+            'img_alt' => 'Tende scout canadesi in un bosco',
+            'badge' => 'Servizio principale',
           ],
           [
             'url'   => '/riparazione-verande-roulotte',
             'title' => 'Riparazione verande roulotte',
             'desc'  => 'Lavorazioni su verande utilizzate in campeggi stagionali: zanzariere, finestre, cerniere, cursori, cordoli, guide, fascioni perimetrali e cucinotti.',
-            'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>',
+            'img'   => 'https://images.unsplash.com/photo-1697964455724-ef772d1fe39e?auto=format&fit=crop&w=800&h=480&q=80',
+            'img_alt' => 'Camper con veranda estesa e tendalino',
             'badge' => null,
           ],
           [
             'url'   => '/manutenzione-tende-carrello',
             'title' => 'Tende carrello e stagionali',
             'desc'  => 'Le tende carrello e le strutture stagionali in cotone richiedono manutenzione periodica per mantenere durata, impermeabilità e funzionalità.',
-            'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>',
+            'img'   => 'https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&h=480&q=80',
+            'img_alt' => 'Tenda carrello in un campo verde',
             'badge' => null,
           ],
           [
             'url'   => '/riparazione-tende-trekking-igloo',
             'title' => 'Trekking / Igloo / Outdoor',
             'desc'  => 'Riparazioni su tende trekking, igloo e outdoor: stecche rotte, paleria piegata, cerniere rotte, strappi, finestrelle scollate e zanzariere danneggiate.',
-            'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>',
+            'img'   => 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&h=480&q=80',
+            'img_alt' => 'Tenda igloo in paesaggio montano al tramonto',
             'badge' => null,
           ],
           [
             'url'   => '/riparazione-paleria-tende',
             'title' => 'Riparazione paleria e stecche',
             'desc'  => 'Ripariamo e sostituiamo paleria per tende igloo, trekking e campeggio: stecche in vetroresina, alluminio, elastici interni, segmenti e punte paleria.',
-            'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>',
+            'img'   => 'https://images.unsplash.com/photo-1571863533956-01c88e79957e?auto=format&fit=crop&w=800&h=480&q=80',
+            'img_alt' => 'Dettaglio paleria e stecche di una tenda da campeggio',
             'badge' => null,
           ],
           [
             'url'   => '/riparazione-tende-speciali',
             'title' => 'Tende speciali e outdoor',
             'desc'  => 'Valutiamo interventi su tende da tetto auto, carpfishing, tarp bushcraft, glamping, tende a campana, yurta, tepee e tende medievali.',
-            'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>',
+            'img'   => 'https://images.unsplash.com/photo-1563299796-17596ed6b017?auto=format&fit=crop&w=800&h=480&q=80',
+            'img_alt' => 'Tenda a campana glamping nella natura',
             'badge' => null,
           ],
         ];
 
         foreach ($services_home as $service) : ?>
-          <article class="service-card group">
-            <div class="flex items-start justify-between">
-              <div class="w-12 h-12 rounded-xl bg-forest/10 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <?php echo $service['icon']; ?>
-                </svg>
-              </div>
+          <article class="service-card-media group relative cursor-pointer">
+            <a href="<?php echo esc_url(home_url($service['url'])); ?>" class="absolute inset-0 z-10" aria-label="<?php echo esc_attr($service['title']); ?>"></a>
+            <div class="relative h-48 overflow-hidden rounded-t-2xl">
+              <img
+                src="<?php echo esc_url($service['img']); ?>"
+                alt="<?php echo esc_attr($service['img_alt']); ?>"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy">
               <?php if ($service['badge']) : ?>
-                <span class="text-xs font-heading font-semibold text-olive bg-olive/10 px-2.5 py-1 rounded-full">
+                <span class="absolute top-3 right-3 text-xs font-heading font-semibold text-forest bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full">
                   <?php echo esc_html($service['badge']); ?>
                 </span>
               <?php endif; ?>
             </div>
-            <div class="flex-1">
-              <h3 class="font-heading font-semibold text-forest text-lg leading-snug mb-2">
-                <?php echo esc_html($service['title']); ?>
-              </h3>
-              <p class="text-muted text-sm leading-relaxed">
-                <?php echo esc_html($service['desc']); ?>
-              </p>
+            <div class="p-6 flex flex-col gap-4 flex-1">
+              <div class="flex-1">
+                <h3 class="font-heading font-semibold text-forest text-lg leading-snug mb-2">
+                  <?php echo esc_html($service['title']); ?>
+                </h3>
+                <p class="text-muted text-sm leading-relaxed">
+                  <?php echo esc_html($service['desc']); ?>
+                </p>
+              </div>
+              <span class="inline-flex items-center gap-1.5 text-olive text-sm font-heading font-semibold group-hover:gap-2.5 transition-all mt-auto">
+                Scopri di più
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
             </div>
-            <a href="<?php echo esc_url(home_url($service['url'])); ?>"
-              class="inline-flex items-center gap-1.5 text-olive hover:text-forest text-sm font-heading font-semibold transition-colors group-hover:gap-2.5 mt-auto">
-              Scopri di più
-              <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
           </article>
         <?php endforeach; ?>
 
@@ -195,7 +203,7 @@ get_header();
       <!-- Associazioni link -->
       <div class="mt-8 text-center">
         <a href="<?php echo esc_url(home_url('/riparazione-tende-associazioni-eventi')); ?>"
-          class="inline-flex items-center gap-2 text-forest hover:text-olive font-heading font-medium text-sm transition-colors border border-forest/20 hover:border-olive/30 px-5 py-2.5 rounded-full">
+          class="inline-flex items-center gap-2 text-forest font-heading font-medium text-sm border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg px-5 py-2.5 rounded-full transition-all duration-300">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>

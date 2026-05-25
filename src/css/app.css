@@ -35,7 +35,7 @@
   }
 
   .btn-whatsapp {
-    @apply inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1dba57] text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer shadow-lg;
+    @apply inline-flex items-center gap-2 bg-[#4FCE5D] hover:bg-[#45b953] text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer shadow-lg;
   }
 
   .btn-primary-sm {
@@ -51,7 +51,7 @@
   }
 
   .btn-whatsapp-sm {
-    @apply inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#1dba57] text-white font-heading font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer shadow-md;
+    @apply inline-flex items-center gap-1.5 bg-[#4FCE5D] hover:bg-[#45b953] text-white font-heading font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer shadow-md;
   }
 
   .section-heading {
@@ -68,6 +68,10 @@
 
   .service-card {
     @apply bg-cream rounded-2xl p-6 border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg transition-all duration-300 flex flex-col gap-4;
+  }
+
+  .service-card-media {
+    @apply bg-cream rounded-2xl border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden;
   }
 
   .step-number {
