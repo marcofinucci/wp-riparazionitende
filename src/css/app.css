@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body text-dark bg-cream antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-forest hover:bg-forest-light text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-olive hover:bg-olive-light text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:text-forest font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1dba57] text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer shadow-lg;
+  }
+
+  .section-heading {
+    @apply font-heading font-bold text-3xl md:text-4xl text-forest leading-tight;
+  }
+
+  .section-subheading {
+    @apply font-heading font-semibold text-xl md:text-2xl text-forest;
+  }
+
+  .card {
+    @apply bg-cream rounded-2xl p-6 border border-canvas hover:border-olive/30 hover:shadow-md transition-all duration-200 cursor-pointer;
+  }
+
+  .service-card {
+    @apply bg-cream rounded-2xl p-6 border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg transition-all duration-300 flex flex-col gap-4;
+  }
+
+  .step-number {
+    @apply w-10 h-10 rounded-full bg-forest text-white font-heading font-bold text-lg flex items-center justify-center flex-shrink-0;
+  }
+
+  .faq-item {
+    @apply border-b border-canvas-dark last:border-0;
+  }
+
+  .container-site {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .nav-link {
+    @apply text-white/85 hover:text-canvas text-sm font-heading font-medium transition-colors duration-150;
+  }
+
+  .nav-link-active {
+    @apply text-canvas font-semibold;
+  }
+
+  .form-label {
+    @apply block font-heading font-medium text-forest text-sm mb-1.5;
+  }
+
+  .form-input {
+    @apply w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm leading-relaxed transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest;
+  }
+
+  .form-input::placeholder {
+    @apply text-muted/60;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .canvas-texture {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.025'%3E%3Crect x='0' y='0' width='1' height='100'/%3E%3Crect x='25' y='0' width='1' height='100'/%3E%3Crect x='50' y='0' width='1' height='100'/%3E%3Crect x='75' y='0' width='1' height='100'/%3E%3Crect x='0' y='0' width='100' height='1'/%3E%3Crect x='0' y='25' width='100' height='1'/%3E%3Crect x='0' y='50' width='100' height='1'/%3E%3Crect x='0' y='75' width='100' height='1'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+/* WordPress alignment classes */
+.alignleft { float: left; margin-right: 1.5rem; }
+.alignright { float: right; margin-left: 1.5rem; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.wp-caption { max-width: 100%; }
+.wp-caption-text { font-size: 0.875rem; color: #4B4B4B; }
