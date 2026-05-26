@@ -148,7 +148,7 @@ get_header();
           ],
           [
             'url'   => '/riparazione-tende-speciali',
-            'title' => 'Tende speciali e outdoor',
+            'title' => 'Riparazione tende speciali e outdoor',
             'desc'  => 'Valutiamo interventi su tende da tetto auto, carpfishing, tarp bushcraft, glamping, tende a campana, yurta, tepee e tende medievali.',
             'img'   => 'https://images.unsplash.com/photo-1563299796-17596ed6b017?auto=format&fit=crop&w=800&h=480&q=80',
             'img_alt' => 'Tenda a campana glamping nella natura',
