@@ -9,9 +9,7 @@ get_header();
 
 <main id="main">
 
-  <!-- =====================================================================
-       HERO
-  ===================================================================== -->
+  <!-- HERO -->
   <section class="relative overflow-hidden bg-forest" aria-label="Hero">
 
     <!-- Background image -->
@@ -23,7 +21,7 @@ get_header();
       loading="eager"
       fetchpriority="high">
 
-    <!-- Dark overlay: garantisce leggibilità del testo -->
+    <!-- Dark overlay -->
     <div class="absolute inset-0 bg-forest/80" aria-hidden="true"></div>
 
     <!-- Vignette laterale per profondità -->
@@ -68,9 +66,7 @@ get_header();
     </div>
   </section>
 
-  <!-- =====================================================================
-       TRUST BAR / STAT COUNTER
-  ===================================================================== -->
+  <!-- TRUST BAR / STAT COUNTER -->
   <section class="bg-olive" aria-label="Numeri chiave">
     <div class="container-site py-8 lg:py-10">
       <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/20">
@@ -94,9 +90,7 @@ get_header();
     </div>
   </section>
 
-  <!-- =====================================================================
-       SERVIZI
-  ===================================================================== -->
+  <!-- SERVIZI -->
   <section class="bg-cream py-14 lg:py-16" aria-labelledby="servizi-heading">
     <div class="container-site">
 
@@ -129,8 +123,8 @@ get_header();
             'badge' => null,
           ],
           [
-            'url'   => '/manutenzione-tende-carrello',
-            'title' => 'Tende carrello e stagionali',
+            'url'   => '/riparazione-tende-carrello',
+            'title' => 'Riparazione tende carrello e stagionali',
             'desc'  => 'Le tende carrello e le strutture stagionali in cotone richiedono manutenzione periodica per mantenere durata, impermeabilità e funzionalità.',
             'img'   => 'https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&h=480&q=80',
             'img_alt' => 'Tenda carrello in un campo verde',
@@ -138,7 +132,7 @@ get_header();
           ],
           [
             'url'   => '/riparazione-tende-trekking-igloo',
-            'title' => 'Trekking / Igloo / Outdoor',
+            'title' => 'Riparazione tende trekking, igloo e outdoor',
             'desc'  => 'Riparazioni su tende trekking, igloo e outdoor: stecche rotte, paleria piegata, cerniere rotte, strappi, finestrelle scollate e zanzariere danneggiate.',
             'img'   => 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&h=480&q=80',
             'img_alt' => 'Tenda igloo in paesaggio montano al tramonto',
@@ -207,9 +201,7 @@ get_header();
     </div>
   </section>
 
-  <!-- =====================================================================
-       AUTOREVOLEZZA
-  ===================================================================== -->
+  <!-- AUTOREVOLEZZA -->
   <section class="bg-canvas py-14 lg:py-16" aria-labelledby="autorevolezza-heading">
     <div class="container-site">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -275,9 +267,7 @@ get_header();
     </div>
   </section>
 
-  <!-- =====================================================================
-       COME FUNZIONA
-  ===================================================================== -->
+  <!-- COME FUNZIONA -->
   <section class="bg-cream py-14 lg:py-16" aria-labelledby="come-funziona-heading">
     <div class="container-site">
 
@@ -335,9 +325,7 @@ get_header();
     </div>
   </section>
 
-  <!-- =====================================================================
-       MAPPA ITALIA
-  ===================================================================== -->
+  <!-- MAPPA ITALIA -->
   <section class="bg-forest py-14 lg:py-16" aria-labelledby="mappa-heading">
     <div class="container-site">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -416,9 +404,7 @@ get_header();
     </div>
   </section>
 
-  <!-- =====================================================================
-       SOSTENIBILITÀ
-  ===================================================================== -->
+  <!-- SOSTENIBILITÀ -->
   <section class="bg-cream py-14 lg:py-16" aria-labelledby="sostenibilita-heading">
     <div class="container-site">
       <div class="max-w-3xl mx-auto text-center">
@@ -448,9 +434,7 @@ get_header();
     </div>
   </section>
 
-  <!-- =====================================================================
-       SALEWA
-  ===================================================================== -->
+  <!-- SALEWA -->
   <section class="bg-canvas py-12 lg:py-14" aria-labelledby="salewa-heading">
     <div class="container-site">
       <div class="max-w-2xl mx-auto text-center">
@@ -469,9 +453,7 @@ get_header();
     </div>
   </section>
 
-  <!-- =====================================================================
-       PRIMA DELLA SPEDIZIONE
-  ===================================================================== -->
+  <!-- PRIMA DELLA SPEDIZIONE -->
   <section class="bg-cream py-14 lg:py-16" aria-labelledby="spedizione-prep-heading">
     <div class="container-site">
       <div class="bg-forest/5 border border-forest/15 rounded-2xl p-8 lg:p-12 max-w-4xl mx-auto">
@@ -509,9 +491,7 @@ get_header();
     </div>
   </section>
 
-  <!-- =====================================================================
-       FAQ
-  ===================================================================== -->
+  <!-- FAQ -->
   <section class="bg-canvas py-14 lg:py-16" aria-labelledby="faq-heading">
     <div class="container-site">
 
@@ -575,9 +555,7 @@ get_header();
     </div>
   </section>
 
-  <!-- =====================================================================
-       CTA FINALE
-  ===================================================================== -->
+  <!-- CTA FINALE -->
   <section class="bg-forest py-16 lg:py-20" aria-labelledby="cta-finale-heading">
     <div class="container-site">
       <div class="max-w-2xl mx-auto text-center">
