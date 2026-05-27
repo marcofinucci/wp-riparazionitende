@@ -25,7 +25,7 @@ get_header();
 
                     <?php if (get_row_layout() == 'text') {
                         get_template_part('template-parts/blocks/text', null, [
-                            'text' => get_sub_field('text'),
+                            'content' => get_sub_field('content'),
                         ]);
                     } ?>
 

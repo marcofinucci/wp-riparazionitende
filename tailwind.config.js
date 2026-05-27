@@ -30,13 +30,10 @@ module.exports = {
         heading: ["Poppins", "sans-serif"],
         body: ["Open Sans", "sans-serif"],
       },
-      backgroundImage: {
-        "canvas-texture":
-          "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            fontSize: "1rem",
             color: theme("colors.dark"),
             fontFamily: theme("fontFamily.body").join(", "),
             lineHeight: "1.625",
@@ -67,7 +64,6 @@ module.exports = {
               marginBottom: "1rem",
             },
 
-            /* Max come titolo pagina: text-3xl md:text-4xl */
             h1: {
               fontFamily: theme("fontFamily.heading").join(", "),
               fontWeight: "700",
@@ -81,15 +77,14 @@ module.exports = {
               },
             },
 
-            /* Come .section-subheading */
             h2: {
               fontFamily: theme("fontFamily.heading").join(", "),
               fontWeight: "600",
               fontSize: "1.25rem",
-              lineHeight: "1.3",
+              lineHeight: "1.25",
               color: theme("colors.forest.DEFAULT"),
               marginTop: "2rem",
-              marginBottom: "0.75rem",
+              marginBottom: "1rem",
               "@media (min-width: 768px)": {
                 fontSize: "1.5rem",
               },
@@ -101,8 +96,8 @@ module.exports = {
               fontSize: "1.125rem",
               lineHeight: "1.4",
               color: theme("colors.forest.DEFAULT"),
-              marginTop: "1.5rem",
-              marginBottom: "0.5rem",
+              marginTop: "2rem",
+              marginBottom: "1rem",
             },
 
             h4: {
@@ -111,8 +106,8 @@ module.exports = {
               fontSize: "1rem",
               lineHeight: "1.4",
               color: theme("colors.forest.DEFAULT"),
-              marginTop: "1.25rem",
-              marginBottom: "0.5rem",
+              marginTop: "2rem",
+              marginBottom: "1rem",
             },
 
             "h1, h2, h3, h4": {
@@ -141,8 +136,8 @@ module.exports = {
 
             hr: {
               borderColor: theme("colors.canvas.dark"),
-              marginTop: "2.5rem",
-              marginBottom: "2.5rem",
+              marginTop: "2rem",
+              marginBottom: "2rem",
             },
 
             img: {
@@ -166,35 +161,11 @@ module.exports = {
           },
         },
 
-        /* prose-lg: corpo leggermente più grande, titoli senza scalare oltre il titolo pagina */
+        /* prose-lg */
         lg: {
           css: {
             fontSize: "1.125rem",
-            lineHeight: "1.75",
-
-            h1: {
-              fontSize: "1.875rem",
-              marginTop: "2rem",
-              marginBottom: "1rem",
-              "@media (min-width: 768px)": {
-                fontSize: "2.25rem",
-              },
-            },
-
-            h2: {
-              fontSize: "1.25rem",
-              "@media (min-width: 768px)": {
-                fontSize: "1.5rem",
-              },
-            },
-
-            h3: {
-              fontSize: "1.125rem",
-            },
-
-            h4: {
-              fontSize: "1rem",
-            },
+            lineHeight: "1.5",
           },
         },
       }),
