@@ -99,7 +99,33 @@ if (function_exists('acf_add_options_page')) {
     ]);
 }
 
+/* Pagination */
 
+function show_pagination()
+{
+    global $wp_query;
+    return ($wp_query->max_num_pages > 1);
+}
+
+/* Disable WP Admin Bar */
+
+add_filter('show_admin_bar', '__return_false');
+
+/* Disable plugin auto update */
+
+add_filter('auto_update_plugin', '__return_false');
+
+/* Disable theme auto update */
+
+add_filter('auto_update_theme', '__return_false');
+
+
+
+
+
+
+
+// ELIMINARE
 
 // Helper: contact email
 function rtc_contact_email(): string

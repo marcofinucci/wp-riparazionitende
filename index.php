@@ -23,6 +23,7 @@ get_header();
           </article>
         <?php endwhile; ?>
       </div>
+      <?php get_template_part('template-parts/pagination'); ?>
     <?php else : ?>
       <p class="text-muted"><?php esc_html_e('Nessun contenuto trovato.', 'riparazionetende'); ?></p>
     <?php endif; ?>

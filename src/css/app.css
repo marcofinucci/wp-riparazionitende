@@ -106,6 +106,36 @@
   .form-input::placeholder {
     @apply text-muted/60;
   }
+
+  .pagination {
+    @apply flex flex-wrap items-center justify-center gap-2;
+  }
+
+  .pagination ul.page-numbers {
+    @apply flex flex-wrap items-center justify-center gap-2 list-none p-0 m-0;
+  }
+
+  .pagination a.page-numbers,
+  .pagination span.page-numbers {
+    @apply inline-flex items-center justify-center min-w-10 font-heading font-semibold text-sm px-4 py-2 rounded-full border border-canvas-dark/30 text-forest no-underline transition-colors duration-200;
+  }
+
+  .pagination a.page-numbers:hover {
+    @apply border-olive/40 text-olive;
+  }
+
+  .pagination span.page-numbers.current {
+    @apply bg-forest text-white border-forest;
+  }
+
+  .pagination span.page-numbers.dots {
+    @apply min-w-0 border-transparent px-2 text-muted;
+  }
+
+  .pagination a.page-numbers.prev,
+  .pagination a.page-numbers.next {
+    @apply px-5;
+  }
 }
 
 @layer utilities {
