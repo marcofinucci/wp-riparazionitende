@@ -47,7 +47,7 @@ get_header();
   <section class="my-14 lg:my-16">
     <div class="container-site">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <div class="prose max-w-3xl [&>:first-child]:mt-0 [&>:last-child]:mb-0">
+          <div class="max-w-3xl [&>:first-child]:mt-0 [&>:last-child]:mb-0">
             <?php the_content(); ?>
           </div>
       <?php endwhile;

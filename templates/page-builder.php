@@ -29,12 +29,6 @@ get_header();
                         ]);
                     } ?>
 
-                    <?php if (get_row_layout() == 'editor') {
-                        get_template_part('template-parts/blocks/editor', null, [
-                            'content' => get_sub_field('content'),
-                        ]);
-                    } ?>
-
                     <?php if (get_row_layout() == 'lavorazioni') {
                         get_template_part('template-parts/blocks/lavorazioni', null, [
                             'heading' => get_sub_field('heading'),
