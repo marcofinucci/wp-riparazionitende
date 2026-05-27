@@ -47,14 +47,12 @@ get_header();
   <!-- Content -->
   <section class="bg-cream py-14 lg:py-16">
     <div class="container-site">
-      <div class="max-w-3xl">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <div class="prose prose-lg max-w-none">
-              <?php the_content(); ?>
-            </div>
-        <?php endwhile;
-        endif; ?>
-      </div>
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <div class="prose max-w-3xl">
+            <?php the_content(); ?>
+          </div>
+      <?php endwhile;
+      endif; ?>
     </div>
   </section>
 </main>

@@ -1,0 +1,359 @@
+{
+    "key": "group_rtc_page_builder",
+    "title": "Page Builder",
+    "fields": [
+        {
+            "key": "field_rtc_pb_breadcrumb",
+            "label": "Etichetta breadcrumb",
+            "name": "breadcrumb_label",
+            "type": "text",
+            "instructions": "Se vuoto, usa il titolo della pagina."
+        },
+        {
+            "key": "field_rtc_pb_h1",
+            "label": "Titolo H1",
+            "name": "custom_h1",
+            "type": "text",
+            "instructions": "Se vuoto, usa il titolo della pagina."
+        },
+        {
+            "key": "field_rtc_pb_subtitle",
+            "label": "Sottotitolo header",
+            "name": "header_subtitle",
+            "type": "textarea",
+            "rows": 2
+        },
+        {
+            "key": "field_rtc_pb_content",
+            "label": "Contenuti",
+            "name": "content",
+            "type": "flexible_content",
+            "button_label": "Aggiungi blocco",
+            "layouts": {
+                "layout_text": {
+                    "key": "layout_text",
+                    "name": "text",
+                    "label": "Testo",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_text_content",
+                            "label": "Testo",
+                            "name": "text",
+                            "type": "textarea",
+                            "rows": 5,
+                            "required": 1
+                        }
+                    ]
+                },
+                "layout_editor": {
+                    "key": "layout_editor",
+                    "name": "editor",
+                    "label": "Editor",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_editor_content",
+                            "label": "Contenuto",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "required": 1
+                        }
+                    ]
+                },
+                "layout_lavorazioni": {
+                    "key": "layout_lavorazioni",
+                    "name": "lavorazioni",
+                    "label": "Lavorazioni",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_lav_heading",
+                            "label": "Titolo",
+                            "name": "heading",
+                            "type": "text",
+                            "default_value": "Lavorazioni principali"
+                        },
+                        {
+                            "key": "field_lav_items",
+                            "label": "Voci",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "table",
+                            "button_label": "Aggiungi voce",
+                            "sub_fields": [
+                                {
+                                    "key": "field_lav_item",
+                                    "label": "Voce",
+                                    "name": "item",
+                                    "type": "text",
+                                    "required": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_subsection": {
+                    "key": "layout_subsection",
+                    "name": "subsection",
+                    "label": "Sottosezione",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_sub_heading",
+                            "label": "Titolo",
+                            "name": "heading",
+                            "type": "text"
+                        },
+                        {
+                            "key": "field_sub_text",
+                            "label": "Testo",
+                            "name": "text",
+                            "type": "textarea",
+                            "rows": 4
+                        },
+                        {
+                            "key": "field_sub_items",
+                            "label": "Elenco",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "table",
+                            "button_label": "Aggiungi voce",
+                            "sub_fields": [
+                                {
+                                    "key": "field_sub_item",
+                                    "label": "Voce",
+                                    "name": "item",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_note": {
+                    "key": "layout_note",
+                    "name": "note",
+                    "label": "Nota informativa",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_note_text",
+                            "label": "Testo",
+                            "name": "text",
+                            "type": "textarea",
+                            "rows": 3,
+                            "required": 1
+                        }
+                    ]
+                },
+                "layout_salewa": {
+                    "key": "layout_salewa",
+                    "name": "salewa",
+                    "label": "Box Salewa",
+                    "display": "block",
+                    "sub_fields": []
+                },
+                "layout_steps": {
+                    "key": "layout_steps",
+                    "name": "steps",
+                    "label": "Procedura (step numerati)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_steps_heading",
+                            "label": "Titolo",
+                            "name": "heading",
+                            "type": "text",
+                            "default_value": "Procedura"
+                        },
+                        {
+                            "key": "field_steps_list",
+                            "label": "Step",
+                            "name": "steps",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Aggiungi step",
+                            "sub_fields": [
+                                {
+                                    "key": "field_step_title",
+                                    "label": "Titolo",
+                                    "name": "title",
+                                    "type": "text",
+                                    "required": 1
+                                },
+                                {
+                                    "key": "field_step_desc",
+                                    "label": "Descrizione",
+                                    "name": "description",
+                                    "type": "textarea",
+                                    "rows": 3,
+                                    "required": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_related": {
+                    "key": "layout_related",
+                    "name": "related_pages",
+                    "label": "Link correlati",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rel_heading",
+                            "label": "Titolo",
+                            "name": "heading",
+                            "type": "text",
+                            "default_value": "Potrebbe interessarti anche"
+                        },
+                        {
+                            "key": "field_rel_links",
+                            "label": "Link",
+                            "name": "links",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Aggiungi link",
+                            "sub_fields": [
+                                {
+                                    "key": "field_rel_label",
+                                    "label": "Etichetta",
+                                    "name": "label",
+                                    "type": "text",
+                                    "required": 1
+                                },
+                                {
+                                    "key": "field_rel_link",
+                                    "label": "URL",
+                                    "name": "link",
+                                    "type": "link",
+                                    "return_format": "array",
+                                    "required": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_contact_canali": {
+                    "key": "layout_contact_canali",
+                    "name": "contact_canali",
+                    "label": "Canali di contatto",
+                    "display": "block",
+                    "sub_fields": []
+                },
+                "layout_contact_form": {
+                    "key": "layout_contact_form",
+                    "name": "contact_form",
+                    "label": "Form contatti",
+                    "display": "block",
+                    "sub_fields": []
+                },
+                "layout_faq": {
+                    "key": "layout_faq",
+                    "name": "faq",
+                    "label": "FAQ",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_faq_heading",
+                            "label": "Titolo",
+                            "name": "heading",
+                            "type": "text",
+                            "default_value": "Domande frequenti"
+                        },
+                        {
+                            "key": "field_faq_items",
+                            "label": "Domande",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Aggiungi domanda",
+                            "sub_fields": [
+                                {
+                                    "key": "field_faq_question",
+                                    "label": "Domanda",
+                                    "name": "question",
+                                    "type": "text",
+                                    "required": 1
+                                },
+                                {
+                                    "key": "field_faq_answer",
+                                    "label": "Risposta",
+                                    "name": "answer",
+                                    "type": "textarea",
+                                    "rows": 3,
+                                    "required": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_cta": {
+                    "key": "layout_cta",
+                    "name": "cta",
+                    "label": "CTA finale",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cta_title",
+                            "label": "Titolo",
+                            "name": "title",
+                            "type": "text",
+                            "default_value": "Hai una tenda da riparare?"
+                        },
+                        {
+                            "key": "field_cta_text",
+                            "label": "Testo",
+                            "name": "text",
+                            "type": "textarea",
+                            "rows": 2,
+                            "default_value": "Invia foto della tenda e dei danni per ricevere una valutazione preliminare."
+                        },
+                        {
+                            "key": "field_cta_wa",
+                            "label": "Mostra WhatsApp",
+                            "name": "show_whatsapp",
+                            "type": "true_false",
+                            "default_value": 1,
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_cta_wa_label",
+                            "label": "Testo pulsante WhatsApp",
+                            "name": "whatsapp_label",
+                            "type": "text",
+                            "default_value": "Contattaci su WhatsApp"
+                        },
+                        {
+                            "key": "field_cta_spedire",
+                            "label": "Mostra Come spedire",
+                            "name": "show_spedire",
+                            "type": "true_false",
+                            "default_value": 1,
+                            "ui": 1
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/page-builder.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 0,
+    "modified": 1779901200
+}

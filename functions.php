@@ -88,7 +88,7 @@ function rtc_excerpt_length($length)
 }
 add_filter('excerpt_length', 'rtc_excerpt_length');
 
-// ACF options page
+/* ACF options page */
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page([
         'page_title' => 'Impostazioni Sito',
