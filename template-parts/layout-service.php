@@ -34,9 +34,24 @@ get_header();
 <main id="main">
 
   <!-- Page Header -->
-  <section class="bg-forest py-16 lg:py-20">
-    <div class="container-site">
+  <?php $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x1080'); ?>
+  <section class="relative overflow-hidden bg-forest py-16 lg:py-20">
+    <?php if ($header_thumb) : ?>
+      <img
+        src="<?php echo esc_url($header_thumb); ?>"
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="eager">
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 bg-forest/80" aria-hidden="true"></div>
+      <!-- Vignette -->
+      <div class="absolute inset-0" aria-hidden="true"
+        style="background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.30) 100%);">
+      </div>
+    <?php endif; ?>
 
+    <div class="container-site relative z-10">
       <!-- Breadcrumb -->
       <nav aria-label="Breadcrumb" class="mb-5">
         <ol class="flex items-center gap-2 text-white/50 text-sm font-body flex-wrap">

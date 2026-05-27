@@ -3107,6 +3107,14 @@ h1,
   color: rgb(255 255 255 / 0.9);
 }
 
+.text-inherit {
+  color: inherit;
+}
+
+.no-underline {
+  text-decoration-line: none;
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

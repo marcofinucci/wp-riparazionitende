@@ -29,9 +29,6 @@ get_header();
       style="background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.80) 100%);">
     </div>
 
-    <!-- Gradiente bottom -->
-    <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-forest-dark/80 to-transparent" aria-hidden="true"></div>
-
     <div class="container-site relative z-10 py-16 lg:py-20">
       <div class="max-w-3xl">
         <div class="inline-flex items-center gap-2 text-canvas text-xs font-heading font-semibold uppercase tracking-widest mb-6">
