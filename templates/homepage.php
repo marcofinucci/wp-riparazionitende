@@ -88,7 +88,7 @@ get_header();
   </section>
 
   <!-- SERVIZI -->
-  <section class="bg-cream py-14 lg:py-16" aria-labelledby="servizi-heading">
+  <section class=" py-14 lg:py-16" aria-labelledby="servizi-heading">
     <div class="container-site">
 
       <div class="text-center mb-12">
@@ -223,7 +223,7 @@ get_header();
 
         <!-- Stats grid -->
         <div class="grid grid-cols-1 gap-4">
-          <div class="bg-cream rounded-2xl p-7 border border-canvas-dark/40">
+          <div class=" rounded-2xl p-7 border border-canvas-dark/40">
             <div class="flex items-center gap-5">
               <div class="w-14 h-14 rounded-xl bg-forest/10 flex items-center justify-center flex-shrink-0">
                 <?php rtc_icon('clock', 'w-7 h-7 text-forest'); ?>
@@ -235,7 +235,7 @@ get_header();
             </div>
           </div>
 
-          <div class="bg-cream rounded-2xl p-7 border border-canvas-dark/40">
+          <div class=" rounded-2xl p-7 border border-canvas-dark/40">
             <div class="flex items-center gap-5">
               <div class="w-14 h-14 rounded-xl bg-forest/10  flex items-center justify-center flex-shrink-0">
                 <?php rtc_icon('badge-check', 'w-7 h-7 text-forest'); ?>
@@ -247,7 +247,7 @@ get_header();
             </div>
           </div>
 
-          <div class="bg-cream rounded-2xl p-7 border border-canvas-dark/40">
+          <div class=" rounded-2xl p-7 border border-canvas-dark/40">
             <div class="flex items-center gap-5">
               <div class="w-14 h-14 rounded-xl bg-forest/10 flex items-center justify-center flex-shrink-0">
                 <?php rtc_icon('map', 'w-7 h-7 text-forest'); ?>
@@ -265,7 +265,7 @@ get_header();
   </section>
 
   <!-- COME FUNZIONA -->
-  <section class="bg-cream py-14 lg:py-16" aria-labelledby="come-funziona-heading">
+  <section class=" py-14 lg:py-16" aria-labelledby="come-funziona-heading">
     <div class="container-site">
 
       <div class="text-center mb-12">
@@ -293,7 +293,7 @@ get_header();
             ['num' => '5', 'title' => 'Preventivo finale', 'desc' => 'Il preventivo viene confermato o aggiornato dopo il controllo del materiale.'],
           ];
           foreach ($steps_home as $step) : ?>
-            <div class="flex flex-col items-center text-center gap-4 bg-cream rounded-2xl p-5 border border-canvas-dark/20">
+            <div class="flex flex-col items-center text-center gap-4  rounded-2xl p-5 border border-canvas-dark/20">
               <div class="w-12 h-12 rounded-full bg-forest text-white font-heading font-bold text-xl flex items-center justify-center shadow-sm">
                 <?php echo esc_html($step['num']); ?>
               </div>
@@ -402,7 +402,7 @@ get_header();
   </section>
 
   <!-- SOSTENIBILITÀ -->
-  <section class="bg-cream py-14 lg:py-16" aria-labelledby="sostenibilita-heading">
+  <section class=" py-14 lg:py-16" aria-labelledby="sostenibilita-heading">
     <div class="container-site">
       <div class="max-w-3xl mx-auto text-center">
 
@@ -451,7 +451,7 @@ get_header();
   </section>
 
   <!-- PRIMA DELLA SPEDIZIONE -->
-  <section class="bg-cream py-14 lg:py-16" aria-labelledby="spedizione-prep-heading">
+  <section class=" py-14 lg:py-16" aria-labelledby="spedizione-prep-heading">
     <div class="container-site">
       <div class="bg-forest/5 border border-forest/15 rounded-2xl p-8 lg:p-12 max-w-4xl mx-auto">
 

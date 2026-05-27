@@ -58,7 +58,7 @@
                 ];
                 foreach ($services as $s) : ?>
                   <a href="<?php echo esc_url(home_url($s['url'])); ?>"
-                    class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-dark hover:bg-cream hover:text-forest font-body text-sm font-medium transition-colors group">
+                    class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-dark hover:text-forest font-body text-sm font-medium transition-colors group">
                     <?php echo esc_html($s['label']); ?>
                   </a>
                 <?php endforeach; ?>

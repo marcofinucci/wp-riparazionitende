@@ -10,7 +10,7 @@ if (!$heading && !$text && !$items) {
 }
 ?>
 
-<section class="bg-cream py-12 lg:py-14">
+<section class=" py-12 lg:py-14">
   <div class="container-site">
     <div class="max-w-3xl">
       <?php if ($heading) : ?>

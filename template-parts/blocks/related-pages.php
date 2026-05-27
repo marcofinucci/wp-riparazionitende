@@ -5,11 +5,11 @@ $heading = $args['heading'] ?? 'Potrebbe interessarti anche';
 $links   = $args['links'] ?? [];
 
 if (!$links) {
-    return;
+  return;
 }
 ?>
 
-<section class="bg-cream py-12 lg:py-14">
+<section class=" py-12 lg:py-14">
   <div class="container-site">
     <div class="max-w-3xl">
       <?php if ($heading) : ?>
@@ -22,13 +22,13 @@ if (!$links) {
           $href  = '';
 
           if (!empty($row['link']) && is_array($row['link'])) {
-              $href = $row['link']['url'] ?? '';
+            $href = $row['link']['url'] ?? '';
           } elseif (!empty($row['url'])) {
-              $href = (strpos($row['url'], 'http') === 0) ? $row['url'] : home_url($row['url']);
+            $href = (strpos($row['url'], 'http') === 0) ? $row['url'] : home_url($row['url']);
           }
 
           if (!$label || !$href) {
-              continue;
+            continue;
           }
           ?>
           <a href="<?php echo esc_url($href); ?>"

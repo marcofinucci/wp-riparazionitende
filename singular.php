@@ -8,7 +8,6 @@ get_header();
 ?>
 
 <main id="main">
-
   <!-- Page Header -->
   <?php $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x1080'); ?>
   <section class="relative overflow-hidden bg-forest py-16 lg:py-20">
@@ -45,7 +44,7 @@ get_header();
   </section>
 
   <!-- Content -->
-  <section class="bg-cream py-14 lg:py-16">
+  <section class="my-14 lg:my-16">
     <div class="container-site">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
           <div class="prose max-w-3xl [&>:first-child]:mt-0 [&>:last-child]:mb-0">

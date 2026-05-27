@@ -41,7 +41,7 @@ get_header();
   </section>
 
   <!-- Canali di contatto -->
-  <section class="bg-cream py-14 lg:py-16" aria-labelledby="canali-heading">
+  <section class=" py-14 lg:py-16" aria-labelledby="canali-heading">
     <div class="container-site">
       <h2 id="canali-heading" class="section-subheading mb-8">Contattaci</h2>
       <?php
@@ -208,7 +208,7 @@ get_header();
         </div>
 
         <aside class="lg:col-span-2 space-y-6">
-          <div class="bg-cream rounded-2xl p-6 border border-canvas-dark/30">
+          <div class=" rounded-2xl p-6 border border-canvas-dark/30">
             <h3 class="font-heading font-semibold text-forest text-base mb-4">Prima di scriverci</h3>
             <ol class="space-y-4">
               <?php
@@ -245,10 +245,10 @@ get_header();
   </section>
 
   <!-- FAQ contatti -->
-  <section class="bg-cream py-14 lg:py-16" aria-labelledby="faq-contatti-heading">
+  <section class=" py-14 lg:py-16" aria-labelledby="faq-contatti-heading">
     <div class="container-site max-w-3xl">
       <h2 id="faq-contatti-heading" class="section-subheading mb-8">Domande frequenti</h2>
-      <div class="rounded-2xl border border-canvas-dark/30 bg-cream overflow-hidden">
+      <div class="rounded-2xl border border-canvas-dark/30  overflow-hidden">
         <?php
         $faqs = [
           [

@@ -26,7 +26,7 @@ get_header();
   </section>
 
   <!-- Intro -->
-  <section class="bg-cream py-14 lg:py-16">
+  <section class=" py-14 lg:py-16">
     <div class="container-site">
       <div class="max-w-3xl text-muted text-lg ">
         <p>Prima di spedire o consegnare il materiale è necessario contattarci, inviare foto e compilare la scheda cliente o gruppo scout.</p>
@@ -69,7 +69,7 @@ get_header();
   </section>
 
   <!-- Regole -->
-  <section class="bg-cream py-14 lg:py-16" aria-labelledby="regole-heading">
+  <section class=" py-14 lg:py-16" aria-labelledby="regole-heading">
     <div class="container-site">
       <div class="max-w-3xl">
         <h2 id="regole-heading" class="section-subheading mb-7">Regole per la spedizione</h2>

@@ -69,7 +69,7 @@ get_header();
 
   <!-- Intro -->
   <?php if ($intro) : ?>
-    <section class="bg-cream py-14 lg:py-16">
+    <section class="py-14 lg:py-16">
       <div class="container-site">
         <div class="max-w-3xl space-y-4 text-muted text-lg">
           <?php foreach ($intro as $para) : ?>
@@ -101,7 +101,7 @@ get_header();
 
   <!-- Extra blocks (sub-sections) -->
   <?php foreach ($extra_blocks as $block) : ?>
-    <section class="bg-cream py-12 lg:py-14">
+    <section class="py-12 lg:py-14">
       <div class="container-site">
         <div class="max-w-3xl">
           <?php if (!empty($block['heading'])) : ?>
@@ -127,7 +127,7 @@ get_header();
 
   <!-- Note -->
   <?php if ($note) : ?>
-    <section class="bg-cream py-12 lg:py-14">
+    <section class=" py-12 lg:py-14">
       <div class="container-site">
         <div class="max-w-3xl bg-forest/5 border border-forest/15 rounded-2xl p-6 flex items-start gap-4">
           <?php rtc_icon('info', 'w-5 h-5 text-forest flex-shrink-0 mt-0.5'); ?>
@@ -141,7 +141,7 @@ get_header();
   <?php if ($show_salewa) : ?>
     <section class="bg-canvas py-12 lg:py-14">
       <div class="container-site">
-        <div class="max-w-3xl flex flex-col sm:flex-row items-start sm:items-center gap-5 bg-cream rounded-2xl p-7 border border-canvas-dark/30">
+        <div class="max-w-3xl flex flex-col sm:flex-row items-start sm:items-center gap-5  rounded-2xl p-7 border border-canvas-dark/30">
           <div class="flex-1">
             <h3 class="font-heading font-semibold text-forest text-lg mb-2">Riparazioni anche su tende a marchio Salewa</h3>
             <p class="text-muted text-sm">Effettuiamo lavorazioni anche su tende a marchio Salewa.</p>
@@ -158,7 +158,7 @@ get_header();
 
   <!-- Related pages -->
   <?php if ($related_pages) : ?>
-    <section class="bg-cream py-12 lg:py-14">
+    <section class=" py-12 lg:py-14">
       <div class="container-site">
         <div class="max-w-3xl">
           <h3 class="font-heading font-semibold text-forest text-base mb-5">Potrebbe interessarti anche</h3>

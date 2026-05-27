@@ -158,8 +158,8 @@ module.exports = {
               color: theme("colors.muted"),
               borderLeftColor: theme("colors.olive.DEFAULT"),
               borderLeftWidth: "3px",
-              marginTop: "1rem",
-              marginBottom: "1rem",
+              marginTop: "2rem",
+              marginBottom: "2rem",
             },
 
             "ul > li::marker": {
@@ -173,19 +173,19 @@ module.exports = {
 
             hr: {
               borderColor: theme("colors.canvas.dark"),
-              marginTop: "1rem",
-              marginBottom: "1rem",
+              marginTop: "2rem",
+              marginBottom: "2rem",
             },
 
             img: {
               borderRadius: theme("borderRadius.xl"),
-              marginTop: "1rem",
-              marginBottom: "1rem",
+              marginTop: "2rem",
+              marginBottom: "2rem",
             },
 
             table: {
-              marginTop: "1rem",
-              marginBottom: "1rem",
+              marginTop: "2rem",
+              marginBottom: "2rem",
             },
 
             pre: {

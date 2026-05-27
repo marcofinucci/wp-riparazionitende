@@ -70,7 +70,7 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
       </div>
 
       <aside class="lg:col-span-2 space-y-6">
-        <div class="bg-cream rounded-2xl p-6 border border-canvas-dark/30">
+        <div class=" rounded-2xl p-6 border border-canvas-dark/30">
           <h3 class="font-heading font-semibold text-forest text-base mb-4">Prima di scriverci</h3>
           <ol class="space-y-4">
             <?php

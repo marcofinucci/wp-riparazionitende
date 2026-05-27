@@ -7,7 +7,7 @@ $email      = rtc_contact_email();
 $phone      = rtc_contact_phone();
 ?>
 
-<section class="bg-cream py-14 lg:py-16" aria-labelledby="canali-heading">
+<section class=" py-14 lg:py-16" aria-labelledby="canali-heading">
   <div class="container-site">
     <h2 id="canali-heading" class="section-subheading mb-8">Contattaci</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

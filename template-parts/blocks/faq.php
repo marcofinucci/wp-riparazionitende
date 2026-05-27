@@ -11,12 +11,12 @@ if (!$items) {
 $heading_id = 'faq-' . wp_unique_id();
 ?>
 
-<section class="bg-cream py-14 lg:py-16" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class=" py-14 lg:py-16" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
   <div class="container-site max-w-3xl">
     <?php if ($heading) : ?>
       <h2 id="<?php echo esc_attr($heading_id); ?>" class="section-subheading mb-8"><?php echo esc_html($heading); ?></h2>
     <?php endif; ?>
-    <div class="rounded-2xl border border-canvas-dark/30 bg-cream overflow-hidden">
+    <div class="rounded-2xl border border-canvas-dark/30  overflow-hidden">
       <?php foreach ($items as $i => $row) : ?>
         <?php
         $question = $row['question'] ?? ($row['q'] ?? '');
