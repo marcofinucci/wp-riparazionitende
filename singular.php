@@ -48,7 +48,7 @@ get_header();
   <section class="bg-cream py-14 lg:py-16">
     <div class="container-site">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <div class="prose max-w-3xl">
+          <div class="prose max-w-3xl [&>:first-child]:mt-0 [&>:last-child]:mb-0">
             <?php the_content(); ?>
           </div>
       <?php endwhile;

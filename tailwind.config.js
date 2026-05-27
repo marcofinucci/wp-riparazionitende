@@ -64,6 +64,21 @@ module.exports = {
               marginBottom: "1rem",
             },
 
+            ul: {
+              marginTop: "1rem",
+              marginBottom: "1rem",
+            },
+
+            ol: {
+              marginTop: "1rem",
+              marginBottom: "1rem",
+            },
+
+            li: {
+              marginTop: "0.5rem",
+              marginBottom: "0.5rem",
+            },
+
             h1: {
               fontFamily: theme("fontFamily.heading").join(", "),
               fontWeight: "700",
@@ -110,7 +125,27 @@ module.exports = {
               marginBottom: "1rem",
             },
 
-            "h1, h2, h3, h4": {
+            h5: {
+              fontFamily: theme("fontFamily.heading").join(", "),
+              fontWeight: "600",
+              fontSize: "0.875rem",
+              lineHeight: "1.4",
+              color: theme("colors.forest.DEFAULT"),
+              marginTop: "2rem",
+              marginBottom: "1rem",
+            },
+
+            h6: {
+              fontFamily: theme("fontFamily.heading").join(", "),
+              fontWeight: "600",
+              fontSize: "0.75rem",
+              lineHeight: "1.4",
+              color: theme("colors.forest.DEFAULT"),
+              marginTop: "2rem",
+              marginBottom: "1rem",
+            },
+
+            "h1, h2, h3, h4, h5, h6": {
               "& strong": {
                 color: "inherit",
                 fontWeight: "700",
@@ -123,6 +158,8 @@ module.exports = {
               color: theme("colors.muted"),
               borderLeftColor: theme("colors.olive.DEFAULT"),
               borderLeftWidth: "3px",
+              marginTop: "1rem",
+              marginBottom: "1rem",
             },
 
             "ul > li::marker": {
@@ -136,12 +173,24 @@ module.exports = {
 
             hr: {
               borderColor: theme("colors.canvas.dark"),
-              marginTop: "2rem",
-              marginBottom: "2rem",
+              marginTop: "1rem",
+              marginBottom: "1rem",
             },
 
             img: {
               borderRadius: theme("borderRadius.xl"),
+              marginTop: "1rem",
+              marginBottom: "1rem",
+            },
+
+            table: {
+              marginTop: "1rem",
+              marginBottom: "1rem",
+            },
+
+            pre: {
+              marginTop: "1rem",
+              marginBottom: "1rem",
             },
 
             "figure img": {
@@ -158,14 +207,6 @@ module.exports = {
               color: theme("colors.forest.DEFAULT"),
               fontFamily: theme("fontFamily.heading").join(", "),
             },
-          },
-        },
-
-        /* prose-lg */
-        lg: {
-          css: {
-            fontSize: "1.125rem",
-            lineHeight: "1.5",
           },
         },
       }),

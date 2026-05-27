@@ -10,7 +10,7 @@ if (!$content) {
 
 <section class="bg-cream py-14 lg:py-16">
   <div class="container-site">
-    <div class="max-w-3xl prose">
+    <div class="max-w-3xl prose [&>:first-child]:mt-0 [&>:last-child]:mb-0">
       <?php echo wp_kses_post($content); ?>
     </div>
   </div>
