@@ -42,7 +42,7 @@ get_header();
           in tutta Italia
         </h1>
 
-        <p class="text-white text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
+        <p class="text-white text-lg md:text-xl  mb-10 max-w-2xl">
           Laboratorio artigianale specializzato nella manutenzione e riparazione di tende scout, verande roulotte, tende carrello, tende igloo, paleria e tende tecniche outdoor.
           Riceviamo materiali da tutta Italia tramite spedizione.
         </p>
@@ -170,10 +170,10 @@ get_header();
             </div>
             <div class="p-6 flex flex-col gap-4 flex-1">
               <div class="flex-1">
-                <h3 class="font-heading font-semibold text-forest text-lg leading-snug mb-2">
+                <h3 class="font-heading font-semibold text-forest text-lg mb-2">
                   <?php echo esc_html($service['title']); ?>
                 </h3>
-                <p class="text-muted text-sm leading-relaxed">
+                <p class="text-muted text-sm ">
                   <?php echo esc_html($service['desc']); ?>
                 </p>
               </div>
@@ -208,7 +208,7 @@ get_header();
           <h2 id="autorevolezza-heading" class="section-heading mb-6">
             Una specializzazione costruita nel tempo
           </h2>
-          <div class="space-y-4 text-muted leading-relaxed">
+          <div class="space-y-4 text-muted ">
             <p>
               Le prime riparazioni nascono alla fine degli anni '90 lavorando principalmente con gruppi scout abruzzesi.
             </p>
@@ -301,7 +301,7 @@ get_header();
                 <h3 class="font-heading font-semibold text-forest text-base mb-1.5">
                   <?php echo esc_html($step['title']); ?>
                 </h3>
-                <p class="text-muted text-sm leading-relaxed">
+                <p class="text-muted text-sm ">
                   <?php echo esc_html($step['desc']); ?>
                 </p>
               </div>
@@ -329,16 +329,16 @@ get_header();
 
         <div>
           <p class="text-canvas/70 font-heading font-semibold text-sm uppercase tracking-widest mb-3">Copertura nazionale</p>
-          <h2 id="mappa-heading" class="font-heading font-bold text-3xl md:text-4xl text-white leading-tight mb-6">
+          <h2 id="mappa-heading" class="font-heading font-bold text-3xl md:text-4xl text-white !leading-tight mb-6">
             Riceviamo tende<br>da tutta Italia
           </h2>
-          <p class="text-white/65 leading-relaxed mb-6">
+          <p class="text-white/65  mb-6">
             Lavoriamo con gruppi scout, campeggiatori stagionali, escursionisti, pescatori e appassionati outdoor provenienti da tutta Italia.
           </p>
-          <p class="text-white/65 leading-relaxed mb-8">
+          <p class="text-white/65  mb-8">
             La maggior parte delle lavorazioni viene gestita tramite spedizione. Riceviamo tende da tutte le regioni italiane.
           </p>
-          <p class="text-canvas/80 text-sm italic leading-relaxed">
+          <p class="text-canvas/80 text-sm italic ">
             Riceviamo spedizioni da Roma, Milano, Torino, Napoli, Palermo, Bologna, Firenze, Bari, Genova, Padova e da molte altre città italiane.
           </p>
         </div>
@@ -410,7 +410,7 @@ get_header();
         <h2 id="sostenibilita-heading" class="section-heading mb-4">Riparare invece di sostituire</h2>
         <p class="font-heading font-semibold text-olive text-xl mb-8">Ogni tenda riparata è una tenda in meno da buttare.</p>
 
-        <div class="space-y-4 text-muted leading-relaxed mb-12 text-left max-w-2xl mx-auto">
+        <div class="space-y-4 text-muted  mb-12 text-left max-w-2xl mx-auto">
           <p>Crediamo nella manutenzione, nella riparazione e nella durata dei materiali nel tempo.</p>
           <p>Molte tende possono continuare a essere utilizzate per anni con la corretta manutenzione.</p>
           <p>Ogni tenda recuperata significa meno sprechi, meno materiale smaltito, più anni di utilizzo e maggiore sostenibilità.</p>
@@ -419,7 +419,7 @@ get_header();
         <!-- Badge Powell -->
         <figure class="bg-forest rounded-2xl p-8 text-left max-w-2xl mx-auto">
           <?php rtc_icon('quote', 'w-8 h-8 text-canvas/50 mb-4'); ?>
-          <blockquote class="font-heading text-xl text-white leading-relaxed mb-5">
+          <blockquote class="font-heading text-xl text-white  mb-5">
             "Non esiste buono o cattivo tempo, ma solo buono o cattivo equipaggiamento."
           </blockquote>
           <figcaption class="text-canvas/65 text-sm font-body">
@@ -461,7 +461,7 @@ get_header();
           </div>
           <div>
             <h2 id="spedizione-prep-heading" class="section-subheading mb-4">Prima della spedizione</h2>
-            <p class="text-muted mb-5 leading-relaxed">
+            <p class="text-muted mb-5 ">
               Per poter effettuare correttamente le lavorazioni, il materiale deve essere pulito, asciutto e lavorabile.
             </p>
             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -543,7 +543,7 @@ get_header();
               <?php rtc_icon('chevron-down', 'w-5 h-5 text-olive flex-shrink-0 transition-transform duration-200', ['data-faq-icon' => '']); ?>
             </button>
             <div id="faq-answer-<?php echo $i; ?>" data-faq-content class="hidden pb-5">
-              <p class="text-muted leading-relaxed"><?php echo esc_html($faq['a']); ?></p>
+              <p class="text-muted "><?php echo esc_html($faq['a']); ?></p>
             </div>
           </div>
         <?php endforeach; ?>
@@ -564,7 +564,7 @@ get_header();
         <h2 id="cta-finale-heading" class="font-heading font-bold text-3xl md:text-4xl text-white mb-4">
           Hai una tenda da riparare?
         </h2>
-        <p class="text-white/65 text-lg leading-relaxed mb-10">
+        <p class="text-white/65 text-lg  mb-10">
           Invia foto della tenda e dei danni per ricevere una valutazione preliminare. Gestiamo ogni lavorazione dopo valutazione e spedizione.
         </p>
 

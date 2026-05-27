@@ -16,7 +16,7 @@ $wa_url = rtc_whatsapp_link('Salve, vorrei una valutazione per la riparazione di
       <h2 class="font-heading font-bold text-2xl md:text-3xl text-white mb-4"><?php echo esc_html($title); ?></h2>
     <?php endif; ?>
     <?php if ($text) : ?>
-      <p class="text-white/65 mb-8 max-w-lg mx-auto leading-relaxed"><?php echo esc_html($text); ?></p>
+      <p class="text-white/65 mb-8 max-w-lg mx-auto "><?php echo esc_html($text); ?></p>
     <?php endif; ?>
     <?php if ($show_whatsapp || $show_spedire) : ?>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">

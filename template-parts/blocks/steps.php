@@ -5,7 +5,7 @@ $heading = $args['heading'] ?? 'Procedura';
 $steps   = $args['steps'] ?? [];
 
 if (!$steps) {
-    return;
+  return;
 }
 
 $heading_id = 'steps-' . wp_unique_id();
@@ -23,7 +23,7 @@ $heading_id = 'steps-' . wp_unique_id();
           $title = is_array($step) ? ($step['title'] ?? '') : '';
           $desc  = is_array($step) ? ($step['description'] ?? ($step['desc'] ?? '')) : '';
           if (!$title && !$desc) {
-              continue;
+            continue;
           }
           ?>
           <li class="flex items-start gap-5">
@@ -35,7 +35,7 @@ $heading_id = 'steps-' . wp_unique_id();
                 <h3 class="font-heading font-semibold text-forest text-lg mb-1.5"><?php echo esc_html($title); ?></h3>
               <?php endif; ?>
               <?php if ($desc) : ?>
-                <p class="text-muted leading-relaxed"><?php echo esc_html($desc); ?></p>
+                <p class="text-muted "><?php echo esc_html($desc); ?></p>
               <?php endif; ?>
             </div>
           </li>

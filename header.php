@@ -26,7 +26,7 @@
           <div class="w-16 flex items-center justify-center flex-shrink-0">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/riparazionitendecampeggio-logotipo.svg" alt="Riparazioni Tende Campeggio">
           </div>
-          <div class="leading-tight font-semibold text-white text-sm uppercase group-hover:text-canvas transition-colors">
+          <div class="font-semibold text-white text-sm uppercase group-hover:text-canvas transition-colors">
             <div>Riparazioni Tende</div>
             <div>Campeggio</div>
           </div>

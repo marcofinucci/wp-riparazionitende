@@ -55,7 +55,7 @@
   }
 
   .section-heading {
-    @apply font-heading font-bold text-3xl md:text-4xl text-forest leading-tight;
+    @apply font-heading font-bold text-3xl md:text-4xl text-forest !leading-tight;
   }
 
   .section-subheading {
@@ -99,7 +99,7 @@
   }
 
   .form-input {
-    @apply w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm leading-relaxed transition-colors duration-200;
+    @apply w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm  transition-colors duration-200;
     @apply focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest;
   }
 

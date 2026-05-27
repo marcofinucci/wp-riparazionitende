@@ -31,10 +31,10 @@ get_header();
           <li class="text-canvas/80" aria-current="page">Contatti</li>
         </ol>
       </nav>
-      <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight max-w-3xl text-balance">
+      <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white !leading-tight max-w-3xl text-balance">
         Contattaci per la riparazione della tua tenda
       </h1>
-      <p class="mt-4 text-white/65 text-lg leading-relaxed max-w-2xl">
+      <p class="mt-4 text-white/65 text-lg  max-w-2xl">
         Invia foto e una breve descrizione per ricevere una valutazione preliminare. Rispondiamo in ordine di arrivo.
       </p>
     </div>
@@ -107,7 +107,7 @@ get_header();
             </div>
             <div>
               <h3 class="font-heading font-semibold text-forest text-lg mb-1"><?php echo esc_html($canale['title']); ?></h3>
-              <p class="text-muted text-sm leading-relaxed mb-3"><?php echo esc_html($canale['desc']); ?></p>
+              <p class="text-muted text-sm  mb-3"><?php echo esc_html($canale['desc']); ?></p>
               <span class="<?php echo esc_attr($action_class); ?>">
                 <?php echo esc_html($action['label']); ?>
                 <?php if (!empty($action['chevron'])) : ?>
@@ -123,7 +123,7 @@ get_header();
         <?php rtc_icon('clock', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
         <div>
           <h3 class="font-heading font-semibold text-forest text-base mb-1">Tempi di risposta</h3>
-          <p class="text-muted text-sm leading-relaxed">
+          <p class="text-muted text-sm ">
             Rispondiamo di norma entro <strong class="text-dark font-medium">1–2 giorni lavorativi</strong>.
             In periodi di alta richiesta i tempi possono allungarsi: ti aggiorniamo appena possibile.
           </p>
@@ -139,21 +139,21 @@ get_header();
 
         <div class="lg:col-span-3">
           <h2 id="form-heading" class="section-subheading mb-2">Scrivici un messaggio</h2>
-          <p class="text-muted text-sm leading-relaxed mb-8">
+          <p class="text-muted text-sm  mb-8">
             Compila il modulo per inviarci una richiesta via email. Per inviare foto della tenda usa WhatsApp.
           </p>
 
           <?php if ($contact_status === 'success') : ?>
             <div role="status" class="mb-6 rounded-2xl border border-olive/30 bg-olive/10 px-5 py-4 flex items-start gap-3">
               <?php rtc_icon('check', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
-              <p class="text-dark text-sm leading-relaxed">
+              <p class="text-dark text-sm ">
                 Messaggio inviato correttamente. Ti risponderemo al più presto.
               </p>
             </div>
           <?php elseif ($contact_status === 'error') : ?>
             <div role="alert" class="mb-6 rounded-2xl border border-red-300 bg-red-50 px-5 py-4 flex items-start gap-3">
               <?php rtc_icon('circle-alert', 'w-5 h-5 text-red-600 flex-shrink-0 mt-0.5'); ?>
-              <p class="text-dark text-sm leading-relaxed">
+              <p class="text-dark text-sm ">
                 Non è stato possibile inviare il messaggio. Riprova o contattaci su WhatsApp.
               </p>
             </div>
@@ -221,7 +221,7 @@ get_header();
               foreach ($tips as $i => $tip) : ?>
                 <li class="flex items-start gap-3 text-sm">
                   <span class="step-number w-7 h-7 text-xs"><?php echo $i + 1; ?></span>
-                  <span class="text-muted leading-relaxed pt-0.5"><?php echo esc_html($tip); ?></span>
+                  <span class="text-muted  pt-0.5"><?php echo esc_html($tip); ?></span>
                 </li>
               <?php endforeach; ?>
             </ol>
@@ -229,7 +229,7 @@ get_header();
 
           <div class="bg-forest/5 border border-forest/15 rounded-2xl p-6">
             <h3 class="font-heading font-semibold text-forest text-base mb-3">Laboratorio</h3>
-            <p class="text-muted text-sm leading-relaxed mb-4">
+            <p class="text-muted text-sm  mb-4">
               Lavoriamo su appuntamento e tramite spedizione da tutta Italia. Non è un punto vendita al dettaglio.
             </p>
             <a href="<?php echo esc_url(home_url('/come-spedire-tenda-da-riparare')); ?>"
@@ -269,13 +269,13 @@ get_header();
             <button type="button" data-faq-trigger
               class="w-full flex items-center justify-between gap-4 py-5 text-left cursor-pointer"
               aria-expanded="false" aria-controls="faq-contatti-<?php echo $i; ?>">
-              <span class="font-heading font-medium text-forest text-sm md:text-base leading-snug">
+              <span class="font-heading font-medium text-forest text-sm md:text-base">
                 <?php echo esc_html($faq['q']); ?>
               </span>
               <?php rtc_icon('chevron-down', 'w-5 h-5 text-olive flex-shrink-0 transition-transform duration-200', ['data-faq-icon' => '']); ?>
             </button>
             <div id="faq-contatti-<?php echo $i; ?>" data-faq-content class="hidden pb-5">
-              <p class="text-muted text-sm leading-relaxed"><?php echo esc_html($faq['a']); ?></p>
+              <p class="text-muted text-sm "><?php echo esc_html($faq['a']); ?></p>
             </div>
           </div>
         <?php endforeach; ?>
@@ -312,7 +312,7 @@ get_header();
   <section class="bg-forest py-16 lg:py-20">
     <div class="container-site text-center">
       <h2 class="font-heading font-bold text-2xl md:text-3xl text-white mb-4">Hai già le foto della tenda?</h2>
-      <p class="text-white/65 mb-8 max-w-lg mx-auto leading-relaxed">
+      <p class="text-white/65 mb-8 max-w-lg mx-auto ">
         Inviale su WhatsApp per una valutazione più rapida.
       </p>
       <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener noreferrer"

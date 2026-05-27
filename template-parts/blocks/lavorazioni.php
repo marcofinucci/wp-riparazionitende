@@ -5,7 +5,7 @@ $heading = $args['heading'] ?? 'Lavorazioni principali';
 $items   = $args['items'] ?? [];
 
 if (!$items) {
-    return;
+  return;
 }
 
 $heading_id = 'lavorazioni-' . wp_unique_id();
@@ -21,11 +21,11 @@ $heading_id = 'lavorazioni-' . wp_unique_id();
         <?php foreach ($items as $row) : ?>
           <?php $item = is_array($row) ? ($row['item'] ?? '') : $row; ?>
           <?php if (!$item) {
-              continue;
+            continue;
           } ?>
           <li class="flex items-start gap-3">
             <?php rtc_icon('check', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
-            <span class="text-dark text-sm leading-relaxed"><?php echo esc_html($item); ?></span>
+            <span class="text-dark text-sm "><?php echo esc_html($item); ?></span>
           </li>
         <?php endforeach; ?>
       </ul>

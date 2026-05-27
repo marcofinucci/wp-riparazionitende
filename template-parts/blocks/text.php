@@ -4,13 +4,13 @@ defined('ABSPATH') || exit;
 $text = $args['text'] ?? '';
 
 if (!$text) {
-    return;
+  return;
 }
 ?>
 
 <section class="bg-cream py-14 lg:py-16">
   <div class="container-site">
-    <div class="max-w-3xl text-muted text-lg leading-relaxed">
+    <div class="max-w-3xl text-muted text-lg ">
       <?php echo wpautop(esc_html($text)); ?>
     </div>
   </div>

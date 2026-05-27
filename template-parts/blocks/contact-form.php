@@ -10,19 +10,19 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
 
       <div class="lg:col-span-3">
         <h2 id="form-heading" class="section-subheading mb-2">Scrivici un messaggio</h2>
-        <p class="text-muted text-sm leading-relaxed mb-8">
+        <p class="text-muted text-sm  mb-8">
           Compila il modulo per inviarci una richiesta via email. Per inviare foto della tenda usa WhatsApp.
         </p>
 
         <?php if ($contact_status === 'success') : ?>
           <div role="status" class="mb-6 rounded-2xl border border-olive/30 bg-olive/10 px-5 py-4 flex items-start gap-3">
             <?php rtc_icon('check', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
-            <p class="text-dark text-sm leading-relaxed">Messaggio inviato correttamente. Ti risponderemo al più presto.</p>
+            <p class="text-dark text-sm ">Messaggio inviato correttamente. Ti risponderemo al più presto.</p>
           </div>
         <?php elseif ($contact_status === 'error') : ?>
           <div role="alert" class="mb-6 rounded-2xl border border-red-300 bg-red-50 px-5 py-4 flex items-start gap-3">
             <?php rtc_icon('circle-alert', 'w-5 h-5 text-red-600 flex-shrink-0 mt-0.5'); ?>
-            <p class="text-dark text-sm leading-relaxed">Non è stato possibile inviare il messaggio. Riprova o contattaci su WhatsApp.</p>
+            <p class="text-dark text-sm ">Non è stato possibile inviare il messaggio. Riprova o contattaci su WhatsApp.</p>
           </div>
         <?php endif; ?>
 
@@ -75,15 +75,15 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
           <ol class="space-y-4">
             <?php
             $tips = [
-                'Invia foto chiare della tenda e dei danni',
-                'Indica marca, modello e tipo di tenda',
-                'Non spedire prima di aver ricevuto conferma',
-                'Compila la scheda cliente se richiesta',
+              'Invia foto chiare della tenda e dei danni',
+              'Indica marca, modello e tipo di tenda',
+              'Non spedire prima di aver ricevuto conferma',
+              'Compila la scheda cliente se richiesta',
             ];
             foreach ($tips as $i => $tip) : ?>
               <li class="flex items-start gap-3 text-sm">
                 <span class="step-number w-7 h-7 text-xs"><?php echo $i + 1; ?></span>
-                <span class="text-muted leading-relaxed pt-0.5"><?php echo esc_html($tip); ?></span>
+                <span class="text-muted  pt-0.5"><?php echo esc_html($tip); ?></span>
               </li>
             <?php endforeach; ?>
           </ol>
@@ -91,7 +91,7 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
 
         <div class="bg-forest/5 border border-forest/15 rounded-2xl p-6">
           <h3 class="font-heading font-semibold text-forest text-base mb-3">Laboratorio</h3>
-          <p class="text-muted text-sm leading-relaxed mb-4">
+          <p class="text-muted text-sm  mb-4">
             Lavoriamo su appuntamento e tramite spedizione da tutta Italia. Non è un punto vendita al dettaglio.
           </p>
           <a href="<?php echo esc_url(home_url('/come-spedire-tenda-da-riparare')); ?>"

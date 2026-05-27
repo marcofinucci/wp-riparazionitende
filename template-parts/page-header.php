@@ -31,12 +31,12 @@ $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x10
       </ol>
     </nav>
 
-    <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight max-w-3xl text-balance">
+    <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white !leading-tight max-w-3xl text-balance">
       <?php echo esc_html($h1); ?>
     </h1>
 
     <?php if ($subtitle) : ?>
-      <p class="mt-4 text-white/65 text-lg leading-relaxed max-w-2xl">
+      <p class="mt-4 text-white/65 text-lg  max-w-2xl">
         <?php echo esc_html($subtitle); ?>
       </p>
     <?php endif; ?>

@@ -38,7 +38,7 @@ get_header();
       </nav>
 
       <!-- Page Title -->
-      <h1 class="font-heading font-bold text-3xl md:text-4xl text-white leading-tight max-w-3xl">
+      <h1 class="font-heading font-bold text-3xl md:text-4xl text-white !leading-tight max-w-3xl">
         <?php the_title(); ?>
       </h1>
     </div>

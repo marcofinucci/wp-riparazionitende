@@ -1608,7 +1608,7 @@ h1,
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.25 !important;
   --tw-text-opacity: 1;
   color: rgb(47 79 58 / var(--tw-text-opacity, 1));
 }
@@ -1796,7 +1796,6 @@ h1,
   padding-bottom: 0.75rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  line-height: 1.625;
   --tw-text-opacity: 1;
   color: rgb(43 43 43 / var(--tw-text-opacity, 1));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
@@ -2815,10 +2814,6 @@ h1,
 
 .\!leading-tight {
   line-height: 1.25 !important;
-}
-
-.leading-relaxed {
-  line-height: 1.625;
 }
 
 .leading-snug {

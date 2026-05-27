@@ -28,7 +28,7 @@
             <span class="block font-heading text-canvas/70 text-xs">Campeggio</span>
           </div>
         </a>
-        <p class="text-white/65 text-sm leading-relaxed mb-5">
+        <p class="text-white/65 text-sm mb-5">
           Laboratorio artigianale specializzato nella manutenzione e riparazione di tende scout, verande roulotte, tende carrello e attrezzatura outdoor.
         </p>
         <div class="flex flex-col gap-2.5">

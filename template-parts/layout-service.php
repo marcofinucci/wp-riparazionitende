@@ -61,7 +61,7 @@ get_header();
         </ol>
       </nav>
 
-      <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight max-w-3xl">
+      <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white !leading-tight max-w-3xl">
         <?php echo esc_html($h1); ?>
       </h1>
     </div>
@@ -71,7 +71,7 @@ get_header();
   <?php if ($intro) : ?>
     <section class="bg-cream py-14 lg:py-16">
       <div class="container-site">
-        <div class="max-w-3xl space-y-4 text-muted text-lg leading-relaxed">
+        <div class="max-w-3xl space-y-4 text-muted text-lg">
           <?php foreach ($intro as $para) : ?>
             <p><?php echo esc_html($para); ?></p>
           <?php endforeach; ?>
@@ -90,7 +90,7 @@ get_header();
             <?php foreach ($lavorazioni as $item) : ?>
               <li class="flex items-start gap-3">
                 <?php rtc_icon('check', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
-                <span class="text-dark text-sm leading-relaxed"><?php echo esc_html($item); ?></span>
+                <span class="text-dark text-sm"><?php echo esc_html($item); ?></span>
               </li>
             <?php endforeach; ?>
           </ul>
@@ -108,14 +108,14 @@ get_header();
             <h2 class="section-subheading mb-6"><?php echo esc_html($block['heading']); ?></h2>
           <?php endif; ?>
           <?php if (!empty($block['text'])) : ?>
-            <p class="text-muted leading-relaxed mb-5"><?php echo esc_html($block['text']); ?></p>
+            <p class="text-muted mb-5"><?php echo esc_html($block['text']); ?></p>
           <?php endif; ?>
           <?php if (!empty($block['items'])) : ?>
             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <?php foreach ($block['items'] as $item) : ?>
                 <li class="flex items-start gap-3">
                   <span class="w-1.5 h-1.5 rounded-full bg-olive flex-shrink-0 mt-2"></span>
-                  <span class="text-dark text-sm leading-relaxed"><?php echo esc_html($item); ?></span>
+                  <span class="text-dark text-sm "><?php echo esc_html($item); ?></span>
                 </li>
               <?php endforeach; ?>
             </ul>
@@ -131,7 +131,7 @@ get_header();
       <div class="container-site">
         <div class="max-w-3xl bg-forest/5 border border-forest/15 rounded-2xl p-6 flex items-start gap-4">
           <?php rtc_icon('info', 'w-5 h-5 text-forest flex-shrink-0 mt-0.5'); ?>
-          <p class="text-muted text-sm leading-relaxed"><?php echo esc_html($note); ?></p>
+          <p class="text-muted text-sm "><?php echo esc_html($note); ?></p>
         </div>
       </div>
     </section>
@@ -180,7 +180,7 @@ get_header();
   <section class="bg-forest py-16 lg:py-20">
     <div class="container-site text-center">
       <h2 class="font-heading font-bold text-2xl md:text-3xl text-white mb-4">Hai una tenda da riparare?</h2>
-      <p class="text-white/65 mb-8 max-w-lg mx-auto leading-relaxed">
+      <p class="text-white/65 mb-8 max-w-lg mx-auto ">
         Invia foto della tenda e dei danni per ricevere una valutazione preliminare.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">

@@ -17,7 +17,7 @@ $phone      = rtc_contact_phone();
         </div>
         <div>
           <h3 class="font-heading font-semibold text-forest text-lg mb-1">WhatsApp</h3>
-          <p class="text-muted text-sm leading-relaxed mb-3">Canale preferito per foto, preventivi e aggiornamenti sulle lavorazioni.</p>
+          <p class="text-muted text-sm  mb-3">Canale preferito per foto, preventivi e aggiornamenti sulle lavorazioni.</p>
           <span class="inline-flex items-center gap-1.5 text-forest group-hover:text-olive font-heading font-medium text-sm transition-colors">
             Scrivici ora
             <?php rtc_icon('chevron-right', 'w-4 h-4 group-hover:translate-x-0.5 transition-transform'); ?>
@@ -31,7 +31,7 @@ $phone      = rtc_contact_phone();
         </div>
         <div>
           <h3 class="font-heading font-semibold text-forest text-lg mb-1">Email</h3>
-          <p class="text-muted text-sm leading-relaxed mb-3">Per schede cliente, documentazione e comunicazioni formali.</p>
+          <p class="text-muted text-sm  mb-3">Per schede cliente, documentazione e comunicazioni formali.</p>
           <span class="text-forest group-hover:text-olive font-heading font-medium text-sm transition-colors break-all"><?php echo esc_html($email); ?></span>
         </div>
       </a>
@@ -42,7 +42,7 @@ $phone      = rtc_contact_phone();
         </div>
         <div>
           <h3 class="font-heading font-semibold text-forest text-lg mb-1">Telefono</h3>
-          <p class="text-muted text-sm leading-relaxed mb-3">Per informazioni rapide negli orari di apertura del laboratorio.</p>
+          <p class="text-muted text-sm  mb-3">Per informazioni rapide negli orari di apertura del laboratorio.</p>
           <span class="text-forest group-hover:text-olive font-heading font-medium text-sm transition-colors"><?php echo esc_html($phone); ?></span>
         </div>
       </a>
@@ -52,7 +52,7 @@ $phone      = rtc_contact_phone();
       <?php rtc_icon('clock', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
       <div>
         <h3 class="font-heading font-semibold text-forest text-base mb-1">Tempi di risposta</h3>
-        <p class="text-muted text-sm leading-relaxed">
+        <p class="text-muted text-sm ">
           Rispondiamo di norma entro <strong class="text-dark font-medium">1–2 giorni lavorativi</strong>.
           In periodi di alta richiesta i tempi possono allungarsi: ti aggiorniamo appena possibile.
         </p>

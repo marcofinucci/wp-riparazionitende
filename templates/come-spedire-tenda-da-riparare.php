@@ -19,7 +19,7 @@ get_header();
           <li class="text-canvas/80" aria-current="page">Come spedire</li>
         </ol>
       </nav>
-      <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight max-w-3xl">
+      <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white !leading-tight max-w-3xl">
         Come spedire una tenda da riparare
       </h1>
     </div>
@@ -28,7 +28,7 @@ get_header();
   <!-- Intro -->
   <section class="bg-cream py-14 lg:py-16">
     <div class="container-site">
-      <div class="max-w-3xl text-muted text-lg leading-relaxed">
+      <div class="max-w-3xl text-muted text-lg ">
         <p>Prima di spedire o consegnare il materiale è necessario contattarci, inviare foto e compilare la scheda cliente o gruppo scout.</p>
       </div>
     </div>
@@ -57,7 +57,7 @@ get_header();
                 <h3 class="font-heading font-semibold text-forest text-lg mb-1.5">
                   <?php echo esc_html($step['title']); ?>
                 </h3>
-                <p class="text-muted leading-relaxed">
+                <p class="text-muted ">
                   <?php echo esc_html($step['desc']); ?>
                 </p>
               </div>
@@ -88,13 +88,13 @@ get_header();
           foreach ($regole as $regola) : ?>
             <li class="flex items-start gap-3">
               <?php rtc_icon('check', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
-              <span class="text-dark text-sm leading-relaxed"><?php echo esc_html($regola); ?></span>
+              <span class="text-dark text-sm "><?php echo esc_html($regola); ?></span>
             </li>
           <?php endforeach; ?>
         </ul>
 
         <div class="bg-forest/5 border border-forest/15 rounded-2xl p-6">
-          <p class="text-muted text-sm leading-relaxed">
+          <p class="text-muted text-sm ">
             <strong class="text-forest font-semibold">Nota:</strong> Le istruzioni complete vengono fornite prima della spedizione. L'invio del materiale implica accettazione delle condizioni comunicate.
           </p>
         </div>
@@ -106,7 +106,7 @@ get_header();
   <section class="bg-forest py-16 lg:py-20">
     <div class="container-site text-center">
       <h2 class="font-heading font-bold text-2xl md:text-3xl text-white mb-4">Pronto per spedire?</h2>
-      <p class="text-white/65 mb-8 max-w-lg mx-auto leading-relaxed">Inizia inviando le foto della tenda e dei danni tramite WhatsApp.</p>
+      <p class="text-white/65 mb-8 max-w-lg mx-auto ">Inizia inviando le foto della tenda e dei danni tramite WhatsApp.</p>
       <a href="https://wa.me/393000000000?text=Salve%2C%20vorrei%20una%20valutazione%20per%20la%20riparazione%20di%20una%20tenda."
         target="_blank" rel="noopener noreferrer"
         class="btn-whatsapp">
