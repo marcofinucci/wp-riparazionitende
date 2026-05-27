@@ -1,8 +1,8 @@
 <?php
-/**
- * Template: Riparazione Tende Trekking, Igloo e Outdoor
- * URL: /riparazione-tende-trekking-igloo
- */
+/*
+Template Name: Riparazione Tende Trekking, Igloo e Outdoor
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 set_query_var('rtc_page_data', [

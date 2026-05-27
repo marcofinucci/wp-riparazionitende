@@ -1,8 +1,8 @@
 <?php
-/**
- * Template: Condizioni di lavorazione
- * URL: /condizioni-lavorazione-tende
- */
+/*
+Template Name: Condizioni di lavorazione
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 set_query_var('rtc_page_data', [

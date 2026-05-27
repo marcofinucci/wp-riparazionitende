@@ -1,8 +1,8 @@
 <?php
-/**
- * Template: Riparazione Tende Scout
- * URL: /riparazione-tende-scout
- */
+/*
+Template Name: Riparazione Tende Scout
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 set_query_var('rtc_page_data', [

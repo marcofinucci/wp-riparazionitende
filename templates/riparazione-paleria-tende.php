@@ -1,8 +1,8 @@
 <?php
-/**
- * Template: Riparazione Paleria Tende
- * URL: /riparazione-paleria-tende
- */
+/*
+Template Name: Riparazione Paleria Tende
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 set_query_var('rtc_page_data', [

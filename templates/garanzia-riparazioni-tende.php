@@ -1,8 +1,8 @@
 <?php
-/**
- * Template: Garanzia riparazioni
- * URL: /garanzia-riparazioni-tende
- */
+/*
+Template Name: Garanzia riparazioni
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 set_query_var('rtc_page_data', [

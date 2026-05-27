@@ -1,8 +1,8 @@
 <?php
-/**
- * Template: Riparazione Tende Associazioni ed Eventi
- * URL: /riparazione-tende-associazioni-eventi
- */
+/*
+Template Name: Riparazione Tende Associazioni ed Eventi
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 set_query_var('rtc_page_data', [

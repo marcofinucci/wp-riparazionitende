@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Riparazioni Tende Campeggio - Theme Functions
  */
@@ -8,7 +9,8 @@ defined('ABSPATH') || exit;
 require_once get_template_directory() . '/inc/icons.php';
 
 // Theme setup
-function rtc_theme_setup(): void {
+function rtc_theme_setup(): void
+{
     load_theme_textdomain('riparazionetende', get_template_directory() . '/languages');
 
     add_theme_support('title-tag');
@@ -27,11 +29,16 @@ function rtc_theme_setup(): void {
         'primary'    => __('Menu principale', 'riparazionetende'),
         'footer_nav' => __('Menu footer', 'riparazionetende'),
     ]);
+
+    // Add custom image
+    add_image_size('hey-1920', 1920, 1920);
+    add_image_size('hey-1920x1080', 1920, 1080, true);
 }
 add_action('after_setup_theme', 'rtc_theme_setup');
 
 // Enqueue scripts and styles
-function rtc_enqueue_assets(): void {
+function rtc_enqueue_assets(): void
+{
     $theme_uri = get_template_directory_uri();
     $theme_dir = get_template_directory();
     $version   = wp_get_theme()->get('Version');
@@ -56,16 +63,28 @@ function rtc_enqueue_assets(): void {
 add_action('wp_enqueue_scripts', 'rtc_enqueue_assets');
 
 // Remove WordPress default styles
-function rtc_remove_default_styles(): void {
+function rtc_remove_default_styles(): void
+{
     wp_deregister_style('wp-block-library');
     wp_deregister_style('wp-block-library-theme');
     wp_deregister_style('classic-themes');
 }
 add_action('wp_enqueue_scripts', 'rtc_remove_default_styles', 100);
 
-// Custom excerpt length
-function rtc_excerpt_length(): int {
-    return 20;
+// Disable wp admin bar
+add_filter('show_admin_bar', '__return_false');
+
+/* Excerpt more */
+function rtc_excerpt_more($more)
+{
+    return '...';
+}
+add_filter('excerpt_more', 'rtc_excerpt_more');
+
+/* Excerpt length */
+function rtc_excerpt_length($length)
+{
+    return 16;
 }
 add_filter('excerpt_length', 'rtc_excerpt_length');
 
@@ -80,18 +99,11 @@ if (function_exists('acf_add_options_page')) {
     ]);
 }
 
-// ACF JSON save/load paths
-add_filter('acf/settings/save_json', function (): string {
-    return get_template_directory() . '/acf-json';
-});
 
-add_filter('acf/settings/load_json', function (array $paths): array {
-    $paths[] = get_template_directory() . '/acf-json';
-    return $paths;
-});
 
 // Helper: contact email
-function rtc_contact_email(): string {
+function rtc_contact_email(): string
+{
     $email = 'info@riparazionitendecampeggio.it';
     if (function_exists('get_field')) {
         $acf = get_field('contact_email', 'option');
@@ -103,7 +115,8 @@ function rtc_contact_email(): string {
 }
 
 // Helper: contact phone (display format)
-function rtc_contact_phone(): string {
+function rtc_contact_phone(): string
+{
     $phone = '+39 085 000 0000';
     if (function_exists('get_field')) {
         $acf = get_field('contact_phone', 'option');
@@ -115,7 +128,8 @@ function rtc_contact_phone(): string {
 }
 
 // Helper: WhatsApp link
-function rtc_whatsapp_link(string $message = ''): string {
+function rtc_whatsapp_link(string $message = ''): string
+{
     $number = get_option('rtc_whatsapp', '393000000000');
     if (function_exists('get_field')) {
         $number = get_field('whatsapp_number', 'option') ?: $number;
@@ -129,7 +143,8 @@ function rtc_whatsapp_link(string $message = ''): string {
 }
 
 // Contact form handler
-function rtc_handle_contact_form(): void {
+function rtc_handle_contact_form(): void
+{
     $redirect = home_url('/contatti/');
 
     if (
@@ -175,6 +190,7 @@ add_action('admin_post_rtc_contact', 'rtc_handle_contact_form');
 add_action('admin_post_nopriv_rtc_contact', 'rtc_handle_contact_form');
 
 // Helper: format phone for tel: link
-function rtc_phone_link(string $phone): string {
+function rtc_phone_link(string $phone): string
+{
     return 'tel:' . preg_replace('/[^0-9+]/', '', $phone);
 }

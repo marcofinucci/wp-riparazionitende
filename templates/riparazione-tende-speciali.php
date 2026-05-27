@@ -1,8 +1,8 @@
 <?php
-/**
- * Template: Riparazione Tende Speciali
- * URL: /riparazione-tende-speciali
- */
+/*
+Template Name: Riparazione Tende Speciali
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 set_query_var('rtc_page_data', [

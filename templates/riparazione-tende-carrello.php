@@ -1,8 +1,8 @@
 <?php
-/**
- * Template: Manutenzione Tende Carrello e Stagionali
- * URL: /manutenzione-tende-carrello
- */
+/*
+Template Name: Riparazione Tende Carrello e Stagionali
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 set_query_var('rtc_page_data', [

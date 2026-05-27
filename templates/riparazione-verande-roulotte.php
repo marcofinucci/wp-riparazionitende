@@ -1,8 +1,8 @@
 <?php
-/**
- * Template: Riparazione Verande Roulotte
- * URL: /riparazione-verande-roulotte
- */
+/*
+Template Name: Riparazione Verande Roulotte
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 set_query_var('rtc_page_data', [

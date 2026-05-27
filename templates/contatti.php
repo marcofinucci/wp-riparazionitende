@@ -1,9 +1,8 @@
 <?php
-
-/**
- * Template: Contatti
- * URL: /contatti
- */
+/*
+Template Name: Contatti
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 $wa_message = 'Salve, vorrei una valutazione per la riparazione di una tenda.';

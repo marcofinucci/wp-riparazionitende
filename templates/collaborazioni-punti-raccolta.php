@@ -1,8 +1,8 @@
 <?php
-/**
- * Template: Collaborazioni e punti raccolta
- * URL: /collaborazioni-punti-raccolta
- */
+/*
+Template Name: Collaborazioni e punti raccolta
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 
 set_query_var('rtc_page_data', [

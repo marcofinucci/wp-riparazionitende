@@ -1,9 +1,8 @@
 <?php
-
-/**
- * Template: Come Spedire
- * URL: /come-spedire-tenda-da-riparare
- */
+/*
+Template Name: Come Spedire
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 get_header();
 ?>

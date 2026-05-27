@@ -1,8 +1,8 @@
 <?php
-
-/**
- * Template: Homepage
- */
+/*
+Template Name: Homepage
+Template Post Type: page
+*/
 defined('ABSPATH') || exit;
 get_header();
 ?>
@@ -240,8 +240,8 @@ get_header();
 
           <div class="bg-cream rounded-2xl p-7 border border-canvas-dark/40">
             <div class="flex items-center gap-5">
-              <div class="w-14 h-14 rounded-xl bg-olive/10 flex items-center justify-center flex-shrink-0">
-                <?php rtc_icon('badge-check', 'w-7 h-7 text-olive'); ?>
+              <div class="w-14 h-14 rounded-xl bg-forest/10  flex items-center justify-center flex-shrink-0">
+                <?php rtc_icon('badge-check', 'w-7 h-7 text-forest'); ?>
               </div>
               <div>
                 <p class="font-heading font-bold text-2xl text-forest">Migliaia di tende</p>
