@@ -85,6 +85,33 @@
           "display": "block",
           "sub_fields": [
             {
+              "key": "field_rtc_pb_margin_top_text",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            },
+            {
               "key": "field_intro_text",
               "label": "Contenuto",
               "name": "content",
@@ -115,6 +142,33 @@
           "label": "Lavorazioni",
           "display": "block",
           "sub_fields": [
+            {
+              "key": "field_rtc_pb_margin_top_lavorazioni",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            },
             {
               "key": "field_lav_heading",
               "label": "Titolo",
@@ -189,6 +243,33 @@
           "label": "Sottosezione",
           "display": "block",
           "sub_fields": [
+            {
+              "key": "field_rtc_pb_margin_top_subsection",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            },
             {
               "key": "field_sub_heading",
               "label": "Titolo",
@@ -284,6 +365,33 @@
           "display": "block",
           "sub_fields": [
             {
+              "key": "field_rtc_pb_margin_top_note",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            },
+            {
               "key": "field_note_text",
               "label": "Testo",
               "name": "text",
@@ -312,7 +420,35 @@
           "name": "salewa",
           "label": "Box Salewa",
           "display": "block",
-          "sub_fields": [],
+          "sub_fields": [
+            {
+              "key": "field_rtc_pb_margin_top_salewa",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            }
+          ],
           "min": "",
           "max": ""
         },
@@ -322,6 +458,33 @@
           "label": "Procedura (step numerati)",
           "display": "block",
           "sub_fields": [
+            {
+              "key": "field_rtc_pb_margin_top_steps",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            },
             {
               "key": "field_steps_heading",
               "label": "Titolo",
@@ -418,6 +581,33 @@
           "display": "block",
           "sub_fields": [
             {
+              "key": "field_rtc_pb_margin_top_related",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            },
+            {
               "key": "field_rel_heading",
               "label": "Titolo",
               "name": "heading",
@@ -507,7 +697,35 @@
           "name": "contact_canali",
           "label": "Canali di contatto",
           "display": "block",
-          "sub_fields": [],
+          "sub_fields": [
+            {
+              "key": "field_rtc_pb_margin_top_contact_canali",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            }
+          ],
           "min": "",
           "max": ""
         },
@@ -516,7 +734,35 @@
           "name": "contact_form",
           "label": "Form contatti",
           "display": "block",
-          "sub_fields": [],
+          "sub_fields": [
+            {
+              "key": "field_rtc_pb_margin_top_contact_form",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            }
+          ],
           "min": "",
           "max": ""
         },
@@ -526,6 +772,33 @@
           "label": "FAQ",
           "display": "block",
           "sub_fields": [
+            {
+              "key": "field_rtc_pb_margin_top_faq",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            },
             {
               "key": "field_faq_heading",
               "label": "Titolo",
@@ -621,6 +894,33 @@
           "label": "CTA finale",
           "display": "block",
           "sub_fields": [
+            {
+              "key": "field_rtc_pb_margin_top_cta",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": ""
+            },
             {
               "key": "field_cta_title",
               "label": "Titolo",

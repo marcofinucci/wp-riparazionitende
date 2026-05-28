@@ -1,10 +1,18 @@
 <?php
 defined('ABSPATH') || exit;
 
+$margin_top = $args['margin_top'] ?? 'medio';
+$margin_top_classes = [
+  'no' => '',
+  'piccolo' => 'mt-6 lg:mt-8',
+  'medio' => 'mt-10 lg:mt-14',
+];
+$margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
+
 $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['contact'])) : '';
 ?>
 
-<section class="bg-canvas py-14 lg:py-16" aria-labelledby="form-heading">
+<section class="<?php echo esc_attr(trim($margin_top_class . ' bg-canvas py-14 lg:py-16')); ?>" aria-labelledby="form-heading">
   <div class="container-site">
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14">
 

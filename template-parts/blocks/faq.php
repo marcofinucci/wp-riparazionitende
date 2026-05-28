@@ -3,6 +3,13 @@ defined('ABSPATH') || exit;
 
 $heading = $args['heading'] ?? 'Domande frequenti';
 $items   = $args['items'] ?? [];
+$margin_top = $args['margin_top'] ?? 'medio';
+$margin_top_classes = [
+  'no' => '',
+  'piccolo' => 'mt-6 lg:mt-8',
+  'medio' => 'mt-10 lg:mt-14',
+];
+$margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
 
 if (!$items) {
   return;
@@ -11,7 +18,7 @@ if (!$items) {
 $heading_id = 'faq-' . wp_unique_id();
 ?>
 
-<section class=" py-14 lg:py-16" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="<?php echo esc_attr(trim($margin_top_class . ' py-14 lg:py-16')); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
   <div class="container-site max-w-3xl">
     <?php if ($heading) : ?>
       <h2 id="<?php echo esc_attr($heading_id); ?>" class="section-subheading mb-8"><?php echo esc_html($heading); ?></h2>

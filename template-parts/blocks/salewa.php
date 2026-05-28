@@ -1,8 +1,16 @@
 <?php
 defined('ABSPATH') || exit;
+
+$margin_top = $args['margin_top'] ?? 'medio';
+$margin_top_classes = [
+  'no' => '',
+  'piccolo' => 'mt-6 lg:mt-8',
+  'medio' => 'mt-10 lg:mt-14',
+];
+$margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
 ?>
 
-<section class="bg-canvas py-12 lg:py-14">
+<section class="<?php echo esc_attr(trim($margin_top_class . ' bg-canvas py-12 lg:py-14')); ?>">
   <div class="container-site">
     <div class="max-w-3xl flex flex-col sm:flex-row items-start sm:items-center gap-5  rounded-2xl p-7 border border-canvas-dark/30">
       <div class="flex-1">

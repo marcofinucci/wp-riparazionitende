@@ -1,13 +1,21 @@
 <?php
 defined('ABSPATH') || exit;
 
+$margin_top = $args['margin_top'] ?? 'medio';
+$margin_top_classes = [
+  'no' => '',
+  'piccolo' => 'mt-6 lg:mt-8',
+  'medio' => 'mt-10 lg:mt-14',
+];
+$margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
+
 $wa_message = 'Salve, vorrei una valutazione per la riparazione di una tenda.';
 $wa_url     = rtc_whatsapp_link($wa_message);
 $email      = rtc_contact_email();
 $phone      = rtc_contact_phone();
 ?>
 
-<section class=" py-14 lg:py-16" aria-labelledby="canali-heading">
+<section class="<?php echo esc_attr(trim($margin_top_class . ' py-14 lg:py-16')); ?>" aria-labelledby="canali-heading">
   <div class="container-site">
     <h2 id="canali-heading" class="section-subheading mb-8">Contattaci</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
