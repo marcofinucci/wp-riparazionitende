@@ -22,7 +22,7 @@ if (!$heading && !$content && !$quote) {
 $heading_id = 'quote-' . wp_unique_id();
 ?>
 
-<section class="block-quote-section py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-quote-section <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
   <div class="container-site">
     <div class="max-w-3xl mx-auto text-center">
       <?php if ($eyebrow) : ?>

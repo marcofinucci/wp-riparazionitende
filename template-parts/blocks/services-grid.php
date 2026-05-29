@@ -44,7 +44,7 @@ $resolve_image = static function ($image): string {
 $footer = $resolve_link($footer_link);
 ?>
 
-<section class="block-services-grid py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-services-grid <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
   <div class="container-site">
     <?php if ($eyebrow || $heading || $intro) : ?>
       <div class="text-center mb-12">

@@ -19,7 +19,7 @@ if (!$items) {
 }
 
 $heading_id = 'faq-' . wp_unique_id();
-$section_class = trim('block-faq py-14 lg:py-16 ' . ($bg_canvas ? 'bg-canvas ' : '') . $margin_top_class);
+$section_class = trim('block-faq ' . ($bg_canvas ? 'bg-canvas py-14 lg:py-16 ' : '') . $margin_top_class);
 ?>
 
 <section class="<?php echo esc_attr($section_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">

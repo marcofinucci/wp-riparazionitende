@@ -19,7 +19,7 @@ if (!$heading && !$items) {
 $heading_id = 'info-box-' . wp_unique_id();
 ?>
 
-<section class="block-info-box py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-info-box <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
   <div class="container-site">
     <div class="bg-forest/5 border border-forest/15 rounded-2xl p-8 lg:p-12 max-w-4xl mx-auto">
       <div class="flex flex-col lg:flex-row gap-8">
