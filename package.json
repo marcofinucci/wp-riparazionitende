@@ -4,7 +4,9 @@
   "description": "WordPress theme for Riparazioni Tende Campeggio",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/css/app.css -o ./assets/css/app.css --watch",
-    "build": "npx tailwindcss -i ./src/css/app.css -o ./assets/css/app.css --minify"
+    "build": "npx tailwindcss -i ./src/css/app.css -o ./assets/css/app.css --minify",
+    "wp:me": "bash scripts/wp-api.sh me",
+    "wp:pages": "bash scripts/wp-api.sh pages"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.11",

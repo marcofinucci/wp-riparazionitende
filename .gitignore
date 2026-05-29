@@ -2,3 +2,4 @@ node_modules/
 .vscode
 .ftpquota
 .DS_Store
+.env

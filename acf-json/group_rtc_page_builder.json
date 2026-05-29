@@ -1,1068 +1,1090 @@
 {
-  "key": "group_rtc_page_builder",
-  "title": "Page Builder",
-  "fields": [
-    {
-      "key": "field_rtc_pb_breadcrumb",
-      "label": "Etichetta breadcrumb",
-      "name": "breadcrumb_label",
-      "aria-label": "",
-      "type": "text",
-      "instructions": "Se vuoto, usa il titolo della pagina.",
-      "required": false,
-      "conditional_logic": false,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "default_value": "",
-      "maxlength": "",
-      "placeholder": "",
-      "prepend": "",
-      "append": ""
-    },
-    {
-      "key": "field_rtc_pb_h1",
-      "label": "Titolo H1",
-      "name": "custom_h1",
-      "aria-label": "",
-      "type": "text",
-      "instructions": "Se vuoto, usa il titolo della pagina.",
-      "required": false,
-      "conditional_logic": false,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "default_value": "",
-      "maxlength": "",
-      "placeholder": "",
-      "prepend": "",
-      "append": ""
-    },
-    {
-      "key": "field_rtc_pb_subtitle",
-      "label": "Sottotitolo header",
-      "name": "header_subtitle",
-      "aria-label": "",
-      "type": "textarea",
-      "instructions": "",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "default_value": "",
-      "maxlength": "",
-      "allow_in_bindings": 1,
-      "rows": "",
-      "placeholder": "",
-      "new_lines": ""
-    },
-    {
-      "key": "field_rtc_pb_content",
-      "label": "Contenuti",
-      "name": "content",
-      "aria-label": "",
-      "type": "flexible_content",
-      "instructions": "",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "layouts": {
-        "layout_intro": {
-          "key": "layout_intro",
-          "name": "text",
-          "label": "Testo",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_text",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
+    "key": "group_rtc_page_builder",
+    "title": "Page Builder",
+    "fields": [
+        {
+            "key": "field_rtc_pb_breadcrumb",
+            "label": "Etichetta breadcrumb",
+            "name": "breadcrumb_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Se vuoto, usa il titolo della pagina.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
             },
-            {
-              "key": "field_intro_text",
-              "label": "Contenuto",
-              "name": "content",
-              "aria-label": "",
-              "type": "textarea",
-              "instructions": "",
-              "required": 1,
-              "conditional_logic": 0,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": "",
-              "maxlength": "",
-              "allow_in_bindings": 1,
-              "rows": 5,
-              "placeholder": "",
-              "new_lines": "wpautop"
-            }
-          ],
-          "min": "",
-          "max": ""
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
-        "layout_lavorazioni": {
-          "key": "layout_lavorazioni",
-          "name": "lavorazioni",
-          "label": "Lavorazioni",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_lavorazioni",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
+        {
+            "key": "field_rtc_pb_h1",
+            "label": "Titolo H1",
+            "name": "custom_h1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Se vuoto, usa il titolo della pagina.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
             },
-            {
-              "key": "field_lav_heading",
-              "label": "Titolo",
-              "name": "heading",
-              "aria-label": "",
-              "type": "text",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": "Lavorazioni principali",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
-            },
-            {
-              "key": "field_lav_items",
-              "label": "Voci",
-              "name": "items",
-              "aria-label": "",
-              "type": "repeater",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "layout": "table",
-              "button_label": "Aggiungi voce",
-              "min": 0,
-              "max": 0,
-              "rows_per_page": 20,
-              "collapsed": "",
-              "sub_fields": [
-                {
-                  "key": "field_lav_item",
-                  "label": "Voce",
-                  "name": "item",
-                  "aria-label": "",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 1,
-                  "conditional_logic": false,
-                  "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                  },
-                  "default_value": "",
-                  "maxlength": "",
-                  "placeholder": "",
-                  "prepend": "",
-                  "append": "",
-                  "parent_repeater": "field_lav_items"
-                }
-              ]
-            }
-          ],
-          "min": "",
-          "max": ""
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
-        "layout_subsection": {
-          "key": "layout_subsection",
-          "name": "subsection",
-          "label": "Sottosezione",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_subsection",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
+        {
+            "key": "field_rtc_pb_subtitle",
+            "label": "Sottotitolo header",
+            "name": "header_subtitle",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
             },
-            {
-              "key": "field_sub_heading",
-              "label": "Titolo",
-              "name": "heading",
-              "aria-label": "",
-              "type": "text",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": "",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
-            },
-            {
-              "key": "field_sub_text",
-              "label": "Testo",
-              "name": "text",
-              "aria-label": "",
-              "type": "textarea",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "rows": 4,
-              "default_value": "",
-              "new_lines": "",
-              "maxlength": "",
-              "placeholder": ""
-            },
-            {
-              "key": "field_sub_items",
-              "label": "Elenco",
-              "name": "items",
-              "aria-label": "",
-              "type": "repeater",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "layout": "table",
-              "button_label": "Aggiungi voce",
-              "min": 0,
-              "max": 0,
-              "rows_per_page": 20,
-              "collapsed": "",
-              "sub_fields": [
-                {
-                  "key": "field_sub_item",
-                  "label": "Voce",
-                  "name": "item",
-                  "aria-label": "",
-                  "type": "text",
-                  "instructions": "",
-                  "required": false,
-                  "conditional_logic": false,
-                  "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                  },
-                  "default_value": "",
-                  "maxlength": "",
-                  "placeholder": "",
-                  "prepend": "",
-                  "append": "",
-                  "parent_repeater": "field_sub_items"
-                }
-              ]
-            }
-          ],
-          "min": "",
-          "max": ""
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         },
-        "layout_note": {
-          "key": "layout_note",
-          "name": "note",
-          "label": "Nota informativa",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_note",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
+        {
+            "key": "field_rtc_pb_content",
+            "label": "Contenuti",
+            "name": "content",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
             },
-            {
-              "key": "field_note_text",
-              "label": "Testo",
-              "name": "text",
-              "aria-label": "",
-              "type": "textarea",
-              "instructions": "",
-              "required": 1,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "rows": 3,
-              "default_value": "",
-              "new_lines": "",
-              "maxlength": "",
-              "placeholder": ""
-            }
-          ],
-          "min": "",
-          "max": ""
-        },
-        "layout_salewa": {
-          "key": "layout_salewa",
-          "name": "salewa",
-          "label": "Box Salewa",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_salewa",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
-            }
-          ],
-          "min": "",
-          "max": ""
-        },
-        "layout_steps": {
-          "key": "layout_steps",
-          "name": "steps",
-          "label": "Procedura (step numerati)",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_steps",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
-            },
-            {
-              "key": "field_steps_heading",
-              "label": "Titolo",
-              "name": "heading",
-              "aria-label": "",
-              "type": "text",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": "Procedura",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
-            },
-            {
-              "key": "field_steps_list",
-              "label": "Step",
-              "name": "steps",
-              "aria-label": "",
-              "type": "repeater",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "layout": "block",
-              "button_label": "Aggiungi step",
-              "min": 0,
-              "max": 0,
-              "rows_per_page": 20,
-              "collapsed": "",
-              "sub_fields": [
-                {
-                  "key": "field_step_title",
-                  "label": "Titolo",
-                  "name": "title",
-                  "aria-label": "",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 1,
-                  "conditional_logic": false,
-                  "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                  },
-                  "default_value": "",
-                  "maxlength": "",
-                  "placeholder": "",
-                  "prepend": "",
-                  "append": "",
-                  "parent_repeater": "field_steps_list"
+            "layouts": {
+                "layout_intro": {
+                    "key": "layout_intro",
+                    "name": "text",
+                    "label": "Testo",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_text",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_intro_text",
+                            "label": "Contenuto",
+                            "name": "content",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 1,
+                            "rows": 5,
+                            "placeholder": "",
+                            "new_lines": "wpautop"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 },
-                {
-                  "key": "field_step_desc",
-                  "label": "Descrizione",
-                  "name": "description",
-                  "aria-label": "",
-                  "type": "textarea",
-                  "instructions": "",
-                  "required": 1,
-                  "conditional_logic": false,
-                  "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                  },
-                  "rows": 3,
-                  "default_value": "",
-                  "new_lines": "",
-                  "maxlength": "",
-                  "placeholder": "",
-                  "parent_repeater": "field_steps_list"
-                }
-              ]
-            }
-          ],
-          "min": "",
-          "max": ""
-        },
-        "layout_related": {
-          "key": "layout_related",
-          "name": "related_pages",
-          "label": "Link correlati",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_related",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
-            },
-            {
-              "key": "field_rel_heading",
-              "label": "Titolo",
-              "name": "heading",
-              "aria-label": "",
-              "type": "text",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": "Potrebbe interessarti anche",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
-            },
-            {
-              "key": "field_rel_links",
-              "label": "Link",
-              "name": "links",
-              "aria-label": "",
-              "type": "repeater",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "layout": "block",
-              "button_label": "Aggiungi link",
-              "min": 0,
-              "max": 0,
-              "rows_per_page": 20,
-              "collapsed": "",
-              "sub_fields": [
-                {
-                  "key": "field_rel_label",
-                  "label": "Etichetta",
-                  "name": "label",
-                  "aria-label": "",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 1,
-                  "conditional_logic": false,
-                  "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                  },
-                  "default_value": "",
-                  "maxlength": "",
-                  "placeholder": "",
-                  "prepend": "",
-                  "append": "",
-                  "parent_repeater": "field_rel_links"
+                "layout_lavorazioni": {
+                    "key": "layout_lavorazioni",
+                    "name": "lavorazioni",
+                    "label": "Lavorazioni",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_lavorazioni",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_lav_heading",
+                            "label": "Titolo",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Lavorazioni principali",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_lav_items",
+                            "label": "Voci",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "button_label": "Aggiungi voce",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_lav_item",
+                                    "label": "Voce",
+                                    "name": "item",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_lav_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 },
-                {
-                  "key": "field_rel_link",
-                  "label": "URL",
-                  "name": "link",
-                  "aria-label": "",
-                  "type": "link",
-                  "instructions": "",
-                  "required": 1,
-                  "conditional_logic": false,
-                  "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                  },
-                  "return_format": "array",
-                  "parent_repeater": "field_rel_links"
-                }
-              ]
-            }
-          ],
-          "min": "",
-          "max": ""
-        },
-        "layout_contact_canali": {
-          "key": "layout_contact_canali",
-          "name": "contact_canali",
-          "label": "Canali di contatto",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_contact_canali",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
-            }
-          ],
-          "min": "",
-          "max": ""
-        },
-        "layout_contact_form": {
-          "key": "layout_contact_form",
-          "name": "contact_form",
-          "label": "Form contatti",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_contact_form",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
-            }
-          ],
-          "min": "",
-          "max": ""
-        },
-        "layout_faq": {
-          "key": "layout_faq",
-          "name": "faq",
-          "label": "FAQ",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_faq",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
-            },
-            {
-              "key": "field_faq_heading",
-              "label": "Titolo",
-              "name": "heading",
-              "aria-label": "",
-              "type": "text",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": "Domande frequenti",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
-            },
-            {
-              "key": "field_faq_items",
-              "label": "Domande",
-              "name": "items",
-              "aria-label": "",
-              "type": "repeater",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "layout": "block",
-              "button_label": "Aggiungi domanda",
-              "min": 0,
-              "max": 0,
-              "rows_per_page": 20,
-              "collapsed": "",
-              "sub_fields": [
-                {
-                  "key": "field_faq_question",
-                  "label": "Domanda",
-                  "name": "question",
-                  "aria-label": "",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 1,
-                  "conditional_logic": false,
-                  "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                  },
-                  "default_value": "",
-                  "maxlength": "",
-                  "placeholder": "",
-                  "prepend": "",
-                  "append": "",
-                  "parent_repeater": "field_faq_items"
+                "layout_subsection": {
+                    "key": "layout_subsection",
+                    "name": "subsection",
+                    "label": "Sottosezione",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_subsection",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_sub_heading",
+                            "label": "Titolo",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_sub_text",
+                            "label": "Testo",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "default_value": "",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_sub_items",
+                            "label": "Elenco",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "button_label": "Aggiungi voce",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_sub_item",
+                                    "label": "Voce",
+                                    "name": "item",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": false,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_sub_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 },
-                {
-                  "key": "field_faq_answer",
-                  "label": "Risposta",
-                  "name": "answer",
-                  "aria-label": "",
-                  "type": "textarea",
-                  "instructions": "",
-                  "required": 1,
-                  "conditional_logic": false,
-                  "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                  },
-                  "rows": 3,
-                  "default_value": "",
-                  "new_lines": "",
-                  "maxlength": "",
-                  "placeholder": "",
-                  "parent_repeater": "field_faq_items"
+                "layout_note": {
+                    "key": "layout_note",
+                    "name": "note",
+                    "label": "Nota informativa",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_note",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_note_text",
+                            "label": "Testo",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 3,
+                            "default_value": "",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_salewa": {
+                    "key": "layout_salewa",
+                    "name": "salewa",
+                    "label": "Box Salewa",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_salewa",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_steps": {
+                    "key": "layout_steps",
+                    "name": "steps",
+                    "label": "Procedura (step numerati)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_steps",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_steps_heading",
+                            "label": "Titolo",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Procedura",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_steps_list",
+                            "label": "Step",
+                            "name": "steps",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "button_label": "Aggiungi step",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_step_title",
+                                    "label": "Titolo",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_steps_list"
+                                },
+                                {
+                                    "key": "field_step_desc",
+                                    "label": "Descrizione",
+                                    "name": "description",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 3,
+                                    "default_value": "",
+                                    "new_lines": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_steps_list"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_related": {
+                    "key": "layout_related",
+                    "name": "related_pages",
+                    "label": "Link correlati",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_related",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_rel_heading",
+                            "label": "Titolo",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Potrebbe interessarti anche",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_rel_links",
+                            "label": "Link",
+                            "name": "links",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "button_label": "Aggiungi link",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_rel_label",
+                                    "label": "Etichetta",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_rel_links"
+                                },
+                                {
+                                    "key": "field_rel_link",
+                                    "label": "URL",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_rel_links"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_contact_canali": {
+                    "key": "layout_contact_canali",
+                    "name": "contact_canali",
+                    "label": "Canali di contatto",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_contact_canali",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_contact_form": {
+                    "key": "layout_contact_form",
+                    "name": "contact_form",
+                    "label": "Form contatti",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_contact_form",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_faq": {
+                    "key": "layout_faq",
+                    "name": "faq",
+                    "label": "FAQ",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_faq",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_faq_heading",
+                            "label": "Titolo",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Domande frequenti",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_faq_items",
+                            "label": "Domande",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "button_label": "Aggiungi domanda",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_faq_question",
+                                    "label": "Domanda",
+                                    "name": "question",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_faq_items"
+                                },
+                                {
+                                    "key": "field_faq_answer",
+                                    "label": "Risposta",
+                                    "name": "answer",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": false,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 3,
+                                    "default_value": "",
+                                    "new_lines": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_faq_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_cta": {
+                    "key": "layout_cta",
+                    "name": "cta",
+                    "label": "CTA finale",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_rtc_pb_margin_top_cta",
+                            "label": "Margine superiore",
+                            "name": "margin_top",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "no": "No",
+                                "piccolo": "Piccolo",
+                                "medio": "Medio"
+                            },
+                            "default_value": "medio",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_cta_title",
+                            "label": "Titolo",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Hai una tenda da riparare?",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cta_text",
+                            "label": "Testo",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 2,
+                            "default_value": "Invia foto della tenda e dei danni per ricevere una valutazione preliminare.",
+                            "new_lines": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_cta_wa",
+                            "label": "Mostra WhatsApp",
+                            "name": "show_whatsapp",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 1,
+                            "ui": 1,
+                            "message": "",
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_cta_wa_label",
+                            "label": "Testo pulsante WhatsApp",
+                            "name": "whatsapp_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Contattaci su WhatsApp",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cta_spedire",
+                            "label": "Mostra Come spedire",
+                            "name": "show_spedire",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 1,
+                            "ui": 1,
+                            "message": "",
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
-              ]
-            }
-          ],
-          "min": "",
-          "max": ""
-        },
-        "layout_cta": {
-          "key": "layout_cta",
-          "name": "cta",
-          "label": "CTA finale",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_rtc_pb_margin_top_cta",
-              "label": "Margine superiore",
-              "name": "margin_top",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "choices": {
-                "no": "No",
-                "piccolo": "Piccolo",
-                "medio": "Medio"
-              },
-              "default_value": "medio",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": ""
             },
-            {
-              "key": "field_cta_title",
-              "label": "Titolo",
-              "name": "title",
-              "aria-label": "",
-              "type": "text",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": "Hai una tenda da riparare?",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
-            },
-            {
-              "key": "field_cta_text",
-              "label": "Testo",
-              "name": "text",
-              "aria-label": "",
-              "type": "textarea",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "rows": 2,
-              "default_value": "Invia foto della tenda e dei danni per ricevere una valutazione preliminare.",
-              "new_lines": "",
-              "maxlength": "",
-              "placeholder": ""
-            },
-            {
-              "key": "field_cta_wa",
-              "label": "Mostra WhatsApp",
-              "name": "show_whatsapp",
-              "aria-label": "",
-              "type": "true_false",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": 1,
-              "ui": 1,
-              "message": "",
-              "ui_on_text": "",
-              "ui_off_text": ""
-            },
-            {
-              "key": "field_cta_wa_label",
-              "label": "Testo pulsante WhatsApp",
-              "name": "whatsapp_label",
-              "aria-label": "",
-              "type": "text",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": "Contattaci su WhatsApp",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
-            },
-            {
-              "key": "field_cta_spedire",
-              "label": "Mostra Come spedire",
-              "name": "show_spedire",
-              "aria-label": "",
-              "type": "true_false",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": 1,
-              "ui": 1,
-              "message": "",
-              "ui_on_text": "",
-              "ui_off_text": ""
-            }
-          ],
-          "min": "",
-          "max": ""
+            "min": "",
+            "max": "",
+            "button_label": "Aggiungi blocco"
         }
-      },
-      "min": "",
-      "max": "",
-      "button_label": "Aggiungi blocco"
-    }
-  ],
-  "location": [
-    [
-      {
-        "param": "page_template",
-        "operator": "==",
-        "value": "templates\/page-builder.php"
-      }
-    ]
-  ],
-  "menu_order": 0,
-  "position": "normal",
-  "style": "seamless",
-  "label_placement": "top",
-  "instruction_placement": "label",
-  "hide_on_screen": [
-    "the_content",
-    "excerpt",
-    "discussion",
-    "comments",
-    "revisions",
-    "slug",
-    "author",
-    "format",
-    "categories",
-    "tags",
-    "send-trackbacks"
-  ],
-  "active": true,
-  "description": "",
-  "show_in_rest": 0,
-  "display_title": "",
-  "allow_ai_access": false,
-  "ai_description": "",
-  "modified": 1779877258
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-builder.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1780067031
 }
