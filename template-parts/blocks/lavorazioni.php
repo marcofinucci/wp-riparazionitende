@@ -18,7 +18,7 @@ if (!$items) {
 $heading_id = 'lavorazioni-' . wp_unique_id();
 ?>
 
-<section class="<?php echo esc_attr(trim($margin_top_class . ' bg-canvas py-14 lg:py-16')); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-lavorazioni bg-canvas py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
   <div class="container-site">
     <div class="max-w-3xl">
       <?php if ($heading) : ?>

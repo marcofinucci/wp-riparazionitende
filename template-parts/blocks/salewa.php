@@ -10,7 +10,7 @@ $margin_top_classes = [
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
 ?>
 
-<section class="<?php echo esc_attr(trim($margin_top_class . ' bg-canvas py-12 lg:py-14')); ?>">
+<section class="block-salewa bg-canvas py-12 lg:py-14 <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <div class="max-w-3xl flex flex-col sm:flex-row items-start sm:items-center gap-5  rounded-2xl p-7 border border-canvas-dark/30">
       <div class="flex-1">

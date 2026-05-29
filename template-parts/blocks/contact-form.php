@@ -12,7 +12,7 @@ $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['med
 $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['contact'])) : '';
 ?>
 
-<section class="<?php echo esc_attr(trim($margin_top_class . ' bg-canvas py-14 lg:py-16')); ?>" aria-labelledby="form-heading">
+<section class="block-contact-form bg-canvas py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="form-heading">
   <div class="container-site">
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14">
 

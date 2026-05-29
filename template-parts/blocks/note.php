@@ -15,7 +15,7 @@ if (!$text) {
 }
 ?>
 
-<section class="<?php echo esc_attr(trim($margin_top_class . ' py-12 lg:py-14')); ?>">
+<section class="block-note <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <div class="max-w-3xl bg-forest/5 border border-forest/15 rounded-2xl p-6 flex items-start gap-4">
       <?php rtc_icon('info', 'w-5 h-5 text-forest flex-shrink-0 mt-0.5'); ?>

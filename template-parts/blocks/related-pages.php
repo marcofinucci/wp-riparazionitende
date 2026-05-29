@@ -16,7 +16,7 @@ if (!$links) {
 }
 ?>
 
-<section class="<?php echo esc_attr(trim($margin_top_class . ' py-12 lg:py-14')); ?>">
+<section class="block-related-pages <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <div class="max-w-3xl">
       <?php if ($heading) : ?>

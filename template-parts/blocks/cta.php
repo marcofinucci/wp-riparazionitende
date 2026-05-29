@@ -17,7 +17,7 @@ $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['med
 $wa_url = rtc_whatsapp_link('Salve, vorrei una valutazione per la riparazione di una tenda.');
 ?>
 
-<section class="<?php echo esc_attr(trim($margin_top_class . ' bg-forest py-16 lg:py-20')); ?>">
+<section class="block-cta bg-forest py-16 lg:py-20 <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site text-center">
     <?php if ($title) : ?>
       <h2 class="font-heading font-bold text-2xl md:text-3xl text-white mb-4"><?php echo esc_html($title); ?></h2>

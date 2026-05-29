@@ -15,7 +15,7 @@ if (!$content) {
 }
 ?>
 
-<section class="<?php echo esc_attr(trim($margin_top_class . ' py-14 lg:py-16')); ?>">
+<section class="block-text <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <div class="max-w-3xl text-muted text-lg [&>*]:mt-4 [&>*:first-child]:mt-0 [&>:last-child]:mb-0">
       <?php echo wp_kses_post($content); ?>

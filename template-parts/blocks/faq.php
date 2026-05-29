@@ -18,7 +18,7 @@ if (!$items) {
 $heading_id = 'faq-' . wp_unique_id();
 ?>
 
-<section class="<?php echo esc_attr(trim($margin_top_class . ' py-14 lg:py-16')); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-faq <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
   <div class="container-site max-w-3xl">
     <?php if ($heading) : ?>
       <h2 id="<?php echo esc_attr($heading_id); ?>" class="section-subheading mb-8"><?php echo esc_html($heading); ?></h2>
