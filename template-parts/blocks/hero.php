@@ -9,24 +9,24 @@ $primary_link   = $args['primary_link'] ?? null;
 $secondary_link = $args['secondary_link'] ?? null;
 
 if (is_array($image)) {
-    $image = $image['url'] ?? '';
+  $image = $image['url'] ?? '';
 } elseif (is_numeric($image)) {
-    $image = wp_get_attachment_image_url((int) $image, 'hey-1920x1080') ?: '';
+  $image = wp_get_attachment_image_url((int) $image, 'hey-1920x1080') ?: '';
 }
 
 if (!$heading) {
-    return;
+  return;
 }
 
 $resolve_link = static function ($link): array {
-    if (is_array($link)) {
-        return [
-            'url'    => $link['url'] ?? '',
-            'title'  => $link['title'] ?? '',
-            'target' => $link['target'] ?? '',
-        ];
-    }
-    return ['url' => (string) $link, 'title' => '', 'target' => ''];
+  if (is_array($link)) {
+    return [
+      'url'    => $link['url'] ?? '',
+      'title'  => $link['title'] ?? '',
+      'target' => $link['target'] ?? '',
+    ];
+  }
+  return ['url' => (string) $link, 'title' => '', 'target' => ''];
 };
 
 $primary   = $resolve_link($primary_link);
