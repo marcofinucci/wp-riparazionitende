@@ -1,26 +1,35 @@
 <?php
 defined('ABSPATH') || exit;
 
-$heading = $args['heading'] ?? 'Potrebbe interessarti anche';
-$links   = $args['links'] ?? [];
+$heading    = $args['heading'] ?? 'Potrebbe interessarti anche';
+$links      = $args['links'] ?? [];
+$background = $args['background'] ?? 'no';
 $margin_top = $args['margin_top'] ?? 'medio';
+$bg_classes = [
+  'canvas' => 'bg-canvas',
+  'olive'  => 'bg-olive',
+];
+$bg_class      = $bg_classes[$background] ?? '';
+$has_bg        = $background !== 'no' && $background !== '';
+$is_olive      = $background === 'olive';
 $margin_top_classes = [
   'no' => '',
   'piccolo' => 'mt-6 lg:mt-8',
   'medio' => 'mt-10 lg:mt-14',
 ];
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
+$section_class = trim('block-related-pages ' . ($has_bg ? $bg_class . ' py-14 lg:py-16 ' : '') . $margin_top_class);
 
 if (!$links) {
   return;
 }
 ?>
 
-<section class="block-related-pages <?php echo esc_attr($margin_top_class); ?>">
+<section class="<?php echo esc_attr($section_class); ?>">
   <div class="container-site">
     <div class="max-w-3xl">
       <?php if ($heading) : ?>
-        <h3 class="font-heading font-semibold text-forest text-base mb-5"><?php echo esc_html($heading); ?></h3>
+        <h3 class="font-heading font-semibold text-base mb-5 <?php echo $is_olive ? 'text-white' : 'text-forest'; ?>"><?php echo esc_html($heading); ?></h3>
       <?php endif; ?>
       <div class="flex flex-wrap gap-3">
         <?php foreach ($links as $row) : ?>
@@ -37,9 +46,12 @@ if (!$links) {
           if (!$label || !$href) {
             continue;
           }
+
+          $link_class = $is_olive
+            ? 'inline-flex items-center gap-2 text-white hover:text-canvas text-sm font-heading font-medium transition-colors border border-white/25 hover:border-canvas/40 px-4 py-2 rounded-full'
+            : 'inline-flex items-center gap-2 text-forest hover:text-olive text-sm font-heading font-medium transition-colors border border-forest/20 hover:border-olive/30 px-4 py-2 rounded-full';
           ?>
-          <a href="<?php echo esc_url($href); ?>"
-            class="inline-flex items-center gap-2 text-forest hover:text-olive text-sm font-heading font-medium transition-colors border border-forest/20 hover:border-olive/30 px-4 py-2 rounded-full">
+          <a href="<?php echo esc_url($href); ?>" class="<?php echo esc_attr($link_class); ?>">
             <?php echo esc_html($label); ?>
             <?php rtc_icon('chevron-right', 'w-3.5 h-3.5'); ?>
           </a>

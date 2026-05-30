@@ -696,6 +696,35 @@
               "save_options": 0
             },
             {
+              "key": "field_rtc_pb_background_related",
+              "label": "Sfondo",
+              "name": "background",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "canvas": "Canvas",
+                "olive": "Olive"
+              },
+              "default_value": "no",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": "",
+              "create_options": 0,
+              "save_options": 0
+            },
+            {
               "key": "field_rel_heading",
               "label": "Titolo",
               "name": "heading",
@@ -910,26 +939,6 @@
               "default_value": "",
               "maxlength": "",
               "placeholder": ""
-            },
-            {
-              "key": "field_faq_centered",
-              "label": "Layout centrato",
-              "name": "centered",
-              "aria-label": "",
-              "type": "true_false",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": 0,
-              "ui": 1,
-              "message": "",
-              "ui_on_text": "",
-              "ui_off_text": ""
             },
             {
               "key": "field_faq_bg_canvas",
@@ -2484,5 +2493,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1780129000
+  "modified": 1780215800
 }

@@ -164,6 +164,7 @@ get_header();
                         get_template_part('template-parts/blocks/related-pages', null, [
                             'heading'    => get_sub_field('heading'),
                             'links'      => get_sub_field('links'),
+                            'background' => get_sub_field('background'),
                             'margin_top' => get_sub_field('margin_top'),
                         ]);
                     } ?>
@@ -185,7 +186,6 @@ get_header();
                             'eyebrow'    => get_sub_field('eyebrow'),
                             'heading'    => get_sub_field('heading'),
                             'items'      => get_sub_field('items'),
-                            'centered'   => get_sub_field('centered'),
                             'bg_canvas'  => get_sub_field('bg_canvas'),
                             'margin_top' => get_sub_field('margin_top'),
                         ]);
