@@ -941,24 +941,32 @@
               "placeholder": ""
             },
             {
-              "key": "field_faq_bg_canvas",
-              "label": "Sfondo canvas",
-              "name": "bg_canvas",
+              "key": "field_rtc_pb_background_faq",
+              "label": "Sfondo",
+              "name": "background",
               "aria-label": "",
-              "type": "true_false",
+              "type": "select",
               "instructions": "",
-              "required": false,
-              "conditional_logic": false,
+              "required": 0,
+              "conditional_logic": 0,
               "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
               },
-              "default_value": 0,
-              "ui": 1,
-              "message": "",
-              "ui_on_text": "",
-              "ui_off_text": ""
+              "choices": {
+                "no": "No",
+                "canvas": "Canvas"
+              },
+              "default_value": "no",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": "",
+              "create_options": 0,
+              "save_options": 0
             },
             {
               "key": "field_faq_heading",
@@ -2493,5 +2501,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1780215800
+  "modified": 1780215900
 }

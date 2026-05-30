@@ -50,7 +50,7 @@ $icon_map   = ['clock' => 'clock', 'badge-check' => 'badge-check', 'map' => 'map
             }
             $icon_name = $icon_map[$icon] ?? 'clock';
             ?>
-            <div class="rounded-2xl p-7 border border-canvas-dark/40">
+            <div class="rounded-2xl p-7 border border-canvas-dark">
               <div class="flex items-center gap-5">
                 <div class="w-14 h-14 rounded-xl bg-forest/10 flex items-center justify-center flex-shrink-0">
                   <?php rtc_icon($icon_name, 'w-7 h-7 text-forest'); ?>

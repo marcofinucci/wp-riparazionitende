@@ -186,7 +186,7 @@ get_header();
                             'eyebrow'    => get_sub_field('eyebrow'),
                             'heading'    => get_sub_field('heading'),
                             'items'      => get_sub_field('items'),
-                            'bg_canvas'  => get_sub_field('bg_canvas'),
+                            'background' => get_sub_field('background') ?: (get_sub_field('bg_canvas') ? 'canvas' : 'no'),
                             'margin_top' => get_sub_field('margin_top'),
                         ]);
                     } ?>

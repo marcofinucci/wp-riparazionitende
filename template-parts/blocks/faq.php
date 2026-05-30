@@ -4,7 +4,10 @@ defined('ABSPATH') || exit;
 $eyebrow    = $args['eyebrow'] ?? '';
 $heading    = $args['heading'] ?? 'Domande frequenti';
 $items      = $args['items'] ?? [];
-$bg_canvas  = !empty($args['bg_canvas']);
+$background = $args['background'] ?? 'no';
+if ($background === 'no' && !empty($args['bg_canvas'])) {
+  $background = 'canvas';
+}
 $margin_top = $args['margin_top'] ?? 'medio';
 $margin_top_classes = [
   'no' => '',
@@ -18,7 +21,7 @@ if (!$items) {
 }
 
 $heading_id = 'faq-' . wp_unique_id();
-$section_class = trim('block-faq ' . ($bg_canvas ? 'bg-canvas py-14 lg:py-16 ' : '') . $margin_top_class);
+$section_class = trim('block-faq ' . ($background === 'canvas' ? 'bg-canvas py-14 lg:py-16 ' : '') . $margin_top_class);
 ?>
 
 <section class="<?php echo esc_attr($section_class); ?>">
