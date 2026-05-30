@@ -18,7 +18,7 @@ if (!$steps) {
 $heading_id = 'steps-' . wp_unique_id();
 ?>
 
-<section class="block-steps bg-canvas py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-steps bg-canvas py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <div class="max-w-3xl">
       <?php if ($heading) : ?>

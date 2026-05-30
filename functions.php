@@ -7,6 +7,7 @@
 defined('ABSPATH') || exit;
 
 require_once get_template_directory() . '/inc/icons.php';
+require_once get_template_directory() . '/inc/nav-walker.php';
 
 // Theme setup
 function rtc_theme_setup(): void
@@ -26,8 +27,10 @@ function rtc_theme_setup(): void
     add_theme_support('responsive-embeds');
 
     register_nav_menus([
-        'primary'    => __('Menu principale', 'riparazionetende'),
-        'footer_nav' => __('Menu footer', 'riparazionetende'),
+        'primary'         => __('Menu principale', 'riparazionetende'),
+        'footer_services' => __('Footer — Servizi', 'riparazionetende'),
+        'footer_info'     => __('Footer — Informazioni', 'riparazionetende'),
+        'footer_legal'    => __('Footer — Link legali', 'riparazionetende'),
     ]);
 
     // Add custom image

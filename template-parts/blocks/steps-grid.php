@@ -9,28 +9,28 @@ $button_link  = $args['button_link'] ?? null;
 $button_label = $args['button_label'] ?? '';
 $margin_top   = $args['margin_top'] ?? 'medio';
 $margin_top_classes = [
-    'no'      => '',
-    'piccolo' => 'mt-6 lg:mt-8',
-    'medio'   => 'mt-10 lg:mt-14',
+  'no'      => '',
+  'piccolo' => 'mt-6 lg:mt-8',
+  'medio'   => 'mt-10 lg:mt-14',
 ];
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
 
 if (!$steps) {
-    return;
+  return;
 }
 
 $heading_id = 'steps-grid-' . wp_unique_id();
 
 if (is_array($button_link)) {
-    $btn_url    = $button_link['url'] ?? '';
-    $btn_target = $button_link['target'] ?? '';
+  $btn_url    = $button_link['url'] ?? '';
+  $btn_target = $button_link['target'] ?? '';
 } else {
-    $btn_url    = (string) $button_link;
-    $btn_target = '';
+  $btn_url    = (string) $button_link;
+  $btn_target = '';
 }
 ?>
 
-<section class="block-steps-grid <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-steps-grid <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <?php if ($eyebrow || $heading || $intro) : ?>
       <div class="text-center mb-12">
@@ -54,7 +54,7 @@ if (is_array($button_link)) {
           $title = is_array($step) ? ($step['title'] ?? '') : '';
           $desc  = is_array($step) ? ($step['description'] ?? ($step['desc'] ?? '')) : '';
           if (!$title && !$desc) {
-              continue;
+            continue;
           }
           ?>
           <div class="flex flex-col items-center text-center gap-4 rounded-2xl p-5 border border-canvas-dark/20">

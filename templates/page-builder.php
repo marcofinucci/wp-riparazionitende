@@ -124,6 +124,7 @@ get_header();
                         get_template_part('template-parts/blocks/lavorazioni', null, [
                             'heading'    => get_sub_field('heading'),
                             'items'      => get_sub_field('items'),
+                            'background' => get_sub_field('background'),
                             'margin_top' => get_sub_field('margin_top'),
                         ]);
                     } ?>

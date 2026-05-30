@@ -9,20 +9,20 @@ $quote     = $args['quote'] ?? '';
 $author    = $args['author'] ?? '';
 $margin_top = $args['margin_top'] ?? 'medio';
 $margin_top_classes = [
-    'no'      => '',
-    'piccolo' => 'mt-6 lg:mt-8',
-    'medio'   => 'mt-10 lg:mt-14',
+  'no'      => '',
+  'piccolo' => 'mt-6 lg:mt-8',
+  'medio'   => 'mt-10 lg:mt-14',
 ];
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
 
 if (!$heading && !$content && !$quote) {
-    return;
+  return;
 }
 
 $heading_id = 'quote-' . wp_unique_id();
 ?>
 
-<section class="block-quote-section <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-quote-section <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <div class="max-w-3xl mx-auto text-center">
       <?php if ($eyebrow) : ?>

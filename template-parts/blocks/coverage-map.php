@@ -7,20 +7,20 @@ $content     = $args['content'] ?? '';
 $quote_text  = $args['quote_text'] ?? '';
 $margin_top  = $args['margin_top'] ?? 'medio';
 $margin_top_classes = [
-    'no'      => '',
-    'piccolo' => 'mt-6 lg:mt-8',
-    'medio'   => 'mt-10 lg:mt-14',
+  'no'      => '',
+  'piccolo' => 'mt-6 lg:mt-8',
+  'medio'   => 'mt-10 lg:mt-14',
 ];
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
 
 if (!$heading && !$content) {
-    return;
+  return;
 }
 
 $heading_id = 'coverage-' . wp_unique_id();
 ?>
 
-<section class="block-coverage-map bg-forest py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-coverage-map bg-forest py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div>

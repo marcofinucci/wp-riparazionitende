@@ -11,7 +11,7 @@ $margin_top_classes = [
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
 ?>
 
-<section class="block-salewa bg-canvas py-12 lg:py-14 <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="salewa-heading">
+<section class="block-salewa bg-canvas py-12 lg:py-14 <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <?php if ($variant === 'centered') : ?>
       <div class="max-w-2xl mx-auto text-center">

@@ -8,43 +8,43 @@ $services    = $args['services'] ?? [];
 $footer_link = $args['footer_link'] ?? null;
 $margin_top  = $args['margin_top'] ?? 'medio';
 $margin_top_classes = [
-    'no'      => '',
-    'piccolo' => 'mt-6 lg:mt-8',
-    'medio'   => 'mt-10 lg:mt-14',
+  'no'      => '',
+  'piccolo' => 'mt-6 lg:mt-8',
+  'medio'   => 'mt-10 lg:mt-14',
 ];
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
 
 if (!$services) {
-    return;
+  return;
 }
 
 $heading_id = 'services-' . wp_unique_id();
 
 $resolve_link = static function ($link): array {
-    if (is_array($link)) {
-        return [
-            'url'    => $link['url'] ?? '',
-            'title'  => $link['title'] ?? '',
-            'target' => $link['target'] ?? '',
-        ];
-    }
-    return ['url' => (string) $link, 'title' => '', 'target' => ''];
+  if (is_array($link)) {
+    return [
+      'url'    => $link['url'] ?? '',
+      'title'  => $link['title'] ?? '',
+      'target' => $link['target'] ?? '',
+    ];
+  }
+  return ['url' => (string) $link, 'title' => '', 'target' => ''];
 };
 
 $resolve_image = static function ($image): string {
-    if (is_array($image)) {
-        return $image['url'] ?? '';
-    }
-    if (is_numeric($image)) {
-        return wp_get_attachment_image_url((int) $image, 'large') ?: '';
-    }
-    return (string) $image;
+  if (is_array($image)) {
+    return $image['url'] ?? '';
+  }
+  if (is_numeric($image)) {
+    return wp_get_attachment_image_url((int) $image, 'large') ?: '';
+  }
+  return (string) $image;
 };
 
 $footer = $resolve_link($footer_link);
 ?>
 
-<section class="block-services-grid <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-services-grid <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <?php if ($eyebrow || $heading || $intro) : ?>
       <div class="text-center mb-12">
@@ -70,7 +70,7 @@ $footer = $resolve_link($footer_link);
         $img_alt  = $service['image_alt'] ?? ($service['img_alt'] ?? '');
         $badge    = $service['badge'] ?? '';
         if (!$title || !$link['url']) {
-            continue;
+          continue;
         }
         ?>
         <article class="service-card-media group relative cursor-pointer">

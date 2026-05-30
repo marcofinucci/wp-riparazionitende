@@ -6,20 +6,20 @@ $text       = $args['text'] ?? '';
 $items      = $args['items'] ?? [];
 $margin_top = $args['margin_top'] ?? 'medio';
 $margin_top_classes = [
-    'no'      => '',
-    'piccolo' => 'mt-6 lg:mt-8',
-    'medio'   => 'mt-10 lg:mt-14',
+  'no'      => '',
+  'piccolo' => 'mt-6 lg:mt-8',
+  'medio'   => 'mt-10 lg:mt-14',
 ];
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
 
 if (!$heading && !$items) {
-    return;
+  return;
 }
 
 $heading_id = 'info-box-' . wp_unique_id();
 ?>
 
-<section class="block-info-box <?php echo esc_attr($margin_top_class); ?>" aria-labelledby="<?php echo esc_attr($heading_id); ?>">
+<section class="block-info-box <?php echo esc_attr($margin_top_class); ?>">
   <div class="container-site">
     <div class="bg-forest/5 border border-forest/15 rounded-2xl p-8 lg:p-12 max-w-4xl mx-auto">
       <div class="flex flex-col lg:flex-row gap-8">
@@ -38,7 +38,7 @@ $heading_id = 'info-box-' . wp_unique_id();
               <?php foreach ($items as $row) : ?>
                 <?php $item = is_array($row) ? ($row['item'] ?? '') : $row; ?>
                 <?php if (!$item) {
-                    continue;
+                  continue;
                 } ?>
                 <li class="flex items-start gap-2.5 text-sm text-dark">
                   <?php rtc_icon('check', 'w-4 h-4 text-olive flex-shrink-0 mt-0.5'); ?>

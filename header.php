@@ -33,47 +33,24 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-5 xl:gap-6" aria-label="Navigazione principale">
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="nav-link">Home</a>
-
-          <!-- Servizi dropdown -->
-          <div class="relative" id="services-parent">
-            <button id="services-btn" aria-haspopup="true" aria-expanded="false"
-              class="nav-link flex items-center gap-1 bg-transparent border-0 p-0 cursor-pointer">
-              Servizi
-              <?php rtc_icon('chevron-down', 'w-4 h-4 transition-transform duration-150', ['id' => 'services-chevron']); ?>
-            </button>
-            <div id="services-dropdown"
-              class="hidden absolute top-full left-1/2 -translate-x-1/2 pt-3 w-72 z-50">
-              <div class="bg-white rounded-2xl shadow-xl border border-canvas p-2">
-                <?php
-                $services = [
-                  ['url' => '/riparazione-tende-scout',              'label' => 'Gruppi Scout'],
-                  ['url' => '/riparazione-verande-roulotte',          'label' => 'Verande roulotte'],
-                  ['url' => '/manutenzione-tende-carrello',           'label' => 'Tende carrello e stagionali'],
-                  ['url' => '/riparazione-tende-trekking-igloo',      'label' => 'Trekking / Igloo / Outdoor'],
-                  ['url' => '/riparazione-paleria-tende',             'label' => 'Paleria e ricambi'],
-                  ['url' => '/riparazione-tende-speciali',            'label' => 'Tende speciali'],
-                  ['url' => '/riparazione-tende-associazioni-eventi', 'label' => 'Associazioni e strutture'],
-                ];
-                foreach ($services as $s) : ?>
-                  <a href="<?php echo esc_url(home_url($s['url'])); ?>"
-                    class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-dark hover:text-forest font-body text-sm font-medium transition-colors group">
-                    <?php echo esc_html($s['label']); ?>
-                  </a>
-                <?php endforeach; ?>
-              </div>
-            </div>
-          </div>
-
-          <a href="<?php echo esc_url(home_url('/come-spedire-tenda-da-riparare')); ?>" class="nav-link">Come spedire</a>
-          <a href="<?php echo esc_url(home_url('/collaborazioni-punti-raccolta')); ?>" class="nav-link">Collaborazioni</a>
-          <a href="<?php echo esc_url(home_url('/contatti')); ?>" class="nav-link">Contatti</a>
-        </nav>
+        <?php if (has_nav_menu('primary')) : ?>
+          <nav class="hidden lg:flex items-center gap-5 xl:gap-6" aria-label="Navigazione principale">
+            <?php
+            wp_nav_menu([
+              'theme_location' => 'primary',
+              'container'      => false,
+              'items_wrap'     => '%3$s',
+              'depth'          => 2,
+              'walker'         => new Rtc_Primary_Nav_Walker(),
+              'fallback_cb'    => false,
+            ]);
+            ?>
+          </nav>
+        <?php endif; ?>
 
         <!-- WhatsApp CTA (desktop) + Mobile menu button -->
         <div class="flex items-center gap-3">
-          <a href="https://wa.me/393000000000" target="_blank" rel="noopener noreferrer"
+          <a href="<?php echo esc_url(rtc_whatsapp_link()); ?>" target="_blank" rel="noopener noreferrer"
             class="hidden sm:inline-flex btn-outline-sm">
             <?php rtc_whatsapp_icon('w-4 h-4'); ?>
             WhatsApp
@@ -90,30 +67,29 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-forest-dark border-t border-forest-light" role="navigation" aria-label="Menu mobile">
-      <div class="container-site py-4 space-y-1">
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="block px-4 py-3 text-white/90 hover:text-white hover:bg-forest-light rounded-xl text-sm font-heading font-medium transition-colors">Home</a>
-        <div class="px-4 py-2">
-          <p class="text-canvas/60 text-xs font-heading font-semibold uppercase tracking-wider mb-2">Servizi</p>
-          <?php foreach ($services as $s) : ?>
-            <a href="<?php echo esc_url(home_url($s['url'])); ?>"
-              class="block px-3 py-2 text-white/80 hover:text-white hover:bg-forest-light rounded-lg text-sm font-body transition-colors">
-              <?php echo esc_html($s['label']); ?>
+    <?php if (has_nav_menu('primary')) : ?>
+      <div id="mobile-menu" class="hidden lg:hidden bg-forest-dark border-t border-forest-light" role="navigation" aria-label="Menu mobile">
+        <div class="container-site py-4 space-y-1">
+          <?php
+          wp_nav_menu([
+            'theme_location' => 'primary',
+            'container'      => false,
+            'items_wrap'     => '%3$s',
+            'depth'          => 2,
+            'walker'         => new Rtc_Mobile_Nav_Walker(),
+            'fallback_cb'    => false,
+          ]);
+          ?>
+          <div class="pt-3 pb-1 px-4">
+            <a href="<?php echo esc_url(rtc_whatsapp_link()); ?>" target="_blank" rel="noopener noreferrer"
+              class="btn-whatsapp w-full justify-center">
+              <?php rtc_whatsapp_icon('w-5 h-5'); ?>
+              Scrivici su WhatsApp
             </a>
-          <?php endforeach; ?>
-        </div>
-        <a href="<?php echo esc_url(home_url('/come-spedire-tenda-da-riparare')); ?>" class="block px-4 py-3 text-white/90 hover:text-white hover:bg-forest-light rounded-xl text-sm font-heading font-medium transition-colors">Come spedire</a>
-        <a href="<?php echo esc_url(home_url('/collaborazioni-punti-raccolta')); ?>" class="block px-4 py-3 text-white/90 hover:text-white hover:bg-forest-light rounded-xl text-sm font-heading font-medium transition-colors">Collaborazioni</a>
-        <a href="<?php echo esc_url(home_url('/contatti')); ?>" class="block px-4 py-3 text-white/90 hover:text-white hover:bg-forest-light rounded-xl text-sm font-heading font-medium transition-colors">Contatti</a>
-        <div class="pt-3 pb-1 px-4">
-          <a href="https://wa.me/393000000000" target="_blank" rel="noopener noreferrer"
-            class="btn-whatsapp w-full justify-center">
-            <?php rtc_whatsapp_icon('w-5 h-5'); ?>
-            Scrivici su WhatsApp
-          </a>
+          </div>
         </div>
       </div>
-    </div>
+    <?php endif; ?>
   </header>
 
   <!-- Spacer for fixed header -->

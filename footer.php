@@ -1,5 +1,5 @@
 <!-- Fixed WhatsApp Button — solo mobile (stessa soglia del burger menu: lg:hidden) -->
-<a href="https://wa.me/393000000000?text=Salve%2C%20vorrei%20una%20valutazione%20per%20la%20riparazione%20di%20una%20tenda."
+<a href="<?php echo esc_url(rtc_whatsapp_link('Salve, vorrei una valutazione per la riparazione di una tenda.')); ?>"
   target="_blank" rel="noopener noreferrer"
   aria-label="Contattaci su WhatsApp"
   class="border border-white lg:hidden fixed bottom-2 right-2 z-50 w-12 h-12 bg-[#4FCE5D] hover:bg-[#45b953] rounded-full shadow-lg flex items-center justify-center transition-all duration-200">
@@ -32,7 +32,7 @@
           Laboratorio artigianale specializzato nella manutenzione e riparazione di tende scout, verande roulotte, tende carrello e attrezzatura outdoor.
         </p>
         <div class="flex flex-col gap-2.5">
-          <a href="https://wa.me/393000000000" target="_blank" rel="noopener noreferrer"
+          <a href="<?php echo esc_url(rtc_whatsapp_link()); ?>" target="_blank" rel="noopener noreferrer"
             class="inline-flex items-center gap-2 text-canvas hover:text-white text-sm transition-colors">
             <?php rtc_whatsapp_icon('w-4 h-4 text-canvas/70'); ?>
             WhatsApp
@@ -51,52 +51,38 @@
       </div>
 
       <!-- Servizi -->
-      <div>
-        <h3 class="font-heading font-semibold text-canvas text-sm uppercase tracking-wider mb-4">Servizi</h3>
-        <ul class="space-y-2.5">
+      <?php if (has_nav_menu('footer_services')) : ?>
+        <div>
+          <h3 class="font-heading font-semibold text-canvas text-sm uppercase tracking-wider mb-4">Servizi</h3>
           <?php
-          $footer_services = [
-            ['/riparazione-tende-scout',              'Gruppi Scout'],
-            ['/riparazione-verande-roulotte',          'Verande roulotte'],
-            ['/manutenzione-tende-carrello',           'Tende carrello e stagionali'],
-            ['/riparazione-tende-trekking-igloo',      'Trekking / Igloo / Outdoor'],
-            ['/riparazione-paleria-tende',             'Paleria e ricambi'],
-            ['/riparazione-tende-speciali',            'Tende speciali'],
-            ['/riparazione-tende-associazioni-eventi', 'Associazioni e strutture'],
-          ];
-          foreach ($footer_services as [$url, $label]) : ?>
-            <li>
-              <a href="<?php echo esc_url(home_url($url)); ?>"
-                class="text-white/65 hover:text-canvas text-sm transition-colors">
-                <?php echo esc_html($label); ?>
-              </a>
-            </li>
-          <?php endforeach; ?>
-        </ul>
-      </div>
+          wp_nav_menu([
+            'theme_location' => 'footer_services',
+            'container'      => false,
+            'menu_class'     => 'space-y-2.5',
+            'depth'          => 1,
+            'walker'         => new Rtc_Footer_Nav_Walker(),
+            'fallback_cb'    => false,
+          ]);
+          ?>
+        </div>
+      <?php endif; ?>
 
       <!-- Utili -->
-      <div>
-        <h3 class="font-heading font-semibold text-canvas text-sm uppercase tracking-wider mb-4">Informazioni</h3>
-        <ul class="space-y-2.5">
+      <?php if (has_nav_menu('footer_info')) : ?>
+        <div>
+          <h3 class="font-heading font-semibold text-canvas text-sm uppercase tracking-wider mb-4">Informazioni</h3>
           <?php
-          $footer_info = [
-            ['/come-spedire-tenda-da-riparare',  'Come spedire'],
-            ['/collaborazioni-punti-raccolta',    'Collaborazioni'],
-            ['/condizioni-lavorazione-tende',     'Condizioni di lavorazione'],
-            ['/garanzia-riparazioni-tende',       'Garanzia'],
-            ['/contatti',                         'Contatti'],
-          ];
-          foreach ($footer_info as [$url, $label]) : ?>
-            <li>
-              <a href="<?php echo esc_url(home_url($url)); ?>"
-                class="text-white/65 hover:text-canvas text-sm transition-colors">
-                <?php echo esc_html($label); ?>
-              </a>
-            </li>
-          <?php endforeach; ?>
-        </ul>
-      </div>
+          wp_nav_menu([
+            'theme_location' => 'footer_info',
+            'container'      => false,
+            'menu_class'     => 'space-y-2.5',
+            'depth'          => 1,
+            'walker'         => new Rtc_Footer_Nav_Walker(),
+            'fallback_cb'    => false,
+          ]);
+          ?>
+        </div>
+      <?php endif; ?>
 
       <!-- Come funziona (summary) -->
       <div>
@@ -130,17 +116,19 @@
         &copy; <?php echo date('Y'); ?> Riparazioni Tende Campeggio. Tutti i diritti riservati.
       </p>
       <nav aria-label="Link legali" class="flex items-center gap-4 flex-wrap justify-center">
-        <?php
-        $legal = [
-          ['/privacy-policy', 'Privacy'],
-          ['/cookie-policy',  'Cookie'],
-        ];
-        foreach ($legal as [$url, $label]) : ?>
-          <a href="<?php echo esc_url(home_url($url)); ?>"
-            class="text-white/45 hover:text-white/70 text-xs transition-colors">
-            <?php echo esc_html($label); ?>
-          </a>
-        <?php endforeach; ?>
+        <?php if (has_nav_menu('footer_legal')) : ?>
+          <?php
+          wp_nav_menu([
+            'theme_location' => 'footer_legal',
+            'container'      => false,
+            'menu_class'     => 'flex items-center gap-4 flex-wrap justify-center',
+            'depth'          => 1,
+            'walker'         => new Rtc_Footer_Nav_Walker(),
+            'link_class'     => 'text-white/45 hover:text-white/70 text-xs transition-colors',
+            'fallback_cb'    => false,
+          ]);
+          ?>
+        <?php endif; ?>
       </nav>
     </div>
   </div>
