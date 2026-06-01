@@ -57,7 +57,7 @@ if (is_array($button_link)) {
             continue;
           }
           ?>
-          <div class="flex flex-col items-center text-center gap-4 rounded-2xl p-5 border border-canvas-dark/20">
+          <div class="flex flex-col items-center text-center gap-4 rounded-2xl p-5 border border-canvas-dark/20 bg-cream">
             <div class="w-12 h-12 rounded-full bg-forest text-white font-heading font-bold text-xl flex items-center justify-center shadow-sm">
               <?php echo $i + 1; ?>
             </div>
