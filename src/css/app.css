@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-body text-dark bg-cream antialiased;
+    @apply font-body type-base text-dark bg-cream antialiased;
   }
 
   h1,
@@ -17,7 +17,7 @@
   h4,
   h5,
   h6 {
-    @apply font-heading;
+    @apply font-bold type-base text-forest;
   }
 }
 
@@ -39,72 +39,19 @@
   }
 
   .btn-primary-sm {
-    @apply inline-flex items-center gap-1.5 bg-forest hover:bg-forest-light text-white font-heading font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center gap-1.5 bg-forest hover:bg-forest-light text-white font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
   .btn-secondary-sm {
-    @apply inline-flex items-center gap-1.5 bg-olive hover:bg-olive-light text-white font-heading font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center gap-1.5 bg-olive hover:bg-olive-light text-white font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
   .btn-outline-sm {
-    @apply inline-flex items-center gap-1.5 border border-white text-white hover:bg-white hover:text-forest font-heading font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center gap-1.5 border border-white text-white hover:bg-white hover:text-forest font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
   .btn-whatsapp-sm {
-    @apply inline-flex items-center gap-1.5 bg-[#4FCE5D] hover:bg-[#45b953] text-white font-heading font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer shadow-md;
-  }
-
-  .section-heading {
-    @apply font-heading font-bold text-3xl md:text-4xl text-forest !leading-tight;
-  }
-
-  .section-subheading {
-    @apply font-heading font-semibold text-xl md:text-2xl text-forest;
-  }
-
-  .card {
-    @apply bg-cream rounded-2xl p-6 border border-canvas hover:border-olive/30 hover:shadow-md transition-all duration-200 cursor-pointer;
-  }
-
-  .service-card {
-    @apply bg-cream rounded-2xl p-6 border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg transition-all duration-300 flex flex-col gap-4;
-  }
-
-  .service-card-media {
-    @apply bg-cream rounded-2xl border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden;
-  }
-
-  .step-number {
-    @apply w-10 h-10 rounded-full bg-forest text-white font-heading font-bold text-lg flex items-center justify-center flex-shrink-0;
-  }
-
-  .faq-item {
-    @apply border-b border-canvas-dark last:border-0;
-  }
-
-  .container-site {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  .nav-link {
-    @apply text-white/85 hover:text-canvas text-sm font-heading font-medium transition-colors duration-150;
-  }
-
-  .nav-link-active {
-    @apply text-canvas font-semibold;
-  }
-
-  .form-label {
-    @apply block font-heading font-medium text-forest text-sm mb-1.5;
-  }
-
-  .form-input {
-    @apply w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm  transition-colors duration-200;
-    @apply focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest;
-  }
-
-  .form-input::placeholder {
-    @apply text-muted/60;
+    @apply inline-flex items-center gap-1.5 bg-[#4FCE5D] hover:bg-[#45b953] text-white font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer shadow-md;
   }
 
   .pagination {
@@ -117,7 +64,7 @@
 
   .pagination a.page-numbers,
   .pagination span.page-numbers {
-    @apply inline-flex items-center justify-center min-w-10 font-heading font-semibold text-sm px-4 py-2 rounded-full border border-canvas-dark/30 text-forest no-underline transition-colors duration-200;
+    @apply inline-flex items-center justify-center min-w-10 font-heading font-semibold type-sm px-4 py-2 rounded-full border border-canvas-dark/30 text-forest no-underline transition-colors duration-200;
   }
 
   .pagination a.page-numbers:hover {
@@ -136,26 +83,4 @@
   .pagination a.page-numbers.next {
     @apply px-5;
   }
-}
-
-/* WordPress alignment classes */
-.alignleft {
-  float: left;
-  margin-right: 1.5rem;
-}
-.alignright {
-  float: right;
-  margin-left: 1.5rem;
-}
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.wp-caption {
-  max-width: 100%;
-}
-.wp-caption-text {
-  font-size: 0.875rem;
-  color: #4b4b4b;
 }

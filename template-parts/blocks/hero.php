@@ -48,21 +48,21 @@ $secondary = $resolve_link($secondary_link);
     </div>
   <?php endif; ?>
 
-  <div class="container-site relative z-10 py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 lg:py-20">
     <div class="max-w-3xl">
       <?php if ($badge) : ?>
-        <div class="inline-flex items-center gap-2 text-canvas text-xs font-heading font-semibold uppercase tracking-widest mb-6">
+        <div class="inline-flex items-center gap-2 text-canvas type-xs font-heading font-semibold uppercase tracking-widest mb-6">
           <span class="w-1.5 h-1.5 rounded-full bg-canvas animate-pulse" aria-hidden="true"></span>
           <?php echo esc_html($badge); ?>
         </div>
       <?php endif; ?>
 
-      <h1 class="font-heading text-balance font-bold text-4xl md:text-5xl lg:text-6xl text-white !leading-tight mb-6">
+      <h1 class="font-heading text-balance font-bold type-5xl text-white mb-6">
         <?php echo nl2br(esc_html($heading)); ?>
       </h1>
 
       <?php if ($text) : ?>
-        <p class="text-white text-lg md:text-xl mb-10 max-w-2xl">
+        <p class="text-white type-lg mb-10 max-w-2xl">
           <?php echo esc_html($text); ?>
         </p>
       <?php endif; ?>

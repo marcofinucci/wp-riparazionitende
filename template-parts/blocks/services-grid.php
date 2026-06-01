@@ -45,14 +45,14 @@ $footer = $resolve_link($footer_link);
 ?>
 
 <section class="block-services-grid <?php echo esc_attr($margin_top_class); ?>">
-  <div class="container-site">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <?php if ($eyebrow || $heading || $intro) : ?>
       <div class="text-center mb-12">
         <?php if ($eyebrow) : ?>
           <p class="text-olive font-heading font-semibold text-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
-          <h2 id="<?php echo esc_attr($heading_id); ?>" class="section-heading"><?php echo esc_html($heading); ?></h2>
+          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest"><?php echo esc_html($heading); ?></h2>
         <?php endif; ?>
         <?php if ($intro) : ?>
           <p class="text-muted mt-4 max-w-xl mx-auto"><?php echo esc_html($intro); ?></p>
@@ -73,7 +73,7 @@ $footer = $resolve_link($footer_link);
           continue;
         }
         ?>
-        <article class="service-card-media group relative cursor-pointer">
+        <article class="bg-cream rounded-2xl border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group relative cursor-pointer">
           <a href="<?php echo esc_url($link['url']); ?>" class="absolute inset-0 z-10" aria-label="<?php echo esc_attr($title); ?>"></a>
           <?php if ($img) : ?>
             <div class="relative h-48 overflow-hidden rounded-t-2xl">

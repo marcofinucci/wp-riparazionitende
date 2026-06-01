@@ -22,17 +22,17 @@ $heading_id = 'cta-' . wp_unique_id();
 ?>
 
 <section class="block-cta bg-forest py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
-  <div class="container-site text-center">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <?php if ($show_icon) : ?>
       <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6">
         <?php rtc_icon('tent', 'w-8 h-8 text-canvas'); ?>
       </div>
     <?php endif; ?>
     <?php if ($title) : ?>
-      <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold text-2xl md:text-3xl text-white mb-4"><?php echo esc_html($title); ?></h2>
+      <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-2xl text-white mb-4"><?php echo esc_html($title); ?></h2>
     <?php endif; ?>
     <?php if ($text) : ?>
-      <p class="text-white/65 mb-8 max-w-lg mx-auto <?php echo $show_icon ? 'text-lg mb-10' : ''; ?>"><?php echo esc_html($text); ?></p>
+      <p class="text-white/65 mb-8 max-w-lg mx-auto <?php echo $show_icon ? 'type-lg mb-10' : ''; ?>"><?php echo esc_html($text); ?></p>
     <?php endif; ?>
     <?php if ($show_whatsapp || $show_spedire || $show_email) : ?>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">

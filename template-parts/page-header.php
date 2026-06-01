@@ -22,21 +22,21 @@ $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x10
     </div>
   <?php endif; ?>
 
-  <div class="container-site relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <nav aria-label="Breadcrumb" class="mb-5">
-      <ol class="flex items-center gap-2 text-white/50 text-sm font-body flex-wrap">
+      <ol class="flex items-center gap-2 text-white/50 type-sm font-body flex-wrap">
         <li><a href="<?php echo esc_url(home_url('/')); ?>" class="hover:text-canvas transition-colors">Home</a></li>
         <li aria-hidden="true"><span class="mx-1">/</span></li>
         <li class="text-canvas/80" aria-current="page"><?php echo esc_html($breadcrumb); ?></li>
       </ol>
     </nav>
 
-    <h1 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white !leading-tight max-w-3xl text-balance">
+    <h1 class="font-heading font-bold type-4xl text-white max-w-3xl text-balance">
       <?php echo esc_html($h1); ?>
     </h1>
 
     <?php if ($subtitle) : ?>
-      <p class="mt-4 text-white/65 text-lg  max-w-2xl">
+      <p class="mt-4 text-white/65 type-lg max-w-2xl">
         <?php echo esc_html($subtitle); ?>
       </p>
     <?php endif; ?>

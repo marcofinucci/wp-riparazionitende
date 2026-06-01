@@ -26,10 +26,10 @@ get_header();
       </div>
     <?php endif; ?>
 
-    <div class="container-site relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Breadcrumb -->
       <nav aria-label="Breadcrumb" class="mb-5">
-        <ol class="flex items-center gap-2 text-white/50 text-sm font-body">
+        <ol class="flex items-center gap-2 text-white/50 type-sm font-body">
           <li><a href="<?php echo esc_url(home_url('/')); ?>" class="hover:text-canvas transition-colors">Home</a></li>
           <li aria-hidden="true"><span class="mx-1">/</span></li>
           <li class="text-canvas/80" aria-current="page"><?php the_title(); ?></li>
@@ -37,7 +37,7 @@ get_header();
       </nav>
 
       <!-- Page Title -->
-      <h1 class="font-heading font-bold text-3xl md:text-4xl text-white !leading-tight max-w-3xl">
+      <h1 class="font-heading font-bold type-4xl text-white max-w-3xl">
         <?php the_title(); ?>
       </h1>
     </div>
@@ -45,7 +45,7 @@ get_header();
 
   <!-- Content -->
   <section class="my-14 lg:my-16">
-    <div class="container-site">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
           <div class="max-w-3xl [&>:first-child]:mt-0 [&>:last-child]:mb-0">
             <?php the_content(); ?>

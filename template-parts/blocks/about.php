@@ -22,14 +22,14 @@ $icon_map   = ['clock' => 'clock', 'badge-check' => 'badge-check', 'map' => 'map
 ?>
 
 <section class="block-about bg-canvas py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
-  <div class="container-site">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <div>
         <?php if ($eyebrow) : ?>
-          <p class="text-olive font-heading font-semibold text-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
+          <p class="text-olive font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
-          <h2 id="<?php echo esc_attr($heading_id); ?>" class="section-heading mb-6"><?php echo esc_html($heading); ?></h2>
+          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest mb-6"><?php echo esc_html($heading); ?></h2>
         <?php endif; ?>
         <?php if ($content) : ?>
           <div class="space-y-4 text-muted">
@@ -57,10 +57,10 @@ $icon_map   = ['clock' => 'clock', 'badge-check' => 'badge-check', 'map' => 'map
                 </div>
                 <div>
                   <?php if ($value) : ?>
-                    <p class="font-heading font-bold text-2xl text-forest"><?php echo esc_html($value); ?></p>
+                    <p class="font-heading font-bold type-2xl text-forest"><?php echo esc_html($value); ?></p>
                   <?php endif; ?>
                   <?php if ($label) : ?>
-                    <p class="text-muted text-sm"><?php echo esc_html($label); ?></p>
+                    <p class="text-muted type-sm"><?php echo esc_html($label); ?></p>
                   <?php endif; ?>
                 </div>
               </div>

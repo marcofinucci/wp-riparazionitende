@@ -10,7 +10,7 @@
 <footer class="bg-forest text-white">
 
   <!-- Footer Main -->
-  <div class="container-site py-14 lg:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
       <!-- Brand -->
@@ -24,26 +24,26 @@
             </svg>
           </div>
           <div>
-            <span class="block font-heading font-bold text-white text-base">Riparazioni Tende</span>
-            <span class="block font-heading text-canvas/70 text-xs">Campeggio</span>
+            <span class="block font-heading font-bold text-white type-base">Riparazioni Tende</span>
+            <span class="block font-heading text-canvas/70 type-xs">Campeggio</span>
           </div>
         </a>
-        <p class="text-white/65 text-sm mb-5">
+        <p class="text-white/65 type-sm mb-5">
           Laboratorio artigianale specializzato nella manutenzione e riparazione di tende scout, verande roulotte, tende carrello e attrezzatura outdoor.
         </p>
         <div class="flex flex-col gap-2.5">
           <a href="<?php echo esc_url(rtc_whatsapp_link()); ?>" target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-canvas hover:text-white text-sm transition-colors">
+            class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
             <?php rtc_whatsapp_icon('w-4 h-4 text-canvas/70'); ?>
             WhatsApp
           </a>
           <a href="mailto:info@riparazionitendecampeggio.it"
-            class="inline-flex items-center gap-2 text-canvas hover:text-white text-sm transition-colors">
+            class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
             <?php rtc_icon('mail', 'w-4 h-4 text-canvas/70'); ?>
             info@riparazionitendecampeggio.it
           </a>
           <a href="<?php echo esc_url(rtc_phone_link(rtc_contact_phone())); ?>"
-            class="inline-flex items-center gap-2 text-canvas hover:text-white text-sm transition-colors">
+            class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
             <?php rtc_icon('phone', 'w-4 h-4 text-canvas/70'); ?>
             <?php echo esc_html(rtc_contact_phone()); ?>
           </a>
@@ -53,7 +53,7 @@
       <!-- Servizi -->
       <?php if (has_nav_menu('footer_services')) : ?>
         <div>
-          <h3 class="font-heading font-semibold text-canvas text-sm uppercase tracking-wider mb-4">Servizi</h3>
+          <h3 class="font-heading font-semibold text-canvas type-sm uppercase tracking-wider mb-4">Servizi</h3>
           <?php
           wp_nav_menu([
             'theme_location' => 'footer_services',
@@ -70,7 +70,7 @@
       <!-- Utili -->
       <?php if (has_nav_menu('footer_info')) : ?>
         <div>
-          <h3 class="font-heading font-semibold text-canvas text-sm uppercase tracking-wider mb-4">Informazioni</h3>
+          <h3 class="font-heading font-semibold text-canvas type-sm uppercase tracking-wider mb-4">Informazioni</h3>
           <?php
           wp_nav_menu([
             'theme_location' => 'footer_info',
@@ -86,7 +86,7 @@
 
       <!-- Come funziona (summary) -->
       <div>
-        <h3 class="font-heading font-semibold text-canvas text-sm uppercase tracking-wider mb-4">Come funziona</h3>
+        <h3 class="font-heading font-semibold text-canvas type-sm uppercase tracking-wider mb-4">Come funziona</h3>
         <ol class="space-y-3">
           <?php
           $steps = [
@@ -97,8 +97,8 @@
             'Ritira la tenda riparata',
           ];
           foreach ($steps as $i => $step) : ?>
-            <li class="flex items-start gap-2.5 text-white/65 text-sm">
-              <span class="w-5 h-5 rounded-full bg-forest-light text-white text-xs font-heading font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+            <li class="flex items-start gap-2.5 text-white/65 type-sm">
+              <span class="w-5 h-5 rounded-full bg-forest-light text-white type-xs font-heading font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
                 <?php echo $i + 1; ?>
               </span>
               <?php echo esc_html($step); ?>
@@ -111,8 +111,8 @@
 
   <!-- Footer Bottom -->
   <div class="border-t border-forest-light">
-    <div class="container-site py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p class="text-white/45 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-white/45 type-xs">
         &copy; <?php echo date('Y'); ?> Riparazioni Tende Campeggio. Tutti i diritti riservati.
       </p>
       <nav aria-label="Link legali" class="flex items-center gap-4 flex-wrap justify-center">
@@ -124,7 +124,7 @@
             'menu_class'     => 'flex items-center gap-4 flex-wrap justify-center',
             'depth'          => 1,
             'walker'         => new Rtc_Footer_Nav_Walker(),
-            'link_class'     => 'text-white/45 hover:text-white/70 text-xs transition-colors',
+            'link_class'     => 'text-white/45 hover:text-white/70 type-xs transition-colors',
             'fallback_cb'    => false,
           ]);
           ?>

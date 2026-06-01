@@ -26,10 +26,10 @@ $heading_id = 'lavorazioni-' . wp_unique_id();
 ?>
 
 <section class="block-lavorazioni <?php echo esc_attr($bg_class); ?> py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
-  <div class="container-site">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl">
       <?php if ($heading) : ?>
-        <h2 id="<?php echo esc_attr($heading_id); ?>" class="<?php echo $is_forest ? 'font-heading font-semibold text-xl md:text-2xl text-white' : 'section-subheading'; ?> mb-7"><?php echo esc_html($heading); ?></h2>
+        <h2 id="<?php echo esc_attr($heading_id); ?>" class="<?php echo $is_forest ? 'font-heading font-semibold type-2xl text-white' : 'font-heading font-semibold type-xl text-forest'; ?> mb-7"><?php echo esc_html($heading); ?></h2>
       <?php endif; ?>
       <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <?php foreach ($items as $row) : ?>
@@ -39,7 +39,7 @@ $heading_id = 'lavorazioni-' . wp_unique_id();
           } ?>
           <li class="flex items-start gap-3">
             <?php rtc_icon('check', 'w-5 h-5 flex-shrink-0 mt-0.5 ' . ($is_forest ? 'text-canvas' : 'text-olive')); ?>
-            <span class="<?php echo $is_forest ? 'text-white/80' : 'text-dark'; ?> text-sm"><?php echo esc_html($item); ?></span>
+            <span class="<?php echo $is_forest ? 'text-white/80' : 'text-dark'; ?> type-sm"><?php echo esc_html($item); ?></span>
           </li>
         <?php endforeach; ?>
       </ul>

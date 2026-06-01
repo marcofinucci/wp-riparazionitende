@@ -13,24 +13,24 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
 ?>
 
 <section class="block-contact-form bg-canvas py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
-  <div class="container-site">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14">
 
       <div class="lg:col-span-3">
-        <h2 id="form-heading" class="section-subheading mb-2">Scrivici un messaggio</h2>
-        <p class="text-muted text-sm  mb-8">
+        <h2 id="form-heading" class="font-heading font-semibold type-xl text-forest mb-2">Scrivici un messaggio</h2>
+        <p class="text-muted type-sm  mb-8">
           Compila il modulo per inviarci una richiesta via email. Per inviare foto della tenda usa WhatsApp.
         </p>
 
         <?php if ($contact_status === 'success') : ?>
           <div role="status" class="mb-6 rounded-2xl border border-olive/30 bg-olive/10 px-5 py-4 flex items-start gap-3">
             <?php rtc_icon('check', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
-            <p class="text-dark text-sm ">Messaggio inviato correttamente. Ti risponderemo al più presto.</p>
+            <p class="text-dark type-sm ">Messaggio inviato correttamente. Ti risponderemo al più presto.</p>
           </div>
         <?php elseif ($contact_status === 'error') : ?>
           <div role="alert" class="mb-6 rounded-2xl border border-red-300 bg-red-50 px-5 py-4 flex items-start gap-3">
             <?php rtc_icon('circle-alert', 'w-5 h-5 text-red-600 flex-shrink-0 mt-0.5'); ?>
-            <p class="text-dark text-sm ">Non è stato possibile inviare il messaggio. Riprova o contattaci su WhatsApp.</p>
+            <p class="text-dark type-sm ">Non è stato possibile inviare il messaggio. Riprova o contattaci su WhatsApp.</p>
           </div>
         <?php endif; ?>
 
@@ -40,23 +40,23 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <label for="contact-name" class="form-label">Nome e cognome <span class="text-olive" aria-hidden="true">*</span></label>
-              <input type="text" id="contact-name" name="contact_name" required autocomplete="name" class="form-input" value="">
+              <label for="contact-name" class="block font-heading font-medium text-forest text-sm mb-1.5">Nome e cognome <span class="text-olive" aria-hidden="true">*</span></label>
+              <input type="text" id="contact-name" name="contact_name" required autocomplete="name" class="w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest placeholder:text-muted/60" value="">
             </div>
             <div>
-              <label for="contact-email" class="form-label">Email <span class="text-olive" aria-hidden="true">*</span></label>
-              <input type="email" id="contact-email" name="contact_email" required autocomplete="email" class="form-input" value="">
+              <label for="contact-email" class="block font-heading font-medium text-forest text-sm mb-1.5">Email <span class="text-olive" aria-hidden="true">*</span></label>
+              <input type="email" id="contact-email" name="contact_email" required autocomplete="email" class="w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest placeholder:text-muted/60" value="">
             </div>
           </div>
 
           <div>
-            <label for="contact-phone" class="form-label">Telefono <span class="text-muted font-normal">(facoltativo)</span></label>
-            <input type="tel" id="contact-phone" name="contact_phone" autocomplete="tel" class="form-input" value="">
+            <label for="contact-phone" class="block font-heading font-medium text-forest text-sm mb-1.5">Telefono <span class="text-muted font-normal">(facoltativo)</span></label>
+            <input type="tel" id="contact-phone" name="contact_phone" autocomplete="tel" class="w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest placeholder:text-muted/60" value="">
           </div>
 
           <div>
-            <label for="contact-subject" class="form-label">Oggetto <span class="text-olive" aria-hidden="true">*</span></label>
-            <select id="contact-subject" name="contact_subject" required class="form-input cursor-pointer">
+            <label for="contact-subject" class="block font-heading font-medium text-forest text-sm mb-1.5">Oggetto <span class="text-olive" aria-hidden="true">*</span></label>
+            <select id="contact-subject" name="contact_subject" required class="w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest placeholder:text-muted/60 cursor-pointer">
               <option value="">Seleziona un argomento</option>
               <option value="Valutazione riparazione tenda">Valutazione riparazione tenda</option>
               <option value="Gruppo scout / associazione">Gruppo scout / associazione</option>
@@ -67,9 +67,9 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
           </div>
 
           <div>
-            <label for="contact-message" class="form-label">Messaggio <span class="text-olive" aria-hidden="true">*</span></label>
+            <label for="contact-message" class="block font-heading font-medium text-forest text-sm mb-1.5">Messaggio <span class="text-olive" aria-hidden="true">*</span></label>
             <textarea id="contact-message" name="contact_message" rows="5" required
-              class="form-input resize-y min-h-[8rem]"
+              class="w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest placeholder:text-muted/60 resize-y min-h-[8rem]"
               placeholder="Descrivi il tipo di tenda, i danni e se hai già inviato foto…"></textarea>
           </div>
 
@@ -79,7 +79,7 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
 
       <aside class="lg:col-span-2 space-y-6">
         <div class=" rounded-2xl p-6 border border-canvas-dark/30">
-          <h3 class="font-heading font-semibold text-forest text-base mb-4">Prima di scriverci</h3>
+          <h3 class="font-heading font-semibold text-forest type-base mb-4">Prima di scriverci</h3>
           <ol class="space-y-4">
             <?php
             $tips = [
@@ -89,8 +89,8 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
               'Compila la scheda cliente se richiesta',
             ];
             foreach ($tips as $i => $tip) : ?>
-              <li class="flex items-start gap-3 text-sm">
-                <span class="step-number w-7 h-7 text-xs"><?php echo $i + 1; ?></span>
+              <li class="flex items-start gap-3 type-sm">
+                <span class="w-7 h-7 rounded-full bg-forest text-white font-heading font-bold flex items-center justify-center flex-shrink-0 type-xs"><?php echo $i + 1; ?></span>
                 <span class="text-muted  pt-0.5"><?php echo esc_html($tip); ?></span>
               </li>
             <?php endforeach; ?>
@@ -98,12 +98,12 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
         </div>
 
         <div class="bg-forest/5 border border-forest/15 rounded-2xl p-6">
-          <h3 class="font-heading font-semibold text-forest text-base mb-3">Laboratorio</h3>
-          <p class="text-muted text-sm  mb-4">
+          <h3 class="font-heading font-semibold text-forest type-base mb-3">Laboratorio</h3>
+          <p class="text-muted type-sm  mb-4">
             Lavoriamo su appuntamento e tramite spedizione da tutta Italia. Non è un punto vendita al dettaglio.
           </p>
           <a href="<?php echo esc_url(home_url('/come-spedire-tenda-da-riparare')); ?>"
-            class="inline-flex items-center gap-2 text-forest hover:text-olive font-heading font-medium text-sm transition-colors cursor-pointer">
+            class="inline-flex items-center gap-2 text-forest hover:text-olive font-heading font-medium type-sm transition-colors cursor-pointer">
             Come spedire il materiale
             <?php rtc_icon('chevron-right', 'w-4 h-4'); ?>
           </a>

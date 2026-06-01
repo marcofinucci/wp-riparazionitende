@@ -21,14 +21,14 @@ $heading_id = 'coverage-' . wp_unique_id();
 ?>
 
 <section class="block-coverage-map bg-forest py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
-  <div class="container-site">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div>
         <?php if ($eyebrow) : ?>
-          <p class="text-canvas/70 font-heading font-semibold text-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
+          <p class="text-canvas/70 font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
-          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold text-3xl md:text-4xl text-white !leading-tight mb-6">
+          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-white mb-6">
             <?php echo nl2br(esc_html($heading)); ?>
           </h2>
         <?php endif; ?>
@@ -38,7 +38,7 @@ $heading_id = 'coverage-' . wp_unique_id();
           </div>
         <?php endif; ?>
         <?php if ($quote_text) : ?>
-          <p class="text-canvas/80 text-sm italic"><?php echo esc_html($quote_text); ?></p>
+          <p class="text-canvas/80 type-sm italic"><?php echo esc_html($quote_text); ?></p>
         <?php endif; ?>
       </div>
 
@@ -46,11 +46,11 @@ $heading_id = 'coverage-' . wp_unique_id();
         <div class="relative w-full max-w-xs lg:max-w-sm" aria-label="Mappa dell'Italia con punti di provenienza delle spedizioni">
           <?php get_template_part('template-parts/blocks/partials/italy-map'); ?>
           <div class="flex items-center justify-center gap-5 mt-4">
-            <div class="flex items-center gap-2 text-canvas/70 text-xs font-body">
+            <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
               <div class="w-3 h-3 rounded-full bg-canvas/80"></div>
               Lavorazioni ricevute
             </div>
-            <div class="flex items-center gap-2 text-canvas/70 text-xs font-body">
+            <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
               <div class="w-3 h-3 rounded-full border border-canvas/60 bg-transparent"></div>
               Sede laboratorio
             </div>

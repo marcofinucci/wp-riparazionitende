@@ -19,14 +19,14 @@
 
   <!-- Site Header -->
   <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-forest-dark">
-    <div class="container-site">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-18">
         <!-- Logo -->
         <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-3 group" aria-label="Riparazioni Tende Campeggio - Home">
           <div class="w-16 flex items-center justify-center flex-shrink-0">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/riparazionitendecampeggio-logotipo.svg" alt="Riparazioni Tende Campeggio">
           </div>
-          <div class="font-semibold text-white text-sm uppercase group-hover:text-canvas transition-colors">
+          <div class="font-semibold text-white type-sm uppercase group-hover:text-canvas transition-colors">
             <div>Riparazioni Tende</div>
             <div>Campeggio</div>
           </div>
@@ -69,7 +69,7 @@
     <!-- Mobile Menu -->
     <?php if (has_nav_menu('primary')) : ?>
       <div id="mobile-menu" class="hidden lg:hidden bg-forest-dark border-t border-forest-light" role="navigation" aria-label="Menu mobile">
-        <div class="container-site py-4 space-y-1">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-1">
           <?php
           wp_nav_menu([
             'theme_location' => 'primary',

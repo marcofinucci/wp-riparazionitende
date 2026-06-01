@@ -31,14 +31,14 @@ if (is_array($button_link)) {
 ?>
 
 <section class="block-steps-grid <?php echo esc_attr($margin_top_class); ?>">
-  <div class="container-site">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <?php if ($eyebrow || $heading || $intro) : ?>
       <div class="text-center mb-12">
         <?php if ($eyebrow) : ?>
-          <p class="text-olive font-heading font-semibold text-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
+          <p class="text-olive font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
-          <h2 id="<?php echo esc_attr($heading_id); ?>" class="section-heading"><?php echo esc_html($heading); ?></h2>
+          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest"><?php echo esc_html($heading); ?></h2>
         <?php endif; ?>
         <?php if ($intro) : ?>
           <p class="text-muted mt-4 max-w-lg mx-auto"><?php echo esc_html($intro); ?></p>
@@ -58,15 +58,15 @@ if (is_array($button_link)) {
           }
           ?>
           <div class="flex flex-col items-center text-center gap-4 rounded-2xl p-5 border border-canvas-dark/20 bg-cream">
-            <div class="w-12 h-12 rounded-full bg-forest text-white font-heading font-bold text-xl flex items-center justify-center shadow-sm">
+            <div class="w-12 h-12 rounded-full bg-forest text-white font-heading font-bold type-xl flex items-center justify-center shadow-sm">
               <?php echo $i + 1; ?>
             </div>
             <div>
               <?php if ($title) : ?>
-                <h3 class="font-heading font-semibold text-forest text-base mb-1.5"><?php echo esc_html($title); ?></h3>
+                <h3 class="font-heading font-semibold text-forest type-base mb-1.5"><?php echo esc_html($title); ?></h3>
               <?php endif; ?>
               <?php if ($desc) : ?>
-                <p class="text-muted text-sm"><?php echo esc_html($desc); ?></p>
+                <p class="text-muted type-sm"><?php echo esc_html($desc); ?></p>
               <?php endif; ?>
             </div>
           </div>
