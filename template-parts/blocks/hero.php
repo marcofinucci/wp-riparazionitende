@@ -42,10 +42,7 @@ $secondary = $resolve_link($secondary_link);
       class="absolute inset-0 w-full h-full object-cover object-bottom"
       loading="eager"
       fetchpriority="high">
-    <div class="absolute inset-0 bg-forest/80" aria-hidden="true"></div>
-    <div class="absolute inset-0" aria-hidden="true"
-      style="background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.80) 100%);">
-    </div>
+    <div class="absolute inset-0 bg-black/70" aria-hidden="true"></div>
   <?php endif; ?>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 lg:py-20">
