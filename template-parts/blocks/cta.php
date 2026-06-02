@@ -16,7 +16,6 @@ $margin_top_classes = [
   'medio' => 'mt-10 lg:mt-14',
 ];
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
-
 $wa_url = rtc_whatsapp_link('Salve, vorrei una valutazione per la riparazione di una tenda.');
 $heading_id = 'cta-' . wp_unique_id();
 ?>
