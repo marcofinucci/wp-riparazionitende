@@ -40,6 +40,29 @@ $resolve_image = static function ($image): string {
   return (string) $image;
 };
 
+$items = [];
+foreach ($services as $service) {
+  $link    = $resolve_link($service['link'] ?? '');
+  $title   = $service['title'] ?? '';
+  $img     = $resolve_image($service['image'] ?? '');
+  $badge   = $service['badge'] ?? '';
+
+  if (!$title || !$link['url']) {
+    continue;
+  }
+
+  $items[] = [
+    'link'    => $link,
+    'title'   => $title,
+    'img'     => $img,
+    'badge'   => $badge,
+  ];
+}
+
+if (!$items) {
+  return;
+}
+
 ?>
 
 <section class="block-services-grid <?php echo esc_attr($margin_top_class); ?>">
@@ -47,61 +70,52 @@ $resolve_image = static function ($image): string {
     <?php if ($eyebrow || $heading || $intro) : ?>
       <div class="text-center mb-12">
         <?php if ($eyebrow) : ?>
-          <p class="text-olive font-heading font-semibold text-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
+          <p class="text-olive font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
           <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest"><?php echo esc_html($heading); ?></h2>
         <?php endif; ?>
         <?php if ($intro) : ?>
-          <p class="text-muted mt-4 max-w-xl mx-auto"><?php echo esc_html($intro); ?></p>
+          <p class="text-muted type-base mt-4 max-w-xl mx-auto"><?php echo esc_html($intro); ?></p>
         <?php endif; ?>
       </div>
     <?php endif; ?>
 
-    <div class="flex flex-wrap -mx-2">
-      <?php foreach ($services as $service) : ?>
+    <div class="grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-3 lg:gap-4 auto-rows-[150px] sm:auto-rows-[170px] lg:auto-rows-[190px]">
+      <?php foreach ($items as $i => $item) : ?>
         <?php
-        $link     = $resolve_link($service['link'] ?? '');
-        $title    = $service['title'] ?? '';
-        $desc     = $service['description'] ?? ($service['desc'] ?? '');
-        $img      = $resolve_image($service['image'] ?? '');
-        $img_alt  = $service['image_alt'] ?? ($service['img_alt'] ?? '');
-        $badge    = $service['badge'] ?? '';
-        if (!$title || !$link['url']) {
-          continue;
+        $pattern = $i % 7;
+        if ($pattern === 0 || $pattern === 1 || $pattern === 5 || $pattern === 6) {
+          $span_class = 'col-span-1 sm:col-span-3 lg:col-span-6';
+        } else {
+          $span_class = 'col-span-1 sm:col-span-2 lg:col-span-4';
         }
         ?>
-        <div class="px-2 w-full lg:w-1/4 mt-4">
-          <article class="h-full bg-cream rounded-2xl border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group relative cursor-pointer">
-            <a href="<?php echo esc_url($link['url']); ?>" class="absolute inset-0 z-10" aria-label="<?php echo esc_attr($title); ?>"></a>
-            <?php if ($img) : ?>
-              <div class="relative h-48 overflow-hidden rounded-t-2xl">
-                <img
-                  src="<?php echo esc_url($img); ?>"
-                  alt="<?php echo esc_attr($img_alt); ?>"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy">
-                <?php if ($badge) : ?>
-                  <span class="absolute top-3 right-3 text-xs font-heading font-semibold text-forest bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                    <?php echo esc_html($badge); ?>
-                  </span>
-                <?php endif; ?>
-              </div>
-            <?php endif; ?>
-            <div class="p-6 flex flex-col gap-4 flex-1">
-              <div class="flex-1">
-                <h3 class="font-heading font-semibold text-forest text-lg mb-2"><?php echo esc_html($title); ?></h3>
-                <?php if ($desc) : ?>
-                  <p class="text-muted text-sm"><?php echo esc_html($desc); ?></p>
-                <?php endif; ?>
-              </div>
-              <span class="inline-flex items-center gap-1.5 text-olive text-sm font-heading font-semibold group-hover:gap-2.5 transition-all mt-auto">
-                Scopri di più
-                <?php rtc_icon('chevron-right', 'w-4 h-4 transition-transform group-hover:translate-x-0.5'); ?>
-              </span>
-            </div>
-          </article>
-        </div>
+        <article class="<?php echo esc_attr($span_class); ?> relative h-full bg-forest rounded-md overflow-hidden group transition-all duration-300">
+          <a href="<?php echo esc_url($item['link']['url']); ?>" class="absolute inset-0 z-20" aria-label="<?php echo esc_attr($item['title']); ?>" <?php echo $item['link']['target'] ? ' target="' . esc_attr($item['link']['target']) . '"' : ''; ?>></a>
+
+          <?php if ($item['img']) : ?>
+            <img
+              src="<?php echo esc_url($item['img']); ?>"
+              alt="<?php echo esc_attr($item['title']); ?>"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy">
+          <?php endif; ?>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10"></div>
+
+          <?php if ($item['badge']) : ?>
+            <span class="absolute top-3 left-3 z-30 type-xs font-heading font-semibold text-white bg-forest px-2 py-1 rounded-full">
+              <?php echo esc_html($item['badge']); ?>
+            </span>
+          <?php endif; ?>
+
+          <div class="relative z-10 p-4 lg:p-5 h-full flex flex-col justify-end">
+            <h3 class="font-heading font-bold text-white type-xl leading-tight uppercase tracking-tight">
+              <?php echo esc_html($item['title']); ?>
+            </h3>
+          </div>
+        </article>
       <?php endforeach; ?>
     </div>
   </div>

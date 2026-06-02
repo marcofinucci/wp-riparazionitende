@@ -35,7 +35,7 @@ if (!$heading && !$text && !$items) {
             } ?>
             <li class="flex items-start gap-3">
               <span class="w-1.5 h-1.5 rounded-full bg-olive flex-shrink-0 mt-2" aria-hidden="true"></span>
-              <span class="text-dark type-sm "><?php echo esc_html($item); ?></span>
+              <span class="text-dark"><?php echo esc_html($item); ?></span>
             </li>
           <?php endforeach; ?>
         </ul>

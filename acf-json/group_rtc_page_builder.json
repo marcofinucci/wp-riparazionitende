@@ -1620,28 +1620,6 @@
                   "append": ""
                 },
                 {
-                  "key": "field_sg_desc",
-                  "label": "Descrizione",
-                  "name": "description",
-                  "aria-label": "",
-                  "type": "textarea",
-                  "instructions": "",
-                  "required": false,
-                  "conditional_logic": 0,
-                  "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                  },
-                  "default_value": "",
-                  "maxlength": "",
-                  "allow_in_bindings": 1,
-                  "rows": 3,
-                  "placeholder": "",
-                  "new_lines": "",
-                  "parent_repeater": "field_sg_services"
-                },
-                {
                   "key": "field_sg_image",
                   "label": "Immagine",
                   "name": "image",
@@ -1666,27 +1644,6 @@
                   "max_size": "",
                   "mime_types": "",
                   "parent_repeater": "field_sg_services"
-                },
-                {
-                  "key": "field_sg_alt",
-                  "label": "Alt immagine",
-                  "name": "image_alt",
-                  "aria-label": "",
-                  "type": "text",
-                  "instructions": "",
-                  "required": false,
-                  "conditional_logic": false,
-                  "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                  },
-                  "default_value": "",
-                  "maxlength": "",
-                  "placeholder": "",
-                  "parent_repeater": "field_sg_services",
-                  "prepend": "",
-                  "append": ""
                 },
                 {
                   "key": "field_sg_badge",
@@ -2558,5 +2515,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1780383893
+  "modified": 1880383898
 }
