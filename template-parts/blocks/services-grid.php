@@ -5,7 +5,6 @@ $eyebrow     = $args['eyebrow'] ?? '';
 $heading     = $args['heading'] ?? '';
 $intro       = $args['intro'] ?? '';
 $services    = $args['services'] ?? [];
-$footer_link = $args['footer_link'] ?? null;
 $margin_top  = $args['margin_top'] ?? 'medio';
 $margin_top_classes = [
   'no'      => '',
@@ -41,7 +40,6 @@ $resolve_image = static function ($image): string {
   return (string) $image;
 };
 
-$footer = $resolve_link($footer_link);
 ?>
 
 <section class="block-services-grid <?php echo esc_attr($margin_top_class); ?>">
@@ -60,7 +58,7 @@ $footer = $resolve_link($footer_link);
       </div>
     <?php endif; ?>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+    <div class="flex flex-wrap -mx-2">
       <?php foreach ($services as $service) : ?>
         <?php
         $link     = $resolve_link($service['link'] ?? '');
@@ -73,47 +71,38 @@ $footer = $resolve_link($footer_link);
           continue;
         }
         ?>
-        <article class="bg-cream rounded-2xl border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group relative cursor-pointer">
-          <a href="<?php echo esc_url($link['url']); ?>" class="absolute inset-0 z-10" aria-label="<?php echo esc_attr($title); ?>"></a>
-          <?php if ($img) : ?>
-            <div class="relative h-48 overflow-hidden rounded-t-2xl">
-              <img
-                src="<?php echo esc_url($img); ?>"
-                alt="<?php echo esc_attr($img_alt); ?>"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy">
-              <?php if ($badge) : ?>
-                <span class="absolute top-3 right-3 text-xs font-heading font-semibold text-forest bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                  <?php echo esc_html($badge); ?>
-                </span>
-              <?php endif; ?>
+        <div class="px-2 w-full lg:w-1/4 mt-4">
+          <article class="h-full bg-cream rounded-2xl border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group relative cursor-pointer">
+            <a href="<?php echo esc_url($link['url']); ?>" class="absolute inset-0 z-10" aria-label="<?php echo esc_attr($title); ?>"></a>
+            <?php if ($img) : ?>
+              <div class="relative h-48 overflow-hidden rounded-t-2xl">
+                <img
+                  src="<?php echo esc_url($img); ?>"
+                  alt="<?php echo esc_attr($img_alt); ?>"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy">
+                <?php if ($badge) : ?>
+                  <span class="absolute top-3 right-3 text-xs font-heading font-semibold text-forest bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                    <?php echo esc_html($badge); ?>
+                  </span>
+                <?php endif; ?>
+              </div>
+            <?php endif; ?>
+            <div class="p-6 flex flex-col gap-4 flex-1">
+              <div class="flex-1">
+                <h3 class="font-heading font-semibold text-forest text-lg mb-2"><?php echo esc_html($title); ?></h3>
+                <?php if ($desc) : ?>
+                  <p class="text-muted text-sm"><?php echo esc_html($desc); ?></p>
+                <?php endif; ?>
+              </div>
+              <span class="inline-flex items-center gap-1.5 text-olive text-sm font-heading font-semibold group-hover:gap-2.5 transition-all mt-auto">
+                Scopri di più
+                <?php rtc_icon('chevron-right', 'w-4 h-4 transition-transform group-hover:translate-x-0.5'); ?>
+              </span>
             </div>
-          <?php endif; ?>
-          <div class="p-6 flex flex-col gap-4 flex-1">
-            <div class="flex-1">
-              <h3 class="font-heading font-semibold text-forest text-lg mb-2"><?php echo esc_html($title); ?></h3>
-              <?php if ($desc) : ?>
-                <p class="text-muted text-sm"><?php echo esc_html($desc); ?></p>
-              <?php endif; ?>
-            </div>
-            <span class="inline-flex items-center gap-1.5 text-olive text-sm font-heading font-semibold group-hover:gap-2.5 transition-all mt-auto">
-              Scopri di più
-              <?php rtc_icon('chevron-right', 'w-4 h-4 transition-transform group-hover:translate-x-0.5'); ?>
-            </span>
-          </div>
-        </article>
+          </article>
+        </div>
       <?php endforeach; ?>
     </div>
-
-    <?php if ($footer['url']) : ?>
-      <div class="mt-8 text-center">
-        <a href="<?php echo esc_url($footer['url']); ?>"
-          class="inline-flex items-center gap-2 text-forest font-heading font-medium text-sm border border-canvas-dark/30 hover:border-olive/40 hover:shadow-lg px-5 py-2.5 rounded-full transition-all duration-300"
-          <?php echo $footer['target'] ? ' target="' . esc_attr($footer['target']) . '"' : ''; ?>>
-          <?php rtc_icon('users', 'w-4 h-4'); ?>
-          <?php echo esc_html($footer['title'] ?: 'Scopri di più'); ?>
-        </a>
-      </div>
-    <?php endif; ?>
   </div>
 </section>

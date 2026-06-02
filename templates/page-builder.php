@@ -55,7 +55,6 @@ get_header();
                             'heading'     => get_sub_field('heading'),
                             'intro'       => get_sub_field('intro'),
                             'services'    => get_sub_field('services'),
-                            'footer_link' => get_sub_field('footer_link'),
                             'margin_top'  => get_sub_field('margin_top'),
                         ]);
                     } ?>
