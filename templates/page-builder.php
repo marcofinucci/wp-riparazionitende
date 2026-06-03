@@ -94,13 +94,14 @@ get_header();
 
                     <?php if (get_row_layout() == 'quote_section') {
                         get_template_part('template-parts/blocks/quote-section', null, [
-                            'eyebrow'    => get_sub_field('eyebrow'),
-                            'heading'    => get_sub_field('heading'),
-                            'highlight'  => get_sub_field('highlight'),
-                            'content'    => get_sub_field('content'),
-                            'quote'      => get_sub_field('quote'),
-                            'author'     => get_sub_field('author'),
-                            'margin_top' => get_sub_field('margin_top'),
+                            'eyebrow'           => get_sub_field('eyebrow'),
+                            'heading'           => get_sub_field('heading'),
+                            'highlight'         => get_sub_field('highlight'),
+                            'content'           => get_sub_field('content'),
+                            'quote'             => get_sub_field('quote'),
+                            'author'            => get_sub_field('author'),
+                            'background_image'  => get_sub_field('background_image'),
+                            'margin_top'        => get_sub_field('margin_top'),
                         ]);
                     } ?>
 
