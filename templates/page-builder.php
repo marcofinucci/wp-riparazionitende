@@ -87,6 +87,7 @@ get_header();
                             'heading'    => get_sub_field('heading'),
                             'content'    => get_sub_field('content'),
                             'quote_text' => get_sub_field('quote_text'),
+                            'image'      => get_sub_field('image'),
                             'margin_top' => get_sub_field('margin_top'),
                         ]);
                     } ?>

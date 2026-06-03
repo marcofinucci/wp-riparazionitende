@@ -5,7 +5,14 @@ $eyebrow     = $args['eyebrow'] ?? '';
 $heading     = $args['heading'] ?? '';
 $content     = $args['content'] ?? '';
 $quote_text  = $args['quote_text'] ?? '';
+$image       = $args['image'] ?? '';
 $margin_top  = $args['margin_top'] ?? 'medio';
+
+if (is_array($image)) {
+  $image = $image['url'] ?? '';
+} elseif (is_numeric($image)) {
+  $image = wp_get_attachment_image_url((int) $image, 'large') ?: '';
+}
 $margin_top_classes = [
   'no'      => '',
   'piccolo' => 'mt-6 lg:mt-8',
@@ -42,21 +49,28 @@ $heading_id = 'coverage-' . wp_unique_id();
         <?php endif; ?>
       </div>
 
-      <div class="flex items-center justify-center">
-        <div class="relative w-full max-w-xs lg:max-w-sm" aria-label="Mappa dell'Italia con punti di provenienza delle spedizioni">
-          <?php get_template_part('template-parts/blocks/partials/italy-map'); ?>
-          <div class="flex items-center justify-center gap-5 mt-4">
-            <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
-              <div class="w-3 h-3 rounded-full bg-canvas/80"></div>
-              Lavorazioni ricevute
-            </div>
-            <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
-              <div class="w-3 h-3 rounded-full border border-canvas/60 bg-transparent"></div>
-              Sede laboratorio
+      <?php if ($image) : ?>
+        <div class="flex items-center justify-center">
+          <div class="relative w-full max-w-xs lg:max-w-sm">
+            <img
+              src="<?php echo esc_url($image); ?>"
+              alt="<?php echo esc_attr($heading ?: "Mappa dell'Italia con punti di provenienza delle spedizioni"); ?>"
+              class="w-full h-auto"
+              loading="lazy"
+              decoding="async" />
+            <div class="flex items-center justify-center gap-5 mt-4">
+              <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
+                <div class="w-3 h-3 rounded-full bg-canvas/80"></div>
+                Lavorazioni ricevute
+              </div>
+              <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
+                <div class="w-3 h-3 rounded-full border border-canvas/60 bg-transparent"></div>
+                Sede laboratorio
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>

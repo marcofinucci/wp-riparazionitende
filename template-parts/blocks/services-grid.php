@@ -102,7 +102,7 @@ if (!$items) {
               loading="lazy">
           <?php endif; ?>
 
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/95  to-black/10"></div>
 
           <?php if ($item['badge']) : ?>
             <span class="absolute top-3 left-3 z-30 type-xs font-heading font-semibold text-white bg-forest px-2 py-1 rounded-full">
@@ -111,7 +111,7 @@ if (!$items) {
           <?php endif; ?>
 
           <div class="relative z-10 p-4 lg:p-5 h-full flex flex-col justify-end">
-            <h3 class="font-heading font-bold text-white type-xl leading-tight uppercase tracking-tight">
+            <h3 class="font-heading font-bold text-white type-xl uppercase text-balance">
               <?php echo esc_html($item['title']); ?>
             </h3>
           </div>

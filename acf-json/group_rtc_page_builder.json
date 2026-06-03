@@ -2186,6 +2186,31 @@
               "rows": 2,
               "placeholder": "",
               "new_lines": ""
+            },
+            {
+              "key": "field_map_image",
+              "label": "Immagine mappa",
+              "name": "image",
+              "aria-label": "",
+              "type": "image",
+              "instructions": "Mappa o grafica visualizzata accanto al testo.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "url",
+              "library": "all",
+              "preview_size": "medium",
+              "min_width": "",
+              "min_height": "",
+              "min_size": "",
+              "max_width": "",
+              "max_height": "",
+              "max_size": "",
+              "mime_types": ""
             }
           ],
           "min": "",
@@ -2515,5 +2540,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1880383898
+  "modified": 1880383900
 }

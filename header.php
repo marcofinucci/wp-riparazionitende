@@ -22,15 +22,17 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-18">
         <!-- Logo -->
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-3 group" aria-label="Riparazioni Tende Campeggio - Home">
-          <div class="w-16 flex items-center justify-center flex-shrink-0">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/riparazionitendecampeggio-logotipo.svg" alt="Riparazioni Tende Campeggio">
-          </div>
-          <div class="font-semibold text-white type-sm uppercase group-hover:text-canvas transition-colors">
+        <div class="flex items-center gap-3 group">
+          <?php if (has_custom_logo()) : ?>
+            <div class="h-12 flex items-center justify-center flex-shrink-0 [&_a]:h-full [&_img]:h-full [&_img]:w-auto">
+              <?php the_custom_logo(); ?>
+            </div>
+          <?php endif; ?>
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="font-heading font-semibold text-white type-sm uppercase group-hover:text-canvas transition-colors flex flex-col !leading-none gap-1 tracking-wide" aria-label="Riparazioni Tende Campeggio - Home">
             <div>Riparazioni Tende</div>
             <div>Campeggio</div>
-          </div>
-        </a>
+          </a>
+        </div>
 
         <!-- Desktop Navigation -->
         <?php if (has_nav_menu('primary')) : ?>
