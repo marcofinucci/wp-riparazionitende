@@ -20,7 +20,7 @@ $wa_url = rtc_whatsapp_link('Salve, vorrei una valutazione per la riparazione di
 $heading_id = 'cta-' . wp_unique_id();
 ?>
 
-<section class="block-cta bg-forest py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
+<section class="block-cta bg-forest-dark py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <?php if ($show_icon) : ?>
       <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6">

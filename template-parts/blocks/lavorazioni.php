@@ -3,13 +3,14 @@ defined('ABSPATH') || exit;
 
 $heading    = $args['heading'] ?? 'Lavorazioni principali';
 $items      = $args['items'] ?? [];
-$background = $args['background'] ?? 'canvas';
+$background = $args['background'] ?? 'no';
 $margin_top = $args['margin_top'] ?? 'medio';
 $bg_classes = [
   'canvas' => 'bg-canvas',
   'forest' => 'bg-forest',
 ];
-$bg_class   = $bg_classes[$background] ?? $bg_classes['canvas'];
+$bg_class   = $bg_classes[$background] ?? '';
+$has_bg     = $background !== 'no' && $background !== '';
 $is_forest  = $background === 'forest';
 $margin_top_classes = [
   'no' => '',
@@ -17,6 +18,7 @@ $margin_top_classes = [
   'medio' => 'mt-10 lg:mt-14',
 ];
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
+$section_class = trim('block-lavorazioni ' . ($has_bg ? $bg_class . ' py-14 lg:py-16 ' : '') . $margin_top_class);
 
 if (!$items) {
   return;
@@ -25,7 +27,7 @@ if (!$items) {
 $heading_id = 'lavorazioni-' . wp_unique_id();
 ?>
 
-<section class="block-lavorazioni <?php echo esc_attr($bg_class); ?> py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
+<section class="<?php echo esc_attr($section_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl">
       <?php if ($heading) : ?>

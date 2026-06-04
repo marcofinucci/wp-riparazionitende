@@ -15,7 +15,7 @@ $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x10
       aria-hidden="true"
       class="absolute inset-0 w-full h-full object-cover"
       loading="eager">
-    <div class="absolute inset-0 bg-black/70" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-forest-dark/70" aria-hidden="true"></div>
   <?php endif; ?>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">

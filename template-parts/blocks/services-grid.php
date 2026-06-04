@@ -81,40 +81,30 @@ if (!$items) {
       </div>
     <?php endif; ?>
 
-    <div class="grid grid-cols-1 sm:grid-cols-6 lg:grid-cols-12 gap-3 lg:gap-4 auto-rows-[150px] sm:auto-rows-[170px] lg:auto-rows-[190px]">
+    <div class="flex flex-wrap -mx-2 justify-center">
       <?php foreach ($items as $i => $item) : ?>
-        <?php
-        $pattern = $i % 7;
-        if ($pattern === 0 || $pattern === 1 || $pattern === 5 || $pattern === 6) {
-          $span_class = 'col-span-1 sm:col-span-3 lg:col-span-6';
-        } else {
-          $span_class = 'col-span-1 sm:col-span-2 lg:col-span-4';
-        }
-        ?>
-        <article class="<?php echo esc_attr($span_class); ?> relative h-full bg-forest rounded-md overflow-hidden group transition-all duration-300">
-          <a href="<?php echo esc_url($item['link']['url']); ?>" class="absolute inset-0 z-20" aria-label="<?php echo esc_attr($item['title']); ?>" <?php echo $item['link']['target'] ? ' target="' . esc_attr($item['link']['target']) . '"' : ''; ?>></a>
+        <article class="w-full md:w-1/2 lg:w-1/4 px-2 mt-4">
+          <a href="<?php echo esc_url($item['link']['url']); ?>" class="<?php echo esc_attr($span_class); ?> bg-white  h-full rounded-2xl overflow-hidden group transition-all duration-300 flex flex-col relative" aria-label="<?php echo esc_attr($item['title']); ?>" <?php echo $item['link']['target'] ? ' target="' . esc_attr($item['link']['target']) . '"' : ''; ?>>
+            <?php if ($item['img']) : ?>
+              <div class="relative aspect-square overflow-hidden bg-forest">
+                <img
+                  src="<?php echo esc_url($item['img']); ?>"
+                  alt="<?php echo esc_attr($item['title']); ?>"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy">
+              </div>
+            <?php endif; ?>
 
-          <?php if ($item['img']) : ?>
-            <img
-              src="<?php echo esc_url($item['img']); ?>"
-              alt="<?php echo esc_attr($item['title']); ?>"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              loading="lazy">
-          <?php endif; ?>
+            <?php if ($item['badge']) : ?>
+              <span class="absolute top-3 left-3 z-30 type-xs font-heading font-semibold text-white bg-forest px-2 py-1 rounded-full">
+                <?php echo esc_html($item['badge']); ?>
+              </span>
+            <?php endif; ?>
 
-          <div class="absolute inset-0 bg-gradient-to-t from-black/95  to-black/10"></div>
-
-          <?php if ($item['badge']) : ?>
-            <span class="absolute top-3 left-3 z-30 type-xs font-heading font-semibold text-white bg-forest px-2 py-1 rounded-full">
-              <?php echo esc_html($item['badge']); ?>
-            </span>
-          <?php endif; ?>
-
-          <div class="relative z-10 p-4 lg:p-5 h-full flex flex-col justify-end">
-            <h3 class="font-heading font-bold text-white type-xl uppercase text-balance">
+            <h3 class="font-heading font-bold p-4 text-center flex-grow">
               <?php echo esc_html($item['title']); ?>
             </h3>
-          </div>
+          </a>
         </article>
       <?php endforeach; ?>
     </div>

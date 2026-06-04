@@ -42,7 +42,7 @@ $secondary = $resolve_link($secondary_link);
       class="absolute inset-0 w-full h-full object-cover object-bottom"
       loading="eager"
       fetchpriority="high">
-    <div class="absolute inset-0 bg-black/70" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-forest-dark/70" aria-hidden="true"></div>
   <?php endif; ?>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 lg:py-20">
@@ -68,7 +68,7 @@ $secondary = $resolve_link($secondary_link);
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <?php if ($primary['url']) : ?>
             <a href="<?php echo esc_url($primary['url']); ?>"
-              class="btn-secondary"
+              class="btn-primary"
               <?php echo $primary['target'] ? ' target="' . esc_attr($primary['target']) . '"' : ''; ?>>
               <?php echo esc_html($primary['title'] ?: 'Scopri di più'); ?>
             </a>

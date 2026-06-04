@@ -208,10 +208,11 @@
                 "id": ""
               },
               "choices": {
+                "no": "No",
                 "canvas": "Canvas",
                 "forest": "Forest"
               },
-              "default_value": "canvas",
+              "default_value": "no",
               "return_format": "value",
               "multiple": 0,
               "allow_null": 0,
@@ -446,6 +447,26 @@
               "placeholder": "",
               "create_options": 0,
               "save_options": 0
+            },
+            {
+              "key": "field_note_title",
+              "label": "Titolo",
+              "name": "title",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
             },
             {
               "key": "field_note_text",
@@ -2565,5 +2586,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1880383902
+  "modified": 1780556680
 }

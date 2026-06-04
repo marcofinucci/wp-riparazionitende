@@ -141,6 +141,7 @@ get_header();
 
                     <?php if (get_row_layout() == 'note') {
                         get_template_part('template-parts/blocks/note', null, [
+                            'title'      => get_sub_field('title'),
                             'text'       => get_sub_field('text'),
                             'margin_top' => get_sub_field('margin_top'),
                         ]);
