@@ -3,7 +3,8 @@ defined('ABSPATH') || exit;
 
 $title          = $args['title'] ?? 'Hai una tenda da riparare?';
 $text           = $args['text'] ?? 'Invia foto della tenda e dei danni per ricevere una valutazione preliminare.';
-$show_whatsapp  = !array_key_exists('show_whatsapp', $args) || $args['show_whatsapp'];
+$wa_url         = $args['wa_url'] ?? '';
+$show_whatsapp  = $wa_url && (!array_key_exists('show_whatsapp', $args) || $args['show_whatsapp']);
 $show_spedire   = !array_key_exists('show_spedire', $args) || $args['show_spedire'];
 $show_email     = !empty($args['show_email']);
 $show_icon      = !empty($args['show_icon']);
@@ -16,7 +17,6 @@ $margin_top_classes = [
   'medio' => 'mt-10 lg:mt-14',
 ];
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
-$wa_url = rtc_whatsapp_link('Salve, vorrei una valutazione per la riparazione di una tenda.');
 $heading_id = 'cta-' . wp_unique_id();
 ?>
 

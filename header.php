@@ -1,3 +1,7 @@
+<?php
+$_rtc_wa     = get_field('whatsapp_number', 'option');
+$_rtc_wa_url = $_rtc_wa['url'] ?? '';
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="scroll-smooth">
 
@@ -52,11 +56,13 @@
 
         <!-- WhatsApp CTA (desktop) + Mobile menu button -->
         <div class="flex items-center gap-3">
-          <a href="<?php echo esc_url(rtc_whatsapp_link()); ?>" target="_blank" rel="noopener noreferrer"
-            class="hidden sm:inline-flex btn-outline-sm">
-            <?php rtc_whatsapp_icon('w-4 h-4'); ?>
-            WhatsApp
-          </a>
+          <?php if ($_rtc_wa_url) : ?>
+            <a href="<?php echo $_rtc_wa_url; ?>" target="_blank" rel="noopener noreferrer"
+              class="hidden sm:inline-flex btn-outline-sm">
+              <?php rtc_whatsapp_icon('w-4 h-4'); ?>
+              WhatsApp
+            </a>
+          <?php endif; ?>
 
           <!-- Mobile hamburger -->
           <button id="mobile-menu-btn" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu"
@@ -82,13 +88,15 @@
             'fallback_cb'    => false,
           ]);
           ?>
-          <div class="pt-3 pb-1 px-4">
-            <a href="<?php echo esc_url(rtc_whatsapp_link()); ?>" target="_blank" rel="noopener noreferrer"
-              class="btn-whatsapp w-full justify-center">
-              <?php rtc_whatsapp_icon('w-5 h-5'); ?>
-              Scrivici su WhatsApp
-            </a>
-          </div>
+          <?php if ($_rtc_wa_url) : ?>
+            <div class="pt-3 pb-1 px-4">
+              <a href="<?php echo $_rtc_wa_url; ?>" target="_blank" rel="noopener noreferrer"
+                class="btn-whatsapp w-full justify-center">
+                <?php rtc_whatsapp_icon('w-5 h-5'); ?>
+                Scrivici su WhatsApp
+              </a>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
     <?php endif; ?>

@@ -1,10 +1,23 @@
+<?php
+$_rtc_wa          = get_field('whatsapp_number', 'option');
+$_rtc_wa_url      = $_rtc_wa['url']   ?? '';
+$_rtc_wa_label    = $_rtc_wa['title'] ?? '';
+$_rtc_email_link  = get_field('contact_email', 'option');
+$_rtc_email_url   = $_rtc_email_link['url']   ?? '';
+$_rtc_email_label = $_rtc_email_link['title'] ?? '';
+$_rtc_phone_link  = get_field('contact_phone', 'option');
+$_rtc_phone_url   = $_rtc_phone_link['url']   ?? '';
+$_rtc_phone_label = $_rtc_phone_link['title'] ?? '';
+?>
 <!-- Fixed WhatsApp Button — solo mobile (stessa soglia del burger menu: lg:hidden) -->
-<a href="<?php echo esc_url(rtc_whatsapp_link('Salve, vorrei una valutazione per la riparazione di una tenda.')); ?>"
-  target="_blank" rel="noopener noreferrer"
-  aria-label="Contattaci su WhatsApp"
-  class="border border-white lg:hidden fixed bottom-2 right-2 z-50 w-12 h-12 bg-[#4FCE5D] hover:bg-[#45b953] rounded-full shadow-lg flex items-center justify-center transition-all duration-200">
-  <?php rtc_whatsapp_icon('w-6 h-6 text-white'); ?>
-</a>
+<?php if ($_rtc_wa_url) : ?>
+  <a href="<?php echo esc_url($_rtc_wa_url); ?>"
+    target="<?php echo esc_attr($_rtc_wa['target'] ?? '_blank'); ?>" rel="noopener noreferrer"
+    aria-label="Contattaci su WhatsApp"
+    class="border border-white lg:hidden fixed bottom-2 right-2 z-50 w-12 h-12 bg-[#4FCE5D] hover:bg-[#45b953] rounded-full shadow-lg flex items-center justify-center transition-all duration-200">
+    <?php rtc_whatsapp_icon('w-6 h-6 text-white'); ?>
+  </a>
+<?php endif; ?>
 
 <!-- Footer -->
 <footer class="bg-forest text-white">
@@ -32,21 +45,28 @@
           Laboratorio artigianale specializzato nella manutenzione e riparazione di tende scout, verande roulotte, tende carrello e attrezzatura outdoor.
         </p>
         <div class="flex flex-col gap-2.5">
-          <a href="<?php echo esc_url(rtc_whatsapp_link()); ?>" target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
-            <?php rtc_whatsapp_icon('w-4 h-4 text-canvas/70'); ?>
-            WhatsApp
-          </a>
-          <a href="mailto:info@riparazionitendecampeggio.it"
-            class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
-            <?php rtc_icon('mail', 'w-4 h-4 text-canvas/70'); ?>
-            info@riparazionitendecampeggio.it
-          </a>
-          <a href="<?php echo esc_url(rtc_phone_link(rtc_contact_phone())); ?>"
-            class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
-            <?php rtc_icon('phone', 'w-4 h-4 text-canvas/70'); ?>
-            <?php echo esc_html(rtc_contact_phone()); ?>
-          </a>
+          <?php if ($_rtc_wa_url) : ?>
+            <a href="<?php echo esc_url($_rtc_wa_url); ?>"
+              target="<?php echo esc_attr($_rtc_wa['target'] ?? '_blank'); ?>" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
+              <?php rtc_whatsapp_icon('w-4 h-4 text-canvas/70'); ?>
+              <?php echo esc_html($_rtc_wa_label ?: 'WhatsApp'); ?>
+            </a>
+          <?php endif; ?>
+          <?php if ($_rtc_email_url) : ?>
+            <a href="<?php echo esc_url($_rtc_email_url); ?>"
+              class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
+              <?php rtc_icon('mail', 'w-4 h-4 text-canvas/70'); ?>
+              <?php echo esc_html($_rtc_email_label); ?>
+            </a>
+          <?php endif; ?>
+          <?php if ($_rtc_phone_url) : ?>
+            <a href="<?php echo esc_url($_rtc_phone_url); ?>"
+              class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
+              <?php rtc_icon('phone', 'w-4 h-4 text-canvas/70'); ?>
+              <?php echo esc_html($_rtc_phone_label); ?>
+            </a>
+          <?php endif; ?>
         </div>
       </div>
 

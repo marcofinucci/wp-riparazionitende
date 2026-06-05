@@ -125,52 +125,6 @@ add_filter('auto_update_theme', '__return_false');
 
 
 
-
-
-
-// ELIMINARE
-
-// Helper: contact email
-function rtc_contact_email(): string
-{
-    $email = 'info@riparazionitendecampeggio.it';
-    if (function_exists('get_field')) {
-        $acf = get_field('contact_email', 'option');
-        if ($acf) {
-            $email = $acf;
-        }
-    }
-    return sanitize_email($email);
-}
-
-// Helper: contact phone (display format)
-function rtc_contact_phone(): string
-{
-    $phone = '+39 085 000 0000';
-    if (function_exists('get_field')) {
-        $acf = get_field('contact_phone', 'option');
-        if ($acf) {
-            $phone = $acf;
-        }
-    }
-    return sanitize_text_field($phone);
-}
-
-// Helper: WhatsApp link
-function rtc_whatsapp_link(string $message = ''): string
-{
-    $number = get_option('rtc_whatsapp', '393000000000');
-    if (function_exists('get_field')) {
-        $number = get_field('whatsapp_number', 'option') ?: $number;
-    }
-    $number = preg_replace('/[^0-9]/', '', $number) ?: '393000000000';
-    $url    = 'https://wa.me/' . $number;
-    if ($message) {
-        $url .= '?text=' . rawurlencode($message);
-    }
-    return esc_url($url);
-}
-
 // Contact form handler
 function rtc_handle_contact_form(): void
 {
@@ -195,7 +149,8 @@ function rtc_handle_contact_form(): void
         exit;
     }
 
-    $to      = rtc_contact_email();
+    $_email_link = get_field('contact_email', 'option');
+    $to          = sanitize_email(str_replace('mailto:', '', $_email_link['url'] ?? ''));
     $headers = [
         'Content-Type: text/plain; charset=UTF-8',
         'Reply-To: ' . $name . ' <' . $from . '>',
@@ -217,9 +172,3 @@ function rtc_handle_contact_form(): void
 }
 add_action('admin_post_rtc_contact', 'rtc_handle_contact_form');
 add_action('admin_post_nopriv_rtc_contact', 'rtc_handle_contact_form');
-
-// Helper: format phone for tel: link
-function rtc_phone_link(string $phone): string
-{
-    return 'tel:' . preg_replace('/[^0-9+]/', '', $phone);
-}

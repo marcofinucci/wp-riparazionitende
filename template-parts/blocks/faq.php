@@ -47,7 +47,7 @@ $section_class = trim('block-faq ' . ($background === 'canvas' ? 'bg-canvas py-1
         }
         $item_id = $heading_id . '-' . $i;
         ?>
-        <div class="border-b border-canvas-dark last:border-0" data-border-b border-canvas-dark last:border-0 role="listitem">
+        <div class="border-b border-canvas-dark last:border-0" data-faq-item role="listitem">
           <button type="button" data-faq-trigger
             class="w-full flex items-center justify-between gap-4 py-5 text-left cursor-pointer group bg-transparent border-0"
             aria-expanded="false" aria-controls="<?php echo esc_attr($item_id); ?>">

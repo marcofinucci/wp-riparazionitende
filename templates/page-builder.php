@@ -173,7 +173,10 @@ get_header();
 
                     <?php if (get_row_layout() == 'contact_canali') {
                         get_template_part('template-parts/blocks/contact-canali', null, [
-                            'margin_top' => get_sub_field('margin_top'),
+                            'margin_top'   => get_sub_field('margin_top'),
+                            'email_link'   => get_field('contact_email', 'option')   ?: [],
+                            'phone_link'   => get_field('contact_phone', 'option')   ?: [],
+                            'wa_link'      => get_field('whatsapp_number', 'option') ?: [],
                         ]);
                     } ?>
 
@@ -194,6 +197,7 @@ get_header();
                     } ?>
 
                     <?php if (get_row_layout() == 'cta') {
+                        $_wa_link = get_field('whatsapp_number', 'option') ?: [];
                         get_template_part('template-parts/blocks/cta', null, [
                             'title'          => get_sub_field('title'),
                             'text'           => get_sub_field('text'),
@@ -204,6 +208,7 @@ get_header();
                             'whatsapp_label' => get_sub_field('whatsapp_label'),
                             'email_label'    => get_sub_field('email_label'),
                             'margin_top'     => get_sub_field('margin_top'),
+                            'wa_url'         => $_wa_link['url'] ?? '',
                         ]);
                     } ?>
 

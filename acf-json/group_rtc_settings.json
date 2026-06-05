@@ -1,0 +1,97 @@
+{
+    "key": "group_rtc_settings",
+    "title": "Impostazioni Sito",
+    "fields": [
+        {
+            "key": "field_rtc_settings_tab_contatti",
+            "label": "Contatti",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": false,
+            "selected": 0
+        },
+        {
+            "key": "field_rtc_contact_email",
+            "label": "Email",
+            "name": "contact_email",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "URL: mailto:info@... — Label: l'indirizzo visualizzato — Target: lascia vuoto..",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_rtc_contact_phone",
+            "label": "Telefono",
+            "name": "contact_phone",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "URL: tel:+39085000000 — Label: numero in formato leggibile (es. +39 085 000 000) — Target: lascia vuoto.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        },
+        {
+            "key": "field_rtc_whatsapp_number",
+            "label": "WhatsApp",
+            "name": "whatsapp_number",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "URL: https:\/\/wa.me\/39... (con testo pre-compilato opzionale) — Label: numero visualizzato (es. +39 385 000 0000) — Target: _blank.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "rtc-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1780679194
+}
