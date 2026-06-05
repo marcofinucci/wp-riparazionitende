@@ -58,7 +58,7 @@ $_rtc_wa_url = $_rtc_wa['url'] ?? '';
         <div class="flex items-center gap-3">
           <?php if ($_rtc_wa_url) : ?>
             <a href="<?php echo $_rtc_wa_url; ?>" target="_blank" rel="noopener noreferrer"
-              class="hidden sm:inline-flex btn-outline-sm">
+              class="hidden sm:inline-flex btn-outline-white-sm">
               <?php rtc_whatsapp_icon('w-4 h-4'); ?>
               WhatsApp
             </a>
@@ -88,15 +88,6 @@ $_rtc_wa_url = $_rtc_wa['url'] ?? '';
             'fallback_cb'    => false,
           ]);
           ?>
-          <?php if ($_rtc_wa_url) : ?>
-            <div class="pt-3 pb-1 px-4">
-              <a href="<?php echo $_rtc_wa_url; ?>" target="_blank" rel="noopener noreferrer"
-                class="btn-whatsapp w-full justify-center">
-                <?php rtc_whatsapp_icon('w-5 h-5'); ?>
-                Scrivici su WhatsApp
-              </a>
-            </div>
-          <?php endif; ?>
         </div>
       </div>
     <?php endif; ?>

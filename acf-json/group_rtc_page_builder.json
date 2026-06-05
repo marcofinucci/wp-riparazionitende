@@ -1158,124 +1158,36 @@
               "placeholder": ""
             },
             {
-              "key": "field_cta_wa",
-              "label": "Mostra WhatsApp",
-              "name": "show_whatsapp",
+              "key": "field_cta_link_primary",
+              "label": "Link primario",
+              "name": "link_primary",
               "aria-label": "",
-              "type": "true_false",
+              "type": "link",
               "instructions": "",
               "required": false,
               "conditional_logic": false,
               "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
               },
-              "default_value": 1,
-              "ui": 1,
-              "message": "",
-              "ui_on_text": "",
-              "ui_off_text": ""
+              "return_format": "array"
             },
             {
-              "key": "field_cta_wa_label",
-              "label": "Testo pulsante WhatsApp",
-              "name": "whatsapp_label",
+              "key": "field_cta_link_secondary",
+              "label": "Link secondario",
+              "name": "link_secondary",
               "aria-label": "",
-              "type": "text",
+              "type": "link",
               "instructions": "",
               "required": false,
               "conditional_logic": false,
               "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
               },
-              "default_value": "Contattaci su WhatsApp",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
-            },
-            {
-              "key": "field_cta_spedire",
-              "label": "Mostra Come spedire",
-              "name": "show_spedire",
-              "aria-label": "",
-              "type": "true_false",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": 1,
-              "ui": 1,
-              "message": "",
-              "ui_on_text": "",
-              "ui_off_text": ""
-            },
-            {
-              "key": "field_cta_email",
-              "label": "Mostra link email\/contatti",
-              "name": "show_email",
-              "aria-label": "",
-              "type": "true_false",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": 0,
-              "ui": 1,
-              "message": "",
-              "ui_on_text": "",
-              "ui_off_text": ""
-            },
-            {
-              "key": "field_cta_icon",
-              "label": "Mostra icona tenda",
-              "name": "show_icon",
-              "aria-label": "",
-              "type": "true_false",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": 0,
-              "ui": 1,
-              "message": "",
-              "ui_on_text": "",
-              "ui_off_text": ""
-            },
-            {
-              "key": "field_cta_email_label",
-              "label": "Testo pulsante email",
-              "name": "email_label",
-              "aria-label": "",
-              "type": "text",
-              "instructions": "",
-              "required": false,
-              "conditional_logic": false,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "default_value": "Oppure scrivi via email",
-              "maxlength": "",
-              "placeholder": "",
-              "prepend": "",
-              "append": ""
+              "return_format": "array"
             }
           ],
           "min": "",
@@ -2586,5 +2498,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1780556680
+  "modified": 1780679612
 }

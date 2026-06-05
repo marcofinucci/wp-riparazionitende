@@ -68,14 +68,14 @@ $secondary = $resolve_link($secondary_link);
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <?php if ($primary['url']) : ?>
             <a href="<?php echo esc_url($primary['url']); ?>"
-              class="btn-primary"
+              class="btn-white"
               <?php echo $primary['target'] ? ' target="' . esc_attr($primary['target']) . '"' : ''; ?>>
               <?php echo esc_html($primary['title'] ?: 'Scopri di più'); ?>
             </a>
           <?php endif; ?>
           <?php if ($secondary['url']) : ?>
             <a href="<?php echo esc_url($secondary['url']); ?>"
-              class="btn-outline"
+              class="btn-outline-white"
               <?php echo $secondary['target'] ? ' target="' . esc_attr($secondary['target']) . '"' : ''; ?>>
               <?php echo esc_html($secondary['title'] ?: 'Scopri di più'); ?>
               <?php rtc_icon('chevron-right', 'w-4 h-4'); ?>

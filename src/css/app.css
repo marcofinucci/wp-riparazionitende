@@ -23,35 +23,35 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-olive hover:bg-olive-light text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center gap-2 border border-olive bg-olive hover:bg-olive-light hover:border-olive-light text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 bg-forest hover:bg-forest-light text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center gap-2 border border-forest bg-forest hover:bg-forest-light hover:border-forest-light text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
-  .btn-outline {
-    @apply inline-flex items-center gap-2 border border-white text-white hover:bg-white hover:text-forest font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
+  .btn-white {
+    @apply inline-flex items-center gap-2 border border-white bg-white hover:bg-canvas hover:border-canvas text-forest font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
-  .btn-whatsapp {
-    @apply inline-flex items-center gap-2 bg-[#4FCE5D] hover:bg-[#45b953] text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer shadow-lg;
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 border border-white text-white hover:bg-canvas hover:border-canvas hover:text-forest font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
   .btn-primary-sm {
-    @apply inline-flex items-center gap-1.5 bg-forest hover:bg-forest-light text-white font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center gap-1.5 border border-olive bg-olive hover:bg-olive-light hover:border-olive-light text-white font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
   .btn-secondary-sm {
-    @apply inline-flex items-center gap-1.5 bg-olive hover:bg-olive-light text-white font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center gap-1.5 border border-forest bg-forest hover:bg-forest-light hover:border-forest-light text-white font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
-  .btn-outline-sm {
-    @apply inline-flex items-center gap-1.5 border border-white text-white hover:bg-white hover:text-forest font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
+  .btn-white-sm {
+    @apply inline-flex items-center gap-1.5 border border-white bg-white hover:bg-canvas hover:border-canvas text-forest font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
-  .btn-whatsapp-sm {
-    @apply inline-flex items-center gap-1.5 bg-[#4FCE5D] hover:bg-[#45b953] text-white font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer shadow-md;
+  .btn-outline-white-sm {
+    @apply inline-flex items-center gap-1.5 border border-white text-white hover:bg-canvas hover:border-canvas hover:text-forest font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
   .pagination {

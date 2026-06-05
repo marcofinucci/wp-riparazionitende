@@ -22,7 +22,7 @@ $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['med
           Effettuiamo lavorazioni anche su tende a marchio Salewa.
         </p>
         <a href="https://www.salewa.com" target="_blank" rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 text-forest hover:text-olive font-heading font-semibold type-sm transition-colors border border-forest/25 hover:border-olive/35 px-5 py-2.5 rounded-full">
+          class="btn-primary">
           Visita il sito Salewa
           <?php rtc_icon('external-link', 'w-4 h-4'); ?>
         </a>
@@ -34,7 +34,7 @@ $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['med
           <p class="text-muted type-sm">Effettuiamo lavorazioni anche su tende a marchio Salewa.</p>
         </div>
         <a href="https://www.salewa.com" target="_blank" rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 text-forest hover:text-olive font-heading font-semibold type-sm transition-colors border border-forest/25 hover:border-olive/35 px-4 py-2.5 rounded-full flex-shrink-0">
+          class="btn-primary">
           Visita Salewa
           <?php rtc_icon('external-link', 'w-4 h-4'); ?>
         </a>

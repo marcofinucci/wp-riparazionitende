@@ -197,18 +197,12 @@ get_header();
                     } ?>
 
                     <?php if (get_row_layout() == 'cta') {
-                        $_wa_link = get_field('whatsapp_number', 'option') ?: [];
                         get_template_part('template-parts/blocks/cta', null, [
                             'title'          => get_sub_field('title'),
                             'text'           => get_sub_field('text'),
-                            'show_whatsapp'  => get_sub_field('show_whatsapp'),
-                            'show_spedire'   => get_sub_field('show_spedire'),
-                            'show_email'     => get_sub_field('show_email'),
-                            'show_icon'      => get_sub_field('show_icon'),
-                            'whatsapp_label' => get_sub_field('whatsapp_label'),
-                            'email_label'    => get_sub_field('email_label'),
+                            'link_primary'   => get_sub_field('link_primary')   ?: [],
+                            'link_secondary' => get_sub_field('link_secondary') ?: [],
                             'margin_top'     => get_sub_field('margin_top'),
-                            'wa_url'         => $_wa_link['url'] ?? '',
                         ]);
                     } ?>
 

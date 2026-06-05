@@ -1,16 +1,11 @@
 <?php
 defined('ABSPATH') || exit;
 
-$title          = $args['title'] ?? 'Hai una tenda da riparare?';
-$text           = $args['text'] ?? 'Invia foto della tenda e dei danni per ricevere una valutazione preliminare.';
-$wa_url         = $args['wa_url'] ?? '';
-$show_whatsapp  = $wa_url && (!array_key_exists('show_whatsapp', $args) || $args['show_whatsapp']);
-$show_spedire   = !array_key_exists('show_spedire', $args) || $args['show_spedire'];
-$show_email     = !empty($args['show_email']);
-$show_icon      = !empty($args['show_icon']);
-$whatsapp_label = $args['whatsapp_label'] ?? 'Contattaci su WhatsApp';
-$email_label    = $args['email_label'] ?? 'Oppure scrivi via email';
-$margin_top     = $args['margin_top'] ?? 'medio';
+$title          = $args['title']         ?? '';
+$text           = $args['text']          ?? '';
+$link_primary   = $args['link_primary']  ?? [];
+$link_secondary = $args['link_secondary'] ?? [];
+$margin_top     = $args['margin_top']    ?? 'medio';
 $margin_top_classes = [
   'no' => '',
   'piccolo' => 'mt-6 lg:mt-8',
@@ -22,33 +17,26 @@ $heading_id = 'cta-' . wp_unique_id();
 
 <section class="block-cta bg-forest-dark py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <?php if ($show_icon) : ?>
-      <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-6">
-        <?php rtc_icon('tent', 'w-8 h-8 text-canvas'); ?>
-      </div>
-    <?php endif; ?>
     <?php if ($title) : ?>
       <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-2xl text-white mb-4"><?php echo esc_html($title); ?></h2>
     <?php endif; ?>
     <?php if ($text) : ?>
-      <p class="text-white/65 mb-8 max-w-lg mx-auto <?php echo $show_icon ? 'type-lg mb-10' : ''; ?>"><?php echo esc_html($text); ?></p>
+      <p class="text-white/65 max-w-lg mx-auto"><?php echo esc_html($text); ?></p>
     <?php endif; ?>
-    <?php if ($show_whatsapp || $show_spedire || $show_email) : ?>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <?php if ($show_whatsapp) : ?>
-          <a href="<?php echo esc_url($wa_url); ?>" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-            <?php rtc_whatsapp_icon('w-5 h-5'); ?>
-            <?php echo esc_html($whatsapp_label); ?>
+    <?php if (!empty($link_primary['url']) || !empty($link_secondary['url'])) : ?>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+        <?php if (!empty($link_primary['url'])) : ?>
+          <a href="<?php echo esc_url($link_primary['url']); ?>"
+            <?php if (!empty($link_primary['target'])) : ?>target="<?php echo esc_attr($link_primary['target']); ?>" rel="noopener noreferrer" <?php endif; ?>
+            class="btn-white">
+            <?php echo esc_html($link_primary['title']); ?>
           </a>
         <?php endif; ?>
-        <?php if ($show_spedire) : ?>
-          <a href="<?php echo esc_url(home_url('/come-spedire-tenda-da-riparare')); ?>" class="btn-outline">
-            Come spedire
-          </a>
-        <?php endif; ?>
-        <?php if ($show_email) : ?>
-          <a href="<?php echo esc_url(home_url('/contatti')); ?>" class="btn-outline">
-            <?php echo esc_html($email_label); ?>
+        <?php if (!empty($link_secondary['url'])) : ?>
+          <a href="<?php echo esc_url($link_secondary['url']); ?>"
+            <?php if (!empty($link_secondary['target'])) : ?>target="<?php echo esc_attr($link_secondary['target']); ?>" rel="noopener noreferrer" <?php endif; ?>
+            class="btn-outline-white">
+            <?php echo esc_html($link_secondary['title']); ?>
           </a>
         <?php endif; ?>
       </div>
