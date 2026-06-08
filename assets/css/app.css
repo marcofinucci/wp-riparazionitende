@@ -1992,6 +1992,10 @@ h1,
   padding-top: 0.75rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2618,6 +2622,10 @@ h1,
   .lg\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .lg\:pb-14 {
+    padding-bottom: 3.5rem;
   }
 }
 

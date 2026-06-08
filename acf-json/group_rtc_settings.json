@@ -70,6 +70,96 @@
       },
       "return_format": "array",
       "allow_in_bindings": 1
+    },
+    {
+      "key": "field_rtc_settings_tab_cta",
+      "label": "CTA Footer",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": false,
+      "selected": 0
+    },
+    {
+      "key": "field_rtc_footer_cta_title",
+      "label": "Titolo",
+      "name": "footer_cta_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_rtc_footer_cta_text",
+      "label": "Testo",
+      "name": "footer_cta_text",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "rows": 3,
+      "new_lines": ""
+    },
+    {
+      "key": "field_rtc_footer_cta_link_primary",
+      "label": "Link principale",
+      "name": "footer_cta_link_primary",
+      "aria-label": "",
+      "type": "link",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "100",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array"
+    },
+    {
+      "key": "field_rtc_footer_cta_link_secondary",
+      "label": "Link secondario",
+      "name": "footer_cta_link_secondary",
+      "aria-label": "",
+      "type": "link",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "100",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array"
     }
   ],
   "location": [
@@ -83,7 +173,7 @@
   ],
   "menu_order": 0,
   "position": "normal",
-  "style": "default",
+  "style": "seamless",
   "label_placement": "top",
   "instruction_placement": "label",
   "hide_on_screen": "",
@@ -93,5 +183,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1780679194
+  "modified": 1780955006
 }

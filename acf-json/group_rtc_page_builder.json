@@ -10,7 +10,15 @@
       "type": "text",
       "instructions": "Se vuoto, usa il titolo della pagina.",
       "required": false,
-      "conditional_logic": false,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_rtc_pb_hide_header",
+            "operator": "==",
+            "value": "0"
+          }
+        ]
+      ],
       "wrapper": {
         "width": "",
         "class": "",
@@ -30,7 +38,15 @@
       "type": "text",
       "instructions": "Se vuoto, usa il titolo della pagina.",
       "required": false,
-      "conditional_logic": false,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_rtc_pb_hide_header",
+            "operator": "==",
+            "value": "0"
+          }
+        ]
+      ],
       "wrapper": {
         "width": "",
         "class": "",
@@ -50,7 +66,15 @@
       "type": "textarea",
       "instructions": "",
       "required": 0,
-      "conditional_logic": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_rtc_pb_hide_header",
+            "operator": "==",
+            "value": "0"
+          }
+        ]
+      ],
       "wrapper": {
         "width": "",
         "class": "",
@@ -69,7 +93,7 @@
       "name": "hide_page_header",
       "aria-label": "",
       "type": "true_false",
-      "instructions": "Attiva per pagine con blocco Hero al posto dell'header standard.",
+      "instructions": "",
       "required": false,
       "conditional_logic": false,
       "wrapper": {
@@ -82,6 +106,54 @@
       "message": "",
       "ui_on_text": "",
       "ui_off_text": ""
+    },
+    {
+      "key": "field_rtc_pb_footer_margin",
+      "label": "Margine prima del footer",
+      "name": "footer_margin_top",
+      "aria-label": "",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "100",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "no": "No",
+        "medio": "Medio"
+      },
+      "default_value": "medio",
+      "return_format": "value",
+      "multiple": 0,
+      "allow_null": 0,
+      "ui": 0,
+      "ajax": 0,
+      "placeholder": "",
+      "create_options": 0,
+      "save_options": 0
+    },
+    {
+      "key": "field_rtc_pb_disable_footer_cta",
+      "label": "Mostra CTA footer",
+      "name": "show_footer_cta",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "100",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "ui": 1,
+      "ui_on_text": "Sì",
+      "ui_off_text": "No"
     },
     {
       "key": "field_rtc_pb_content",
@@ -1085,7 +1157,7 @@
         "layout_cta": {
           "key": "layout_cta",
           "name": "cta",
-          "label": "CTA finale",
+          "label": "Call to Action",
           "display": "block",
           "sub_fields": [
             {
@@ -1167,7 +1239,7 @@
               "required": false,
               "conditional_logic": false,
               "wrapper": {
-                "width": "50",
+                "width": "100",
                 "class": "",
                 "id": ""
               },
@@ -1183,7 +1255,7 @@
               "required": false,
               "conditional_logic": false,
               "wrapper": {
-                "width": "50",
+                "width": "100",
                 "class": "",
                 "id": ""
               },
@@ -2498,5 +2570,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1780679612
+  "modified": 1780955002
 }

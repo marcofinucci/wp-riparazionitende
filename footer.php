@@ -8,6 +8,19 @@ $_rtc_email_label = $_rtc_email_link['title'] ?? '';
 $_rtc_phone_link  = get_field('contact_phone', 'option');
 $_rtc_phone_url   = $_rtc_phone_link['url']   ?? '';
 $_rtc_phone_label = $_rtc_phone_link['title'] ?? '';
+
+$_footer_margin_top    = get_field('footer_margin_top') ?: 'medio';
+$_footer_margin_classes = [
+  'no'    => '',
+  'medio' => 'mt-10 lg:mt-14',
+];
+
+$_footer_cta_title     = get_field('footer_cta_title', 'option');
+$_footer_cta_text      = get_field('footer_cta_text', 'option');
+$_footer_cta_primary   = get_field('footer_cta_link_primary', 'option');
+$_footer_cta_secondary = get_field('footer_cta_link_secondary', 'option');
+$_footer_cta_enabled   = (bool) get_field('show_footer_cta');
+$_footer_cta_shown     = $_footer_cta_enabled && ($_footer_cta_title || $_footer_cta_text || !empty($_footer_cta_primary['url']) || !empty($_footer_cta_secondary['url']));
 ?>
 <!-- Fixed WhatsApp Button — solo mobile (stessa soglia del burger menu: lg:hidden) -->
 <?php if ($_rtc_wa_url) : ?>
@@ -19,8 +32,24 @@ $_rtc_phone_label = $_rtc_phone_link['title'] ?? '';
   </a>
 <?php endif; ?>
 
+<?php if ($_footer_cta_shown) : ?>
+  <?php
+  get_template_part('template-parts/blocks/cta', null, [
+    'title'          => $_footer_cta_title,
+    'text'           => $_footer_cta_text,
+    'link_primary'   => $_footer_cta_primary,
+    'link_secondary' => $_footer_cta_secondary,
+    'margin_top'     => $_footer_margin_top,
+  ]);
+  ?>
+<?php endif; ?>
+
+<?php
+$_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin_top] ?? '') : '';
+?>
+
 <!-- Footer -->
-<footer class="bg-forest text-white">
+<footer class="bg-forest text-white<?php echo $_footer_margin ? ' ' . esc_attr($_footer_margin) : ''; ?>">
 
   <!-- Footer Main -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
