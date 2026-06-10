@@ -181,7 +181,15 @@ get_header();
 
                     <?php if (get_row_layout() == 'contact_form') {
                         get_template_part('template-parts/blocks/contact-form', null, [
-                            'margin_top' => get_sub_field('margin_top'),
+                            'margin_top'    => get_sub_field('margin_top'),
+                            'heading'       => get_sub_field('heading'),
+                            'intro'         => get_sub_field('intro'),
+                            'cf7_shortcode' => get_sub_field('cf7_shortcode'),
+                            'tips_heading'  => get_sub_field('tips_heading'),
+                            'tips'          => get_sub_field('tips') ?: [],
+                            'lab_heading'   => get_sub_field('lab_heading'),
+                            'lab_text'      => get_sub_field('lab_text'),
+                            'lab_link'      => get_sub_field('lab_link') ?: [],
                         ]);
                     } ?>
 

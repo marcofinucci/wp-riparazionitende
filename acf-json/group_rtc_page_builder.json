@@ -949,6 +949,186 @@
               "placeholder": "",
               "create_options": 0,
               "save_options": 0
+            },
+            {
+              "key": "field_rtc_pb_cf_heading",
+              "label": "Titolo form",
+              "name": "heading",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Scrivici un messaggio",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_rtc_pb_cf_intro",
+              "label": "Testo introduttivo",
+              "name": "intro",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Compila il modulo per inviarci una richiesta via email. Per inviare foto della tenda usa WhatsApp.",
+              "maxlength": "",
+              "rows": 3,
+              "placeholder": "",
+              "new_lines": ""
+            },
+            {
+              "key": "field_rtc_pb_cf_shortcode",
+              "label": "Shortcode Contact Form 7",
+              "name": "cf7_shortcode",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "[contact-form-7 id=\"b1a7a33\" title=\"Contattaci\"]",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_rtc_pb_cf_tips_heading",
+              "label": "Titolo suggerimenti",
+              "name": "tips_heading",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Prima di scriverci",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_rtc_pb_cf_tips",
+              "label": "Suggerimenti",
+              "name": "tips",
+              "aria-label": "",
+              "type": "repeater",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "layout": "block",
+              "button_label": "Aggiungi suggerimento",
+              "min": 0,
+              "max": 0,
+              "rows_per_page": 20,
+              "collapsed": "",
+              "sub_fields": [
+                {
+                  "key": "field_rtc_pb_cf_tip_text",
+                  "label": "Testo",
+                  "name": "text",
+                  "aria-label": "",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 1,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                  },
+                  "default_value": "",
+                  "maxlength": "",
+                  "placeholder": "",
+                  "prepend": "",
+                  "append": "",
+                  "parent_repeater": "field_rtc_pb_cf_tips"
+                }
+              ]
+            },
+            {
+              "key": "field_rtc_pb_cf_lab_heading",
+              "label": "Titolo laboratorio",
+              "name": "lab_heading",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Laboratorio",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_rtc_pb_cf_lab_text",
+              "label": "Testo laboratorio",
+              "name": "lab_text",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Lavoriamo su appuntamento e tramite spedizione da tutta Italia. Non è un punto vendita al dettaglio.",
+              "maxlength": "",
+              "rows": 3,
+              "placeholder": "",
+              "new_lines": ""
+            },
+            {
+              "key": "field_rtc_pb_cf_lab_link",
+              "label": "Link laboratorio",
+              "name": "lab_link",
+              "aria-label": "",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
             }
           ],
           "min": "",
@@ -2542,5 +2722,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1781103944
+  "modified": 1781107297
 }
