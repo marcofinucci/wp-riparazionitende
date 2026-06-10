@@ -8,7 +8,6 @@ $margin_top_classes = [
   'medio' => 'mt-10 lg:mt-14',
 ];
 $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['medio'];
-$contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['contact'])) : '';
 ?>
 
 <section class="block-contact-form bg-canvas py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
@@ -21,59 +20,7 @@ $contact_status = isset($_GET['contact']) ? sanitize_key(wp_unslash($_GET['conta
           Compila il modulo per inviarci una richiesta via email. Per inviare foto della tenda usa WhatsApp.
         </p>
 
-        <?php if ($contact_status === 'success') : ?>
-          <div role="status" class="mb-6 rounded-2xl border border-olive/30 bg-olive/10 px-5 py-4 flex items-start gap-3">
-            <?php rtc_icon('check', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
-            <p class="text-dark type-sm ">Messaggio inviato correttamente. Ti risponderemo al più presto.</p>
-          </div>
-        <?php elseif ($contact_status === 'error') : ?>
-          <div role="alert" class="mb-6 rounded-2xl border border-red-300 bg-red-50 px-5 py-4 flex items-start gap-3">
-            <?php rtc_icon('circle-alert', 'w-5 h-5 text-red-600 flex-shrink-0 mt-0.5'); ?>
-            <p class="text-dark type-sm ">Non è stato possibile inviare il messaggio. Riprova o contattaci su WhatsApp.</p>
-          </div>
-        <?php endif; ?>
-
-        <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" class="space-y-5" novalidate>
-          <?php wp_nonce_field('rtc_contact_form', 'rtc_contact_nonce'); ?>
-          <input type="hidden" name="action" value="rtc_contact">
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label for="contact-name" class="block font-heading font-medium text-forest text-sm mb-1.5">Nome e cognome <span class="text-olive" aria-hidden="true">*</span></label>
-              <input type="text" id="contact-name" name="contact_name" required autocomplete="name" class="w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest placeholder:text-muted/60" value="">
-            </div>
-            <div>
-              <label for="contact-email" class="block font-heading font-medium text-forest text-sm mb-1.5">Email <span class="text-olive" aria-hidden="true">*</span></label>
-              <input type="email" id="contact-email" name="contact_email" required autocomplete="email" class="w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest placeholder:text-muted/60" value="">
-            </div>
-          </div>
-
-          <div>
-            <label for="contact-phone" class="block font-heading font-medium text-forest text-sm mb-1.5">Telefono <span class="text-muted font-normal">(facoltativo)</span></label>
-            <input type="tel" id="contact-phone" name="contact_phone" autocomplete="tel" class="w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest placeholder:text-muted/60" value="">
-          </div>
-
-          <div>
-            <label for="contact-subject" class="block font-heading font-medium text-forest text-sm mb-1.5">Oggetto <span class="text-olive" aria-hidden="true">*</span></label>
-            <select id="contact-subject" name="contact_subject" required class="w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest placeholder:text-muted/60 cursor-pointer">
-              <option value="">Seleziona un argomento</option>
-              <option value="Valutazione riparazione tenda">Valutazione riparazione tenda</option>
-              <option value="Gruppo scout / associazione">Gruppo scout / associazione</option>
-              <option value="Spedizione e consegna">Spedizione e consegna</option>
-              <option value="Collaborazione / punto raccolta">Collaborazione / punto raccolta</option>
-              <option value="Altro">Altro</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="contact-message" class="block font-heading font-medium text-forest text-sm mb-1.5">Messaggio <span class="text-olive" aria-hidden="true">*</span></label>
-            <textarea id="contact-message" name="contact_message" rows="5" required
-              class="w-full rounded-xl border border-canvas-dark/40 bg-white px-4 py-3 text-dark text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest/25 focus:border-forest placeholder:text-muted/60 resize-y min-h-[8rem]"
-              placeholder="Descrivi il tipo di tenda, i danni e se hai già inviato foto…"></textarea>
-          </div>
-
-          <button type="submit" class="btn-primary">Invia messaggio</button>
-        </form>
+        <?php echo do_shortcode('[contact-form-7 id="b1a7a33" title="Contattaci"]'); ?>
       </div>
 
       <aside class="lg:col-span-2 space-y-6">
