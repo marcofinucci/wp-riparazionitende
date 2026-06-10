@@ -571,34 +571,6 @@
           "display": "block",
           "sub_fields": [
             {
-              "key": "field_salewa_variant",
-              "label": "Variante",
-              "name": "variant",
-              "aria-label": "",
-              "type": "select",
-              "instructions": "",
-              "required": 0,
-              "conditional_logic": 0,
-              "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-              },
-              "choices": {
-                "default": "Orizzontale",
-                "centered": "Centrato"
-              },
-              "default_value": "default",
-              "return_format": "value",
-              "multiple": 0,
-              "allow_null": 0,
-              "ui": 0,
-              "ajax": 0,
-              "placeholder": "",
-              "create_options": 0,
-              "save_options": 0
-            },
-            {
               "key": "field_rtc_pb_margin_top_salewa",
               "label": "Margine superiore",
               "name": "margin_top",
@@ -2570,5 +2542,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1780955002
+  "modified": 1781103944
 }

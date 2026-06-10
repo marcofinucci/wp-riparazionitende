@@ -149,7 +149,6 @@ get_header();
 
                     <?php if (get_row_layout() == 'salewa') {
                         get_template_part('template-parts/blocks/salewa', null, [
-                            'variant'    => get_sub_field('variant'),
                             'margin_top' => get_sub_field('margin_top'),
                         ]);
                     } ?>

@@ -160,6 +160,80 @@
         "id": ""
       },
       "return_format": "array"
+    },
+    {
+      "key": "field_rtc_settings_tab_salewa",
+      "label": "Box Salewa",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": false,
+      "selected": 0
+    },
+    {
+      "key": "field_rtc_salewa_title",
+      "label": "Titolo",
+      "name": "salewa_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Riparazioni anche su tende a marchio Salewa",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_rtc_salewa_text",
+      "label": "Testo",
+      "name": "salewa_text",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Effettuiamo lavorazioni anche su tende a marchio Salewa.",
+      "maxlength": "",
+      "placeholder": "",
+      "rows": 3,
+      "new_lines": ""
+    },
+    {
+      "key": "field_rtc_salewa_link",
+      "label": "Link",
+      "name": "salewa_link",
+      "aria-label": "",
+      "type": "link",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array"
     }
   ],
   "location": [
@@ -183,5 +257,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1780955006
+  "modified": 1781104928
 }
