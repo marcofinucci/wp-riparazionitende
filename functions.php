@@ -114,10 +114,18 @@ function show_pagination()
 
 add_filter('show_admin_bar', '__return_false');
 
-/* Disable plugin auto update */
+/* Move Yoast to bottom */
+function hey_yoasttobottom()
+{
+    return 'low';
+}
+add_filter('wpseo_metabox_prio', 'hey_yoasttobottom');
 
+/* Contact form 7 delete p tags */
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+/* Disable plugin auto update */
 add_filter('auto_update_plugin', '__return_false');
 
 /* Disable theme auto update */
-
 add_filter('auto_update_theme', '__return_false');

@@ -84,3 +84,62 @@
     @apply px-5;
   }
 }
+
+/* Contact form 7 */
+
+.wpcf7 form.wpcf7-form .wpcf7-spinner {
+  @apply hidden;
+}
+
+.wpcf7-form .form-group:first-child {
+  @apply mt-0;
+}
+
+.wpcf7-form .form-group,
+.wpcf7-form .form-submit {
+  @apply mt-4;
+}
+
+.form-group label {
+  @apply block text-sm font-medium text-forest;
+}
+
+.wpcf7-form-control-wrap {
+  @apply block mt-2;
+}
+
+.wpcf7-form-control-wrap input {
+  @apply w-full px-4 py-2 rounded-md border border-canvas-dark/30 text-forest focus:outline-none focus:ring-2 focus:ring-olive;
+}
+
+.wpcf7-form-control-wrap textarea {
+  @apply w-full px-4 py-2 rounded-md border border-canvas-dark/30 text-forest focus:outline-none focus:ring-2 focus:ring-olive resize-none h-48;
+}
+
+.wpcf7-form .form-submit .wpcf7-submit {
+  @apply inline-flex items-center gap-2 border border-olive bg-olive hover:bg-olive-light hover:border-olive-light text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  @apply border-canvas-dark m-0 mt-4 p-3 rounded;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  @apply border-red-500;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  @apply border-green-500;
+}
+
+.wpcf7-not-valid-tip {
+  @apply text-red-500 text-sm mt-1;
+}
+
+/* Recaptcha */
+
+.grecaptcha-badge {
+  @apply !hidden;
+}

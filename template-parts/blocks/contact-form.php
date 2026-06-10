@@ -24,7 +24,7 @@ $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['med
       </div>
 
       <aside class="lg:col-span-2 space-y-6">
-        <div class=" rounded-2xl p-6 border border-canvas-dark/30">
+        <div class=" rounded-2xl p-6 border border-canvas-dark">
           <h3 class="font-heading font-semibold text-forest type-base mb-4">Prima di scriverci</h3>
           <ol class="space-y-4">
             <?php
