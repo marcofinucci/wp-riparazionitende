@@ -57,19 +57,17 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
 
       <!-- Brand -->
       <div class="lg:col-span-1">
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center gap-3 mb-4 group">
-          <div class="w-10 h-10 text-canvas flex-shrink-0">
-            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M18 3L2 30h32L18 3z" fill="currentColor" opacity="0.9" />
-              <path d="M18 3L8 30h20L18 3z" fill="currentColor" opacity="0.45" />
-              <path d="M18 14v16" stroke="#2F4F3A" stroke-width="1.5" />
-            </svg>
-          </div>
-          <div>
-            <span class="block font-heading font-bold text-white type-base">Riparazioni Tende</span>
-            <span class="block font-heading text-canvas/70 type-xs">Campeggio</span>
-          </div>
-        </a>
+        <div class="flex items-center gap-2 mb-4 group">
+          <?php if (has_custom_logo()) : ?>
+            <div class="h-12 flex items-center justify-center flex-shrink-0 [&_a]:h-full [&_img]:h-full [&_img]:w-auto">
+              <?php the_custom_logo(); ?>
+            </div>
+          <?php endif; ?>
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="font-heading font-semibold text-white type-sm uppercase group-hover:text-canvas transition-colors flex flex-col !leading-none gap-1 tracking-wide" aria-label="Riparazioni Tende Campeggio - Home">
+            <div>Riparazioni Tende</div>
+            <div>Campeggio</div>
+          </a>
+        </div>
         <p class="text-white/65 type-sm mb-5">
           Laboratorio artigianale specializzato nella manutenzione e riparazione di tende scout, verande roulotte, tende carrello e attrezzatura outdoor.
         </p>

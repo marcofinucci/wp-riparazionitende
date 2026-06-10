@@ -26,7 +26,7 @@ $_rtc_wa_url = $_rtc_wa['url'] ?? '';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 lg:h-18">
         <!-- Logo -->
-        <div class="flex items-center gap-3 group">
+        <div class="flex items-center gap-2 group">
           <?php if (has_custom_logo()) : ?>
             <div class="h-12 flex items-center justify-center flex-shrink-0 [&_a]:h-full [&_img]:h-full [&_img]:w-auto">
               <?php the_custom_logo(); ?>
