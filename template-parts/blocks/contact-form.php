@@ -32,7 +32,7 @@ if (!$tips) {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14">
 
-      <div class="lg:col-span-3">
+      <div class="reveal lg:col-span-3">
         <?php if ($heading) : ?>
           <h2 id="form-heading" class="font-heading font-semibold type-xl text-forest mb-2"><?php echo esc_html($heading); ?></h2>
         <?php endif; ?>
@@ -47,7 +47,7 @@ if (!$tips) {
         <?php endif; ?>
       </div>
 
-      <aside class="lg:col-span-2 space-y-6">
+      <aside class="reveal lg:col-span-2 space-y-6" style="--reveal-delay:120ms">
         <?php if ($tips_heading || $tips) : ?>
           <div class=" rounded-2xl p-6 border border-canvas-dark">
             <?php if ($tips_heading) : ?>
@@ -85,7 +85,7 @@ if (!$tips) {
             <?php if (!empty($lab_link['url'])) : ?>
               <a href="<?php echo esc_url($lab_link['url']); ?>"
                 <?php if (!empty($lab_link['target'])) : ?>target="<?php echo esc_attr($lab_link['target']); ?>" rel="noopener noreferrer" <?php endif; ?>
-                class="inline-flex items-center gap-2 text-forest hover:text-olive font-heading font-medium type-sm transition-colors cursor-pointer">
+                class="inline-flex items-center gap-2 text-forest hover:text-accent font-heading font-medium type-sm transition-colors cursor-pointer">
                 <?php echo esc_html($lab_link['title'] ?: 'Come spedire il materiale'); ?>
                 <?php rtc_icon('chevron-right', 'w-4 h-4'); ?>
               </a>

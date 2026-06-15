@@ -32,12 +32,13 @@ if (!$heading && !$content) {
 $heading_id = 'coverage-' . wp_unique_id();
 ?>
 
-<section class="block-coverage-map bg-forest py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="block-coverage-map relative overflow-hidden bg-forest py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
+  <div class="absolute inset-0 bg-topo opacity-[0.06] pointer-events-none" aria-hidden="true"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div>
+      <div class="reveal">
         <?php if ($eyebrow) : ?>
-          <p class="text-canvas/70 font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
+          <p class="text-accent font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
           <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-white mb-6">
@@ -55,7 +56,7 @@ $heading_id = 'coverage-' . wp_unique_id();
       </div>
 
       <?php if ($image_id) : ?>
-        <div class="flex items-center justify-center">
+        <div class="reveal flex items-center justify-center" style="--reveal-delay:120ms">
           <div class="relative w-full max-w-xs lg:max-w-sm">
             <?= wp_get_attachment_image($image_id, 'large', false, [
               'class'    => 'w-full h-auto',
@@ -73,7 +74,7 @@ $heading_id = 'coverage-' . wp_unique_id();
                 <?php endif; ?>
                 <?php if ($legend_lab) : ?>
                   <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
-                    <div class="w-3 h-3 rounded-full border border-canvas/60 bg-transparent"></div>
+                    <div class="w-3 h-3 rounded-full bg-accent"></div>
                     <?php echo esc_html($legend_lab); ?>
                   </div>
                 <?php endif; ?>

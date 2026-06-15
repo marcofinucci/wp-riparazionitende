@@ -7,7 +7,7 @@ $subtitle   = $args['subtitle'] ?? '';
 $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x1080');
 ?>
 
-<section class="relative overflow-hidden bg-forest py-16 lg:py-20 min-h-80 flex items-center">
+<section class="relative overflow-hidden bg-forest-dark py-16 lg:py-20 min-h-80 flex items-center">
   <?php if ($header_thumb) : ?>
     <img
       src="<?php echo esc_url($header_thumb); ?>"
@@ -15,10 +15,13 @@ $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x10
       aria-hidden="true"
       class="absolute inset-0 w-full h-full object-cover"
       loading="eager">
-    <div class="absolute inset-0 bg-forest-dark/70" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/75 to-forest-dark/40" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-forest-dark/80 to-transparent" aria-hidden="true"></div>
   <?php endif; ?>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+  <div class="absolute inset-0 bg-topo opacity-[0.06] pointer-events-none" aria-hidden="true"></div>
+
+  <div class="reveal max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
     <nav aria-label="Breadcrumb" class="mb-5">
       <ol class="flex items-center gap-2 text-white/50 type-sm font-body flex-wrap">
         <li><a href="<?php echo esc_url(home_url('/')); ?>" class="hover:text-canvas transition-colors">Home</a></li>

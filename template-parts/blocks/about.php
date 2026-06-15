@@ -24,9 +24,9 @@ $icon_map   = ['clock' => 'clock', 'badge-check' => 'badge-check', 'map' => 'map
 <section class="block-about bg-canvas py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div>
+      <div class="reveal">
         <?php if ($eyebrow) : ?>
-          <p class="text-olive font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
+          <p class="text-accent font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
           <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest mb-6"><?php echo esc_html($heading); ?></h2>
@@ -39,7 +39,7 @@ $icon_map   = ['clock' => 'clock', 'badge-check' => 'badge-check', 'map' => 'map
       </div>
 
       <?php if ($stats) : ?>
-        <div class="grid grid-cols-1 gap-4">
+        <div class="reveal grid grid-cols-1 gap-4" style="--reveal-delay:120ms">
           <?php foreach ($stats as $stat) : ?>
             <?php
             $icon  = $stat['icon'] ?? 'clock';
@@ -50,10 +50,10 @@ $icon_map   = ['clock' => 'clock', 'badge-check' => 'badge-check', 'map' => 'map
             }
             $icon_name = $icon_map[$icon] ?? 'clock';
             ?>
-            <div class="rounded-2xl p-7 border border-canvas-dark">
+            <div class="rounded-2xl p-7 border border-canvas-dark bg-cream/60">
               <div class="flex items-center gap-5">
-                <div class="w-14 h-14 rounded-xl bg-forest/10 flex items-center justify-center flex-shrink-0">
-                  <?php rtc_icon($icon_name, 'w-7 h-7 text-forest'); ?>
+                <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <?php rtc_icon($icon_name, 'w-7 h-7 text-accent'); ?>
                 </div>
                 <div>
                   <?php if ($value) : ?>

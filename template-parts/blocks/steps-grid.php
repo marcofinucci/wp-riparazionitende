@@ -33,9 +33,9 @@ if (is_array($button_link)) {
 <section class="block-steps-grid <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <?php if ($eyebrow || $heading || $intro) : ?>
-      <div class="text-center mb-12">
+      <div class="reveal text-center mb-12">
         <?php if ($eyebrow) : ?>
-          <p class="text-olive font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
+          <p class="text-accent font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
           <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest"><?php echo esc_html($heading); ?></h2>
@@ -57,7 +57,7 @@ if (is_array($button_link)) {
             continue;
           }
           ?>
-          <div class="flex flex-col items-center text-center gap-4 rounded-2xl p-5 border border-canvas-dark bg-cream">
+          <div class="reveal flex flex-col items-center text-center gap-4 rounded-2xl p-5 border border-canvas-dark bg-cream" style="--reveal-delay:<?php echo esc_attr($i * 80); ?>ms">
             <div class="w-12 h-12 rounded-full bg-forest text-white font-heading font-bold type-xl flex items-center justify-center shadow-sm">
               <?php echo $i + 1; ?>
             </div>

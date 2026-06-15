@@ -51,6 +51,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Scroll reveal — rivela gli elementi .reveal quando entrano nel viewport
+  const revealEls = document.querySelectorAll(".reveal");
+  if (revealEls.length) {
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (prefersReduced || !("IntersectionObserver" in window)) {
+      revealEls.forEach((el) => el.classList.add("is-visible"));
+    } else {
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: "0px 0px -10% 0px", threshold: 0.1 },
+      );
+      revealEls.forEach((el) => observer.observe(el));
+    }
+  }
+
   // Services dropdown (desktop) — hover su tutto il parent (incluso il ponte pt-3 verso il submenu)
   const servicesParent = document.getElementById("services-parent");
   const servicesBtn = document.getElementById("services-btn");

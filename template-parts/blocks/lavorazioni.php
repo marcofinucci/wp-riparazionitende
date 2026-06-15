@@ -29,7 +29,7 @@ $heading_id = 'lavorazioni-' . wp_unique_id();
 
 <section class="<?php echo esc_attr($section_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl">
+    <div class="reveal max-w-3xl">
       <?php if ($heading) : ?>
         <h2 id="<?php echo esc_attr($heading_id); ?>" class="<?php echo $is_forest ? 'font-heading font-semibold type-2xl text-white' : 'font-heading font-semibold type-xl text-forest'; ?> mb-7"><?php echo esc_html($heading); ?></h2>
       <?php endif; ?>

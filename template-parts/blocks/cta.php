@@ -15,8 +15,9 @@ $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['med
 $heading_id = 'cta-' . wp_unique_id();
 ?>
 
-<section class="block-cta bg-forest-dark py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<section class="block-cta relative overflow-hidden bg-forest-dark py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
+  <div class="absolute inset-0 bg-topo opacity-[0.07] pointer-events-none" aria-hidden="true"></div>
+  <div class="reveal max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
     <?php if ($title) : ?>
       <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-2xl text-white mb-4"><?php echo esc_html($title); ?></h2>
     <?php endif; ?>

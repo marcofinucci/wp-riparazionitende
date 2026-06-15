@@ -27,9 +27,9 @@ $section_class = trim('block-faq ' . ($background === 'canvas' ? 'bg-canvas py-1
 <section class="<?php echo esc_attr($section_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <?php if ($eyebrow || $heading) : ?>
-      <div class="text-center mb-12">
+      <div class="reveal text-center mb-12">
         <?php if ($eyebrow) : ?>
-          <p class="text-olive font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
+          <p class="text-accent font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
           <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest"><?php echo esc_html($heading); ?></h2>
@@ -37,7 +37,7 @@ $section_class = trim('block-faq ' . ($background === 'canvas' ? 'bg-canvas py-1
       </div>
     <?php endif; ?>
 
-    <div class="max-w-3xl mx-auto" role="list">
+    <div class="reveal max-w-3xl mx-auto" role="list">
       <?php foreach ($items as $i => $row) : ?>
         <?php
         $question = $row['question'] ?? ($row['q'] ?? '');
@@ -51,10 +51,10 @@ $section_class = trim('block-faq ' . ($background === 'canvas' ? 'bg-canvas py-1
           <button type="button" data-faq-trigger
             class="w-full flex items-center justify-between gap-4 py-5 text-left cursor-pointer group bg-transparent border-0"
             aria-expanded="false" aria-controls="<?php echo esc_attr($item_id); ?>">
-            <span class="font-heading font-semibold text-forest type-base group-hover:text-olive transition-colors">
+            <span class="font-heading font-semibold text-forest type-base group-hover:text-accent transition-colors">
               <?php echo esc_html($question); ?>
             </span>
-            <?php rtc_icon('chevron-down', 'w-5 h-5 text-olive flex-shrink-0 transition-transform duration-200', ['data-faq-icon' => '']); ?>
+            <?php rtc_icon('chevron-down', 'w-5 h-5 text-accent flex-shrink-0 transition-transform duration-200', ['data-faq-icon' => '']); ?>
           </button>
           <div id="<?php echo esc_attr($item_id); ?>" data-faq-content class="hidden pb-5">
             <p class="text-muted"><?php echo esc_html($answer); ?></p>

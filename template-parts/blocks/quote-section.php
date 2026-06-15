@@ -57,15 +57,15 @@ $section_class = trim(implode(' ', [
     <div class="bg-cream rounded-2xl p-8 lg:p-10 xl:p-12 shadow-lg">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 lg:items-center">
         <?php if ($has_main) : ?>
-          <div class="text-left">
+          <div class="reveal text-left">
             <?php if ($eyebrow) : ?>
-              <p class="text-olive font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
+              <p class="text-accent font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
             <?php endif; ?>
             <?php if ($heading) : ?>
               <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest mb-4"><?php echo esc_html($heading); ?></h2>
             <?php endif; ?>
             <?php if ($highlight) : ?>
-              <p class="font-heading font-semibold text-olive type-xl mb-6"><?php echo esc_html($highlight); ?></p>
+              <p class="font-heading font-semibold text-accent type-xl mb-6"><?php echo esc_html($highlight); ?></p>
             <?php endif; ?>
             <?php if ($content) : ?>
               <div class="space-y-4 text-muted">
@@ -76,13 +76,14 @@ $section_class = trim(implode(' ', [
         <?php endif; ?>
 
         <?php if ($quote) : ?>
-          <figure class="bg-forest rounded-2xl p-8 text-left flex flex-col justify-center <?php echo $has_main ? '' : 'lg:col-span-2 max-w-2xl mx-auto w-full'; ?>">
-            <?php rtc_icon('quote', 'w-8 h-8 text-canvas/50 mb-4 flex-shrink-0'); ?>
-            <blockquote class="font-heading type-lg text-white mb-5">
+          <figure class="reveal relative overflow-hidden bg-forest rounded-2xl p-8 text-left flex flex-col justify-center <?php echo $has_main ? '' : 'lg:col-span-2 max-w-2xl mx-auto w-full'; ?>" style="--reveal-delay:120ms">
+            <div class="absolute inset-0 bg-topo opacity-[0.07] pointer-events-none" aria-hidden="true"></div>
+            <?php rtc_icon('quote', 'w-8 h-8 text-accent mb-4 flex-shrink-0 relative z-10'); ?>
+            <blockquote class="font-heading type-lg text-white mb-5 relative z-10">
               <?php echo esc_html($quote); ?>
             </blockquote>
             <?php if ($author) : ?>
-              <figcaption class="text-canvas/65 type-sm font-body">
+              <figcaption class="text-canvas/65 type-sm font-body relative z-10">
                 — <?php echo esc_html($author); ?>
               </figcaption>
             <?php endif; ?>

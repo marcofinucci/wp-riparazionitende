@@ -49,7 +49,7 @@ function rtc_enqueue_assets(): void
     // Google Fonts
     wp_enqueue_style(
         'rtc-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap',
         [],
         null
     );

@@ -27,7 +27,7 @@ if (!$links) {
 
 <section class="<?php echo esc_attr($section_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl">
+    <div class="reveal max-w-3xl">
       <?php if ($heading) : ?>
         <h3 class="font-heading font-semibold type-base mb-5 <?php echo $is_olive ? 'text-white' : 'text-forest'; ?>"><?php echo esc_html($heading); ?></h3>
       <?php endif; ?>
@@ -49,7 +49,7 @@ if (!$links) {
 
           $link_class = $is_olive
             ? 'inline-flex items-center gap-2 text-white hover:text-canvas type-sm font-heading font-medium transition-colors border border-white/25 hover:border-canvas/40 px-4 py-2 rounded-full'
-            : 'inline-flex items-center gap-2 text-forest hover:text-olive type-sm font-heading font-medium transition-colors border border-forest/20 hover:border-olive/30 px-4 py-2 rounded-full';
+            : 'inline-flex items-center gap-2 text-forest hover:text-accent type-sm font-heading font-medium transition-colors border border-forest/20 hover:border-accent/40 px-4 py-2 rounded-full';
           ?>
           <a href="<?php echo esc_url($href); ?>" class="<?php echo esc_attr($link_class); ?>">
             <?php echo esc_html($label); ?>

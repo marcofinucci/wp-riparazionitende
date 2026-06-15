@@ -5,14 +5,19 @@ module.exports = {
     extend: {
       colors: {
         forest: {
-          DEFAULT: "#2F4F3A",
+          DEFAULT: "#27543F",
           light: "#3D6B4F",
-          dark: "#1F3828",
+          dark: "#14302A",
         },
         olive: {
           DEFAULT: "#556B2F",
           light: "#6B8540",
           dark: "#3F5020",
+        },
+        accent: {
+          DEFAULT: "#E2682C",
+          light: "#F0813F",
+          dark: "#C4541E",
         },
         canvas: {
           DEFAULT: "#D8CBB3",
@@ -23,12 +28,12 @@ module.exports = {
           DEFAULT: "#F5F2EA",
           dark: "#EBE5D8",
         },
-        dark: "#2B2B2B",
+        dark: "#1A2421",
         muted: "#4B4B4B",
       },
       fontFamily: {
-        heading: ["Poppins", "sans-serif"],
-        body: ["Open Sans", "sans-serif"],
+        heading: ["Bricolage Grotesque", "sans-serif"],
+        body: ["Inter", "sans-serif"],
       },
     },
   },

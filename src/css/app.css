@@ -17,13 +17,48 @@
   h4,
   h5,
   h6 {
-    @apply font-bold type-base text-forest;
+    @apply font-bold type-base text-forest tracking-tight;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  [type="submit"]:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-cream;
+  }
+}
+
+@layer utilities {
+  /* Scroll reveal — stato iniziale, rivelato via JS con .is-visible */
+  .reveal {
+    @apply opacity-0 translate-y-6;
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Texture topografica — linee di livello (montagna) */
+  .bg-topo {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.2'%3E%3Cpath d='M-20 60 C 40 20, 120 100, 260 40'/%3E%3Cpath d='M-20 90 C 40 50, 120 130, 260 70'/%3E%3Cpath d='M-20 120 C 40 80, 120 160, 260 100'/%3E%3Cpath d='M-20 150 C 40 110, 120 190, 260 130'/%3E%3Cpath d='M-20 180 C 40 140, 120 220, 260 160'/%3E%3Cpath d='M-20 210 C 40 170, 120 250, 260 190'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 240px 240px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      @apply opacity-100 translate-y-0;
+      transition: none;
+    }
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2 border border-olive bg-olive hover:bg-olive-light hover:border-olive-light text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center gap-2 border border-accent bg-accent hover:bg-accent-light hover:border-accent-light text-white font-heading font-semibold px-6 py-3 rounded-full shadow-lg shadow-accent/20 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer focus-visible:ring-forest;
   }
 
   .btn-secondary {
@@ -39,7 +74,7 @@
   }
 
   .btn-primary-sm {
-    @apply inline-flex items-center gap-1.5 border border-olive bg-olive hover:bg-olive-light hover:border-olive-light text-white font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center gap-1.5 border border-accent bg-accent hover:bg-accent-light hover:border-accent-light text-white font-heading font-semibold type-sm px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer;
   }
 
   .btn-secondary-sm {
@@ -117,7 +152,7 @@
 }
 
 .wpcf7-form .form-submit .wpcf7-submit {
-  @apply inline-flex items-center gap-2 border border-olive bg-olive hover:bg-olive-light hover:border-olive-light text-white font-heading font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer;
+    @apply inline-flex items-center gap-2 border border-accent bg-accent hover:bg-accent-light hover:border-accent-light text-white font-heading font-semibold px-6 py-3 rounded-full shadow-lg shadow-accent/20 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer focus-visible:ring-forest;
 }
 
 .wpcf7 form .wpcf7-response-output {
