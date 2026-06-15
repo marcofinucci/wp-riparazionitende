@@ -722,6 +722,46 @@
                   "parent_repeater": "field_steps_list"
                 }
               ]
+            },
+            {
+              "key": "field_steps_download_file",
+              "label": "Allegato PDF",
+              "name": "download_file",
+              "aria-label": "",
+              "type": "file",
+              "instructions": "Opzionale. Mostra un pulsante di download sotto gli step.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array",
+              "library": "all",
+              "min_size": "",
+              "max_size": "",
+              "mime_types": "pdf"
+            },
+            {
+              "key": "field_steps_download_label",
+              "label": "Etichetta pulsante download",
+              "name": "download_label",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Scarica la scheda cliente",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
             }
           ],
           "min": "",
@@ -2722,5 +2762,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1781107297
+  "modified": 1749600000
 }

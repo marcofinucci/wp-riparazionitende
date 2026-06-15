@@ -1,8 +1,10 @@
 <?php
 defined('ABSPATH') || exit;
 
-$heading = $args['heading'] ?? 'Procedura';
-$steps   = $args['steps'] ?? [];
+$heading        = $args['heading'] ?? 'Procedura';
+$steps          = $args['steps'] ?? [];
+$download_file  = $args['download_file'] ?? null;
+$download_label = $args['download_label'] ?? 'Scarica la scheda cliente';
 $margin_top = $args['margin_top'] ?? 'medio';
 $margin_top_classes = [
   'no' => '',
@@ -13,6 +15,13 @@ $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['med
 
 if (!$steps) {
   return;
+}
+
+$download_url = '';
+if (is_array($download_file) && !empty($download_file['url'])) {
+  $download_url = $download_file['url'];
+} elseif (is_numeric($download_file)) {
+  $download_url = wp_get_attachment_url((int) $download_file) ?: '';
 }
 
 $heading_id = 'steps-' . wp_unique_id();
@@ -48,6 +57,16 @@ $heading_id = 'steps-' . wp_unique_id();
           </li>
         <?php endforeach; ?>
       </ol>
+      <?php if ($download_url) : ?>
+        <div class="mt-8">
+          <a href="<?php echo esc_url($download_url); ?>"
+            target="_blank" rel="noopener noreferrer"
+            class="btn-primary">
+            <?php echo esc_html($download_label); ?>
+            <?php rtc_icon('external-link', 'w-4 h-4'); ?>
+          </a>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>
