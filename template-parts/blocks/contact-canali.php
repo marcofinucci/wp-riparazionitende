@@ -11,13 +11,22 @@ $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['med
 $email_link = $args['email_link'] ?? [];
 $phone_link = $args['phone_link'] ?? [];
 $wa_link    = $args['wa_link']    ?? [];
+$heading             = $args['heading'] ?? 'Contattaci';
+$wa_title            = $args['wa_title'] ?? 'WhatsApp';
+$wa_text             = $args['wa_text'] ?? 'Canale preferito per foto, preventivi e aggiornamenti sulle lavorazioni.';
+$email_title         = $args['email_title'] ?? 'Email';
+$email_text          = $args['email_text'] ?? 'Per schede cliente, documentazione e comunicazioni formali.';
+$phone_title         = $args['phone_title'] ?? 'Telefono';
+$phone_text          = $args['phone_text'] ?? 'Per informazioni rapide negli orari di apertura del laboratorio.';
 $response_time_title = $args['response_time_title'] ?? 'Tempi di risposta';
 $response_time_text  = $args['response_time_text'] ?? 'Rispondiamo di norma entro <strong>1–2 giorni lavorativi</strong>. In periodi di alta richiesta i tempi possono allungarsi: ti aggiorniamo appena possibile.';
 ?>
 
 <section class="block-contact-canali <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 id="canali-heading" class="font-heading font-semibold type-xl text-forest mb-8">Contattaci</h2>
+    <?php if ($heading) : ?>
+      <h2 id="canali-heading" class="font-heading font-semibold type-xl text-forest mb-8"><?php echo esc_html($heading); ?></h2>
+    <?php endif; ?>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <?php if (!empty($wa_link['url'])) : ?>
         <a href="<?php echo esc_url($wa_link['url']); ?>"
@@ -27,8 +36,12 @@ $response_time_text  = $args['response_time_text'] ?? 'Rispondiamo di norma entr
             <?php rtc_whatsapp_icon('w-6 h-6 text-forest'); ?>
           </div>
           <div>
-            <h3 class="font-heading font-semibold text-forest type-lg mb-1">WhatsApp</h3>
-            <p class="text-muted type-sm mb-3">Canale preferito per foto, preventivi e aggiornamenti sulle lavorazioni.</p>
+            <?php if ($wa_title) : ?>
+              <h3 class="font-heading font-semibold text-forest type-lg mb-1"><?php echo esc_html($wa_title); ?></h3>
+            <?php endif; ?>
+            <?php if ($wa_text) : ?>
+              <p class="text-muted type-sm mb-3"><?php echo esc_html($wa_text); ?></p>
+            <?php endif; ?>
             <span class="text-forest group-hover:text-olive font-heading font-medium type-sm transition-colors"><?php echo esc_html($wa_link['title']); ?></span>
           </div>
         </a>
@@ -41,8 +54,12 @@ $response_time_text  = $args['response_time_text'] ?? 'Rispondiamo di norma entr
             <?php rtc_icon('mail', 'w-6 h-6 text-forest'); ?>
           </div>
           <div>
-            <h3 class="font-heading font-semibold text-forest type-lg mb-1">Email</h3>
-            <p class="text-muted type-sm mb-3">Per schede cliente, documentazione e comunicazioni formali.</p>
+            <?php if ($email_title) : ?>
+              <h3 class="font-heading font-semibold text-forest type-lg mb-1"><?php echo esc_html($email_title); ?></h3>
+            <?php endif; ?>
+            <?php if ($email_text) : ?>
+              <p class="text-muted type-sm mb-3"><?php echo esc_html($email_text); ?></p>
+            <?php endif; ?>
             <span class="text-forest group-hover:text-olive font-heading font-medium type-sm transition-colors break-all"><?php echo esc_html($email_link['title']); ?></span>
           </div>
         </a>
@@ -55,8 +72,12 @@ $response_time_text  = $args['response_time_text'] ?? 'Rispondiamo di norma entr
             <?php rtc_icon('phone', 'w-6 h-6 text-olive'); ?>
           </div>
           <div>
-            <h3 class="font-heading font-semibold text-forest type-lg mb-1">Telefono</h3>
-            <p class="text-muted type-sm mb-3">Per informazioni rapide negli orari di apertura del laboratorio.</p>
+            <?php if ($phone_title) : ?>
+              <h3 class="font-heading font-semibold text-forest type-lg mb-1"><?php echo esc_html($phone_title); ?></h3>
+            <?php endif; ?>
+            <?php if ($phone_text) : ?>
+              <p class="text-muted type-sm mb-3"><?php echo esc_html($phone_text); ?></p>
+            <?php endif; ?>
             <span class="text-forest group-hover:text-olive font-heading font-medium type-sm transition-colors"><?php echo esc_html($phone_link['title']); ?></span>
           </div>
         </a>

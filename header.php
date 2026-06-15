@@ -1,6 +1,9 @@
 <?php
 $_rtc_wa     = get_field('whatsapp_number', 'option');
 $_rtc_wa_url = $_rtc_wa['url'] ?? '';
+$_header_brand_line_1 = get_field('header_brand_line_1', 'option') ?: 'Riparazioni Tende';
+$_header_brand_line_2 = get_field('header_brand_line_2', 'option') ?: 'Campeggio';
+$_header_wa_label     = get_field('header_whatsapp_label', 'option') ?: 'WhatsApp';
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="scroll-smooth">
@@ -32,9 +35,9 @@ $_rtc_wa_url = $_rtc_wa['url'] ?? '';
               <?php the_custom_logo(); ?>
             </div>
           <?php endif; ?>
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="font-heading font-semibold text-white type-sm uppercase group-hover:text-canvas transition-colors flex flex-col !leading-none gap-1 tracking-wide" aria-label="Riparazioni Tende Campeggio - Home">
-            <div>Riparazioni Tende</div>
-            <div>Campeggio</div>
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="font-heading font-semibold text-white type-sm uppercase group-hover:text-canvas transition-colors flex flex-col !leading-none gap-1 tracking-wide" aria-label="<?php echo esc_attr(trim($_header_brand_line_1 . ' ' . $_header_brand_line_2) . ' - Home'); ?>">
+            <div><?php echo esc_html($_header_brand_line_1); ?></div>
+            <div><?php echo esc_html($_header_brand_line_2); ?></div>
           </a>
         </div>
 
@@ -60,7 +63,7 @@ $_rtc_wa_url = $_rtc_wa['url'] ?? '';
             <a href="<?php echo $_rtc_wa_url; ?>" target="_blank" rel="noopener noreferrer"
               class="hidden sm:inline-flex btn-outline-white-sm">
               <?php rtc_whatsapp_icon('w-4 h-4'); ?>
-              WhatsApp
+              <?php echo esc_html($_header_wa_label); ?>
             </a>
           <?php endif; ?>
 

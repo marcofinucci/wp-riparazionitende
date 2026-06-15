@@ -3,6 +3,84 @@
   "title": "Impostazioni Sito",
   "fields": [
     {
+      "key": "field_rtc_settings_tab_header",
+      "label": "Header",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_rtc_header_brand_line_1",
+      "label": "Nome brand — riga 1",
+      "name": "header_brand_line_1",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Testo accanto al logo. Il logo si gestisce da Personalizza → Identità del sito.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Riparazioni Tende",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_rtc_header_brand_line_2",
+      "label": "Nome brand — riga 2",
+      "name": "header_brand_line_2",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Campeggio",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_rtc_header_whatsapp_label",
+      "label": "Etichetta pulsante WhatsApp",
+      "name": "header_whatsapp_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "WhatsApp",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
       "key": "field_rtc_settings_tab_contatti",
       "label": "Contatti",
       "name": "",
@@ -139,7 +217,7 @@
       "required": 0,
       "conditional_logic": 0,
       "wrapper": {
-        "width": "100",
+        "width": "",
         "class": "",
         "id": ""
       },
@@ -155,7 +233,7 @@
       "required": 0,
       "conditional_logic": 0,
       "wrapper": {
-        "width": "100",
+        "width": "",
         "class": "",
         "id": ""
       },
@@ -178,46 +256,6 @@
       "placement": "top",
       "endpoint": false,
       "selected": 0
-    },
-    {
-      "key": "field_rtc_footer_brand_line_1",
-      "label": "Nome brand — riga 1",
-      "name": "footer_brand_line_1",
-      "aria-label": "",
-      "type": "text",
-      "instructions": "",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "50",
-        "class": "",
-        "id": ""
-      },
-      "default_value": "Riparazioni Tende",
-      "maxlength": "",
-      "placeholder": "",
-      "prepend": "",
-      "append": ""
-    },
-    {
-      "key": "field_rtc_footer_brand_line_2",
-      "label": "Nome brand — riga 2",
-      "name": "footer_brand_line_2",
-      "aria-label": "",
-      "type": "text",
-      "instructions": "",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "50",
-        "class": "",
-        "id": ""
-      },
-      "default_value": "Campeggio",
-      "maxlength": "",
-      "placeholder": "",
-      "prepend": "",
-      "append": ""
     },
     {
       "key": "field_rtc_footer_brand_description",
@@ -249,7 +287,7 @@
       "required": 0,
       "conditional_logic": 0,
       "wrapper": {
-        "width": "50",
+        "width": "",
         "class": "",
         "id": ""
       },
@@ -269,7 +307,7 @@
       "required": 0,
       "conditional_logic": 0,
       "wrapper": {
-        "width": "50",
+        "width": "",
         "class": "",
         "id": ""
       },
@@ -334,26 +372,6 @@
         "id": ""
       },
       "default_value": "Riparazioni Tende Campeggio. Tutti i diritti riservati.",
-      "maxlength": "",
-      "placeholder": "",
-      "prepend": "",
-      "append": ""
-    },
-    {
-      "key": "field_rtc_footer_whatsapp_aria_label",
-      "label": "Etichetta accessibilità pulsante WhatsApp",
-      "name": "footer_whatsapp_aria_label",
-      "aria-label": "",
-      "type": "text",
-      "instructions": "",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "default_value": "Contattaci su WhatsApp",
       "maxlength": "",
       "placeholder": "",
       "prepend": "",
@@ -455,5 +473,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1781529235
+  "modified": 1781530515
 }

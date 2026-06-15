@@ -22,8 +22,8 @@ $_footer_cta_secondary = get_field('footer_cta_link_secondary', 'option');
 $_footer_cta_enabled   = (bool) get_field('show_footer_cta');
 $_footer_cta_shown     = $_footer_cta_enabled && ($_footer_cta_title || $_footer_cta_text || !empty($_footer_cta_primary['url']) || !empty($_footer_cta_secondary['url']));
 
-$_footer_brand_line_1      = get_field('footer_brand_line_1', 'option') ?: 'Riparazioni Tende';
-$_footer_brand_line_2      = get_field('footer_brand_line_2', 'option') ?: 'Campeggio';
+$_footer_brand_line_1      = get_field('header_brand_line_1', 'option') ?: 'Riparazioni Tende';
+$_footer_brand_line_2      = get_field('header_brand_line_2', 'option') ?: 'Campeggio';
 $_footer_brand_description = get_field('footer_brand_description', 'option') ?: 'Laboratorio artigianale specializzato nella manutenzione e riparazione di tende scout, verande roulotte, tende carrello e attrezzatura outdoor.';
 $_footer_services_title    = get_field('footer_services_title', 'option') ?: 'Servizi';
 $_footer_info_title        = get_field('footer_info_title', 'option') ?: 'Informazioni';
@@ -39,13 +39,12 @@ $_footer_how_steps         = $_footer_how_steps_raw
     'Ritira la tenda riparata',
   ];
 $_footer_copyright         = get_field('footer_copyright', 'option') ?: 'Riparazioni Tende Campeggio. Tutti i diritti riservati.';
-$_footer_wa_aria           = get_field('footer_whatsapp_aria_label', 'option') ?: 'Contattaci su WhatsApp';
 ?>
 <!-- Fixed WhatsApp Button — solo mobile (stessa soglia del burger menu: lg:hidden) -->
 <?php if ($_rtc_wa_url) : ?>
   <a href="<?php echo esc_url($_rtc_wa_url); ?>"
     target="<?php echo esc_attr($_rtc_wa['target'] ?? '_blank'); ?>" rel="noopener noreferrer"
-    aria-label="<?php echo esc_attr($_footer_wa_aria); ?>"
+    aria-label="Contattaci su WhatsApp"
     class="border border-white lg:hidden fixed bottom-2 right-2 z-50 w-12 h-12 bg-[#4FCE5D] hover:bg-[#45b953] rounded-full shadow-lg flex items-center justify-center transition-all duration-200">
     <?php rtc_whatsapp_icon('w-6 h-6 text-white'); ?>
   </a>
@@ -77,11 +76,6 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
       <!-- Brand -->
       <div class="lg:col-span-1">
         <div class="flex items-center gap-2 mb-4 group">
-          <?php if (has_custom_logo()) : ?>
-            <div class="h-12 flex items-center justify-center flex-shrink-0 [&_a]:h-full [&_img]:h-full [&_img]:w-auto">
-              <?php the_custom_logo(); ?>
-            </div>
-          <?php endif; ?>
           <a href="<?php echo esc_url(home_url('/')); ?>" class="font-heading font-semibold text-white type-sm uppercase group-hover:text-canvas transition-colors flex flex-col !leading-none gap-1 tracking-wide" aria-label="<?php echo esc_attr(trim($_footer_brand_line_1 . ' ' . $_footer_brand_line_2) . ' - Home'); ?>">
             <div><?php echo esc_html($_footer_brand_line_1); ?></div>
             <div><?php echo esc_html($_footer_brand_line_2); ?></div>

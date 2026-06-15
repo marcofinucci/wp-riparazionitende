@@ -83,12 +83,15 @@ get_header();
 
                     <?php if (get_row_layout() == 'coverage_map') {
                         get_template_part('template-parts/blocks/coverage-map', null, [
-                            'eyebrow'    => get_sub_field('eyebrow'),
-                            'heading'    => get_sub_field('heading'),
-                            'content'    => get_sub_field('content'),
-                            'quote_text' => get_sub_field('quote_text'),
-                            'image'      => get_sub_field('image'),
-                            'margin_top' => get_sub_field('margin_top'),
+                            'eyebrow'          => get_sub_field('eyebrow'),
+                            'heading'          => get_sub_field('heading'),
+                            'content'          => get_sub_field('content'),
+                            'quote_text'       => get_sub_field('quote_text'),
+                            'image'            => get_sub_field('image'),
+                            'image_alt'        => get_sub_field('image_alt'),
+                            'legend_received'  => get_sub_field('legend_received'),
+                            'legend_lab'       => get_sub_field('legend_lab'),
+                            'margin_top'       => get_sub_field('margin_top'),
                         ]);
                     } ?>
 
@@ -175,6 +178,13 @@ get_header();
                     <?php if (get_row_layout() == 'contact_canali') {
                         get_template_part('template-parts/blocks/contact-canali', null, [
                             'margin_top'          => get_sub_field('margin_top'),
+                            'heading'             => get_sub_field('heading'),
+                            'wa_title'            => get_sub_field('wa_title'),
+                            'wa_text'             => get_sub_field('wa_text'),
+                            'email_title'         => get_sub_field('email_title'),
+                            'email_text'          => get_sub_field('email_text'),
+                            'phone_title'         => get_sub_field('phone_title'),
+                            'phone_text'          => get_sub_field('phone_text'),
                             'email_link'          => get_field('contact_email', 'option')   ?: [],
                             'phone_link'          => get_field('contact_phone', 'option')   ?: [],
                             'wa_link'             => get_field('whatsapp_number', 'option') ?: [],

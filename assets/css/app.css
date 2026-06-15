@@ -1410,6 +1410,10 @@ h1,
   height: 1px;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .min-h-80 {
   min-height: 20rem;
 }

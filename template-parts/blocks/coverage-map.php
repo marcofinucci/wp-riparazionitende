@@ -1,12 +1,15 @@
 <?php
 defined('ABSPATH') || exit;
 
-$eyebrow     = $args['eyebrow'] ?? '';
-$heading     = $args['heading'] ?? '';
-$content     = $args['content'] ?? '';
-$quote_text  = $args['quote_text'] ?? '';
-$image       = $args['image'] ?? '';
-$margin_top  = $args['margin_top'] ?? 'medio';
+$eyebrow          = $args['eyebrow'] ?? '';
+$heading          = $args['heading'] ?? '';
+$content          = $args['content'] ?? '';
+$quote_text       = $args['quote_text'] ?? '';
+$image            = $args['image'] ?? '';
+$image_alt        = $args['image_alt'] ?? "Mappa dell'Italia con punti di provenienza delle spedizioni";
+$legend_received  = $args['legend_received'] ?? 'Lavorazioni ricevute';
+$legend_lab       = $args['legend_lab'] ?? 'Sede laboratorio';
+$margin_top       = $args['margin_top'] ?? 'medio';
 
 if (is_array($image)) {
   $image = $image['url'] ?? '';
@@ -54,20 +57,26 @@ $heading_id = 'coverage-' . wp_unique_id();
           <div class="relative w-full max-w-xs lg:max-w-sm">
             <img
               src="<?php echo esc_url($image); ?>"
-              alt="<?php echo esc_attr($heading ?: "Mappa dell'Italia con punti di provenienza delle spedizioni"); ?>"
+              alt="<?php echo esc_attr($image_alt); ?>"
               class="w-full h-auto"
               loading="lazy"
               decoding="async" />
-            <div class="flex items-center justify-center gap-5 mt-4">
-              <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
-                <div class="w-3 h-3 rounded-full bg-canvas/80"></div>
-                Lavorazioni ricevute
+            <?php if ($legend_received || $legend_lab) : ?>
+              <div class="flex items-center justify-center gap-5 mt-4">
+                <?php if ($legend_received) : ?>
+                  <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
+                    <div class="w-3 h-3 rounded-full bg-canvas/80"></div>
+                    <?php echo esc_html($legend_received); ?>
+                  </div>
+                <?php endif; ?>
+                <?php if ($legend_lab) : ?>
+                  <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
+                    <div class="w-3 h-3 rounded-full border border-canvas/60 bg-transparent"></div>
+                    <?php echo esc_html($legend_lab); ?>
+                  </div>
+                <?php endif; ?>
               </div>
-              <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
-                <div class="w-3 h-3 rounded-full border border-canvas/60 bg-transparent"></div>
-                Sede laboratorio
-              </div>
-            </div>
+            <?php endif; ?>
           </div>
         </div>
       <?php endif; ?>

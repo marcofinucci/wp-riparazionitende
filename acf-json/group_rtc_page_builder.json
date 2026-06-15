@@ -117,7 +117,7 @@
       "required": 0,
       "conditional_logic": false,
       "wrapper": {
-        "width": "100",
+        "width": "",
         "class": "",
         "id": ""
       },
@@ -145,7 +145,7 @@
       "required": 0,
       "conditional_logic": false,
       "wrapper": {
-        "width": "100",
+        "width": "",
         "class": "",
         "id": ""
       },
@@ -733,7 +733,7 @@
               "required": 0,
               "conditional_logic": 0,
               "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
               },
@@ -753,7 +753,7 @@
               "required": 0,
               "conditional_logic": 0,
               "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
               },
@@ -950,6 +950,146 @@
               "placeholder": "",
               "create_options": 0,
               "save_options": 0
+            },
+            {
+              "key": "field_contact_canali_heading",
+              "label": "Titolo sezione",
+              "name": "heading",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Contattaci",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_contact_canali_wa_title",
+              "label": "WhatsApp — titolo card",
+              "name": "wa_title",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "WhatsApp",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_contact_canali_wa_text",
+              "label": "WhatsApp — testo card",
+              "name": "wa_text",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Canale preferito per foto, preventivi e aggiornamenti sulle lavorazioni.",
+              "maxlength": "",
+              "placeholder": "",
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_contact_canali_email_title",
+              "label": "Email — titolo card",
+              "name": "email_title",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Email",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_contact_canali_email_text",
+              "label": "Email — testo card",
+              "name": "email_text",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Per schede cliente, documentazione e comunicazioni formali.",
+              "maxlength": "",
+              "placeholder": "",
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_contact_canali_phone_title",
+              "label": "Telefono — titolo card",
+              "name": "phone_title",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Telefono",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_contact_canali_phone_text",
+              "label": "Telefono — testo card",
+              "name": "phone_text",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Per informazioni rapide negli orari di apertura del laboratorio.",
+              "maxlength": "",
+              "placeholder": "",
+              "rows": 2,
+              "new_lines": ""
             },
             {
               "key": "field_contact_canali_response_title",
@@ -1471,7 +1611,7 @@
               "required": false,
               "conditional_logic": false,
               "wrapper": {
-                "width": "100",
+                "width": "",
                 "class": "",
                 "id": ""
               },
@@ -1487,7 +1627,7 @@
               "required": false,
               "conditional_logic": false,
               "wrapper": {
-                "width": "100",
+                "width": "",
                 "class": "",
                 "id": ""
               },
@@ -2448,6 +2588,66 @@
               "max_height": "",
               "max_size": "",
               "mime_types": ""
+            },
+            {
+              "key": "field_map_image_alt",
+              "label": "Testo alternativo immagine",
+              "name": "image_alt",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Mappa dell'Italia con punti di provenienza delle spedizioni",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_map_legend_received",
+              "label": "Legenda — lavorazioni ricevute",
+              "name": "legend_received",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Lavorazioni ricevute",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_map_legend_lab",
+              "label": "Legenda — sede laboratorio",
+              "name": "legend_lab",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Sede laboratorio",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
             }
           ],
           "min": "",
@@ -2802,5 +3002,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1781529235
+  "modified": 1781530354
 }
