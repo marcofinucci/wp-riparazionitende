@@ -11,9 +11,11 @@ $background_image  = $args['background_image'] ?? '';
 $margin_top        = $args['margin_top'] ?? 'medio';
 
 if (is_array($background_image)) {
-  $background_image = $background_image['url'] ?? '';
+  $bg_image_id = (int) ($background_image['ID'] ?? 0);
 } elseif (is_numeric($background_image)) {
-  $background_image = wp_get_attachment_image_url((int) $background_image, 'hey-1920x1080') ?: '';
+  $bg_image_id = (int) $background_image;
+} else {
+  $bg_image_id = 0;
 }
 
 $margin_top_classes = [
@@ -36,19 +38,19 @@ $section_class = trim(implode(' ', [
   'py-14',
   'lg:py-16',
   $margin_top_class,
-  $background_image ? '' : 'bg-canvas',
+  $bg_image_id ? '' : 'bg-canvas',
 ]));
 ?>
 
 <section class="<?php echo esc_attr($section_class); ?>">
-  <?php if ($background_image) : ?>
-    <img
-      src="<?php echo esc_url($background_image); ?>"
-      alt=""
-      aria-hidden="true"
-      class="absolute inset-0 w-full h-full object-cover"
-      loading="lazy"
-      decoding="async">
+  <?php if ($bg_image_id) : ?>
+    <?= wp_get_attachment_image($bg_image_id, 'hey-1920x1080', false, [
+      'class'       => 'absolute inset-0 w-full h-full object-cover',
+      'alt'         => '',
+      'aria-hidden' => 'true',
+      'loading'     => 'lazy',
+      'decoding'    => 'async',
+    ]) ?>
   <?php endif; ?>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -30,21 +30,21 @@ $resolve_link = static function ($link): array {
   return ['url' => (string) $link, 'title' => '', 'target' => ''];
 };
 
-$resolve_image = static function ($image): string {
+$resolve_image_id = static function ($image): int {
   if (is_array($image)) {
-    return $image['url'] ?? '';
+    return (int) ($image['ID'] ?? 0);
   }
   if (is_numeric($image)) {
-    return wp_get_attachment_image_url((int) $image, 'large') ?: '';
+    return (int) $image;
   }
-  return (string) $image;
+  return 0;
 };
 
 $items = [];
 foreach ($services as $service) {
   $link    = $resolve_link($service['link'] ?? '');
   $title   = $service['title'] ?? '';
-  $img     = $resolve_image($service['image'] ?? '');
+  $img     = $resolve_image_id($service['image'] ?? '');
   $badge   = $service['badge'] ?? '';
 
   if (!$title || !$link['url']) {
@@ -87,11 +87,11 @@ if (!$items) {
           <a href="<?php echo esc_url($item['link']['url']); ?>" class="<?php echo esc_attr($span_class); ?> bg-white  h-full rounded-2xl overflow-hidden group transition-all duration-300 flex flex-col relative" aria-label="<?php echo esc_attr($item['title']); ?>" <?php echo $item['link']['target'] ? ' target="' . esc_attr($item['link']['target']) . '"' : ''; ?>>
             <?php if ($item['img']) : ?>
               <div class="relative aspect-[3/2] overflow-hidden bg-forest">
-                <img
-                  src="<?php echo esc_url($item['img']); ?>"
-                  alt="<?php echo esc_attr($item['title']); ?>"
-                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy">
+                <?= wp_get_attachment_image($item['img'], 'large', false, [
+                  'class'   => 'absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105',
+                  'alt'     => esc_attr($item['title']),
+                  'loading' => 'lazy',
+                ]) ?>
               </div>
             <?php endif; ?>
 

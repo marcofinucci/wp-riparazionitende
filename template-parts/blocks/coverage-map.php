@@ -12,9 +12,11 @@ $legend_lab       = $args['legend_lab'] ?? 'Sede laboratorio';
 $margin_top       = $args['margin_top'] ?? 'medio';
 
 if (is_array($image)) {
-  $image = $image['url'] ?? '';
+  $image_id = (int) ($image['ID'] ?? 0);
 } elseif (is_numeric($image)) {
-  $image = wp_get_attachment_image_url((int) $image, 'large') ?: '';
+  $image_id = (int) $image;
+} else {
+  $image_id = 0;
 }
 $margin_top_classes = [
   'no'      => '',
@@ -52,15 +54,15 @@ $heading_id = 'coverage-' . wp_unique_id();
         <?php endif; ?>
       </div>
 
-      <?php if ($image) : ?>
+      <?php if ($image_id) : ?>
         <div class="flex items-center justify-center">
           <div class="relative w-full max-w-xs lg:max-w-sm">
-            <img
-              src="<?php echo esc_url($image); ?>"
-              alt="<?php echo esc_attr($image_alt); ?>"
-              class="w-full h-auto"
-              loading="lazy"
-              decoding="async" />
+            <?= wp_get_attachment_image($image_id, 'large', false, [
+              'class'    => 'w-full h-auto',
+              'alt'      => esc_attr($image_alt),
+              'loading'  => 'lazy',
+              'decoding' => 'async',
+            ]) ?>
             <?php if ($legend_received || $legend_lab) : ?>
               <div class="flex items-center justify-center gap-5 mt-4">
                 <?php if ($legend_received) : ?>

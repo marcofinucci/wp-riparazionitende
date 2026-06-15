@@ -9,9 +9,11 @@ $primary_link   = $args['primary_link'] ?? null;
 $secondary_link = $args['secondary_link'] ?? null;
 
 if (is_array($image)) {
-  $image = $image['url'] ?? '';
+  $image_id = (int) ($image['ID'] ?? 0);
 } elseif (is_numeric($image)) {
-  $image = wp_get_attachment_image_url((int) $image, 'hey-1920x1080') ?: '';
+  $image_id = (int) $image;
+} else {
+  $image_id = 0;
 }
 
 if (!$heading) {
@@ -34,14 +36,14 @@ $secondary = $resolve_link($secondary_link);
 ?>
 
 <section class="block-hero relative overflow-hidden bg-forest" aria-label="Hero">
-  <?php if ($image) : ?>
-    <img
-      src="<?php echo esc_url($image); ?>"
-      alt=""
-      aria-hidden="true"
-      class="absolute inset-0 w-full h-full object-cover object-bottom"
-      loading="eager"
-      fetchpriority="high">
+  <?php if ($image_id) : ?>
+    <?= wp_get_attachment_image($image_id, 'hey-1920x1080', false, [
+      'class'         => 'absolute inset-0 w-full h-full object-cover object-bottom',
+      'alt'           => '',
+      'aria-hidden'   => 'true',
+      'loading'       => 'eager',
+      'fetchpriority' => 'high',
+    ]) ?>
     <div class="absolute inset-0 bg-forest-dark/70" aria-hidden="true"></div>
   <?php endif; ?>
 

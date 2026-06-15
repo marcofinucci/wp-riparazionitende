@@ -1719,7 +1719,7 @@
                 "class": "",
                 "id": ""
               },
-              "return_format": "url",
+              "return_format": "id",
               "library": "all",
               "preview_size": "medium",
               "min_width": "",
@@ -2010,7 +2010,7 @@
                     "class": "",
                     "id": ""
                   },
-                  "return_format": "url",
+                  "return_format": "id",
                   "library": "all",
                   "preview_size": "medium",
                   "min_width": "",
@@ -2578,7 +2578,7 @@
                 "class": "",
                 "id": ""
               },
-              "return_format": "url",
+              "return_format": "id",
               "library": "all",
               "preview_size": "medium",
               "min_width": "",
@@ -2702,7 +2702,7 @@
                 "class": "",
                 "id": ""
               },
-              "return_format": "url",
+              "return_format": "id",
               "library": "all",
               "preview_size": "medium",
               "min_width": "",
@@ -2974,7 +2974,7 @@
       {
         "param": "page_template",
         "operator": "==",
-        "value": "templates\/page-builder.php"
+        "value": "templates/page-builder.php"
       }
     ]
   ],
