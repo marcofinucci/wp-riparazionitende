@@ -19,7 +19,7 @@ $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x10
     <div class="absolute inset-0 bg-gradient-to-r from-forest-dark/80 to-transparent" aria-hidden="true"></div>
   <?php endif; ?>
 
-  <div class="absolute inset-0 bg-topo opacity-[0.06] pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-peaks opacity-[0.05] pointer-events-none" aria-hidden="true"></div>
 
   <div class="reveal max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
     <nav aria-label="Breadcrumb" class="mb-5">

@@ -42,10 +42,20 @@
     @apply opacity-100 translate-y-0;
   }
 
-  /* Texture topografica — linee di livello (montagna) */
+  /* Texture mappa topografica — riusa l'SVG del blocco salewa, ricolorato in
+     bianco via filtro per le sezioni scure. background-size: cover, no-repeat. */
   .bg-topo {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.2'%3E%3Cpath d='M-20 60 C 40 20, 120 100, 260 40'/%3E%3Cpath d='M-20 90 C 40 50, 120 130, 260 70'/%3E%3Cpath d='M-20 120 C 40 80, 120 160, 260 100'/%3E%3Cpath d='M-20 150 C 40 110, 120 190, 260 130'/%3E%3Cpath d='M-20 180 C 40 140, 120 220, 260 160'/%3E%3Cpath d='M-20 210 C 40 170, 120 250, 260 190'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 240px 240px;
+    background-image: url("../images/riparazionitendecampeggio-texture.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0) invert(1);
+  }
+
+  /* Texture zigzag "cime" — pattern seamless (alternativa a .bg-topo) */
+  .bg-peaks {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='40' viewBox='0 0 60 40'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpath d='M0 15 L15 5 L30 15 L45 5 L60 15'/%3E%3Cpath d='M0 35 L15 25 L30 35 L45 25 L60 35'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 90px 60px;
   }
 
   @media (prefers-reduced-motion: reduce) {

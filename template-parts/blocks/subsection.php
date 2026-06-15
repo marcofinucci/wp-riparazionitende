@@ -19,7 +19,7 @@ if (!$heading && !$text && !$items) {
 
 <section class="block-subsection <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl">
+    <div class="reveal max-w-3xl">
       <?php if ($heading) : ?>
         <h2 class="font-heading font-semibold type-xl text-forest mb-6"><?php echo esc_html($heading); ?></h2>
       <?php endif; ?>

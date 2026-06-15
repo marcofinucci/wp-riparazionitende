@@ -21,7 +21,7 @@ $heading_id = 'info-box-' . wp_unique_id();
 
 <section class="block-info-box <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-forest/5 border border-forest/15 rounded-2xl p-8 lg:p-12 max-w-4xl mx-auto">
+    <div class="reveal bg-forest/5 border border-forest/15 rounded-2xl p-8 lg:p-12 max-w-4xl mx-auto">
       <div class="flex flex-col lg:flex-row gap-8">
         <div class="w-14 h-14 rounded-xl bg-forest/10 flex items-center justify-center flex-shrink-0">
           <?php rtc_icon('info', 'w-7 h-7 text-forest'); ?>

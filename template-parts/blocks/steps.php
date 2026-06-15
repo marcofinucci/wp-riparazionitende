@@ -29,7 +29,7 @@ $heading_id = 'steps-' . wp_unique_id();
 
 <section class="block-steps bg-canvas py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl">
+    <div class="reveal max-w-3xl">
       <?php if ($heading) : ?>
         <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl text-forest mb-8"><?php echo esc_html($heading); ?></h2>
       <?php endif; ?>

@@ -33,7 +33,7 @@ $heading_id = 'coverage-' . wp_unique_id();
 ?>
 
 <section class="block-coverage-map relative overflow-hidden bg-forest py-14 lg:py-16 <?php echo esc_attr($margin_top_class); ?>">
-  <div class="absolute inset-0 bg-topo opacity-[0.06] pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-peaks opacity-[0.05] pointer-events-none" aria-hidden="true"></div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div class="reveal">

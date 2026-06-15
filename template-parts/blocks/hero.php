@@ -48,7 +48,7 @@ $secondary = $resolve_link($secondary_link);
     <div class="absolute inset-0 bg-gradient-to-r from-forest-dark/80 to-transparent" aria-hidden="true"></div>
   <?php endif; ?>
 
-  <div class="absolute inset-0 bg-topo opacity-[0.06] pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-peaks opacity-[0.05] pointer-events-none" aria-hidden="true"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-28 w-full">
     <div class="max-w-3xl">

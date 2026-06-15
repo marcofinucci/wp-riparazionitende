@@ -17,7 +17,7 @@ if (!$content) {
 
 <section class="block-text <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl text-muted type-lg [&>*]:mt-4 [&>*:first-child]:mt-0 [&>:last-child]:mb-0">
+    <div class="reveal max-w-3xl text-muted type-lg [&>*]:mt-4 [&>*:first-child]:mt-0 [&>:last-child]:mb-0">
       <?php echo wp_kses_post($content); ?>
     </div>
   </div>

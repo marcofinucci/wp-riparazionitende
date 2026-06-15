@@ -25,7 +25,7 @@ $texture_url = get_template_directory_uri() . '/assets/images/riparazionitendeca
     decoding="async">
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="max-w-2xl mx-auto text-center">
+    <div class="reveal max-w-2xl mx-auto text-center">
       <div class="mb-6 flex justify-center text-forest">
         <svg xmlns="http://www.w3.org/2000/svg" width="86" height="53" viewBox="0 0 86 53" fill="none" data-v-5fd9d08b="">
           <g clip-path="url(#clip0_10675_2784)">
