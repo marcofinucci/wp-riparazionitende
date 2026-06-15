@@ -96,22 +96,22 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
           <?php if ($_rtc_wa_url) : ?>
             <a href="<?php echo esc_url($_rtc_wa_url); ?>"
               target="<?php echo esc_attr($_rtc_wa['target'] ?? '_blank'); ?>" rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
-              <?php rtc_whatsapp_icon('w-4 h-4 text-canvas/70'); ?>
+              class="inline-flex items-center gap-2 text-white hover:text-canvas type-sm transition-colors">
+              <?php rtc_whatsapp_icon('w-4 h-4 text-white'); ?>
               <?php echo esc_html($_rtc_wa_label ?: 'WhatsApp'); ?>
             </a>
           <?php endif; ?>
           <?php if ($_rtc_email_url) : ?>
             <a href="<?php echo esc_url($_rtc_email_url); ?>"
-              class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
-              <?php rtc_icon('mail', 'w-4 h-4 text-canvas/70'); ?>
+              class="inline-flex items-center gap-2 text-white hover:text-canvas type-sm transition-colors">
+              <?php rtc_icon('mail', 'w-4 h-4 text-white'); ?>
               <?php echo esc_html($_rtc_email_label); ?>
             </a>
           <?php endif; ?>
           <?php if ($_rtc_phone_url) : ?>
             <a href="<?php echo esc_url($_rtc_phone_url); ?>"
-              class="inline-flex items-center gap-2 text-canvas hover:text-white type-sm transition-colors">
-              <?php rtc_icon('phone', 'w-4 h-4 text-canvas/70'); ?>
+              class="inline-flex items-center gap-2 text-whites hover:text-canvas type-sm transition-colors">
+              <?php rtc_icon('phone', 'w-4 h-4 text-white'); ?>
               <?php echo esc_html($_rtc_phone_label); ?>
             </a>
           <?php endif; ?>
@@ -154,19 +154,19 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
 
       <!-- Come funziona (summary) -->
       <?php if ($_footer_how_steps) : ?>
-      <div>
-        <h3 class="font-heading font-semibold text-canvas type-sm uppercase tracking-wider mb-4"><?php echo esc_html($_footer_how_title); ?></h3>
-        <ol class="space-y-3">
-          <?php foreach ($_footer_how_steps as $i => $step) : ?>
-            <li class="flex items-start gap-2.5 text-white/65 type-sm">
-              <span class="w-5 h-5 rounded-full bg-forest-light text-white type-xs font-heading font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
-                <?php echo $i + 1; ?>
-              </span>
-              <?php echo esc_html($step); ?>
-            </li>
-          <?php endforeach; ?>
-        </ol>
-      </div>
+        <div>
+          <h3 class="font-heading font-semibold text-canvas type-sm uppercase tracking-wider mb-4"><?php echo esc_html($_footer_how_title); ?></h3>
+          <ol class="space-y-3">
+            <?php foreach ($_footer_how_steps as $i => $step) : ?>
+              <li class="flex items-start gap-2.5 text-white/65 type-sm">
+                <span class="w-5 h-5 rounded-full bg-forest-light text-white type-xs font-heading font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <?php echo $i + 1; ?>
+                </span>
+                <?php echo esc_html($step); ?>
+              </li>
+            <?php endforeach; ?>
+          </ol>
+        </div>
       <?php endif; ?>
     </div>
   </div>
@@ -174,8 +174,8 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
   <!-- Footer Bottom -->
   <div class="border-t border-forest-light">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p class="text-white/45 type-xs">
-        &copy; <?php echo date('Y'); ?> <?php echo esc_html($_footer_copyright); ?>
+      <p class="text-white/45 type-xs [&_a:hover]:text-white/70">
+        &copy; <?php echo date('Y'); ?> <?php echo $_footer_copyright ?>
       </p>
       <nav aria-label="Link legali" class="flex items-center gap-4 flex-wrap justify-center">
         <?php if (has_nav_menu('footer_legal')) : ?>
