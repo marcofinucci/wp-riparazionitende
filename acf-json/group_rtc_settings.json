@@ -162,6 +162,204 @@
       "return_format": "array"
     },
     {
+      "key": "field_rtc_settings_tab_footer",
+      "label": "Footer",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": false,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": false,
+      "selected": 0
+    },
+    {
+      "key": "field_rtc_footer_brand_line_1",
+      "label": "Nome brand — riga 1",
+      "name": "footer_brand_line_1",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Riparazioni Tende",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_rtc_footer_brand_line_2",
+      "label": "Nome brand — riga 2",
+      "name": "footer_brand_line_2",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Campeggio",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_rtc_footer_brand_description",
+      "label": "Descrizione brand",
+      "name": "footer_brand_description",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Laboratorio artigianale specializzato nella manutenzione e riparazione di tende scout, verande roulotte, tende carrello e attrezzatura outdoor.",
+      "maxlength": "",
+      "placeholder": "",
+      "rows": 3,
+      "new_lines": ""
+    },
+    {
+      "key": "field_rtc_footer_services_title",
+      "label": "Titolo colonna servizi",
+      "name": "footer_services_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Servizi",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_rtc_footer_info_title",
+      "label": "Titolo colonna informazioni",
+      "name": "footer_info_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Informazioni",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_rtc_footer_how_it_works_title",
+      "label": "Titolo colonna come funziona",
+      "name": "footer_how_it_works_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Come funziona",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_rtc_footer_how_it_works_steps",
+      "label": "Passaggi come funziona",
+      "name": "footer_how_it_works_steps",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Un passaggio per riga.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Invia foto della tenda\nCompila la scheda cliente\nRicevi la valutazione\nSpedisci il materiale\nRitira la tenda riparata",
+      "maxlength": "",
+      "placeholder": "",
+      "rows": 5,
+      "new_lines": ""
+    },
+    {
+      "key": "field_rtc_footer_copyright",
+      "label": "Testo copyright",
+      "name": "footer_copyright",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Mostrato dopo l'anno. Es: «Riparazioni Tende Campeggio. Tutti i diritti riservati.»",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Riparazioni Tende Campeggio. Tutti i diritti riservati.",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_rtc_footer_whatsapp_aria_label",
+      "label": "Etichetta accessibilità pulsante WhatsApp",
+      "name": "footer_whatsapp_aria_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "Contattaci su WhatsApp",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
       "key": "field_rtc_settings_tab_salewa",
       "label": "Box Salewa",
       "name": "",
@@ -257,5 +455,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1781104928
+  "modified": 1749513600
 }
