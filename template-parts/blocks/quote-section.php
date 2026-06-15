@@ -65,7 +65,7 @@ $section_class = trim(implode(' ', [
               <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest mb-4"><?php echo esc_html($heading); ?></h2>
             <?php endif; ?>
             <?php if ($highlight) : ?>
-              <p class="font-heading font-semibold text-accent type-xl mb-6"><?php echo esc_html($highlight); ?></p>
+              <p class="font-heading font-semibold text-forest type-xl mb-6"><?php echo esc_html($highlight); ?></p>
             <?php endif; ?>
             <?php if ($content) : ?>
               <div class="space-y-4 text-muted">
