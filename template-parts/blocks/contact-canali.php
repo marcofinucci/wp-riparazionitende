@@ -11,6 +11,8 @@ $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['med
 $email_link = $args['email_link'] ?? [];
 $phone_link = $args['phone_link'] ?? [];
 $wa_link    = $args['wa_link']    ?? [];
+$response_time_title = $args['response_time_title'] ?? 'Tempi di risposta';
+$response_time_text  = $args['response_time_text'] ?? 'Rispondiamo di norma entro <strong>1–2 giorni lavorativi</strong>. In periodi di alta richiesta i tempi possono allungarsi: ti aggiorniamo appena possibile.';
 ?>
 
 <section class="block-contact-canali <?php echo esc_attr($margin_top_class); ?>">
@@ -61,15 +63,20 @@ $wa_link    = $args['wa_link']    ?? [];
       <?php endif; ?>
     </div>
 
-    <div class="mt-8 bg-forest/5 border border-forest/15 rounded-2xl p-6 flex items-start gap-4 max-w-3xl">
-      <?php rtc_icon('clock', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
-      <div>
-        <h3 class="font-heading font-semibold text-forest type-base mb-1">Tempi di risposta</h3>
-        <p class="text-muted type-sm">
-          Rispondiamo di norma entro <strong class="text-dark font-medium">1–2 giorni lavorativi</strong>.
-          In periodi di alta richiesta i tempi possono allungarsi: ti aggiorniamo appena possibile.
-        </p>
+    <?php if ($response_time_title || $response_time_text) : ?>
+      <div class="mt-8 bg-forest/5 border border-forest/15 rounded-2xl p-6 flex items-start gap-4 max-w-3xl">
+        <?php rtc_icon('clock', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
+        <div>
+          <?php if ($response_time_title) : ?>
+            <h3 class="font-heading font-semibold text-forest type-base mb-1"><?php echo esc_html($response_time_title); ?></h3>
+          <?php endif; ?>
+          <?php if ($response_time_text) : ?>
+            <p class="text-muted type-sm [&_strong]:text-dark [&_strong]:font-medium">
+              <?php echo wp_kses_post($response_time_text); ?>
+            </p>
+          <?php endif; ?>
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
   </div>
 </section>

@@ -174,10 +174,12 @@ get_header();
 
                     <?php if (get_row_layout() == 'contact_canali') {
                         get_template_part('template-parts/blocks/contact-canali', null, [
-                            'margin_top'   => get_sub_field('margin_top'),
-                            'email_link'   => get_field('contact_email', 'option')   ?: [],
-                            'phone_link'   => get_field('contact_phone', 'option')   ?: [],
-                            'wa_link'      => get_field('whatsapp_number', 'option') ?: [],
+                            'margin_top'          => get_sub_field('margin_top'),
+                            'email_link'          => get_field('contact_email', 'option')   ?: [],
+                            'phone_link'          => get_field('contact_phone', 'option')   ?: [],
+                            'wa_link'             => get_field('whatsapp_number', 'option') ?: [],
+                            'response_time_title' => get_sub_field('response_time_title'),
+                            'response_time_text'  => get_sub_field('response_time_text'),
                         ]);
                     } ?>
 

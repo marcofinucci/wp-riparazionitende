@@ -950,6 +950,46 @@
               "placeholder": "",
               "create_options": 0,
               "save_options": 0
+            },
+            {
+              "key": "field_contact_canali_response_title",
+              "label": "Titolo tempi di risposta",
+              "name": "response_time_title",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Tempi di risposta",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_contact_canali_response_text",
+              "label": "Testo tempi di risposta",
+              "name": "response_time_text",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Rispondiamo di norma entro <strong>1–2 giorni lavorativi</strong>. In periodi di alta richiesta i tempi possono allungarsi: ti aggiorniamo appena possibile.",
+              "maxlength": "",
+              "placeholder": "",
+              "rows": 3,
+              "new_lines": ""
             }
           ],
           "min": "",
@@ -2762,5 +2802,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1749600000
+  "modified": 1749686400
 }
