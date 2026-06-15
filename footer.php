@@ -45,7 +45,7 @@ $_footer_copyright         = get_field('footer_copyright', 'option') ?: 'Riparaz
   <a href="<?php echo esc_url($_rtc_wa_url); ?>"
     target="<?php echo esc_attr($_rtc_wa['target'] ?? '_blank'); ?>" rel="noopener noreferrer"
     aria-label="Contattaci su WhatsApp"
-    class="border border-white lg:hidden fixed bottom-2 right-2 z-50 w-12 h-12 bg-[#4FCE5D] hover:bg-[#45b953] rounded-full shadow-lg flex items-center justify-center transition-all duration-200">
+    class="lg:hidden fixed bottom-2 right-2 z-50 w-12 h-12 bg-forest-light hover:bg-forest rounded-full shadow-lg flex items-center justify-center transition-all duration-200">
     <?php rtc_whatsapp_icon('w-6 h-6 text-white'); ?>
   </a>
 <?php endif; ?>
@@ -167,8 +167,8 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
 
   <!-- Footer Bottom -->
   <div class="border-t border-forest-light">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p class="text-white/45 type-xs [&_a:hover]:text-white/70">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between md:gap-4">
+      <p class="text-white/45 text-center md:text-left type-xs [&_a:hover]:text-white/70">
         &copy; <?php echo date('Y'); ?> <?php echo $_footer_copyright ?>
       </p>
       <nav aria-label="Link legali" class="flex items-center gap-4 flex-wrap justify-center">

@@ -31,7 +31,7 @@ $_header_wa_label     = get_field('header_whatsapp_label', 'option') ?: 'WhatsAp
         <!-- Logo -->
         <div class="flex items-center gap-2 group">
           <?php if (has_custom_logo()) : ?>
-            <div class="h-12 flex items-center justify-center flex-shrink-0 [&_a]:h-full [&_img]:h-full [&_img]:w-auto">
+            <div class="h-9 lg:h-10 flex items-center justify-center flex-shrink-0 [&_a]:h-full [&_img]:h-full [&_img]:w-auto">
               <?php the_custom_logo(); ?>
             </div>
           <?php endif; ?>
@@ -77,20 +77,34 @@ $_header_wa_label     = get_field('header_whatsapp_label', 'option') ?: 'WhatsAp
       </div>
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu Overlay -->
     <?php if (has_nav_menu('primary')) : ?>
-      <div id="mobile-menu" class="hidden lg:hidden bg-forest-dark border-t border-forest-light" role="navigation" aria-label="Menu mobile">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-1">
-          <?php
-          wp_nav_menu([
-            'theme_location' => 'primary',
-            'container'      => false,
-            'items_wrap'     => '%3$s',
-            'depth'          => 2,
-            'walker'         => new Rtc_Mobile_Nav_Walker(),
-            'fallback_cb'    => false,
-          ]);
-          ?>
+      <div id="mobile-menu"
+        class="hidden lg:hidden fixed inset-0 top-16 z-40 bg-forest-dark overflow-y-auto"
+        role="navigation"
+        aria-label="Menu mobile">
+        <div class="mobile-menu-inner relative flex flex-col min-h-full max-w-7xl mx-auto px-4 sm:px-6 py-8 pb-10">
+          <nav class="flex-1 space-y-1">
+            <?php
+            wp_nav_menu([
+              'theme_location' => 'primary',
+              'container'      => false,
+              'items_wrap'     => '%3$s',
+              'depth'          => 2,
+              'walker'         => new Rtc_Mobile_Nav_Walker(),
+              'fallback_cb'    => false,
+            ]);
+            ?>
+          </nav>
+          <?php if ($_rtc_wa_url) : ?>
+            <div class="mt-10 pt-8 border-t border-white/10">
+              <a href="<?php echo $_rtc_wa_url; ?>" target="_blank" rel="noopener noreferrer"
+                class="btn-primary w-full justify-center">
+                <?php rtc_whatsapp_icon('w-5 h-5'); ?>
+                <?php echo esc_html($_header_wa_label); ?>
+              </a>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
     <?php endif; ?>

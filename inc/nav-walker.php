@@ -68,8 +68,8 @@ class Rtc_Mobile_Nav_Walker extends Walker_Nav_Menu
         $has_children = in_array('menu-item-has-children', $item->classes, true);
 
         if ($depth === 0 && $has_children) {
-            $output .= '<div class="px-4 py-2">';
-            $output .= '<p class="text-canvas/60 type-xs font-heading font-semibold uppercase tracking-wider mb-2">';
+            $output .= '<div class="pt-5 pb-1">';
+            $output .= '<p class="text-accent type-xs font-heading font-semibold uppercase tracking-wider mb-3 px-2">';
             $output .= esc_html($title);
             $output .= '</p>';
             return;
@@ -77,14 +77,14 @@ class Rtc_Mobile_Nav_Walker extends Walker_Nav_Menu
 
         if ($depth === 0) {
             $output .= '<a href="' . esc_url($item->url) . '"';
-            $output .= ' class="block px-4 py-3 text-white hover:text-canvas hover:bg-forest-light rounded-xl type-sm font-heading font-medium transition-colors">';
+            $output .= ' class="block px-2 py-3.5 text-white hover:text-accent type-2xl font-heading font-semibold tracking-tight transition-colors duration-200">';
             $output .= esc_html($title);
             $output .= '</a>';
             return;
         }
 
         $output .= '<a href="' . esc_url($item->url) . '"';
-        $output .= ' class="block px-3 py-2 text-white hover:text-canvas hover:bg-forest-light rounded-lg type-sm font-body transition-colors">';
+        $output .= ' class="block pl-6 pr-2 py-2.5 text-canvas/90 hover:text-accent type-lg font-body transition-colors duration-200">';
         $output .= esc_html($title);
         $output .= '</a>';
     }

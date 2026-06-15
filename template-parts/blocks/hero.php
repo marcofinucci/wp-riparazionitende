@@ -70,7 +70,7 @@ $secondary = $resolve_link($secondary_link);
       <?php endif; ?>
 
       <?php if ($primary['url'] || $secondary['url']) : ?>
-        <div class="reveal flex flex-col sm:flex-row gap-3 sm:gap-4" style="--reveal-delay:240ms">
+        <div class="reveal flex flex-col items-start sm:items-center sm:flex-row gap-3 sm:gap-4" style="--reveal-delay:240ms">
           <?php if ($primary['url']) : ?>
             <a href="<?php echo esc_url($primary['url']); ?>"
               class="btn-primary"

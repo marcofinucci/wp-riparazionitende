@@ -6,12 +6,42 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeIcon = document.getElementById("menu-icon-close");
 
   if (menuBtn && mobileMenu) {
+    let closeTimer = null;
+
+    const openMenu = () => {
+      if (closeTimer) {
+        clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+      mobileMenu.classList.remove("hidden");
+      document.body.classList.add("overflow-hidden");
+      requestAnimationFrame(() => mobileMenu.classList.add("is-open"));
+      menuBtn.setAttribute("aria-expanded", "true");
+      menuBtn.setAttribute("aria-label", "Chiudi menu");
+      menuIcon?.classList.add("hidden");
+      closeIcon?.classList.remove("hidden");
+    };
+
+    const closeMenu = () => {
+      mobileMenu.classList.remove("is-open");
+      document.body.classList.remove("overflow-hidden");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.setAttribute("aria-label", "Apri menu");
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+      closeTimer = setTimeout(() => mobileMenu.classList.add("hidden"), 300);
+    };
+
     menuBtn.addEventListener("click", () => {
-      const isOpen = !mobileMenu.classList.contains("hidden");
-      mobileMenu.classList.toggle("hidden", isOpen);
-      menuIcon?.classList.toggle("hidden", !isOpen);
-      closeIcon?.classList.toggle("hidden", isOpen);
-      menuBtn.setAttribute("aria-expanded", String(!isOpen));
+      mobileMenu.classList.contains("is-open") ? closeMenu() : openMenu();
+    });
+    mobileMenu
+      .querySelectorAll("a")
+      .forEach((link) => link.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mobileMenu.classList.contains("is-open")) {
+        closeMenu();
+      }
     });
   }
 

@@ -130,6 +130,39 @@
   }
 }
 
+/* Mobile menu overlay — fuori da @layer per evitare purge degli ID */
+
+#mobile-menu {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#mobile-menu.is-open {
+  opacity: 1;
+}
+
+#mobile-menu .mobile-menu-inner {
+  opacity: 0;
+  transform: translateY(-0.75rem);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#mobile-menu.is-open .mobile-menu-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #mobile-menu,
+  #mobile-menu .mobile-menu-inner {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Contact form 7 */
 
 .wpcf7 form.wpcf7-form .wpcf7-spinner {
@@ -162,7 +195,7 @@
 }
 
 .wpcf7-form .form-submit .wpcf7-submit {
-    @apply inline-flex items-center gap-2 border border-accent bg-accent hover:bg-accent-light hover:border-accent-light text-white font-heading font-semibold px-6 py-3 rounded-full shadow-lg shadow-accent/20 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer focus-visible:ring-forest;
+  @apply inline-flex items-center gap-2 border border-accent bg-accent hover:bg-accent-light hover:border-accent-light text-white font-heading font-semibold px-6 py-3 rounded-full shadow-lg shadow-accent/20 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer focus-visible:ring-forest;
 }
 
 .wpcf7 form .wpcf7-response-output {

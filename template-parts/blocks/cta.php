@@ -25,7 +25,7 @@ $heading_id = 'cta-' . wp_unique_id();
       <p class="text-white/65 max-w-lg mx-auto"><?php echo esc_html($text); ?></p>
     <?php endif; ?>
     <?php if (!empty($link_primary['url']) || !empty($link_secondary['url'])) : ?>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+      <div class="flex flex-col items-center sm:flex-row gap-4 justify-center mt-8">
         <?php if (!empty($link_primary['url'])) : ?>
           <a href="<?php echo esc_url($link_primary['url']); ?>"
             <?php if (!empty($link_primary['target'])) : ?>target="<?php echo esc_attr($link_primary['target']); ?>" rel="noopener noreferrer" <?php endif; ?>
