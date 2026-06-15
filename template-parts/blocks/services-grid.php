@@ -86,7 +86,7 @@ if (!$items) {
         <article class="w-full md:w-1/2 lg:w-1/4 px-2 mt-4">
           <a href="<?php echo esc_url($item['link']['url']); ?>" class="<?php echo esc_attr($span_class); ?> bg-white  h-full rounded-2xl overflow-hidden group transition-all duration-300 flex flex-col relative" aria-label="<?php echo esc_attr($item['title']); ?>" <?php echo $item['link']['target'] ? ' target="' . esc_attr($item['link']['target']) . '"' : ''; ?>>
             <?php if ($item['img']) : ?>
-              <div class="relative aspect-square overflow-hidden bg-forest">
+              <div class="relative aspect-[3/2] overflow-hidden bg-forest">
                 <img
                   src="<?php echo esc_url($item['img']); ?>"
                   alt="<?php echo esc_attr($item['title']); ?>"
