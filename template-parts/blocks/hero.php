@@ -35,7 +35,7 @@ $primary   = $resolve_link($primary_link);
 $secondary = $resolve_link($secondary_link);
 ?>
 
-<section class="block-hero relative overflow-hidden bg-forest-dark flex items-center min-h-[88vh]" aria-label="Hero">
+<section class="block-hero relative overflow-hidden bg-forest-dark flex items-center min-h-[80vh]" aria-label="Hero">
   <?php if ($image_id) : ?>
     <?= wp_get_attachment_image($image_id, 'hey-1920x1080', false, [
       'class'         => 'absolute inset-0 w-full h-full object-cover object-bottom scale-105',
