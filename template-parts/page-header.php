@@ -15,8 +15,8 @@ $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x10
       aria-hidden="true"
       class="absolute inset-0 w-full h-full object-cover"
       loading="eager">
-    <div class="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/75 to-forest-dark/40" aria-hidden="true"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-forest-dark/80 to-transparent" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/50 to-transparent" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-forest-dark via-forest-dark/50 to-transparent" aria-hidden="true"></div>
   <?php endif; ?>
 
   <div class="absolute inset-0 bg-peaks opacity-[0.05] pointer-events-none" aria-hidden="true"></div>

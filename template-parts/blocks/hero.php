@@ -44,8 +44,8 @@ $secondary = $resolve_link($secondary_link);
       'loading'       => 'eager',
       'fetchpriority' => 'high',
     ]) ?>
-    <div class="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/75 to-forest-dark/30" aria-hidden="true"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-forest-dark/60 to-transparent" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/50 to-transparent" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-forest-dark/50 to-transparent" aria-hidden="true"></div>
   <?php endif; ?>
 
   <div class="absolute inset-0 bg-peaks opacity-[0.05] pointer-events-none" aria-hidden="true"></div>

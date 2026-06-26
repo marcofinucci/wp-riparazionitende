@@ -15,10 +15,11 @@ $_footer_margin_classes = [
   'medio' => 'mt-10 lg:mt-14',
 ];
 
-$_footer_cta_title     = get_field('footer_cta_title', 'option');
-$_footer_cta_text      = get_field('footer_cta_text', 'option');
-$_footer_cta_primary   = get_field('footer_cta_link_primary', 'option');
-$_footer_cta_secondary = get_field('footer_cta_link_secondary', 'option');
+$_footer_cta_title            = get_field('footer_cta_title', 'option');
+$_footer_cta_text             = get_field('footer_cta_text', 'option');
+$_footer_cta_primary          = get_field('footer_cta_link_primary', 'option');
+$_footer_cta_secondary        = get_field('footer_cta_link_secondary', 'option');
+$_footer_cta_background_image = get_field('footer_cta_background_image', 'option');
 $_footer_cta_enabled   = (bool) get_field('show_footer_cta');
 $_footer_cta_shown     = $_footer_cta_enabled && ($_footer_cta_title || $_footer_cta_text || !empty($_footer_cta_primary['url']) || !empty($_footer_cta_secondary['url']));
 
@@ -53,11 +54,12 @@ $_footer_copyright         = get_field('footer_copyright', 'option') ?: 'Riparaz
 <?php if ($_footer_cta_shown) : ?>
   <?php
   get_template_part('template-parts/blocks/cta', null, [
-    'title'          => $_footer_cta_title,
-    'text'           => $_footer_cta_text,
-    'link_primary'   => $_footer_cta_primary,
-    'link_secondary' => $_footer_cta_secondary,
-    'margin_top'     => $_footer_margin_top,
+    'title'            => $_footer_cta_title,
+    'text'             => $_footer_cta_text,
+    'link_primary'     => $_footer_cta_primary,
+    'link_secondary'   => $_footer_cta_secondary,
+    'background_image' => $_footer_cta_background_image,
+    'margin_top'       => $_footer_margin_top,
   ]);
   ?>
 <?php endif; ?>

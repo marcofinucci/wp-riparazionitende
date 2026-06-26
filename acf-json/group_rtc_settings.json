@@ -240,6 +240,31 @@
       "return_format": "array"
     },
     {
+      "key": "field_rtc_footer_cta_background_image",
+      "label": "Immagine di sfondo",
+      "name": "footer_cta_background_image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "id",
+      "library": "all",
+      "preview_size": "medium",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": ""
+    },
+    {
       "key": "field_rtc_settings_tab_footer",
       "label": "Footer",
       "name": "",
@@ -473,5 +498,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1781530515
+  "modified": 1782508800
 }

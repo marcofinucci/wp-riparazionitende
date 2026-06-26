@@ -219,11 +219,12 @@ get_header();
 
                     <?php if (get_row_layout() == 'cta') {
                         get_template_part('template-parts/blocks/cta', null, [
-                            'title'          => get_sub_field('title'),
-                            'text'           => get_sub_field('text'),
-                            'link_primary'   => get_sub_field('link_primary')   ?: [],
-                            'link_secondary' => get_sub_field('link_secondary') ?: [],
-                            'margin_top'     => get_sub_field('margin_top'),
+                            'title'            => get_sub_field('title'),
+                            'text'             => get_sub_field('text'),
+                            'link_primary'     => get_sub_field('link_primary')     ?: [],
+                            'link_secondary'   => get_sub_field('link_secondary')   ?: [],
+                            'background_image' => get_sub_field('background_image'),
+                            'margin_top'       => get_sub_field('margin_top'),
                         ]);
                     } ?>
 

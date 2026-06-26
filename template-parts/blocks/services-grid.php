@@ -84,7 +84,7 @@ if (!$items) {
     <div class="flex flex-wrap -mx-2 justify-center">
       <?php foreach ($items as $i => $item) : ?>
         <article class="reveal w-full sm:w-1/2 lg:w-1/3 px-2 mt-4" style="--reveal-delay:<?php echo esc_attr(($i % 4) * 80); ?>ms">
-          <a href="<?php echo esc_url($item['link']['url']); ?>" class="relative block h-full rounded-2xl overflow-hidden bg-forest-dark shadow-md hover:shadow-2xl group transition-all duration-300 hover:-translate-y-1 transform-gpu [backface-visibility:hidden]" aria-label="<?php echo esc_attr($item['title']); ?>" <?php echo $item['link']['target'] ? ' target="' . esc_attr($item['link']['target']) . '"' : ''; ?>>
+          <a href="<?php echo esc_url($item['link']['url']); ?>" class="relative flex flex-col h-full rounded-2xl overflow-hidden bg-forest-dark shadow-md hover:shadow-2xl group transition-all duration-300 transform-gpu [backface-visibility:hidden]" aria-label="<?php echo esc_attr($item['title']); ?>" <?php echo $item['link']['target'] ? ' target="' . esc_attr($item['link']['target']) . '"' : ''; ?>>
             <div class="relative aspect-[4/5] overflow-hidden rounded-2xl transform-gpu [backface-visibility:hidden]">
               <?php if ($item['img']) : ?>
                 <?= wp_get_attachment_image($item['img'], 'large', false, [
@@ -93,16 +93,15 @@ if (!$items) {
                   'loading' => 'lazy',
                 ]) ?>
               <?php endif; ?>
-              <div class="absolute inset-0 bg-gradient-to-t from-forest-dark via-forest-dark/35 to-transparent" aria-hidden="true"></div>
+
+              <?php if ($item['badge']) : ?>
+                <span class="absolute top-3 left-3 z-30 type-xs font-heading font-semibold text-white bg-accent px-2.5 py-1 rounded-full shadow-sm">
+                  <?php echo esc_html($item['badge']); ?>
+                </span>
+              <?php endif; ?>
             </div>
 
-            <?php if ($item['badge']) : ?>
-              <span class="absolute top-3 left-3 z-30 type-xs font-heading font-semibold text-white bg-accent px-2.5 py-1 rounded-full shadow-sm">
-                <?php echo esc_html($item['badge']); ?>
-              </span>
-            <?php endif; ?>
-
-            <div class="absolute inset-x-0 bottom-0 z-20 p-5 flex items-end justify-between gap-3">
+            <div class="bg-forest-dark p-5 flex items-center justify-between gap-3 grow">
               <h3 class="font-heading font-bold text-white type-lg !leading-tight text-balance">
                 <?php echo esc_html($item['title']); ?>
               </h3>
