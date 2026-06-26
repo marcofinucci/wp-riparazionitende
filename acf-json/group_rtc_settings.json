@@ -303,6 +303,79 @@
       "new_lines": ""
     },
     {
+      "key": "field_rtc_footer_social_links",
+      "label": "Social",
+      "name": "footer_social_links",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Link ai profili social mostrati nel footer.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "table",
+      "button_label": "Aggiungi social",
+      "min": 0,
+      "max": 0,
+      "rows_per_page": 20,
+      "collapsed": "",
+      "sub_fields": [
+        {
+          "key": "field_rtc_footer_social_link",
+          "label": "Link",
+          "name": "link",
+          "aria-label": "",
+          "type": "link",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "parent_repeater": "field_rtc_footer_social_links"
+        },
+        {
+          "key": "field_rtc_footer_social_icon",
+          "label": "Icona",
+          "name": "icon",
+          "aria-label": "",
+          "type": "select",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "choices": {
+            "facebook": "Facebook",
+            "instagram": "Instagram",
+            "linkedin": "LinkedIn",
+            "youtube": "YouTube",
+            "tiktok": "TikTok",
+            "whatsapp": "WhatsApp"
+          },
+          "default_value": "instagram",
+          "return_format": "value",
+          "multiple": 0,
+          "allow_null": 0,
+          "ui": 0,
+          "ajax": 0,
+          "placeholder": "",
+          "create_options": 0,
+          "save_options": 0,
+          "parent_repeater": "field_rtc_footer_social_links"
+        }
+      ]
+    },
+    {
       "key": "field_rtc_footer_services_title",
       "label": "Titolo colonna servizi",
       "name": "footer_services_title",
@@ -498,5 +571,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1782508800
+  "modified": 1751299200
 }

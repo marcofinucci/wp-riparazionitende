@@ -40,6 +40,7 @@ $_footer_how_steps         = $_footer_how_steps_raw
     'Ritira la tenda riparata',
   ];
 $_footer_copyright         = get_field('footer_copyright', 'option') ?: 'Riparazioni Tende Campeggio. Tutti i diritti riservati.';
+$_footer_social_links      = get_field('footer_social_links', 'option') ?: [];
 ?>
 <!-- Fixed WhatsApp Button — solo mobile (stessa soglia del burger menu: lg:hidden) -->
 <?php if ($_rtc_wa_url) : ?>
@@ -112,6 +113,32 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
             </a>
           <?php endif; ?>
         </div>
+        <?php if ($_footer_social_links) : ?>
+          <div class="flex items-center gap-3 mt-5">
+            <?php foreach ($_footer_social_links as $_social) :
+              $_social_link  = $_social['link'] ?? [];
+              $_social_url   = $_social_link['url'] ?? '';
+              $_social_icon  = $_social['icon'] ?? '';
+              if (!$_social_url || !$_social_icon) {
+                continue;
+              }
+              $_social_label = $_social_link['title'] ?: ucfirst($_social_icon);
+              $_social_target = $_social_link['target'] ?: '_blank';
+            ?>
+              <a href="<?php echo esc_url($_social_url); ?>"
+                target="<?php echo esc_attr($_social_target); ?>"
+                rel="noopener noreferrer"
+                aria-label="<?php echo esc_attr($_social_label); ?>"
+                class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center transition-colors">
+                <?php if ($_social_icon === 'whatsapp') : ?>
+                  <?php rtc_whatsapp_icon('w-4 h-4 text-white'); ?>
+                <?php else : ?>
+                  <?php rtc_icon($_social_icon, 'w-4 h-4 text-white'); ?>
+                <?php endif; ?>
+              </a>
+            <?php endforeach; ?>
+          </div>
+        <?php endif; ?>
       </div>
 
       <!-- Servizi -->
