@@ -83,7 +83,7 @@ if (!$items) {
 
     <div class="flex flex-wrap -mx-2 justify-center">
       <?php foreach ($items as $i => $item) : ?>
-        <article class="reveal w-full sm:w-1/2 lg:w-1/4 px-2 mt-4" style="--reveal-delay:<?php echo esc_attr(($i % 4) * 80); ?>ms">
+        <article class="reveal w-full sm:w-1/2 lg:w-1/3 px-2 mt-4" style="--reveal-delay:<?php echo esc_attr(($i % 4) * 80); ?>ms">
           <a href="<?php echo esc_url($item['link']['url']); ?>" class="relative block h-full rounded-2xl overflow-hidden bg-forest-dark shadow-md hover:shadow-2xl group transition-all duration-300 hover:-translate-y-1 transform-gpu [backface-visibility:hidden]" aria-label="<?php echo esc_attr($item['title']); ?>" <?php echo $item['link']['target'] ? ' target="' . esc_attr($item['link']['target']) . '"' : ''; ?>>
             <div class="relative aspect-[4/5] overflow-hidden rounded-2xl transform-gpu [backface-visibility:hidden]">
               <?php if ($item['img']) : ?>
