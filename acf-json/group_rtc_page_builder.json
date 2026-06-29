@@ -1092,6 +1092,62 @@
               "new_lines": ""
             },
             {
+              "key": "field_contact_canali_address_title",
+              "label": "Indirizzo — titolo card",
+              "name": "address_title",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_contact_canali_address_text",
+              "label": "Indirizzo — testo card",
+              "name": "address_text",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "maxlength": "",
+              "placeholder": "",
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_contact_canali_address_link",
+              "label": "Indirizzo — link",
+              "name": "address_link",
+              "aria-label": "",
+              "type": "link",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array"
+            },
+            {
               "key": "field_contact_canali_response_title",
               "label": "Titolo tempi di risposta",
               "name": "response_time_title",
@@ -3027,5 +3083,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1782508800
+  "modified": 1782595200
 }
