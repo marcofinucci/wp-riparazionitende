@@ -3,8 +3,10 @@ defined('ABSPATH') || exit;
 
 $heading        = $args['heading'] ?? 'Procedura';
 $steps          = $args['steps'] ?? [];
-$download_file  = $args['download_file'] ?? null;
-$download_label = $args['download_label'] ?? 'Scarica la scheda cliente';
+$download_file    = $args['download_file'] ?? null;
+$download_label   = $args['download_label'] ?? 'Scarica la scheda cliente';
+$download_file_2  = $args['download_file_2'] ?? null;
+$download_label_2 = $args['download_label_2'] ?? '';
 $margin_top = $args['margin_top'] ?? 'medio';
 $margin_top_classes = [
   'no' => '',
@@ -24,6 +26,13 @@ if (is_array($download_file) && !empty($download_file['url'])) {
   $download_url = wp_get_attachment_url((int) $download_file) ?: '';
 }
 
+$download_url_2 = '';
+if (is_array($download_file_2) && !empty($download_file_2['url'])) {
+  $download_url_2 = $download_file_2['url'];
+} elseif (is_numeric($download_file_2)) {
+  $download_url_2 = wp_get_attachment_url((int) $download_file_2) ?: '';
+}
+
 $heading_id = 'steps-' . wp_unique_id();
 ?>
 
@@ -31,9 +40,29 @@ $heading_id = 'steps-' . wp_unique_id();
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="reveal max-w-3xl">
       <?php if ($heading) : ?>
-        <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl text-forest mb-8"><?php echo esc_html($heading); ?></h2>
+        <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl text-forest"><?php echo esc_html($heading); ?></h2>
       <?php endif; ?>
-      <ol class="space-y-6">
+      <?php if ($download_url || $download_url_2) : ?>
+        <div class="flex flex-col items-start sm:flex-row flex-wrap gap-4 mt-8">
+          <?php if ($download_url) : ?>
+            <a href="<?php echo esc_url($download_url); ?>"
+              target="_blank" rel="noopener noreferrer"
+              class="btn-primary">
+              <?php echo esc_html($download_label); ?>
+              <?php rtc_icon('external-link', 'w-4 h-4'); ?>
+            </a>
+          <?php endif; ?>
+          <?php if ($download_url_2) : ?>
+            <a href="<?php echo esc_url($download_url_2); ?>"
+              target="_blank" rel="noopener noreferrer"
+              class="btn-primary">
+              <?php echo esc_html($download_label_2 ?: 'Scarica allegato'); ?>
+              <?php rtc_icon('external-link', 'w-4 h-4'); ?>
+            </a>
+          <?php endif; ?>
+        </div>
+      <?php endif; ?>
+      <ol class="space-y-6 mt-8">
         <?php foreach ($steps as $i => $step) : ?>
           <?php
           $title = is_array($step) ? ($step['title'] ?? '') : '';
@@ -57,16 +86,6 @@ $heading_id = 'steps-' . wp_unique_id();
           </li>
         <?php endforeach; ?>
       </ol>
-      <?php if ($download_url) : ?>
-        <div class="mt-8">
-          <a href="<?php echo esc_url($download_url); ?>"
-            target="_blank" rel="noopener noreferrer"
-            class="btn-primary">
-            <?php echo esc_html($download_label); ?>
-            <?php rtc_icon('external-link', 'w-4 h-4'); ?>
-          </a>
-        </div>
-      <?php endif; ?>
     </div>
   </div>
 </section>

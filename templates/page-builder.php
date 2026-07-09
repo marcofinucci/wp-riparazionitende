@@ -160,8 +160,10 @@ get_header();
                         get_template_part('template-parts/blocks/steps', null, [
                             'heading'         => get_sub_field('heading'),
                             'steps'           => get_sub_field('steps'),
-                            'download_file'   => get_sub_field('download_file'),
-                            'download_label'  => get_sub_field('download_label'),
+                            'download_file'    => get_sub_field('download_file'),
+                            'download_label'   => get_sub_field('download_label'),
+                            'download_file_2'  => get_sub_field('download_file_2'),
+                            'download_label_2' => get_sub_field('download_label_2'),
                             'margin_top'      => get_sub_field('margin_top'),
                         ]);
                     } ?>

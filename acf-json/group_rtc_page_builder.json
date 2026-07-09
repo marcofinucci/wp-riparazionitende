@@ -762,6 +762,46 @@
               "placeholder": "",
               "prepend": "",
               "append": ""
+            },
+            {
+              "key": "field_steps_download_file_2",
+              "label": "Secondo allegato PDF",
+              "name": "download_file_2",
+              "aria-label": "",
+              "type": "file",
+              "instructions": "Opzionale. Mostra un secondo pulsante di download sotto gli step.",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array",
+              "library": "all",
+              "min_size": "",
+              "max_size": "",
+              "mime_types": "pdf"
+            },
+            {
+              "key": "field_steps_download_label_2",
+              "label": "Etichetta secondo pulsante download",
+              "name": "download_label_2",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
             }
           ],
           "min": "",
@@ -3083,5 +3123,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1782595200
+  "modified": 1783576801
 }
