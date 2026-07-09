@@ -22,9 +22,9 @@ if (!$text) {
       <?php rtc_icon('info', 'w-5 h-5 text-forest flex-shrink-0 mt-0.5'); ?>
       <div>
         <?php if ($title) : ?>
-          <h3 class="font-heading font-semibold text-forest type-base mb-1"><?php echo esc_html($title); ?></h3>
+          <h3 class="font-heading font-semibold text-forest type-base mb-1 [&>a]:underline"><?php echo $title; ?></h3>
         <?php endif; ?>
-        <p class="text-muted type-sm"><?php echo esc_html($text); ?></p>
+        <p class="text-muted type-sm [&>a]:underline"><?php echo $text; ?></p>
       </div>
     </div>
   </div>

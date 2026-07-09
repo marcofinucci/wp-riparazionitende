@@ -150,6 +150,25 @@ get_header();
                         ]);
                     } ?>
 
+                    <?php if (get_row_layout() == 'download') {
+                        get_template_part('template-parts/blocks/download', null, [
+                            'heading'        => get_sub_field('heading'),
+                            'text'           => get_sub_field('text'),
+                            'download_file'  => get_sub_field('download_file'),
+                            'download_label' => get_sub_field('download_label'),
+                            'background'     => get_sub_field('background'),
+                            'margin_top'     => get_sub_field('margin_top'),
+                        ]);
+                    } ?>
+
+                    <?php if (get_row_layout() == 'images') {
+                        get_template_part('template-parts/blocks/images', null, [
+                            'images'       => get_sub_field('images'),
+                            'grid_columns' => get_sub_field('grid_columns'),
+                            'margin_top'   => get_sub_field('margin_top'),
+                        ]);
+                    } ?>
+
                     <?php if (get_row_layout() == 'salewa') {
                         get_template_part('template-parts/blocks/salewa', null, [
                             'margin_top' => get_sub_field('margin_top'),

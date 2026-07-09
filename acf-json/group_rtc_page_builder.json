@@ -564,6 +564,154 @@
           "min": "",
           "max": ""
         },
+        "layout_download": {
+          "key": "layout_download",
+          "name": "download",
+          "label": "Download",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_rtc_pb_margin_top_download",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": "",
+              "create_options": 0,
+              "save_options": 0
+            },
+            {
+              "key": "field_download_background",
+              "label": "Sfondo",
+              "name": "background",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "canvas": "Canvas",
+                "forest": "Forest"
+              },
+              "default_value": "no",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": "",
+              "create_options": 0,
+              "save_options": 0
+            },
+            {
+              "key": "field_download_heading",
+              "label": "Titolo",
+              "name": "heading",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_download_text",
+              "label": "Testo",
+              "name": "text",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 3,
+              "default_value": "",
+              "new_lines": "",
+              "maxlength": "",
+              "placeholder": ""
+            },
+            {
+              "key": "field_download_file",
+              "label": "Allegato PDF",
+              "name": "download_file",
+              "aria-label": "",
+              "type": "file",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array",
+              "library": "all",
+              "min_size": "",
+              "max_size": "",
+              "mime_types": "pdf"
+            },
+            {
+              "key": "field_download_label",
+              "label": "Etichetta pulsante",
+              "name": "download_label",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "Scarica allegato",
+              "maxlength": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
         "layout_salewa": {
           "key": "layout_salewa",
           "name": "salewa",
@@ -3083,6 +3231,103 @@
           ],
           "min": "",
           "max": ""
+        },
+        "layout_images": {
+          "key": "layout_images",
+          "name": "images",
+          "label": "Immagini",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_rtc_pb_margin_top_images",
+              "label": "Margine superiore",
+              "name": "margin_top",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "no": "No",
+                "piccolo": "Piccolo",
+                "medio": "Medio"
+              },
+              "default_value": "medio",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": "",
+              "create_options": 0,
+              "save_options": 0
+            },
+            {
+              "key": "field_images_grid_columns",
+              "label": "Colonne griglia",
+              "name": "grid_columns",
+              "aria-label": "",
+              "type": "select",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "choices": {
+                "1": "1 colonna",
+                "2": "2 colonne",
+                "3": "3 colonne",
+                "4": "4 colonne"
+              },
+              "default_value": "2",
+              "return_format": "value",
+              "multiple": 0,
+              "allow_null": 0,
+              "ui": 0,
+              "ajax": 0,
+              "placeholder": "",
+              "create_options": 0,
+              "save_options": 0
+            },
+            {
+              "key": "field_images_gallery",
+              "label": "Immagini",
+              "name": "images",
+              "aria-label": "",
+              "type": "gallery",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "id",
+              "library": "all",
+              "min": 0,
+              "max": 0,
+              "min_width": "",
+              "min_height": "",
+              "min_size": "",
+              "max_width": "",
+              "max_height": "",
+              "max_size": "",
+              "mime_types": "",
+              "insert": "append",
+              "preview_size": "medium"
+            }
+          ],
+          "min": "",
+          "max": ""
         }
       },
       "min": "",
@@ -3123,5 +3368,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1783576801
+  "modified": 1783578056
 }
