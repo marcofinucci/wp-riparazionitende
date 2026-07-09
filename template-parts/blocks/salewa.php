@@ -54,7 +54,7 @@ $texture_url = get_template_directory_uri() . '/assets/images/riparazionitendeca
           <?php if (!empty($link['url'])) : ?>
             <a href="<?php echo esc_url($link['url']); ?>"
               <?php if (!empty($link['target'])) : ?>target="<?php echo esc_attr($link['target']); ?>" rel="noopener noreferrer" <?php endif; ?>
-              class="btn-primary mt-8">
+              class="btn-primary mt-6">
               <?php echo esc_html($link['title']); ?>
             </a>
           <?php endif; ?>

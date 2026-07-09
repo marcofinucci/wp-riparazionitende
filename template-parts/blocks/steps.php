@@ -47,7 +47,7 @@ $heading_id = 'steps-' . wp_unique_id();
         <p class="text-muted mt-4 rich-text"><?php echo wp_kses_post($text); ?></p>
       <?php endif; ?>
       <?php if ($download_url || $download_url_2) : ?>
-        <div class="flex flex-col items-start sm:flex-row flex-wrap gap-4 mt-8">
+        <div class="flex flex-col items-start sm:flex-row flex-wrap gap-4 mt-6">
           <?php if ($download_url) : ?>
             <a href="<?php echo esc_url($download_url); ?>"
               target="_blank" rel="noopener noreferrer"
@@ -66,7 +66,7 @@ $heading_id = 'steps-' . wp_unique_id();
           <?php endif; ?>
         </div>
       <?php endif; ?>
-      <ol class="space-y-6 mt-8">
+      <ol class="space-y-6 mt-6">
         <?php foreach ($steps as $i => $step) : ?>
           <?php
           $title = is_array($step) ? ($step['title'] ?? '') : '';

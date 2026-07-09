@@ -28,7 +28,7 @@ $response_time_text  = $args['response_time_text'] ?? '';
 <section class="block-contact-canali <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <?php if ($heading) : ?>
-      <h2 id="canali-heading" class="font-heading font-semibold type-xl text-forest mb-8 rich-text"><?php echo wp_kses_post($heading); ?></h2>
+      <h2 id="canali-heading" class="font-heading font-semibold type-xl text-forest mb-6 rich-text"><?php echo wp_kses_post($heading); ?></h2>
     <?php endif; ?>
     <div class="reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <?php if (!empty($wa_link['url'])) : ?>
