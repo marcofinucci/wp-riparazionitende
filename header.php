@@ -96,15 +96,6 @@ $_header_wa_label     = get_field('header_whatsapp_label', 'option') ?: 'WhatsAp
             ]);
             ?>
           </nav>
-          <?php if ($_rtc_wa_url) : ?>
-            <div class="mt-10 pt-8 border-t border-white/10">
-              <a href="<?php echo $_rtc_wa_url; ?>" target="_blank" rel="noopener noreferrer"
-                class="btn-primary w-full justify-center">
-                <?php rtc_whatsapp_icon('w-5 h-5'); ?>
-                <?php echo esc_html($_header_wa_label); ?>
-              </a>
-            </div>
-          <?php endif; ?>
         </div>
       </div>
     <?php endif; ?>
