@@ -28,7 +28,7 @@ $response_time_text  = $args['response_time_text'] ?? '';
 <section class="block-contact-canali <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <?php if ($heading) : ?>
-      <h2 id="canali-heading" class="font-heading font-semibold type-xl text-forest mb-8"><?php echo esc_html($heading); ?></h2>
+      <h2 id="canali-heading" class="font-heading font-semibold type-xl text-forest mb-8 rich-text"><?php echo wp_kses_post($heading); ?></h2>
     <?php endif; ?>
     <div class="reveal grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <?php if (!empty($wa_link['url'])) : ?>
@@ -41,10 +41,10 @@ $response_time_text  = $args['response_time_text'] ?? '';
           <div class="grow flex flex-col">
             <div class="grow">
               <?php if ($wa_title) : ?>
-                <h3 class="font-heading font-semibold text-forest type-lg mb-1"><?php echo esc_html($wa_title); ?></h3>
+                <h3 class="font-heading font-semibold text-forest type-lg mb-1 rich-text"><?php echo wp_kses_post($wa_title); ?></h3>
               <?php endif; ?>
               <?php if ($wa_text) : ?>
-                <p class="text-muted type-sm mb-3"><?php echo esc_html($wa_text); ?></p>
+                <p class="text-muted type-sm mb-3 rich-text"><?php echo wp_kses_post($wa_text); ?></p>
               <?php endif; ?>
             </div>
             <span class="text-forest group-hover:text-accent font-heading font-medium type-sm transition-colors"><?php echo esc_html($wa_link['title']); ?></span>
@@ -61,10 +61,10 @@ $response_time_text  = $args['response_time_text'] ?? '';
           <div class="grow flex flex-col">
             <div class="grow">
               <?php if ($email_title) : ?>
-                <h3 class="font-heading font-semibold text-forest type-lg mb-1"><?php echo esc_html($email_title); ?></h3>
+                <h3 class="font-heading font-semibold text-forest type-lg mb-1 rich-text"><?php echo wp_kses_post($email_title); ?></h3>
               <?php endif; ?>
               <?php if ($email_text) : ?>
-                <p class="text-muted type-sm mb-3"><?php echo esc_html($email_text); ?></p>
+                <p class="text-muted type-sm mb-3 rich-text"><?php echo wp_kses_post($email_text); ?></p>
               <?php endif; ?>
             </div>
             <span class="text-forest group-hover:text-accent font-heading font-medium type-sm transition-colors break-all"><?php echo esc_html($email_link['title']); ?></span>
@@ -81,10 +81,10 @@ $response_time_text  = $args['response_time_text'] ?? '';
           <div class="grow flex flex-col">
             <div class="grow">
               <?php if ($phone_title) : ?>
-                <h3 class="font-heading font-semibold text-forest type-lg mb-1"><?php echo esc_html($phone_title); ?></h3>
+                <h3 class="font-heading font-semibold text-forest type-lg mb-1 rich-text"><?php echo wp_kses_post($phone_title); ?></h3>
               <?php endif; ?>
               <?php if ($phone_text) : ?>
-                <p class="text-muted type-sm mb-3"><?php echo esc_html($phone_text); ?></p>
+                <p class="text-muted type-sm mb-3 rich-text"><?php echo wp_kses_post($phone_text); ?></p>
               <?php endif; ?>
             </div>
             <span class="text-forest group-hover:text-accent font-heading font-medium type-sm transition-colors"><?php echo esc_html($phone_link['title']); ?></span>
@@ -101,10 +101,10 @@ $response_time_text  = $args['response_time_text'] ?? '';
           <div class="grow flex flex-col">
             <div class="grow">
               <?php if ($address_title) : ?>
-                <h3 class="font-heading font-semibold text-forest type-lg mb-1"><?php echo esc_html($address_title); ?></h3>
+                <h3 class="font-heading font-semibold text-forest type-lg mb-1 rich-text"><?php echo wp_kses_post($address_title); ?></h3>
               <?php endif; ?>
               <?php if ($address_text) : ?>
-                <p class="text-muted type-sm mb-3"><?php echo esc_html($address_text); ?></p>
+                <p class="text-muted type-sm mb-3 rich-text"><?php echo wp_kses_post($address_text); ?></p>
               <?php endif; ?>
             </div>
             <span class="text-forest group-hover:text-accent font-heading font-medium type-sm transition-colors"><?php echo esc_html($address_link['title']); ?></span>
@@ -118,10 +118,10 @@ $response_time_text  = $args['response_time_text'] ?? '';
         <?php rtc_icon('clock', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
         <div>
           <?php if ($response_time_title) : ?>
-            <h3 class="font-heading font-semibold text-forest type-base mb-1"><?php echo esc_html($response_time_title); ?></h3>
+            <h3 class="font-heading font-semibold text-forest type-base mb-1 rich-text"><?php echo wp_kses_post($response_time_title); ?></h3>
           <?php endif; ?>
           <?php if ($response_time_text) : ?>
-            <p class="text-muted type-sm [&_strong]:text-dark [&_strong]:font-medium">
+            <p class="text-muted type-sm rich-text">
               <?php echo wp_kses_post($response_time_text); ?>
             </p>
           <?php endif; ?>

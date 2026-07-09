@@ -40,10 +40,10 @@ $heading_id = 'download-' . wp_unique_id();
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="reveal max-w-3xl">
       <?php if ($heading) : ?>
-        <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl <?php echo $is_forest ? 'text-white' : 'text-forest'; ?>"><?php echo esc_html($heading); ?></h2>
+        <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl <?php echo $is_forest ? 'text-white' : 'text-forest'; ?> rich-text"><?php echo wp_kses_post($heading); ?></h2>
       <?php endif; ?>
       <?php if ($text) : ?>
-        <p class="<?php echo $is_forest ? 'text-white/80' : 'text-muted'; ?> <?php echo $heading ? 'mt-6' : ''; ?>"><?php echo esc_html($text); ?></p>
+        <p class="<?php echo $is_forest ? 'text-white/80' : 'text-muted'; ?> <?php echo $heading ? 'mt-6' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
       <?php endif; ?>
       <?php if ($download_url) : ?>
         <div class="<?php echo ($heading || $text) ? 'mt-6' : ''; ?>">

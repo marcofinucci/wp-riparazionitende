@@ -30,13 +30,13 @@ $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x10
       </ol>
     </nav>
 
-    <h1 class="font-heading font-bold type-4xl text-white max-w-3xl text-balance">
-      <?php echo esc_html($h1); ?>
+    <h1 class="font-heading font-bold type-4xl text-white max-w-3xl text-balance rich-text">
+      <?php echo wp_kses_post($h1); ?>
     </h1>
 
     <?php if ($subtitle) : ?>
-      <p class="mt-4 text-white/65 type-lg max-w-2xl">
-        <?php echo esc_html($subtitle); ?>
+      <p class="mt-4 text-white/65 type-lg max-w-2xl rich-text">
+        <?php echo wp_kses_post($subtitle); ?>
       </p>
     <?php endif; ?>
   </div>

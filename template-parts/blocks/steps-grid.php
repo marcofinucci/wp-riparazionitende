@@ -38,10 +38,10 @@ if (is_array($button_link)) {
           <p class="text-accent font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
-          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest"><?php echo esc_html($heading); ?></h2>
+          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest rich-text"><?php echo wp_kses_post($heading); ?></h2>
         <?php endif; ?>
         <?php if ($intro) : ?>
-          <p class="text-muted mt-4 max-w-lg mx-auto"><?php echo esc_html($intro); ?></p>
+          <p class="text-muted mt-4 max-w-lg mx-auto rich-text"><?php echo wp_kses_post($intro); ?></p>
         <?php endif; ?>
       </div>
     <?php endif; ?>
@@ -63,10 +63,10 @@ if (is_array($button_link)) {
             </div>
             <div>
               <?php if ($title) : ?>
-                <h3 class="font-heading font-semibold text-forest type-base mb-1.5"><?php echo esc_html($title); ?></h3>
+                <h3 class="font-heading font-semibold text-forest type-base mb-1.5 rich-text"><?php echo wp_kses_post($title); ?></h3>
               <?php endif; ?>
               <?php if ($desc) : ?>
-                <p class="text-muted type-sm"><?php echo esc_html($desc); ?></p>
+                <p class="text-muted type-sm rich-text"><?php echo wp_kses_post($desc); ?></p>
               <?php endif; ?>
             </div>
           </div>

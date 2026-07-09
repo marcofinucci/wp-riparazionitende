@@ -40,7 +40,7 @@ $heading_id = 'steps-' . wp_unique_id();
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="reveal max-w-3xl">
       <?php if ($heading) : ?>
-        <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl text-forest"><?php echo esc_html($heading); ?></h2>
+        <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl text-forest rich-text"><?php echo wp_kses_post($heading); ?></h2>
       <?php endif; ?>
       <?php if ($download_url || $download_url_2) : ?>
         <div class="flex flex-col items-start sm:flex-row flex-wrap gap-4 mt-8">
@@ -77,10 +77,10 @@ $heading_id = 'steps-' . wp_unique_id();
             </div>
             <div class="pt-1">
               <?php if ($title) : ?>
-                <h3 class="font-heading font-semibold text-forest type-lg mb-1.5"><?php echo esc_html($title); ?></h3>
+                <h3 class="font-heading font-semibold text-forest type-lg mb-1.5 rich-text"><?php echo wp_kses_post($title); ?></h3>
               <?php endif; ?>
               <?php if ($desc) : ?>
-                <p class="text-muted "><?php echo esc_html($desc); ?></p>
+                <p class="text-muted rich-text"><?php echo wp_kses_post($desc); ?></p>
               <?php endif; ?>
             </div>
           </li>

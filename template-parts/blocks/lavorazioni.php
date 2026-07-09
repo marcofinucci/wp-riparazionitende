@@ -31,7 +31,7 @@ $heading_id = 'lavorazioni-' . wp_unique_id();
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="reveal max-w-3xl">
       <?php if ($heading) : ?>
-        <h2 id="<?php echo esc_attr($heading_id); ?>" class="<?php echo $is_forest ? 'font-heading font-semibold type-2xl text-white' : 'font-heading font-semibold type-xl text-forest'; ?> mb-7"><?php echo esc_html($heading); ?></h2>
+        <h2 id="<?php echo esc_attr($heading_id); ?>" class="<?php echo $is_forest ? 'font-heading font-semibold type-2xl text-white' : 'font-heading font-semibold type-xl text-forest'; ?> mb-7 rich-text"><?php echo wp_kses_post($heading); ?></h2>
       <?php endif; ?>
       <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <?php foreach ($items as $row) : ?>

@@ -41,17 +41,17 @@ $heading_id = 'coverage-' . wp_unique_id();
           <p class="text-accent font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
-          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-white mb-6">
-            <?php echo nl2br(esc_html($heading)); ?>
+          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-white mb-6 rich-text">
+            <?php echo nl2br(wp_kses_post($heading)); ?>
           </h2>
         <?php endif; ?>
         <?php if ($content) : ?>
-          <div class="space-y-6 mb-8 text-white/65">
+          <div class="space-y-6 mb-8 text-white/65 rich-text">
             <?php echo wp_kses_post(wpautop($content)); ?>
           </div>
         <?php endif; ?>
         <?php if ($quote_text) : ?>
-          <p class="text-canvas/80 type-sm italic"><?php echo esc_html($quote_text); ?></p>
+          <p class="text-canvas/80 type-sm italic rich-text"><?php echo wp_kses_post($quote_text); ?></p>
         <?php endif; ?>
       </div>
 

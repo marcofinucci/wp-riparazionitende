@@ -62,13 +62,13 @@ $section_class = trim(implode(' ', [
               <p class="text-accent font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
             <?php endif; ?>
             <?php if ($heading) : ?>
-              <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest mb-4"><?php echo esc_html($heading); ?></h2>
+              <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest mb-4 rich-text"><?php echo wp_kses_post($heading); ?></h2>
             <?php endif; ?>
             <?php if ($highlight) : ?>
-              <p class="font-heading font-semibold text-forest type-xl mb-6"><?php echo esc_html($highlight); ?></p>
+              <p class="font-heading font-semibold text-forest type-xl mb-6 rich-text"><?php echo wp_kses_post($highlight); ?></p>
             <?php endif; ?>
             <?php if ($content) : ?>
-              <div class="space-y-4 text-muted">
+              <div class="space-y-4 text-muted rich-text">
                 <?php echo wp_kses_post(wpautop($content)); ?>
               </div>
             <?php endif; ?>
@@ -79,8 +79,8 @@ $section_class = trim(implode(' ', [
           <figure class="reveal relative overflow-hidden bg-forest rounded-2xl p-8 text-left flex flex-col justify-center <?php echo $has_main ? '' : 'lg:col-span-2 max-w-2xl mx-auto w-full'; ?>" style="--reveal-delay:120ms">
             <div class="absolute inset-0 bg-peaks opacity-[0.05] pointer-events-none" aria-hidden="true"></div>
             <?php rtc_icon('quote', 'w-8 h-8 text-accent mb-4 flex-shrink-0 relative z-10'); ?>
-            <blockquote class="font-heading type-lg text-white mb-5 relative z-10">
-              <?php echo esc_html($quote); ?>
+            <blockquote class="font-heading type-lg text-white mb-5 relative z-10 rich-text">
+              <?php echo wp_kses_post($quote); ?>
             </blockquote>
             <?php if ($author) : ?>
               <figcaption class="text-canvas/65 type-sm font-body relative z-10">

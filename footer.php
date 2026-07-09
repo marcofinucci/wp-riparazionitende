@@ -85,8 +85,8 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
           </a>
         </div>
         <?php if ($_footer_brand_description) : ?>
-          <p class="text-white/65 type-sm mb-5">
-            <?php echo esc_html($_footer_brand_description); ?>
+          <p class="text-white/65 type-sm mb-5 rich-text">
+            <?php echo wp_kses_post($_footer_brand_description); ?>
           </p>
         <?php endif; ?>
         <div class="flex flex-col gap-2.5">

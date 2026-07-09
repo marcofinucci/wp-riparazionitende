@@ -29,10 +29,10 @@ $icon_map   = ['clock' => 'clock', 'badge-check' => 'badge-check', 'map' => 'map
           <p class="text-accent font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
-          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest mb-6"><?php echo esc_html($heading); ?></h2>
+          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest mb-6 rich-text"><?php echo wp_kses_post($heading); ?></h2>
         <?php endif; ?>
         <?php if ($content) : ?>
-          <div class="space-y-4 text-muted">
+          <div class="space-y-4 text-muted rich-text">
             <?php echo wp_kses_post(wpautop($content)); ?>
           </div>
         <?php endif; ?>

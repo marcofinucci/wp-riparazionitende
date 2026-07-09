@@ -59,13 +59,13 @@ $secondary = $resolve_link($secondary_link);
         </div>
       <?php endif; ?>
 
-      <h1 class="reveal font-heading text-balance font-bold text-[2.75rem] sm:text-[3.5rem] lg:text-[4.5rem] !leading-[1.05] text-white mb-6" style="--reveal-delay:80ms">
-        <?php echo nl2br(esc_html($heading)); ?>
+      <h1 class="reveal font-heading text-balance font-bold text-[2.75rem] sm:text-[3.5rem] lg:text-[4.5rem] !leading-[1.05] text-white mb-6 rich-text" style="--reveal-delay:80ms">
+        <?php echo nl2br(wp_kses_post($heading)); ?>
       </h1>
 
       <?php if ($text) : ?>
-        <p class="reveal text-white/85 type-lg mb-10 max-w-2xl" style="--reveal-delay:160ms">
-          <?php echo esc_html($text); ?>
+        <p class="reveal text-white/85 type-lg mb-10 max-w-2xl rich-text" style="--reveal-delay:160ms">
+          <?php echo wp_kses_post($text); ?>
         </p>
       <?php endif; ?>
 

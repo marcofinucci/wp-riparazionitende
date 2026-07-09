@@ -73,10 +73,10 @@ if (!$items) {
           <p class="text-accent font-heading font-semibold type-sm uppercase tracking-widest mb-3"><?php echo esc_html($eyebrow); ?></p>
         <?php endif; ?>
         <?php if ($heading) : ?>
-          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest"><?php echo esc_html($heading); ?></h2>
+          <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-3xl text-forest rich-text"><?php echo wp_kses_post($heading); ?></h2>
         <?php endif; ?>
         <?php if ($intro) : ?>
-          <p class="text-muted type-base mt-4 max-w-xl mx-auto"><?php echo esc_html($intro); ?></p>
+          <p class="text-muted type-base mt-4 max-w-xl mx-auto rich-text"><?php echo wp_kses_post($intro); ?></p>
         <?php endif; ?>
       </div>
     <?php endif; ?>
@@ -102,8 +102,8 @@ if (!$items) {
             </div>
 
             <div class="bg-forest-dark p-5 flex items-center justify-between gap-3 grow">
-              <h3 class="font-heading font-bold text-white type-lg !leading-tight text-balance">
-                <?php echo esc_html($item['title']); ?>
+              <h3 class="font-heading font-bold text-white type-lg !leading-tight text-balance rich-text">
+                <?php echo wp_kses_post($item['title']); ?>
               </h3>
               <span class="flex-shrink-0 w-9 h-9 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white transition-colors duration-300 group-hover:bg-accent group-hover:border-accent" aria-hidden="true">
                 <?php rtc_icon('chevron-right', 'w-4 h-4'); ?>
