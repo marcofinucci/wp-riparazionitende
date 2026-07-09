@@ -19,7 +19,7 @@ if (!$items) {
           continue;
         }
         ?>
-        <div class="flex flex-col items-center text-center py-5 sm:py-0 sm:px-8">
+        <div class="flex flex-col items-center text-center py-6 sm:py-0 sm:px-8">
           <?php if ($value) : ?>
             <span class="font-heading font-bold type-3xl text-white"><?php echo esc_html($value); ?></span>
           <?php endif; ?>

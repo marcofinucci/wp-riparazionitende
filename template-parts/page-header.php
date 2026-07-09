@@ -22,7 +22,7 @@ $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x10
   <div class="absolute inset-0 bg-peaks opacity-[0.05] pointer-events-none" aria-hidden="true"></div>
 
   <div class="reveal max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-    <nav aria-label="Breadcrumb" class="mb-5">
+    <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-white/50 type-sm font-body flex-wrap">
         <li><a href="<?php echo esc_url(home_url('/')); ?>" class="hover:text-canvas transition-colors">Home</a></li>
         <li aria-hidden="true"><span class="mx-1">/</span></li>
@@ -30,14 +30,16 @@ $header_thumb = get_the_post_thumbnail_url(get_queried_object_id(), 'hey-1920x10
       </ol>
     </nav>
 
-    <h1 class="font-heading font-bold type-4xl text-white max-w-3xl text-balance rich-text">
-      <?php echo wp_kses_post($h1); ?>
-    </h1>
+    <div class="flow">
+      <h1 class="font-heading font-bold type-4xl text-white max-w-3xl text-balance rich-text">
+        <?php echo wp_kses_post($h1); ?>
+      </h1>
 
-    <?php if ($subtitle) : ?>
-      <p class="mt-4 text-white/65 type-lg max-w-2xl rich-text">
-        <?php echo wp_kses_post($subtitle); ?>
-      </p>
-    <?php endif; ?>
+      <?php if ($subtitle) : ?>
+        <p class="mt-4 text-white/65 type-lg max-w-2xl rich-text">
+          <?php echo wp_kses_post($subtitle); ?>
+        </p>
+      <?php endif; ?>
+    </div>
   </div>
 </section>

@@ -39,12 +39,12 @@ $response_time_text  = $args['response_time_text'] ?? '';
             <?php rtc_whatsapp_icon('w-6 h-6 text-forest'); ?>
           </div>
           <div class="grow flex flex-col">
-            <div class="grow">
+            <div class="grow flow">
               <?php if ($wa_title) : ?>
                 <h3 class="font-heading font-semibold text-forest type-lg rich-text"><?php echo wp_kses_post($wa_title); ?></h3>
               <?php endif; ?>
               <?php if ($wa_text) : ?>
-                <p class="text-muted type-sm mb-3 <?php echo $wa_title ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($wa_text); ?></p>
+                <p class="text-muted type-sm mt-4 mb-3 rich-text"><?php echo wp_kses_post($wa_text); ?></p>
               <?php endif; ?>
             </div>
             <span class="text-forest group-hover:text-accent font-heading font-medium type-sm transition-colors"><?php echo esc_html($wa_link['title']); ?></span>
@@ -59,12 +59,12 @@ $response_time_text  = $args['response_time_text'] ?? '';
             <?php rtc_icon('mail', 'w-6 h-6 text-forest'); ?>
           </div>
           <div class="grow flex flex-col">
-            <div class="grow">
+            <div class="grow flow">
               <?php if ($email_title) : ?>
                 <h3 class="font-heading font-semibold text-forest type-lg rich-text"><?php echo wp_kses_post($email_title); ?></h3>
               <?php endif; ?>
               <?php if ($email_text) : ?>
-                <p class="text-muted type-sm mb-3 <?php echo $email_title ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($email_text); ?></p>
+                <p class="text-muted type-sm mt-4 mb-3 rich-text"><?php echo wp_kses_post($email_text); ?></p>
               <?php endif; ?>
             </div>
             <span class="text-forest group-hover:text-accent font-heading font-medium type-sm transition-colors break-all"><?php echo esc_html($email_link['title']); ?></span>
@@ -79,12 +79,12 @@ $response_time_text  = $args['response_time_text'] ?? '';
             <?php rtc_icon('phone', 'w-6 h-6 text-olive'); ?>
           </div>
           <div class="grow flex flex-col">
-            <div class="grow">
+            <div class="grow flow">
               <?php if ($phone_title) : ?>
                 <h3 class="font-heading font-semibold text-forest type-lg rich-text"><?php echo wp_kses_post($phone_title); ?></h3>
               <?php endif; ?>
               <?php if ($phone_text) : ?>
-                <p class="text-muted type-sm mb-3 <?php echo $phone_title ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($phone_text); ?></p>
+                <p class="text-muted type-sm mt-4 mb-3 rich-text"><?php echo wp_kses_post($phone_text); ?></p>
               <?php endif; ?>
             </div>
             <span class="text-forest group-hover:text-accent font-heading font-medium type-sm transition-colors"><?php echo esc_html($phone_link['title']); ?></span>
@@ -99,12 +99,12 @@ $response_time_text  = $args['response_time_text'] ?? '';
             <?php rtc_icon('map', 'w-6 h-6 text-olive'); ?>
           </div>
           <div class="grow flex flex-col">
-            <div class="grow">
+            <div class="grow flow">
               <?php if ($address_title) : ?>
                 <h3 class="font-heading font-semibold text-forest type-lg rich-text"><?php echo wp_kses_post($address_title); ?></h3>
               <?php endif; ?>
               <?php if ($address_text) : ?>
-                <p class="text-muted type-sm mb-3 <?php echo $address_title ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($address_text); ?></p>
+                <p class="text-muted type-sm mt-4 mb-3 rich-text"><?php echo wp_kses_post($address_text); ?></p>
               <?php endif; ?>
             </div>
             <span class="text-forest group-hover:text-accent font-heading font-medium type-sm transition-colors"><?php echo esc_html($address_link['title']); ?></span>
@@ -116,12 +116,12 @@ $response_time_text  = $args['response_time_text'] ?? '';
     <?php if ($response_time_title || $response_time_text) : ?>
       <div class="mt-8 bg-forest/5 border border-forest/15 rounded-2xl p-6 flex items-start gap-4 max-w-3xl">
         <?php rtc_icon('clock', 'w-5 h-5 text-olive flex-shrink-0 mt-0.5'); ?>
-        <div>
+        <div class="flow">
           <?php if ($response_time_title) : ?>
             <h3 class="font-heading font-semibold text-forest type-base rich-text"><?php echo wp_kses_post($response_time_title); ?></h3>
           <?php endif; ?>
           <?php if ($response_time_text) : ?>
-            <p class="text-muted type-sm <?php echo $response_time_title ? 'mt-4' : ''; ?> rich-text">
+            <p class="text-muted type-sm mt-4 rich-text">
               <?php echo wp_kses_post($response_time_text); ?>
             </p>
           <?php endif; ?>

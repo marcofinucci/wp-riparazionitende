@@ -51,16 +51,16 @@ $icon_map   = ['clock' => 'clock', 'badge-check' => 'badge-check', 'map' => 'map
             $icon_name = $icon_map[$icon] ?? 'clock';
             ?>
             <div class="rounded-2xl p-7 border border-canvas-dark bg-cream/60">
-              <div class="flex items-center gap-5">
+              <div class="flex items-center gap-6">
                 <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
                   <?php rtc_icon($icon_name, 'w-7 h-7 text-accent'); ?>
                 </div>
-                <div>
+                <div class="flow">
                   <?php if ($value) : ?>
                     <p class="font-heading font-bold type-2xl text-forest"><?php echo esc_html($value); ?></p>
                   <?php endif; ?>
                   <?php if ($label) : ?>
-                    <p class="text-muted type-sm"><?php echo esc_html($label); ?></p>
+                    <p class="text-muted type-sm mt-1"><?php echo esc_html($label); ?></p>
                   <?php endif; ?>
                 </div>
               </div>

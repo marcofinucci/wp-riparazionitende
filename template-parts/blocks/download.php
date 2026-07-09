@@ -38,15 +38,15 @@ $heading_id = 'download-' . wp_unique_id();
 
 <section class="<?php echo esc_attr($section_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="reveal max-w-3xl">
+    <div class="reveal max-w-3xl flow">
       <?php if ($heading) : ?>
         <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl <?php echo $is_forest ? 'text-white' : 'text-forest'; ?> rich-text"><?php echo wp_kses_post($heading); ?></h2>
       <?php endif; ?>
       <?php if ($text) : ?>
-        <p class="<?php echo $is_forest ? 'text-white/80' : 'text-muted'; ?> <?php echo $heading ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
+        <p class="<?php echo $is_forest ? 'text-white/80' : 'text-muted'; ?> mt-4 rich-text"><?php echo wp_kses_post($text); ?></p>
       <?php endif; ?>
       <?php if ($download_url) : ?>
-        <div class="<?php echo ($heading || $text) ? 'mt-6' : ''; ?>">
+        <div class="mt-8">
           <a href="<?php echo esc_url($download_url); ?>"
             target="_blank" rel="noopener noreferrer"
             class="btn-primary">

@@ -85,7 +85,7 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
           </a>
         </div>
         <?php if ($_footer_brand_description) : ?>
-          <p class="text-white/65 type-sm mb-5 rich-text">
+          <p class="text-white/65 type-sm mb-6 rich-text">
             <?php echo wp_kses_post($_footer_brand_description); ?>
           </p>
         <?php endif; ?>
@@ -114,7 +114,7 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
           <?php endif; ?>
         </div>
         <?php if ($_footer_social_links) : ?>
-          <div class="flex items-center gap-3 mt-5">
+          <div class="flex items-center gap-3 mt-6">
             <?php foreach ($_footer_social_links as $_social) :
               $_social_link  = $_social['link'] ?? [];
               $_social_url   = $_social_link['url'] ?? '';
@@ -196,7 +196,7 @@ $_footer_margin = !$_footer_cta_shown ? ($_footer_margin_classes[$_footer_margin
 
   <!-- Footer Bottom -->
   <div class="border-t border-forest-light">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between md:gap-4">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between md:gap-4">
       <p class="text-white/45 text-center md:text-left type-xs [&_a:hover]:text-white/70">
         &copy; <?php echo date('Y'); ?> <?php echo $_footer_copyright ?>
       </p>

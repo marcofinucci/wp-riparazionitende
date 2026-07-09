@@ -79,7 +79,7 @@ $section_class = trim(implode(' ', [
           <figure class="reveal relative overflow-hidden bg-forest rounded-2xl p-8 text-left flex flex-col justify-center <?php echo $has_main ? '' : 'lg:col-span-2 max-w-2xl mx-auto w-full'; ?>" style="--reveal-delay:120ms">
             <div class="absolute inset-0 bg-peaks opacity-[0.05] pointer-events-none" aria-hidden="true"></div>
             <?php rtc_icon('quote', 'w-8 h-8 text-accent mb-4 flex-shrink-0 relative z-10'); ?>
-            <blockquote class="font-heading type-lg text-white mb-5 relative z-10 rich-text">
+            <blockquote class="font-heading type-lg text-white mb-6 relative z-10 rich-text">
               <?php echo wp_kses_post($quote); ?>
             </blockquote>
             <?php if ($author) : ?>

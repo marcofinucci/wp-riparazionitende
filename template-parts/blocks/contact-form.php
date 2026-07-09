@@ -32,29 +32,31 @@ if (!$tips) {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14">
 
-      <div class="reveal lg:col-span-3">
+      <div class="reveal lg:col-span-3 flow">
         <?php if ($heading) : ?>
           <h2 id="form-heading" class="font-heading font-semibold type-xl text-forest rich-text"><?php echo wp_kses_post($heading); ?></h2>
         <?php endif; ?>
         <?php if ($intro) : ?>
-          <p class="text-muted type-sm mb-8 <?php echo $heading ? 'mt-4' : ''; ?> rich-text">
+          <p class="text-muted type-sm mt-4 rich-text">
             <?php echo wp_kses_post($intro); ?>
           </p>
         <?php endif; ?>
 
         <?php if ($cf7_shortcode) : ?>
-          <?php echo do_shortcode($cf7_shortcode); ?>
+          <div class="mt-8">
+            <?php echo do_shortcode($cf7_shortcode); ?>
+          </div>
         <?php endif; ?>
       </div>
 
       <aside class="reveal lg:col-span-2 space-y-6" style="--reveal-delay:120ms">
         <?php if ($tips_heading || $tips) : ?>
-          <div class=" rounded-2xl p-6 border border-canvas-dark">
+          <div class="rounded-2xl p-6 border border-canvas-dark flow">
             <?php if ($tips_heading) : ?>
-              <h3 class="font-heading font-semibold text-forest type-base mb-4 rich-text"><?php echo wp_kses_post($tips_heading); ?></h3>
+              <h3 class="font-heading font-semibold text-forest type-base rich-text"><?php echo wp_kses_post($tips_heading); ?></h3>
             <?php endif; ?>
             <?php if ($tips) : ?>
-              <ol class="space-y-4">
+              <ol class="space-y-4 mt-4">
                 <?php foreach ($tips as $i => $row) : ?>
                   <?php
                   $tip = $row['text'] ?? '';
@@ -73,19 +75,19 @@ if (!$tips) {
         <?php endif; ?>
 
         <?php if ($lab_heading || $lab_text || !empty($lab_link['url'])) : ?>
-          <div class="bg-forest/5 border border-forest/15 rounded-2xl p-6">
+          <div class="bg-forest/5 border border-forest/15 rounded-2xl p-6 flow">
             <?php if ($lab_heading) : ?>
               <h3 class="font-heading font-semibold text-forest type-base rich-text"><?php echo wp_kses_post($lab_heading); ?></h3>
             <?php endif; ?>
             <?php if ($lab_text) : ?>
-              <p class="text-muted type-sm mb-4 <?php echo $lab_heading ? 'mt-4' : ''; ?> rich-text">
+              <p class="text-muted type-sm mt-4 rich-text">
                 <?php echo wp_kses_post($lab_text); ?>
               </p>
             <?php endif; ?>
             <?php if (!empty($lab_link['url'])) : ?>
               <a href="<?php echo esc_url($lab_link['url']); ?>"
                 <?php if (!empty($lab_link['target'])) : ?>target="<?php echo esc_attr($lab_link['target']); ?>" rel="noopener noreferrer" <?php endif; ?>
-                class="inline-flex items-center gap-2 text-forest hover:text-accent font-heading font-medium type-sm transition-colors cursor-pointer">
+                class="inline-flex items-center gap-2 text-forest hover:text-accent font-heading font-medium type-sm transition-colors cursor-pointer mt-6">
                 <?php echo esc_html($lab_link['title'] ?: 'Come spedire il materiale'); ?>
                 <?php rtc_icon('chevron-right', 'w-4 h-4'); ?>
               </a>

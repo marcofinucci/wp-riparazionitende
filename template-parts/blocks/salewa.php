@@ -39,22 +39,26 @@ $texture_url = get_template_directory_uri() . '/assets/images/riparazionitendeca
           </defs>
         </svg>
       </div>
-      <?php if ($title) : ?>
-        <h2 id="salewa-heading" class="font-heading font-semibold type-xl text-forest rich-text">
-          <?php echo wp_kses_post($title); ?>
-        </h2>
-      <?php endif; ?>
-      <?php if ($text) : ?>
-        <p class="text-muted mb-6 <?php echo $title ? 'mt-4' : ''; ?> rich-text">
-          <?php echo wp_kses_post($text); ?>
-        </p>
-      <?php endif; ?>
-      <?php if (!empty($link['url'])) : ?>
-        <a href="<?php echo esc_url($link['url']); ?>"
-          <?php if (!empty($link['target'])) : ?>target="<?php echo esc_attr($link['target']); ?>" rel="noopener noreferrer" <?php endif; ?>
-          class="btn-primary">
-          <?php echo esc_html($link['title']); ?>
-        </a>
+      <?php if ($title || $text || !empty($link['url'])) : ?>
+        <div class="flow">
+          <?php if ($title) : ?>
+            <h2 id="salewa-heading" class="font-heading font-semibold type-xl text-forest rich-text">
+              <?php echo wp_kses_post($title); ?>
+            </h2>
+          <?php endif; ?>
+          <?php if ($text) : ?>
+            <p class="text-muted mt-4 rich-text">
+              <?php echo wp_kses_post($text); ?>
+            </p>
+          <?php endif; ?>
+          <?php if (!empty($link['url'])) : ?>
+            <a href="<?php echo esc_url($link['url']); ?>"
+              <?php if (!empty($link['target'])) : ?>target="<?php echo esc_attr($link['target']); ?>" rel="noopener noreferrer" <?php endif; ?>
+              class="btn-primary mt-8">
+              <?php echo esc_html($link['title']); ?>
+            </a>
+          <?php endif; ?>
+        </div>
       <?php endif; ?>
     </div>
   </div>

@@ -43,7 +43,7 @@ $_header_wa_label     = get_field('header_whatsapp_label', 'option') ?: 'WhatsAp
 
         <!-- Desktop Navigation -->
         <?php if (has_nav_menu('primary')) : ?>
-          <nav class="hidden lg:flex items-center gap-5 xl:gap-6" aria-label="Navigazione principale">
+          <nav class="hidden lg:flex items-center gap-6" aria-label="Navigazione principale">
             <?php
             wp_nav_menu([
               'theme_location' => 'primary',

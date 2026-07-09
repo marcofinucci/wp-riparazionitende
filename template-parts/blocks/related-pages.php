@@ -29,7 +29,7 @@ if (!$links) {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="reveal max-w-3xl">
       <?php if ($heading) : ?>
-        <h3 class="font-heading font-semibold type-base mb-5 <?php echo $is_olive ? 'text-white' : 'text-forest'; ?> rich-text"><?php echo wp_kses_post($heading); ?></h3>
+        <h3 class="font-heading font-semibold type-base mb-6 <?php echo $is_olive ? 'text-white' : 'text-forest'; ?> rich-text"><?php echo wp_kses_post($heading); ?></h3>
       <?php endif; ?>
       <div class="flex flex-wrap gap-3">
         <?php foreach ($links as $row) : ?>

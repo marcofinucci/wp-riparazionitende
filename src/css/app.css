@@ -71,6 +71,10 @@
     @apply underline;
   }
 
+  .flow > :first-child {
+    @apply mt-0;
+  }
+
   .btn-primary {
     @apply inline-flex items-center gap-2 border border-accent bg-accent hover:bg-accent-light hover:border-accent-light text-white font-heading font-semibold px-6 py-3 rounded-full shadow-lg shadow-accent/20 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer focus-visible:ring-forest;
   }
@@ -130,7 +134,7 @@
 
   .pagination a.page-numbers.prev,
   .pagination a.page-numbers.next {
-    @apply px-5;
+    @apply px-6;
   }
 }
 

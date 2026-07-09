@@ -19,15 +19,15 @@ if (!$heading && !$text && !$items) {
 
 <section class="block-subsection <?php echo esc_attr($margin_top_class); ?>">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="reveal max-w-3xl">
+    <div class="reveal max-w-3xl flow">
       <?php if ($heading) : ?>
         <h2 class="font-heading font-semibold type-xl text-forest rich-text"><?php echo wp_kses_post($heading); ?></h2>
       <?php endif; ?>
       <?php if ($text) : ?>
-        <p class="text-muted mb-5 <?php echo $heading ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
+        <p class="text-muted mt-4 rich-text"><?php echo wp_kses_post($text); ?></p>
       <?php endif; ?>
       <?php if ($items) : ?>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
           <?php foreach ($items as $row) : ?>
             <?php $item = is_array($row) ? ($row['item'] ?? '') : $row; ?>
             <?php if (!$item) {

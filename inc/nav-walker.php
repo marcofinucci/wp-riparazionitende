@@ -68,7 +68,7 @@ class Rtc_Mobile_Nav_Walker extends Walker_Nav_Menu
         $has_children = in_array('menu-item-has-children', $item->classes, true);
 
         if ($depth === 0 && $has_children) {
-            $output .= '<div class="pt-5 pb-1">';
+            $output .= '<div class="pt-6 pb-1">';
             $output .= '<p class="text-accent type-xs font-heading font-semibold uppercase tracking-wider mb-3 px-2">';
             $output .= esc_html($title);
             $output .= '</p>';

@@ -101,7 +101,7 @@ if (!$items) {
               <?php endif; ?>
             </div>
 
-            <div class="bg-forest-dark p-5 flex items-center justify-between gap-3 grow">
+            <div class="bg-forest-dark p-6 flex items-center justify-between gap-3 grow">
               <h3 class="font-heading font-bold text-white type-lg !leading-tight text-balance rich-text">
                 <?php echo wp_kses_post($item['title']); ?>
               </h3>

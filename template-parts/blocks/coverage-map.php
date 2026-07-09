@@ -65,7 +65,7 @@ $heading_id = 'coverage-' . wp_unique_id();
               'decoding' => 'async',
             ]) ?>
             <?php if ($legend_received || $legend_lab) : ?>
-              <div class="flex items-center justify-center gap-5 mt-4">
+              <div class="flex items-center justify-center gap-6 mt-4">
                 <?php if ($legend_received) : ?>
                   <div class="flex items-center gap-2 text-canvas/70 type-xs font-body">
                     <div class="w-3 h-3 rounded-full bg-canvas/80"></div>

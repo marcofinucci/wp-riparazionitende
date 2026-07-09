@@ -57,7 +57,7 @@ if (is_array($button_link)) {
             continue;
           }
           ?>
-          <div class="reveal flex flex-col items-center text-center gap-4 rounded-2xl p-5 border border-canvas-dark bg-cream" style="--reveal-delay:<?php echo esc_attr($i * 80); ?>ms">
+          <div class="reveal flex flex-col items-center text-center gap-4 rounded-2xl p-6 border border-canvas-dark bg-cream" style="--reveal-delay:<?php echo esc_attr($i * 80); ?>ms">
             <div class="w-12 h-12 rounded-full bg-forest text-white font-heading font-bold type-xl flex items-center justify-center shadow-sm">
               <?php echo $i + 1; ?>
             </div>

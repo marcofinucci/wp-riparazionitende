@@ -26,15 +26,15 @@ $heading_id = 'info-box-' . wp_unique_id();
         <div class="w-14 h-14 rounded-xl bg-forest/10 flex items-center justify-center flex-shrink-0">
           <?php rtc_icon('info', 'w-7 h-7 text-forest'); ?>
         </div>
-        <div>
+        <div class="flow">
           <?php if ($heading) : ?>
             <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl text-forest rich-text"><?php echo wp_kses_post($heading); ?></h2>
           <?php endif; ?>
           <?php if ($text) : ?>
-            <p class="text-muted mb-5 <?php echo $heading ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
+            <p class="text-muted mt-4 rich-text"><?php echo wp_kses_post($text); ?></p>
           <?php endif; ?>
           <?php if ($items) : ?>
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-6">
               <?php foreach ($items as $row) : ?>
                 <?php $item = is_array($row) ? ($row['item'] ?? '') : $row; ?>
                 <?php if (!$item) {
