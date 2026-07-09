@@ -46,7 +46,7 @@ $heading_id = 'download-' . wp_unique_id();
         <p class="<?php echo $is_forest ? 'text-white/80' : 'text-muted'; ?> mt-4 rich-text"><?php echo wp_kses_post($text); ?></p>
       <?php endif; ?>
       <?php if ($download_url) : ?>
-        <div class="mt-8">
+        <div class="mt-6">
           <a href="<?php echo esc_url($download_url); ?>"
             target="_blank" rel="noopener noreferrer"
             class="btn-primary">

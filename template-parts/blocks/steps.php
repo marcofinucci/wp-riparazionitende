@@ -81,7 +81,7 @@ $heading_id = 'steps-' . wp_unique_id();
             </div>
             <div class="pt-1">
               <?php if ($title) : ?>
-                <h3 class="font-heading font-semibold text-forest type-lg mb-1.5 rich-text"><?php echo wp_kses_post($title); ?></h3>
+                <h3 class="font-heading font-semibold text-forest type-lg mb-2 rich-text"><?php echo wp_kses_post($title); ?></h3>
               <?php endif; ?>
               <?php if ($desc) : ?>
                 <p class="text-muted rich-text"><?php echo wp_kses_post($desc); ?></p>

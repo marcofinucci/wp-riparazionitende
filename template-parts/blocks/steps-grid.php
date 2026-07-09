@@ -63,7 +63,7 @@ if (is_array($button_link)) {
             </div>
             <div>
               <?php if ($title) : ?>
-                <h3 class="font-heading font-semibold text-forest type-base mb-1.5 rich-text"><?php echo wp_kses_post($title); ?></h3>
+                <h3 class="font-heading font-semibold text-forest type-base mb-2 rich-text"><?php echo wp_kses_post($title); ?></h3>
               <?php endif; ?>
               <?php if ($desc) : ?>
                 <p class="text-muted type-sm rich-text"><?php echo wp_kses_post($desc); ?></p>

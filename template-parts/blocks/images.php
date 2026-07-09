@@ -14,7 +14,7 @@ $margin_top_class = $margin_top_classes[$margin_top] ?? $margin_top_classes['med
 $grid_classes = [
   '1' => 'grid-cols-1',
   '2' => 'grid-cols-1 sm:grid-cols-2',
-  '3' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+  '3' => 'grid-cols-1 sm:grid-cols-3',
   '4' => 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4',
 ];
 $grid_class = $grid_classes[$grid_columns] ?? $grid_classes['2'];
