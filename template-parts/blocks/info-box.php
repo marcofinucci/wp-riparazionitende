@@ -28,10 +28,10 @@ $heading_id = 'info-box-' . wp_unique_id();
         </div>
         <div>
           <?php if ($heading) : ?>
-            <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl text-forest mb-4 rich-text"><?php echo wp_kses_post($heading); ?></h2>
+            <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl text-forest rich-text"><?php echo wp_kses_post($heading); ?></h2>
           <?php endif; ?>
           <?php if ($text) : ?>
-            <p class="text-muted mb-5 rich-text"><?php echo wp_kses_post($text); ?></p>
+            <p class="text-muted mb-5 <?php echo $heading ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
           <?php endif; ?>
           <?php if ($items) : ?>
             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">

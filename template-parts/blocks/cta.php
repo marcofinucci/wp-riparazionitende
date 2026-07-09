@@ -39,10 +39,10 @@ $heading_id = 'cta-' . wp_unique_id();
   <div class="absolute inset-0 bg-peaks opacity-[0.05] pointer-events-none" aria-hidden="true"></div>
   <div class="reveal max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
     <?php if ($title) : ?>
-      <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-2xl text-white mb-4 rich-text"><?php echo wp_kses_post($title); ?></h2>
+      <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-bold type-2xl text-white rich-text"><?php echo wp_kses_post($title); ?></h2>
     <?php endif; ?>
     <?php if ($text) : ?>
-      <p class="text-white/65 max-w-lg mx-auto rich-text"><?php echo wp_kses_post($text); ?></p>
+      <p class="text-white/65 max-w-lg mx-auto <?php echo $title ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
     <?php endif; ?>
     <?php if (!empty($link_primary['url']) || !empty($link_secondary['url'])) : ?>
       <div class="flex flex-col items-center sm:flex-row gap-4 justify-center mt-8">

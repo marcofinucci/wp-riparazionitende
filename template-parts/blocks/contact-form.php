@@ -34,10 +34,10 @@ if (!$tips) {
 
       <div class="reveal lg:col-span-3">
         <?php if ($heading) : ?>
-          <h2 id="form-heading" class="font-heading font-semibold type-xl text-forest mb-2 rich-text"><?php echo wp_kses_post($heading); ?></h2>
+          <h2 id="form-heading" class="font-heading font-semibold type-xl text-forest rich-text"><?php echo wp_kses_post($heading); ?></h2>
         <?php endif; ?>
         <?php if ($intro) : ?>
-          <p class="text-muted type-sm mb-8 rich-text">
+          <p class="text-muted type-sm mb-8 <?php echo $heading ? 'mt-4' : ''; ?> rich-text">
             <?php echo wp_kses_post($intro); ?>
           </p>
         <?php endif; ?>
@@ -75,10 +75,10 @@ if (!$tips) {
         <?php if ($lab_heading || $lab_text || !empty($lab_link['url'])) : ?>
           <div class="bg-forest/5 border border-forest/15 rounded-2xl p-6">
             <?php if ($lab_heading) : ?>
-              <h3 class="font-heading font-semibold text-forest type-base mb-3 rich-text"><?php echo wp_kses_post($lab_heading); ?></h3>
+              <h3 class="font-heading font-semibold text-forest type-base rich-text"><?php echo wp_kses_post($lab_heading); ?></h3>
             <?php endif; ?>
             <?php if ($lab_text) : ?>
-              <p class="text-muted type-sm mb-4 rich-text">
+              <p class="text-muted type-sm mb-4 <?php echo $lab_heading ? 'mt-4' : ''; ?> rich-text">
                 <?php echo wp_kses_post($lab_text); ?>
               </p>
             <?php endif; ?>

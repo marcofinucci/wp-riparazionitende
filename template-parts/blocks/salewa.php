@@ -40,12 +40,12 @@ $texture_url = get_template_directory_uri() . '/assets/images/riparazionitendeca
         </svg>
       </div>
       <?php if ($title) : ?>
-        <h2 id="salewa-heading" class="font-heading font-semibold type-xl text-forest mb-3 rich-text">
+        <h2 id="salewa-heading" class="font-heading font-semibold type-xl text-forest rich-text">
           <?php echo wp_kses_post($title); ?>
         </h2>
       <?php endif; ?>
       <?php if ($text) : ?>
-        <p class="text-muted mb-6 rich-text">
+        <p class="text-muted mb-6 <?php echo $title ? 'mt-4' : ''; ?> rich-text">
           <?php echo wp_kses_post($text); ?>
         </p>
       <?php endif; ?>

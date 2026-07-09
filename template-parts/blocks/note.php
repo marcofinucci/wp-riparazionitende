@@ -22,9 +22,9 @@ if (!$text) {
       <?php rtc_icon('info', 'w-5 h-5 text-forest flex-shrink-0 mt-0.5'); ?>
       <div>
         <?php if ($title) : ?>
-          <h3 class="font-heading font-semibold text-forest type-base mb-1 rich-text"><?php echo wp_kses_post($title); ?></h3>
+          <h3 class="font-heading font-semibold text-forest type-base rich-text"><?php echo wp_kses_post($title); ?></h3>
         <?php endif; ?>
-        <p class="text-muted type-sm rich-text"><?php echo wp_kses_post($text); ?></p>
+        <p class="text-muted type-sm <?php echo $title ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
       </div>
     </div>
   </div>

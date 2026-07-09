@@ -21,10 +21,10 @@ if (!$heading && !$text && !$items) {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="reveal max-w-3xl">
       <?php if ($heading) : ?>
-        <h2 class="font-heading font-semibold type-xl text-forest mb-6 rich-text"><?php echo wp_kses_post($heading); ?></h2>
+        <h2 class="font-heading font-semibold type-xl text-forest rich-text"><?php echo wp_kses_post($heading); ?></h2>
       <?php endif; ?>
       <?php if ($text) : ?>
-        <p class="text-muted mb-5 rich-text"><?php echo wp_kses_post($text); ?></p>
+        <p class="text-muted mb-5 <?php echo $heading ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
       <?php endif; ?>
       <?php if ($items) : ?>
         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">

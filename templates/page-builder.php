@@ -177,8 +177,9 @@ get_header();
 
                     <?php if (get_row_layout() == 'steps') {
                         get_template_part('template-parts/blocks/steps', null, [
-                            'heading'         => get_sub_field('heading'),
-                            'steps'           => get_sub_field('steps'),
+                            'heading'          => get_sub_field('heading'),
+                            'text'             => get_sub_field('text'),
+                            'steps'            => get_sub_field('steps'),
                             'download_file'    => get_sub_field('download_file'),
                             'download_label'   => get_sub_field('download_label'),
                             'download_file_2'  => get_sub_field('download_file_2'),

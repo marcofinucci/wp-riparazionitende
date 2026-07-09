@@ -807,6 +807,26 @@
               "append": ""
             },
             {
+              "key": "field_steps_text",
+              "label": "Testo",
+              "name": "text",
+              "aria-label": "",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "rows": 3,
+              "default_value": "",
+              "new_lines": "",
+              "maxlength": "",
+              "placeholder": ""
+            },
+            {
               "key": "field_steps_list",
               "label": "Step",
               "name": "steps",
@@ -3368,5 +3388,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1783578056
+  "modified": 1783579625
 }

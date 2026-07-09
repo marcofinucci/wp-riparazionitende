@@ -43,7 +43,7 @@ $heading_id = 'download-' . wp_unique_id();
         <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl <?php echo $is_forest ? 'text-white' : 'text-forest'; ?> rich-text"><?php echo wp_kses_post($heading); ?></h2>
       <?php endif; ?>
       <?php if ($text) : ?>
-        <p class="<?php echo $is_forest ? 'text-white/80' : 'text-muted'; ?> <?php echo $heading ? 'mt-6' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
+        <p class="<?php echo $is_forest ? 'text-white/80' : 'text-muted'; ?> <?php echo $heading ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
       <?php endif; ?>
       <?php if ($download_url) : ?>
         <div class="<?php echo ($heading || $text) ? 'mt-6' : ''; ?>">

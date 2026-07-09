@@ -2,6 +2,7 @@
 defined('ABSPATH') || exit;
 
 $heading        = $args['heading'] ?? 'Procedura';
+$text           = $args['text'] ?? '';
 $steps          = $args['steps'] ?? [];
 $download_file    = $args['download_file'] ?? null;
 $download_label   = $args['download_label'] ?? 'Scarica la scheda cliente';
@@ -42,8 +43,11 @@ $heading_id = 'steps-' . wp_unique_id();
       <?php if ($heading) : ?>
         <h2 id="<?php echo esc_attr($heading_id); ?>" class="font-heading font-semibold type-xl text-forest rich-text"><?php echo wp_kses_post($heading); ?></h2>
       <?php endif; ?>
+      <?php if ($text) : ?>
+        <p class="text-muted <?php echo $heading ? 'mt-4' : ''; ?> rich-text"><?php echo wp_kses_post($text); ?></p>
+      <?php endif; ?>
       <?php if ($download_url || $download_url_2) : ?>
-        <div class="flex flex-col items-start sm:flex-row flex-wrap gap-4 mt-8">
+        <div class="flex flex-col items-start sm:flex-row flex-wrap gap-4 <?php echo ($heading || $text) ? 'mt-8' : ''; ?>">
           <?php if ($download_url) : ?>
             <a href="<?php echo esc_url($download_url); ?>"
               target="_blank" rel="noopener noreferrer"
@@ -62,7 +66,7 @@ $heading_id = 'steps-' . wp_unique_id();
           <?php endif; ?>
         </div>
       <?php endif; ?>
-      <ol class="space-y-6 mt-8">
+      <ol class="space-y-6 <?php echo ($heading || $text || $download_url || $download_url_2) ? 'mt-8' : ''; ?>">
         <?php foreach ($steps as $i => $step) : ?>
           <?php
           $title = is_array($step) ? ($step['title'] ?? '') : '';
