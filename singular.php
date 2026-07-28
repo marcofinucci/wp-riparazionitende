@@ -47,7 +47,7 @@ get_header();
   <section class="my-14 lg:my-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <div class="max-w-3xl flow rich-text [&>*]:mt-4 [&>:last-child]:mb-0">
+          <div class="max-w-3xl prose">
             <?php the_content(); ?>
           </div>
       <?php endwhile;
